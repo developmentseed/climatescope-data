@@ -57,7 +57,7 @@ src_core = src_dir + 'cs-core/'
 fn_core_full_csv = export_dir + 'cs-core.csv'
 
 # Source structure
-core_data_sheets = ['scores', 'parameters', 'indicators']
+core_data_sheets = ['score', 'param', 'ind']
 core_data_cols = ['id', 'iso', 'score']
 
   # Check if tmp folder exists, otherwise create it
@@ -111,7 +111,7 @@ def build_col_index(fn,sheet):
 def merge_csv(fn):
   "Merge all CSV files in the temporary directory."
   files = glob.glob(tmp_dir + "/*.csv")
-  df_merged = pd.DataFrame()
+  df_merged = pd.DataFrame()  
   for csv in files:
     df = pd.read_csv(csv)
     df_merged = df_merged.append(df, ignore_index=True)
@@ -142,8 +142,9 @@ def main():
       # Read Excel (parsing only relevant cols) and store them as temp CSV
       df = pd.read_excel(fn,sheet,parse_cols = cols_index)
 
-      # Add column with year
+      # Add column with year and a column with the type
       df['year'] = year
+      df['type'] = sheet
 
       df.to_csv(tmp_dir + sheet + year + '.csv', encoding='latin-1',index=0)
       

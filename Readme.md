@@ -16,8 +16,8 @@ The script expects the core Climatescope data to be provided in .xlsx format and
 These files should contain the following sheets:
 
 - scores
-- parameters
-- indicators
+- param
+- ind
 
 Each of these files, should have the following columns:
 
