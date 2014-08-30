@@ -52,6 +52,8 @@ tmp_dir = 'tmp/'
 
 # Source - filenames / dirs
 src_core = src_dir + 'cs-core/'
+src_meta_aa = src_dir + 'meta/admin_areas.csv'
+src_meta_index = src_dir + 'meta/index.csv'
 
 # Export - filenames
 fn_core_full_csv = export_dir + 'cs-core.csv'
@@ -59,8 +61,6 @@ fn_core_full_csv = export_dir + 'cs-core.csv'
 # Source structure
 core_data_sheets = ['score', 'param', 'ind']
 core_data_cols = ['id', 'iso', 'score']
-
-  # Check if tmp folder exists, otherwise create it
 
 
 def check_dir(d):
@@ -79,6 +79,16 @@ def list_years():
   for fn in os.listdir(src_core):
     years.append(os.path.splitext(fn)[0])
   return years
+
+
+def build_list(search,result,csv):
+  "Build a list from a CSV file, iterating over rows and storing the 'result' column when the 'search' matches."
+  df = pd.read_csv(csv)
+  l = []
+  for index, row in df.iterrows():
+    if row['type'] == search:
+      l.append(row[result])
+  return l
 
 
 def clean_tmp(full = False):
@@ -128,8 +138,10 @@ def main():
 
   # 1. Store the relevant core data for each year in one big CSV
 
-  # Check which years to process
+  # Build the different lists with things we have to loop over.
   years = list_years()
+  countries = build_list('country','iso',src_meta_aa)
+  states = build_list('state','iso',src_meta_aa)
 
   for year in years:
     fn = src_core + year + '.xlsx'
@@ -151,8 +163,6 @@ def main():
   # Merge the CSV files
   merge_csv(fn_core_full_csv)
   clean_tmp()
-
-
 
 
   # Fully remove the temp directory

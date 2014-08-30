@@ -1,0 +1,81 @@
+"iso","type","name","name_es","weight"
+"AR","country","Argentina","Argentina","on"
+"BS","country","Bahamas","Bahamas","on"
+"BD","country","Bangladesh","Banglades","off"
+"BB","country","Barbados","Barbados","on"
+"BZ","country","Belize","Belice","on"
+"BO","country","Bolivia","Bolivia","on"
+"BW","country","Botswana","Botsuana","off"
+"BR","country","Brazil","Brasil","on"
+"CM","country","Cameroon","Camerun","off"
+"CL","country","Chile","Chile","on"
+"CN","country","China","China","on"
+"CO","country","Colombia","Colombia","on"
+"CD","country","DR Congo","RD Congo","off"
+"CR","country","Costa Rica","Costa Rica","on"
+"CI","country","Côte d'Ivoire","Costa de Marfil","off"
+"DO","country","Dominican Republic","Republica Dominicana","on"
+"EC","country","Ecuador","Ecuador","on"
+"SV","country","El Salvador","El Salvador","on"
+"ET","country","Ethiopia","Etiopia","off"
+"GH","country","Ghana","Ghana","off"
+"GT","country","Guatemala","Guatemala","on"
+"GY","country","Guyana","Guyana","on"
+"HT","country","Haiti","Haiti","off"
+"HN","country","Honduras","Honduras","on"
+"IN","country","India","India","on"
+"ID","country","Indonesia","Indonesia","on"
+"JM","country","Jamaica","Jamaica","on"
+"KE","country","Kenya","Kenia","off"
+"LR","country","Liberia","Liberia","off"
+"MW","country","Malawi","Malaui","off"
+"MX","country","Mexico","Mexico","on"
+"MZ","country","Mozambique","Mozambique","off"
+"MM","country","Myanmar","Birmania","off"
+"NP","country","Nepal","Nepal","off"
+"NI","country","Nicaragua","Nicaragua","on"
+"NG","country","Nigeria","Nigeria","off"
+"PK","country","Pakistan","Pakistan","off"
+"PA","country","Panama","Panama","on"
+"PY","country","Paraguay","Paraguay","on"
+"PE","country","Peru","Peru","on"
+"RW","country","Rwanda","Ruanda","off"
+"SN","country","Senegal","Senegal","off"
+"SL","country","Sierra Leone","Sierra Leona","off"
+"ZA","country","South Africa","Sudafrica","on"
+"LK","country","Sri Lanka","Sri Lanka","on"
+"SR","country","Suriname","Surinam","on"
+"TJ","country","Tajikistan","Tayikistan","on"
+"TZ","country","Tanzania","Tanzania","off"
+"TT","country","Trinidad and Tobago","Trinidad y Tobago","on"
+"UG","country","Uganda","Uganda","off"
+"UY","country","Uruguay","Uruguay","on"
+"VE","country","Venezuela","Venezuela","on"
+"VN","country","Vietnam","Vietnam","on"
+"ZM","country","Zambia","Zambia","off"
+"ZW","country","Zimbabwe","Zimbabue","off"
+"CN-35","state","Fujian","Fujian",
+"CN-62","state","Gansu","Gansu",
+"CN-44","state","Guangdong","Guangdong",
+"CN-13","state","Hebei","Hebei",
+"CN-23","state","Heilongjiang","Heilongjiang",
+"CN-42","state","Hubei","Hubei",
+"CN-32","state","Jiangsu","Jiangsu",
+"CN-22","state","Jilin","Jilin",
+"CN-15","state","Nei Mongol","Nei Mongol",
+"CN-63","state","Qinghai","Qinghai",
+"CN-37","state","Shandong","Shandong",
+"CN-51","state","Sichuan","Sichuan",
+"CN-65","state","Xinjiang","Xinjiang",
+"CN-54","state","Xizang","Xizang",
+"CN-53","state","Yunnan","Yunnan",
+"IN-AP","state","Andhra Pradesh","Andhra Pradesh",
+"IN-GJ","state","Gujarat","Gujarat",
+"IN-MP","state","Madhya Pradesh","Madhya Pradesh",
+"IN-MH","state","Maharashtra","Maharashtra",
+"IN-KA","state","Karnataka","Karnataka",
+"IN-PB","state","Punjab","Punjab",
+"IN-RJ","state","Rajasthan","Rajasthan",
+"IN-TN","state","Tamil Nadu","Tamil Nadu",
+"IN-UP","state","Uttar Pradesh","Uttar Pradesh",
+"IN-WB","state","West Bengal","West Bengal",
