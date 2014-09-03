@@ -62,6 +62,9 @@ fn_core_full_csv = export_dir + 'cs-core.csv'
 core_data_sheets = ['score', 'param', 'ind']
 core_data_cols = ['id', 'iso', 'score']
 
+# Languages
+lang = ['en','es']
+
 
 def check_dir(d):
   "Check if a folder exists. If so, ask user to delete it first."
@@ -118,16 +121,6 @@ def build_col_index(fn,sheet):
   return cols_index
 
 
-def merge_csv(fn):
-  "Merge all CSV files in the temporary directory."
-  files = glob.glob(tmp_dir + "/*.csv")
-  df_merged = pd.DataFrame()  
-  for csv in files:
-    df = pd.read_csv(csv)
-    df_merged = df_merged.append(df, ignore_index=True)
-  df_merged.to_csv(fn,index=0)
-
-
 def main():
 
   # Check if tmp folder exists, otherwise create it
@@ -136,35 +129,44 @@ def main():
   else:
     os.makedirs(tmp_dir)
 
-  # 1. Store the relevant core data for each year in one big CSV
-
   # Build the different lists with things we have to loop over.
-  years = list_years()
   countries = build_list('country','iso',src_meta_aa)
   states = build_list('state','iso',src_meta_aa)
+  years = list_years()
+  current_yr = max(years)
+
+  # 1. Store the relevant core data for each year in one big CSV
+  first_yr = True
 
   for year in years:
+    # All core data files are named after the year of the edition
     fn = src_core + year + '.xlsx'
 
+    df_yr = pd.DataFrame()
     for sheet in core_data_sheets:
       
       # Build an index to parse only the relevant columns
       cols_index = build_col_index(fn,sheet)
 
-      # Read Excel (parsing only relevant cols) and store them as temp CSV
-      df = pd.read_excel(fn,sheet,parse_cols = cols_index)
+      # Read Excel (parsing only relevant cols)
+      df_sheet = pd.read_excel(fn,sheet,parse_cols = cols_index)
 
-      # Add column with year and a column with the type
-      df['year'] = year
-      df['type'] = sheet
+      # Append each sheet to a dataframe holding the data for that year
+      df_yr = df_yr.append(df_sheet, ignore_index=True)
 
-      df.to_csv(tmp_dir + sheet + year + '.csv', encoding='latin-1',index=0)
-      
-  # Merge the CSV files
-  merge_csv(fn_core_full_csv)
-  clean_tmp()
+    # Rename the column 'score' to year
+    df_yr.rename(columns={'score':year}, inplace=True)
 
+    if first_yr:
+      # If it's the first year, we initialize the full DataFrame
+      df_full = df_yr
+      first_yr = False
+    else:
+      # Every subsequent year will have to be merged into df_full
+      df_full = pd.merge(df_full,df_yr,on=['iso','id'])
 
+  df_full.to_csv(fn_core_full_csv,encoding='UTF-8',index=0)
+  
   # Fully remove the temp directory
   clean_tmp(True)
 
