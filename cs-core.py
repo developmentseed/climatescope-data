@@ -35,7 +35,8 @@
 #
 # TECH DEBT / TODO
 # - build_col_index(): reading in the whole excel sheet to just fetch the header
-# - merge_csv(): year stored as dtype float64
+# - check what's up with CN-65. Has strange character that needs to be sanitized
+# - add metadata about indicators to country and state csv's.
 
 
 import sys
@@ -55,7 +56,7 @@ src_core = src_dir + 'cs-core/'
 src_meta_aa = src_dir + 'meta/admin_areas.csv'
 src_meta_index = src_dir + 'meta/index.csv'
 
-# Export - filenames
+# Export - filenames / dirs
 fn_core_full_csv = export_dir + 'cs-core.csv'
 
 # Source structure
@@ -63,7 +64,7 @@ core_data_sheets = ['score', 'param', 'ind']
 core_data_cols = ['id', 'iso', 'score']
 
 # Languages
-lang = ['en','es']
+langs = ['en','es']
 
 
 def check_dir(d):
@@ -132,6 +133,7 @@ def main():
   # Build the different lists with things we have to loop over.
   countries = build_list('country','iso',src_meta_aa)
   states = build_list('state','iso',src_meta_aa)
+  admin_areas = countries + states
   years = list_years()
   current_yr = max(years)
 
@@ -167,6 +169,15 @@ def main():
 
   df_full.to_csv(fn_core_full_csv,encoding='UTF-8',index=0)
   
+  # 2. Generate the country + state CSVs
+  for aa in admin_areas:
+    df_aa = df_full[df_full['iso'] == aa]
+    for lang in langs:
+      fn = export_dir + lang + '/download/admin-areas/climatescope-' + aa + '.csv'
+      # Drop the ISO column
+      df_aa1 = df_aa.drop(['iso'],axis=1)
+      df_aa1.to_csv(fn,index=0)
+
   # Fully remove the temp directory
   clean_tmp(True)
 
