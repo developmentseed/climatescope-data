@@ -36,7 +36,7 @@
 # TECH DEBT / TODO
 # - build_col_index(): reading in the whole excel sheet to just fetch the header
 # - check what's up with CN-65. Has strange character that needs to be sanitized
-# - add metadata about indicators to country and state csv's.
+# - add metadata about indicators to CSV's (country, state, parameter, etc)
 
 
 import sys
@@ -57,7 +57,7 @@ src_meta_aa = src_dir + 'meta/admin_areas.csv'
 src_meta_index = src_dir + 'meta/index.csv'
 
 # Export - filenames / dirs
-fn_core_full_csv = export_dir + 'cs-core.csv'
+exp_core_csv = export_dir + 'cs-core.csv'
 
 # Source structure
 core_data_sheets = ['score', 'param', 'ind']
@@ -133,6 +133,8 @@ def main():
   # Build the different lists with things we have to loop over.
   countries = build_list('country','iso',src_meta_aa)
   states = build_list('state','iso',src_meta_aa)
+  regions = build_list('country','region',src_meta_aa)
+  index_param = build_list('param','id',src_meta_index)
   admin_areas = countries + states
   years = list_years()
   current_yr = max(years)
@@ -167,16 +169,27 @@ def main():
       # Every subsequent year will have to be merged into df_full
       df_full = pd.merge(df_full,df_yr,on=['iso','id'])
 
-  df_full.to_csv(fn_core_full_csv,encoding='UTF-8',index=0)
+  df_full.to_csv(exp_core_csv,encoding='UTF-8',index=0)
   
   # 2. Generate the country + state CSVs
   for aa in admin_areas:
     df_aa = df_full[df_full['iso'] == aa]
+    # Drop the ISO column
+    df_aa1 = df_aa.drop(['iso'],axis=1)
     for lang in langs:
       fn = export_dir + lang + '/download/admin-areas/climatescope-' + aa + '.csv'
-      # Drop the ISO column
-      df_aa1 = df_aa.drop(['iso'],axis=1)
       df_aa1.to_csv(fn,index=0)
+
+  # 3. Generate the region CSVs
+  
+  # 4. Generate the parameter CSVs
+  for param in index_param:
+    df_param = df_full[df_full['id'] == param]
+    # Drop the id column
+    df_param1 = df_param.drop(['id'],axis=1)
+    for lang in langs:
+      fn = export_dir + lang + '/download/parameters/climatescope-' + str(param) + '.csv'
+      df_param.to_csv(fn,encoding='UTF-8',index=0)
 
   # Fully remove the temp directory
   clean_tmp(True)
