@@ -23,20 +23,19 @@
 #
 # Preliminary structure:
 #
-# 1. sanity checks
+# 0. sanity checks
 #   - all sheets in xlsx
 #   - correct headers
 #   - year specified in filename
-# 2. store all years in one CSV
-# x. convert xlsx to csv
-# x. store countries in dict
-# x. generate csv's
-# x. generate json
+# 1. store all years in one CSV
+# 2. generate csv's
+# 3. generate json
 #
 # TECH DEBT / TODO
 # - build_col_index(): reading in the whole excel sheet to just fetch the header
-# - check what's up with CN-65. Has strange character that needs to be sanitized
-# - add metadata about indicators to CSV's (country, state, parameter, etc)
+# - check what's up with CN-65 & CD. Has strange character that needs to be sanitized
+# - add metadata about indicators and admin areas to CSV's (incl. i18n)
+# - automatically generate all the folders
 
 
 import sys
@@ -85,14 +84,14 @@ def list_years():
   return years
 
 
-def build_list(search,result,csv):
-  "Build a list from a CSV file, iterating over rows and storing the 'result' column when the 'search' matches."
+def build_set(search,search_col,result,csv):
+  "Build a set from a CSV file, iterating over rows and storing the 'result' column when the 'search' matches."
   df = pd.read_csv(csv)
-  l = []
+  s = set()
   for index, row in df.iterrows():
-    if row['type'] == search:
-      l.append(row[result])
-  return l
+    if row[search_col] == search:
+      s.add(row[result])
+  return s
 
 
 def clean_tmp(full = False):
@@ -130,12 +129,13 @@ def main():
   else:
     os.makedirs(tmp_dir)
 
-  # Build the different lists with things we have to loop over.
-  countries = build_list('country','iso',src_meta_aa)
-  states = build_list('state','iso',src_meta_aa)
-  regions = build_list('country','region',src_meta_aa)
-  index_param = build_list('param','id',src_meta_index)
-  admin_areas = countries + states
+  # Build the different sets with things we have to loop over.
+  regions = build_set('country','type','region',src_meta_aa)
+  countries = build_set('country','type','iso',src_meta_aa)
+  states = build_set('state','type','iso',src_meta_aa)
+  admin_areas = countries | states
+  index_score = build_set('score','type','id',src_meta_index)
+  index_param = build_set('param','type','id',src_meta_index)
   years = list_years()
   current_yr = max(years)
 
@@ -171,7 +171,29 @@ def main():
 
   df_full.to_csv(exp_core_csv,encoding='UTF-8',index=0)
   
-  # 2. Generate the country + state CSVs
+  # 2.1 Generate the main CSV
+
+  # Filter out only the score and parameters
+  df = df_full[df_full['id'].isin(index_param | index_score)]
+
+  # Pivot the dataframe and use only the data of the current edition
+  df_main = df.pivot(index='iso',columns='id',values=current_yr)
+  for lang in langs:
+    fn = export_dir + lang + '/download/climatescope-main.csv'
+    df_main.to_csv(fn,encoding='UTF-8')
+
+  # 2.2 Generate the region CSVs
+  for region in regions:
+    # Build a set with the admin areas for this region
+    aa_region = build_set(region,'region','iso',src_meta_aa)
+
+    # Filter the main dataframe of the current edition on region
+    df_region = df_main.loc[aa_region]
+    for lang in langs:
+      fn = export_dir + lang + '/download/regions/climatescope-' + region + '.csv'
+      df_region.to_csv(fn,encoding='UTF-8')
+
+  # 2.3 Generate the country + state CSVs
   for aa in admin_areas:
     df_aa = df_full[df_full['iso'] == aa]
     # Drop the ISO column
@@ -180,9 +202,7 @@ def main():
       fn = export_dir + lang + '/download/admin-areas/climatescope-' + aa + '.csv'
       df_aa1.to_csv(fn,index=0)
 
-  # 3. Generate the region CSVs
-  
-  # 4. Generate the parameter CSVs
+  # 2.4 Generate the parameter CSVs
   for param in index_param:
     df_param = df_full[df_full['id'] == param]
     # Drop the id column
@@ -192,7 +212,7 @@ def main():
       df_param.to_csv(fn,encoding='UTF-8',index=0)
 
   # Fully remove the temp directory
-  clean_tmp(True)
+  #clean_tmp(True)
 
 if __name__ == "__main__":
   main()
