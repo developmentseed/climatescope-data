@@ -1,81 +1,84 @@
-"iso","type","name:en","name:es","weight","region"
-"AR","country","Argentina","Argentina","on","lac"
-"BS","country","Bahamas","Bahamas","on","lac"
-"BD","country","Bangladesh","Banglades","off","asia"
-"BB","country","Barbados","Barbados","on","lac"
-"BZ","country","Belize","Belice","on","lac"
-"BO","country","Bolivia","Bolivia","on","lac"
-"BW","country","Botswana","Botsuana","off","africa"
-"BR","country","Brazil","Brasil","on","lac"
-"CM","country","Cameroon","Camerun","off","africa"
-"CL","country","Chile","Chile","on","lac"
-"CN","country","China","China","on","asia"
-"CO","country","Colombia","Colombia","on","lac"
-"CD","country","DR Congo","RD Congo","off","africa"
-"CR","country","Costa Rica","Costa Rica","on","lac"
-"CI","country","Côte d'Ivoire","Costa de Marfil","off","africa"
-"DO","country","Dominican Republic","Republica Dominicana","on","lac"
-"EC","country","Ecuador","Ecuador","on","lac"
-"SV","country","El Salvador","El Salvador","on","lac"
-"ET","country","Ethiopia","Etiopia","off","africa"
-"GH","country","Ghana","Ghana","off","africa"
-"GT","country","Guatemala","Guatemala","on","lac"
-"GY","country","Guyana","Guyana","on","lac"
-"HT","country","Haiti","Haiti","off","lac"
-"HN","country","Honduras","Honduras","on","lac"
-"IN","country","India","India","on","asia"
-"ID","country","Indonesia","Indonesia","on","asia"
-"JM","country","Jamaica","Jamaica","on","lac"
-"KE","country","Kenya","Kenia","off","africa"
-"LR","country","Liberia","Liberia","off","africa"
-"MW","country","Malawi","Malaui","off","africa"
-"MX","country","Mexico","Mexico","on","lac"
-"MZ","country","Mozambique","Mozambique","off","africa"
-"MM","country","Myanmar","Birmania","off","asia"
-"NP","country","Nepal","Nepal","off","asia"
-"NI","country","Nicaragua","Nicaragua","on","lac"
-"NG","country","Nigeria","Nigeria","off","africa"
-"PK","country","Pakistan","Pakistan","off","asia"
-"PA","country","Panama","Panama","on","lac"
-"PY","country","Paraguay","Paraguay","on","lac"
-"PE","country","Peru","Peru","on","lac"
-"RW","country","Rwanda","Ruanda","off","africa"
-"SN","country","Senegal","Senegal","off","africa"
-"SL","country","Sierra Leone","Sierra Leona","off","africa"
-"ZA","country","South africa","Sudafrica","on","africa"
-"LK","country","Sri Lanka","Sri Lanka","on","asia"
-"SR","country","Suriname","Surinam","on","lac"
-"TJ","country","Tajikistan","Tayikistan","on","asia"
-"TZ","country","Tanzania","Tanzania","off","africa"
-"TT","country","Trinidad and Tobago","Trinidad y Tobago","on","lac"
-"UG","country","Uganda","Uganda","off","africa"
-"UY","country","Uruguay","Uruguay","on","lac"
-"VE","country","Venezuela","Venezuela","on","lac"
-"VN","country","Vietnam","Vietnam","on","asia"
-"ZM","country","Zambia","Zambia","off","africa"
-"ZW","country","Zimbabwe","Zimbabue","off","africa"
-"CN-35","state","Fujian","Fujian","on","asia"
-"CN-62","state","Gansu","Gansu","on","asia"
-"CN-44","state","Guangdong","Guangdong","on","asia"
-"CN-13","state","Hebei","Hebei","on","asia"
-"CN-23","state","Heilongjiang","Heilongjiang","on","asia"
-"CN-42","state","Hubei","Hubei","on","asia"
-"CN-32","state","Jiangsu","Jiangsu","on","asia"
-"CN-22","state","Jilin","Jilin","on","asia"
-"CN-15","state","Nei Mongol","Nei Mongol","on","asia"
-"CN-63","state","Qinghai","Qinghai","on","asia"
-"CN-37","state","Shandong","Shandong","on","asia"
-"CN-51","state","Sichuan","Sichuan","on","asia"
-"CN-65","state","Xinjiang","Xinjiang","on","asia"
-"CN-54","state","Xizang","Xizang","on","asia"
-"CN-53","state","Yunnan","Yunnan","on","asia"
-"IN-AP","state","Andhra Pradesh","Andhra Pradesh","on","asia"
-"IN-GJ","state","Gujarat","Gujarat","on","asia"
-"IN-MP","state","Madhya Pradesh","Madhya Pradesh","on","asia"
-"IN-MH","state","Maharashtra","Maharashtra","on","asia"
-"IN-KA","state","Karnataka","Karnataka","on","asia"
-"IN-PB","state","Punjab","Punjab","on","asia"
-"IN-RJ","state","Rajasthan","Rajasthan","on","asia"
-"IN-TN","state","Tamil Nadu","Tamil Nadu","on","asia"
-"IN-UP","state","Uttar Pradesh","Uttar Pradesh","on","asia"
-"IN-WB","state","West Bengal","West Bengal","on","asia"
+"iso","type","name:en","name:es","weight","region","country"
+"afr","region","Africa","África",,,
+"asia","region","Asia","Asia",,,
+"lac","region","Latin America and the Caribbean","América Latina y el Caribe",,,
+"AR","country","Argentina","Argentina","on","lac",
+"BS","country","Bahamas","Bahamas","on","lac",
+"BD","country","Bangladesh","Banglades","off","asia",
+"BB","country","Barbados","Barbados","on","lac",
+"BZ","country","Belize","Belice","on","lac",
+"BO","country","Bolivia","Bolivia","on","lac",
+"BW","country","Botswana","Botsuana","off","afr",
+"BR","country","Brazil","Brasil","on","lac",
+"CM","country","Cameroon","Camerun","off","afr",
+"CL","country","Chile","Chile","on","lac",
+"CN","country","China","China","on","asia",
+"CO","country","Colombia","Colombia","on","lac",
+"CD","country","DR Congo","RD Congo","off","afr",
+"CR","country","Costa Rica","Costa Rica","on","lac",
+"CI","country","Côte d'Ivoire","Costa de Marfil","off","afr",
+"DO","country","Dominican Republic","Republica Dominicana","on","lac",
+"EC","country","Ecuador","Ecuador","on","lac",
+"SV","country","El Salvador","El Salvador","on","lac",
+"ET","country","Ethiopia","Etiopia","off","afr",
+"GH","country","Ghana","Ghana","off","afr",
+"GT","country","Guatemala","Guatemala","on","lac",
+"GY","country","Guyana","Guyana","on","lac",
+"HT","country","Haiti","Haiti","off","lac",
+"HN","country","Honduras","Honduras","on","lac",
+"IN","country","India","India","on","asia",
+"ID","country","Indonesia","Indonesia","on","asia",
+"JM","country","Jamaica","Jamaica","on","lac",
+"KE","country","Kenya","Kenia","off","afr",
+"LR","country","Liberia","Liberia","off","afr",
+"MW","country","Malawi","Malaui","off","afr",
+"MX","country","Mexico","Mexico","on","lac",
+"MZ","country","Mozambique","Mozambique","off","afr",
+"MM","country","Myanmar","Birmania","off","asia",
+"NP","country","Nepal","Nepal","off","asia",
+"NI","country","Nicaragua","Nicaragua","on","lac",
+"NG","country","Nigeria","Nigeria","off","afr",
+"PK","country","Pakistan","Pakistan","off","asia",
+"PA","country","Panama","Panama","on","lac",
+"PY","country","Paraguay","Paraguay","on","lac",
+"PE","country","Peru","Peru","on","lac",
+"RW","country","Rwanda","Ruanda","off","afr",
+"SN","country","Senegal","Senegal","off","afr",
+"SL","country","Sierra Leone","Sierra Leona","off","afr",
+"ZA","country","South africa","Sudafrica","on","afr",
+"LK","country","Sri Lanka","Sri Lanka","on","asia",
+"SR","country","Suriname","Surinam","on","lac",
+"TJ","country","Tajikistan","Tayikistan","on","asia",
+"TZ","country","Tanzania","Tanzania","off","afr",
+"TT","country","Trinidad and Tobago","Trinidad y Tobago","on","lac",
+"UG","country","Uganda","Uganda","off","afr",
+"UY","country","Uruguay","Uruguay","on","lac",
+"VE","country","Venezuela","Venezuela","on","lac",
+"VN","country","Vietnam","Vietnam","on","asia",
+"ZM","country","Zambia","Zambia","off","afr",
+"ZW","country","Zimbabwe","Zimbabue","off","afr",
+"CN-35","state","Fujian","Fujian","on","asia","cn"
+"CN-62","state","Gansu","Gansu","on","asia","cn"
+"CN-44","state","Guangdong","Guangdong","on","asia","cn"
+"CN-13","state","Hebei","Hebei","on","asia","cn"
+"CN-23","state","Heilongjiang","Heilongjiang","on","asia","cn"
+"CN-42","state","Hubei","Hubei","on","asia","cn"
+"CN-32","state","Jiangsu","Jiangsu","on","asia","cn"
+"CN-22","state","Jilin","Jilin","on","asia","cn"
+"CN-15","state","Nei Mongol","Nei Mongol","on","asia","cn"
+"CN-63","state","Qinghai","Qinghai","on","asia","cn"
+"CN-37","state","Shandong","Shandong","on","asia","cn"
+"CN-51","state","Sichuan","Sichuan","on","asia","cn"
+"CN-65","state","Xinjiang","Xinjiang","on","asia","cn"
+"CN-54","state","Xizang","Xizang","on","asia","cn"
+"CN-53","state","Yunnan","Yunnan","on","asia","cn"
+"IN-AP","state","Andhra Pradesh","Andhra Pradesh","on","asia","in"
+"IN-GJ","state","Gujarat","Gujarat","on","asia","in"
+"IN-MP","state","Madhya Pradesh","Madhya Pradesh","on","asia","in"
+"IN-MH","state","Maharashtra","Maharashtra","on","asia","in"
+"IN-KA","state","Karnataka","Karnataka","on","asia","in"
+"IN-PB","state","Punjab","Punjab","on","asia","in"
+"IN-RJ","state","Rajasthan","Rajasthan","on","asia","in"
+"IN-TN","state","Tamil Nadu","Tamil Nadu","on","asia","in"
+"IN-UP","state","Uttar Pradesh","Uttar Pradesh","on","asia","in"
+"IN-WB","state","West Bengal","West Bengal","on","asia","in"

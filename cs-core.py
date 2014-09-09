@@ -85,7 +85,7 @@ def list_years():
 
 
 def build_set(search,search_col,result,csv):
-  "Build a set from a CSV file, iterating over rows and storing the 'result' column when the 'search' matches."
+  "Build a set from a CSV file, iterating over rows and storing the value of 'result' column when the 'search' is found in the 'search_col'."
   df = pd.read_csv(csv)
   s = set()
   for index, row in df.iterrows():
@@ -130,7 +130,7 @@ def main():
     os.makedirs(tmp_dir)
 
   # Build the different sets with things we have to loop over.
-  regions = build_set('country','type','region',src_meta_aa)
+  regions = build_set('region','type','iso',src_meta_aa)
   countries = build_set('country','type','iso',src_meta_aa)
   states = build_set('state','type','iso',src_meta_aa)
   admin_areas = countries | states
@@ -212,7 +212,7 @@ def main():
       df_param.to_csv(fn,encoding='UTF-8',index=0)
 
   # Fully remove the temp directory
-  #clean_tmp(True)
+  clean_tmp(True)
 
 if __name__ == "__main__":
   main()
