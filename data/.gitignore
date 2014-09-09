@@ -1,0 +1,3 @@
+# Ignore the CSV and JSON files in the export dir
+*.csv
+*.json
