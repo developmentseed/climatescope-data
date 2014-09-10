@@ -243,8 +243,11 @@ def main():
         with open('./tilemill/project/' + tm_project + '/style.mss','w') as mss:
           mss.write(cartocss_template)
 
+        # For the file export, we want the iso code lowercase
+        iso_fn = iso.lower()
+
         # Build the export command
-        command = "node %sindex.js export %s %s%s.png --format=png --width=%s --height=%s --bbox=%s --files='tilemill'" % (tm_dir, tm_project, exp_dir, iso, width, height, new_bbox)     
+        command = "node %sindex.js export %s %s%s.png --format=png --width=%s --height=%s --bbox=%s --files='tilemill'" % (tm_dir, tm_project, exp_dir, iso_fn, width, height, new_bbox)
         # shlex makes sure that all arguments are correctly passed, most notably the bounding box
         args = shlex.split(command)
         subprocess.call(args)
