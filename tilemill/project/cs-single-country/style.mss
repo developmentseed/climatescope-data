@@ -1,0 +1,61 @@
+    Map { background-color: #f2f2f2; }
+    #countries {
+      ::outline { line-color: #fff; }
+      polygon-fill: #fff;
+    [ISO_A2 = "BD"] { polygon-fill: #E5E5E5; }
+[ISO_A2 = "DO"] { polygon-fill: #E5E5E5; }
+[ISO_A2 = "BB"] { polygon-fill: #E5E5E5; }
+[ISO_A2 = "BO"] { polygon-fill: #E5E5E5; }
+[ISO_A2 = "HT"] { polygon-fill: #E5E5E5; }
+[ISO_A2 = "JM"] { polygon-fill: #E5E5E5; }
+[ISO_A2 = "BW"] { polygon-fill: #E5E5E5; }
+[ISO_A2 = "HN"] { polygon-fill: #E5E5E5; }
+[ISO_A2 = "BR"] { polygon-fill: #E5E5E5; }
+[ISO_A2 = "BS"] { polygon-fill: #E5E5E5; }
+[ISO_A2 = "CR"] { polygon-fill: #E5E5E5; }
+[ISO_A2 = "VE"] { polygon-fill: #E5E5E5; }
+[ISO_A2 = "NI"] { polygon-fill: #E5E5E5; }
+[ISO_A2 = "RW"] { polygon-fill: #E5E5E5; }
+[ISO_A2 = "TZ"] { polygon-fill: #E5E5E5; }
+[ISO_A2 = "TT"] { polygon-fill: #E5E5E5; }
+[ISO_A2 = "PY"] { polygon-fill: #E5E5E5; }
+[ISO_A2 = "LK"] { polygon-fill: #E5E5E5; }
+[ISO_A2 = "NG"] { polygon-fill: #E5E5E5; }
+[ISO_A2 = "PA"] { polygon-fill: #E5E5E5; }
+[ISO_A2 = "LR"] { polygon-fill: #E5E5E5; }
+[ISO_A2 = "BZ"] { polygon-fill: #E5E5E5; }
+[ISO_A2 = "ZW"] { polygon-fill: #E5E5E5; }
+[ISO_A2 = "PE"] { polygon-fill: #E5E5E5; }
+[ISO_A2 = "NP"] { polygon-fill: #E5E5E5; }
+[ISO_A2 = "PK"] { polygon-fill: #E5E5E5; }
+[ISO_A2 = "ZM"] { polygon-fill: #E5E5E5; }
+[ISO_A2 = "CI"] { polygon-fill: #E5E5E5; }
+[ISO_A2 = "GT"] { polygon-fill: #E5E5E5; }
+[ISO_A2 = "CO"] { polygon-fill: #E5E5E5; }
+[ISO_A2 = "CN"] { polygon-fill: #E5E5E5; }
+[ISO_A2 = "CM"] { polygon-fill: #E5E5E5; }
+[ISO_A2 = "CL"] { polygon-fill: #E5E5E5; }
+[ISO_A2 = "ZA"] { polygon-fill: #E5E5E5; }
+[ISO_A2 = "EC"] { polygon-fill: #E5E5E5; }
+[ISO_A2 = "CD"] { polygon-fill: #E5E5E5; }
+[ISO_A2 = "AR"] { polygon-fill: #E5E5E5; }
+[ISO_A2 = "GY"] { polygon-fill: #E5E5E5; }
+[ISO_A2 = "IN"] { polygon-fill: #E5E5E5; }
+[ISO_A2 = "VN"] { polygon-fill: #E5E5E5; }
+[ISO_A2 = "ET"] { polygon-fill: #E5E5E5; }
+[ISO_A2 = "TJ"] { polygon-fill: #E5E5E5; }
+[ISO_A2 = "ID"] { polygon-fill: #E5E5E5; }
+[ISO_A2 = "GH"] { polygon-fill: #E5E5E5; }
+[ISO_A2 = "UY"] { polygon-fill: #E5E5E5; }
+[ISO_A2 = "KE"] { polygon-fill: #E5E5E5; }
+[ISO_A2 = "MM"] { polygon-fill: #E5E5E5; }
+[ISO_A2 = "SR"] { polygon-fill: #E5E5E5; }
+[ISO_A2 = "SV"] { polygon-fill: #E5E5E5; }
+[ISO_A2 = "MW"] { polygon-fill: #E5E5E5; }
+[ISO_A2 = "SN"] { polygon-fill: #E5E5E5; }
+[ISO_A2 = "SL"] { polygon-fill: #E5E5E5; }
+[ISO_A2 = "UG"] { polygon-fill: #E5E5E5; }
+[ISO_A2 = "MX"] { polygon-fill: #E5E5E5; }
+[ISO_A2 = "MZ"] { polygon-fill: #E5E5E5; }
+[ISO_A2 = "TJ"] { polygon-fill: #C3D500; }
+}
