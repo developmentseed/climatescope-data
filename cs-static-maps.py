@@ -2,20 +2,16 @@
 # -*- coding: UTF-8 -*-
 
 # This script takes the list of administrative areas provided in the meta file
-# and produces a static map in PNG format for each of them. The country 
+# and produces a static map in PNG format for each of them. 
 # It uses Tilemill to generate these images.
 #
-# The bulk of the calculations is done to re-calculate the bounding box. Based
-# on the original bounding box, we calculate a new width, making the country
-# fit the height of the image nicely.
-# Since the actual length between two longitudes is not the same on every 
-# latitude. It is necessary to calculate how many pixels the min and max
-# longitude take up.
+# Based on the original bounding box in degrees, we calculate a new bounding 
+# box for the desired height and width. By default, it scales the polygon and
+# centers it. It is also possible to specify offsets.
 #
-# INPUT
-#
-#
-# OUTPUT
+# The bulk of the calculations is done to re-calculate the bounding box 
+# properly, taking into account the different distances between the longitudes
+# at the min and max latitude.
 #
 #
 # USAGE
