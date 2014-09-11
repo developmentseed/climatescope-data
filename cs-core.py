@@ -42,6 +42,7 @@ import sys
 import os
 import os.path
 import shutil
+import json
 import pandas as pd
 import glob
 
@@ -75,12 +76,17 @@ def check_dir(d):
     return False
 
 
-def list_years():
-  "Build a list with the years there is data for."
+def get_years(current=True):
+  "Return a set with the years there is core data for. If current is set to false, only the previous years are returned."
    # Check which years are available
-  years = []
+  years = set()
   for fn in os.listdir(src_core):
-    years.append(os.path.splitext(fn)[0])
+    years.add(os.path.splitext(fn)[0])
+  
+  if not current:
+    current_yr = max(years)
+    years.remove(current_yr)
+
   return years
 
 
@@ -121,8 +127,30 @@ def build_col_index(fn,sheet):
   return cols_index
 
 
-def main():
+def aa_main_json(aa, df_data, df_meta_aa, df_meta_index, params,lang):
+  "Build the dict for a particular administrative area to be used in the main JSON. 'aa' = iso code, 'df_data' = the dataframe containing the data, 'df_meta_aa' = dataframe with metadata for country, 'df_meta_index' = meta for index, 'params' = the list with parameters to get data for, 'lang' = the language being looped over."
+  aa_data = {}
 
+  # Load metadata for the admin areas
+  aa_data['iso'] = aa.lower()
+  aa_data['name'] = df_meta_aa.ix[aa,'name:' + lang]
+  aa_data['score'] = df_data.ix[aa,0]
+
+  # The parameters are stored as a list with dicts
+  param_list = []
+  for param in params:
+    param_data = {}
+    param_data['id'] = param
+    param_data['value'] = df_data.ix[aa,param]
+
+    param_list.append(param_data)
+
+  aa_data['parameters'] = param_list
+
+  return aa_data
+
+
+def main():
   # Check if tmp folder exists, otherwise create it
   if check_dir(tmp_dir) == True:
     sys.exit(0)
@@ -136,7 +164,7 @@ def main():
   admin_areas = countries | states
   index_score = build_set('score','type','id',src_meta_index)
   index_param = build_set('param','type','id',src_meta_index)
-  years = list_years()
+  years = get_years()
   current_yr = max(years)
 
   # 1. Store the relevant core data for each year in one big CSV
@@ -158,6 +186,12 @@ def main():
       # Append each sheet to a dataframe holding the data for that year
       df_yr = df_yr.append(df_sheet, ignore_index=True)
 
+    # Add overall rank + regional rank
+    # df_yr_score = df_yr[df_yr['id'].isin(index_score)]
+    # print df_yr_score.rank()
+    # print df_yr.head(5)
+    # print df_yr_score.head(5)
+
     # Rename the column 'score' to year
     df_yr.rename(columns={'score':year}, inplace=True)
 
@@ -170,17 +204,54 @@ def main():
       df_full = pd.merge(df_full,df_yr,on=['iso','id'])
 
   df_full.to_csv(exp_core_csv,encoding='UTF-8',index=0)
+
+  # Read in the files with meta-data
+  df_meta_aa = pd.read_csv(src_meta_aa,index_col='iso')
+  df_meta_index = pd.read_csv(src_meta_index,index_col='id')
+
+  # 2.1 Generate the main CSV and JSON
+
+  # The main data only contains the scores and parameters for the current edition
+  df_main = df_full[df_full['id'].isin(index_param | index_score)].drop(get_years(current=False),axis=1)
   
-  # 2.1 Generate the main CSV
+  # Pivot the dataframe
+  df_main = df_main.pivot(index='iso',columns='id',values='2015')
+  
+  # Generate the main JSON
+  for lang in langs:
 
-  # Filter out only the score and parameters
-  df = df_full[df_full['id'].isin(index_param | index_score)]
+    # The JSON will contain a list with dicts
+    json_data = []
 
-  # Pivot the dataframe and use only the data of the current edition
-  df_main = df.pivot(index='iso',columns='id',values=current_yr)
+    # Loop over the countries
+    for country in countries:
+      country_data = aa_main_json(country, df_main, df_meta_aa, df_meta_index, index_param,lang)
+
+      # Check if there are any states or provinces for this country
+      country_states = build_set(country,'country','iso',src_meta_aa)
+
+      # Loop over the country states
+      if country_states:
+        state_list = []
+        for state in country_states:
+          state_data = aa_main_json(state, df_main, df_meta_aa, df_meta_index, index_param,lang)
+          state_list.append(state_data)
+
+        country_data['states'] = state_list
+
+      json_data.append(country_data)
+
+    # Write the list to a JSON file
+    with open(lang + '-test.json','w') as ofile:
+      json.dump(json_data, ofile)
+
+  sys.exit(0)
+
+  # Generate the CSV  
   for lang in langs:
     fn = export_dir + lang + '/download/climatescope-main.csv'
     df_main.to_csv(fn,encoding='UTF-8')
+
 
   # 2.2 Generate the region CSVs
   for region in regions:
