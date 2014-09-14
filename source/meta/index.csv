@@ -1,9 +1,9 @@
-"id","type","name:en","name:es","group:en","group:es","weight","off"
+"id","type","name:en","name:es","group:en","group:es","weight","grid"
 0,"score","Score","Puntaje",,,,
-1,"param","Enabling framework","Marco Propicio",,,,
-2,"param","Financing and Investiments","Financiamiento y Inversión",,,,
-3,"param","Value chains","Cadenas de valor",,,,
-4,"param","GHG management","Gestión de GEI",,,,
+1,"param","Enabling framework","Marco Propicio",,,0.4,
+2,"param","Financing and Investments","Financiamiento y Inversión",,,0.3,
+3,"param","Value chains","Cadenas de valor",,,0.15,
+4,"param","GHG management","Gestión de GEI",,,0.15,
 " 1.01 ","ind","Clean energy policies","Es...Clean energy policies","Policy & Regulation","Policy & Regulation",,"both"
 " 1.02 ","ind","Power sector structure","Es...Power sector structure","Policy & Regulation","Policy & Regulation",,"both"
 " 1.03 ","ind","Distributed energy regulatory framework","Es...Distributed energy regulatory framework","Policy & Regulation","Policy & Regulation",,"off"
