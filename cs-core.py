@@ -127,14 +127,34 @@ def build_col_index(fn,sheet):
   return cols_index
 
 
-def aa_main_json(aa, df_data, df_meta_aa, df_meta_index, params,lang):
+def build_main_json_aa(aa, df_data, df_meta_aa, df_meta_index, params,lang):
   "Build the dict for a particular administrative area to be used in the main JSON. 'aa' = iso code, 'df_data' = the dataframe containing the data, 'df_meta_aa' = dataframe with metadata for country, 'df_meta_index' = meta for index, 'params' = the list with parameters to get data for, 'lang' = the language being looped over."
   aa_data = {}
 
   # Load metadata for the admin areas
   aa_data['iso'] = aa.lower()
   aa_data['name'] = df_meta_aa.ix[aa,'name:' + lang]
+  aa_data['grid'] = df_meta_aa.ix[aa,'grid']
   aa_data['score'] = df_data.ix[aa,0]
+  
+  # Add region for the countries
+  if df_meta_aa.ix[aa,'type'] == 'country':
+    aa_region = {}
+    region = df_meta_aa.ix[aa,'region']
+    # Add the id of the region
+    aa_region['id'] = region
+    # Fetch the name of the region from the meta file
+    aa_region['name'] = df_meta_aa.ix[region,'name:' + lang]
+    aa_data['region'] = aa_region
+
+  # Not every type of admin area has all the rankings
+  if pd.notnull(df_data.ix[aa,'or']):
+    aa_data['overall_ranking'] = df_data.ix[aa,'or']
+  if pd.notnull(df_data.ix[aa,'rr']):
+    aa_data['regional_ranking'] = df_data.ix[aa,'rr']
+  if pd.notnull(df_data.ix[aa,'sr']):
+    aa_data['state_ranking'] = df_data.ix[aa,'sr']
+
 
   # The parameters are stored as a list with dicts
   param_list = []
@@ -142,12 +162,30 @@ def aa_main_json(aa, df_data, df_meta_aa, df_meta_index, params,lang):
     param_data = {}
     param_data['id'] = param
     param_data['value'] = df_data.ix[aa,param]
+    param_data['name'] = df_meta_index.ix[param,'name:' + lang]
+    param_data['weight'] = df_meta_index.ix[param,'weight']
 
     param_list.append(param_data)
 
   aa_data['parameters'] = param_list
 
   return aa_data
+
+
+def get_rank(aa,vid,df,name):
+  "Build a dataframe that ranks the score of a list of administrative areas for a particular variable. 'aa' = list of iso codes, 'id' = id of variable (score/param/indicator) to rank, 'df' = the dataframe to consume (multi-index on 'iso' and 'id'), 'name' = the name of the rank (eg. 'or')."
+
+  # Slice the DF to only contain the administrative areas and the score/parameter/indicator ranking on. Then calculate the rank.
+  df_rank = df.loc[(aa,vid),:].rank(ascending=False)
+
+  # Reset the index, so we can override the parameter ID to the name
+  df_rank.reset_index(inplace=True)
+  df_rank['id'] = name
+  
+  # Re-index it again.
+  df_rank.set_index(['iso','id'],inplace=True)
+
+  return df_rank
 
 
 def main():
@@ -181,16 +219,63 @@ def main():
       cols_index = build_col_index(fn,sheet)
 
       # Read Excel (parsing only relevant cols)
-      df_sheet = pd.read_excel(fn,sheet,parse_cols = cols_index)
+      df_sheet = pd.read_excel(fn,sheet,parse_cols=cols_index)
 
       # Append each sheet to a dataframe holding the data for that year
-      df_yr = df_yr.append(df_sheet, ignore_index=True)
+      df_yr = df_yr.append(df_sheet)
 
-    # Add overall rank + regional rank
-    # df_yr_score = df_yr[df_yr['id'].isin(index_score)]
-    # print df_yr_score.rank()
-    # print df_yr.head(5)
-    # print df_yr_score.head(5)
+    # Set the index of the DF to the ISO code and ID of the indicator
+    df_yr.set_index(['iso','id'],inplace=True)
+    # Make sure the index is sorted so the slicing works well
+    df_yr.sortlevel(inplace=True)
+    
+
+    # Calculate the Overall Rank (or)
+
+    # To be able to use multi-index slicing, the countries set is converted to a list.
+    cl = list(countries)
+
+    # Get the rank for the score
+    df_yr_or = get_rank(cl,0,df_yr,'or')
+
+    # Append it to the DF with the yearly data
+    df_yr = df_yr.append(df_yr_or)
+    df_yr.sortlevel(inplace=True)
+  
+
+    # Calculate the Regional Rank (rr)
+    for region in regions:
+      # Build a set with the admin areas for this region
+      aa_region = build_set(region,'region','iso',src_meta_aa)
+      # Filter out the states and provinces, leaving only the countries
+      c_region = aa_region.difference(states)
+      # Turn the set into a list to be able to build the rank
+      cl = list(c_region)
+
+      # Build the regional rank
+      df_rr = get_rank(cl,0,df_yr,'rr')
+
+      # Append it to the DF with the yearly data
+      df_yr = df_yr.append(df_rr)
+      df_yr.sortlevel(inplace=True)
+
+
+    # Add the in-country rank to the states/provinces
+    for country in countries:
+      # Check if there are any states or provinces for this country
+      country_states = build_set(country,'country','iso',src_meta_aa)
+
+      if country_states:
+        # Turn the set into a list
+        sl = list(country_states)
+
+        # Build the state rank
+        df_sr = get_rank(sl,0,df_yr,'sr')
+
+        # Append it to the DF with the yearly data
+        df_yr = df_yr.append(df_sr)
+        df_yr.sortlevel(inplace=True)
+
 
     # Rename the column 'score' to year
     df_yr.rename(columns={'score':year}, inplace=True)
@@ -201,22 +286,30 @@ def main():
       first_yr = False
     else:
       # Every subsequent year will have to be merged into df_full
-      df_full = pd.merge(df_full,df_yr,on=['iso','id'])
+      df_full = pd.merge(df_full,df_yr,left_index=True,right_index=True)
+      
+  df_full.to_csv(exp_core_csv,encoding='UTF-8')
 
-  df_full.to_csv(exp_core_csv,encoding='UTF-8',index=0)
 
   # Read in the files with meta-data
   df_meta_aa = pd.read_csv(src_meta_aa,index_col='iso')
   df_meta_index = pd.read_csv(src_meta_index,index_col='id')
 
+
   # 2.1 Generate the main CSV and JSON
 
-  # The main data only contains the scores and parameters for the current edition
-  df_main = df_full[df_full['id'].isin(index_param | index_score)].drop(get_years(current=False),axis=1)
+  # Only interested in the score, the parameters and the rankings
+  rankings = set(['or','rr','sr'])
+  spr = list(index_param | index_score | rankings)
+  # Slice the DF to only contain the score and parameters for the current year.
+  df_main = df_full.loc[(slice(None),spr),current_yr]
   
+  # Reset the index, so we can pivot the df
+  df_main = df_main.reset_index()
   # Pivot the dataframe
   df_main = df_main.pivot(index='iso',columns='id',values='2015')
-  
+
+
   # Generate the main JSON
   for lang in langs:
 
@@ -225,7 +318,7 @@ def main():
 
     # Loop over the countries
     for country in countries:
-      country_data = aa_main_json(country, df_main, df_meta_aa, df_meta_index, index_param,lang)
+      country_data = build_main_json_aa(country, df_main, df_meta_aa, df_meta_index, index_param,lang)
 
       # Check if there are any states or provinces for this country
       country_states = build_set(country,'country','iso',src_meta_aa)
@@ -234,7 +327,7 @@ def main():
       if country_states:
         state_list = []
         for state in country_states:
-          state_data = aa_main_json(state, df_main, df_meta_aa, df_meta_index, index_param,lang)
+          state_data = build_main_json_aa(state, df_main, df_meta_aa, df_meta_index, index_param,lang)
           state_list.append(state_data)
 
         country_data['states'] = state_list
@@ -245,9 +338,7 @@ def main():
     with open(lang + '-test.json','w') as ofile:
       json.dump(json_data, ofile)
 
-  sys.exit(0)
-
-  # Generate the CSV  
+  # Generate the CSV
   for lang in langs:
     fn = export_dir + lang + '/download/climatescope-main.csv'
     df_main.to_csv(fn,encoding='UTF-8')
@@ -257,30 +348,30 @@ def main():
   for region in regions:
     # Build a set with the admin areas for this region
     aa_region = build_set(region,'region','iso',src_meta_aa)
-
+    aal = list(aa_region)
+    
     # Filter the main dataframe of the current edition on region
-    df_region = df_main.loc[aa_region]
+    df_region = df_main.loc[aal,:]
     for lang in langs:
       fn = export_dir + lang + '/download/regions/climatescope-' + region + '.csv'
       df_region.to_csv(fn,encoding='UTF-8')
 
+
   # 2.3 Generate the country + state CSVs
   for aa in admin_areas:
-    df_aa = df_full[df_full['iso'] == aa]
-    # Drop the ISO column
-    df_aa1 = df_aa.drop(['iso'],axis=1)
+    df_aa = df_full.loc[aa,:]
     for lang in langs:
       fn = export_dir + lang + '/download/admin-areas/climatescope-' + aa + '.csv'
-      df_aa1.to_csv(fn,index=0)
+      df_aa.to_csv(fn)
+
 
   # 2.4 Generate the parameter CSVs
   for param in index_param:
-    df_param = df_full[df_full['id'] == param]
-    # Drop the id column
-    df_param1 = df_param.drop(['id'],axis=1)
+    df_param = df_full.loc[(slice(None),param),:]
     for lang in langs:
       fn = export_dir + lang + '/download/parameters/climatescope-' + str(param) + '.csv'
-      df_param.to_csv(fn,encoding='UTF-8',index=0)
+      df_param.to_csv(fn,encoding='UTF-8')
+
 
   # Fully remove the temp directory
   clean_tmp(True)
