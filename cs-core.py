@@ -125,16 +125,7 @@ def build_main_json_aa(aa, df_data, df_meta_aa, df_meta_index, params,lang):
   aa_data['name'] = df_meta_aa.ix[aa,'name:' + lang]
   aa_data['grid'] = df_meta_aa.ix[aa,'grid']
   aa_data['score'] = round(df_data.ix[aa,0],2)
-  
-  # Add region for the countries
-  if df_meta_aa.ix[aa,'type'] == 'country':
-    aa_region = {}
-    region = df_meta_aa.ix[aa,'region']
-    # Add the id of the region
-    aa_region['id'] = region
-    # Fetch the name of the region from the meta file
-    aa_region['name'] = df_meta_aa.ix[region,'name:' + lang]
-    aa_data['region'] = aa_region
+
 
   # Not every type of admin area has all the rankings
   if pd.notnull(df_data.ix[aa,'or']):
