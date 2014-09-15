@@ -19,22 +19,9 @@
 # Example: python cs-core.py
 #
 #
-#
-#
-# Preliminary structure:
-#
-# 0. sanity checks
-#   - all sheets in xlsx
-#   - correct headers
-#   - year specified in filename
-# 1. store all years in one CSV
-# 2. generate csv's
-# 3. generate json
-#
 # TECH DEBT / TODO
 # - build_col_index(): reading in the whole excel sheet to just fetch the header
 # - check what's up with CN-65 & CD. Has strange character that needs to be sanitized
-# - add metadata about indicators and admin areas to CSV's (incl. i18n)
 # - automatically generate all the folders
 
 
@@ -43,8 +30,11 @@ import os
 import os.path
 import shutil
 import json
+from decimal import *
+import numpy as np
 import pandas as pd
 import glob
+
 
 # Directory structure
 src_dir = 'source/'
@@ -135,7 +125,7 @@ def build_main_json_aa(aa, df_data, df_meta_aa, df_meta_index, params,lang):
   aa_data['iso'] = aa.lower()
   aa_data['name'] = df_meta_aa.ix[aa,'name:' + lang]
   aa_data['grid'] = df_meta_aa.ix[aa,'grid']
-  aa_data['score'] = df_data.ix[aa,0]
+  aa_data['score'] = round(df_data.ix[aa,0],2)
   
   # Add region for the countries
   if df_meta_aa.ix[aa,'type'] == 'country':
@@ -149,22 +139,21 @@ def build_main_json_aa(aa, df_data, df_meta_aa, df_meta_index, params,lang):
 
   # Not every type of admin area has all the rankings
   if pd.notnull(df_data.ix[aa,'or']):
-    aa_data['overall_ranking'] = df_data.ix[aa,'or']
+    aa_data['overall_ranking'] = int(df_data.ix[aa,'or'])
   if pd.notnull(df_data.ix[aa,'rr']):
-    aa_data['regional_ranking'] = df_data.ix[aa,'rr']
+    aa_data['regional_ranking'] = int(df_data.ix[aa,'rr'])
   if pd.notnull(df_data.ix[aa,'sr']):
-    aa_data['state_ranking'] = df_data.ix[aa,'sr']
+    aa_data['state_ranking'] = int(df_data.ix[aa,'sr'])
 
 
   # The parameters are stored as a list with dicts
   param_list = []
   for param in params:
     param_data = {}
-    param_data['id'] = param
-    param_data['value'] = df_data.ix[aa,param]
+    param_data['id'] = int(param)
+    param_data['value'] = round(df_data.ix[aa,param],2)
     param_data['name'] = df_meta_index.ix[param,'name:' + lang]
-    param_data['weight'] = df_meta_index.ix[param,'weight']
-
+    param_data['weight'] = round(df_meta_index.ix[param,'weight'],2)
     param_list.append(param_data)
 
   aa_data['parameters'] = param_list
@@ -287,7 +276,9 @@ def main():
     else:
       # Every subsequent year will have to be merged into df_full
       df_full = pd.merge(df_full,df_yr,left_index=True,right_index=True)
-      
+      # Make sure the floats are rounded to 2 decimals
+      df_full = np.round(df_full,2)
+
   df_full.to_csv(exp_core_csv,encoding='UTF-8')
 
 
@@ -309,10 +300,9 @@ def main():
   # Pivot the dataframe
   df_main = df_main.pivot(index='iso',columns='id',values='2015')
 
-
-  # Generate the main JSON
   for lang in langs:
 
+    # Generate the main JSON
     # The JSON will contain a list with dicts
     json_data = []
 
@@ -324,27 +314,27 @@ def main():
       country_states = build_set(country,'country','iso',src_meta_aa)
 
       # Loop over the country states
+      state_list = []
       if country_states:
-        state_list = []
         for state in country_states:
           state_data = build_main_json_aa(state, df_main, df_meta_aa, df_meta_index, index_param,lang)
           state_list.append(state_data)
 
-        country_data['states'] = state_list
+      # Even when there are no states, an empty list has to be printed
+      country_data['states'] = state_list
 
       json_data.append(country_data)
 
     # Write the list to a JSON file
-    with open(lang + '-test.json','w') as ofile:
+    with open('data/' + lang + '/api/countries.json','w') as ofile:
       json.dump(json_data, ofile)
 
-  # Generate the CSV
-  for lang in langs:
+    # Generate the CSV
     fn = export_dir + lang + '/download/climatescope-main.csv'
     df_main.to_csv(fn,encoding='UTF-8')
+  sys.exit(0)
 
-
-  # 2.2 Generate the region CSVs
+  # 2.2 Generate the regional CSV and JSON
   for region in regions:
     # Build a set with the admin areas for this region
     aa_region = build_set(region,'region','iso',src_meta_aa)
@@ -352,6 +342,10 @@ def main():
     
     # Filter the main dataframe of the current edition on region
     df_region = df_main.loc[aal,:]
+
+
+
+
     for lang in langs:
       fn = export_dir + lang + '/download/regions/climatescope-' + region + '.csv'
       df_region.to_csv(fn,encoding='UTF-8')
