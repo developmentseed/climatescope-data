@@ -30,7 +30,6 @@ import os
 import os.path
 import shutil
 import json
-from decimal import *
 import numpy as np
 import pandas as pd
 import glob
