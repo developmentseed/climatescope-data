@@ -116,7 +116,36 @@ def build_col_index(fn,sheet):
   return cols_index
 
 
-def build_main_json_aa(aa, df_data, df_meta_aa, df_meta_index, params,lang):
+def build_main_json(lang,cl,df):
+  "Build the main JSON. 'lang' = current language, 'cl' = list with countries, 'df' = dataframe to get data from."
+
+  json_data = []
+  
+  # Build a set with available parameters
+  index_param = build_set('param','type','id',src_meta_index)
+
+  # Loop over the countries list
+  for country in cl:
+    country_data = build_main_json_aa(country, df, index_param,lang)
+
+    # Check if there are any states or provinces for this country
+    country_states = build_set(country,'country','iso',src_meta_aa)
+
+    # Loop over the country states
+    state_list = []
+    if country_states:
+      for state in country_states:
+        state_data = build_main_json_aa(state, df, index_param,lang)
+        state_list.append(state_data)
+
+    # Even when there are no states, an empty list has to be printed
+    country_data['states'] = state_list
+
+    json_data.append(country_data)
+
+  return json_data
+
+def build_main_json_aa(aa, df_data, params,lang):
   "Build the dict for a particular administrative area to be used in the main JSON. 'aa' = iso code, 'df_data' = the dataframe containing the data, 'df_meta_aa' = dataframe with metadata for country, 'df_meta_index' = meta for index, 'params' = the list with parameters to get data for, 'lang' = the language being looped over."
   aa_data = {}
 
@@ -183,6 +212,13 @@ def main():
   index_param = build_set('param','type','id',src_meta_index)
   years = get_years()
   current_yr = max(years)
+
+  # Read in the files with meta-data and set the scope to global
+  global df_meta_aa
+  df_meta_aa = pd.read_csv(src_meta_aa,index_col='iso')
+  global df_meta_index
+  df_meta_index = pd.read_csv(src_meta_index,index_col='id')
+
 
   # 1. Store the relevant core data for each year in one big CSV
   first_yr = True
@@ -272,11 +308,6 @@ def main():
   df_full.to_csv(exp_core_csv,encoding='UTF-8')
 
 
-  # Read in the files with meta-data
-  df_meta_aa = pd.read_csv(src_meta_aa,index_col='iso')
-  df_meta_index = pd.read_csv(src_meta_index,index_col='id')
-
-
   # 2.1 Generate the main CSV and JSON
 
   # Only interested in the score, the parameters and the rankings
@@ -294,26 +325,7 @@ def main():
 
     # Generate the main JSON
     # The JSON will contain a list with dicts
-    json_data = []
-
-    # Loop over the countries
-    for country in countries:
-      country_data = build_main_json_aa(country, df_main, df_meta_aa, df_meta_index, index_param,lang)
-
-      # Check if there are any states or provinces for this country
-      country_states = build_set(country,'country','iso',src_meta_aa)
-
-      # Loop over the country states
-      state_list = []
-      if country_states:
-        for state in country_states:
-          state_data = build_main_json_aa(state, df_main, df_meta_aa, df_meta_index, index_param,lang)
-          state_list.append(state_data)
-
-      # Even when there are no states, an empty list has to be printed
-      country_data['states'] = state_list
-
-      json_data.append(country_data)
+    json_data = build_main_json(lang,countries,df_main)
 
     # Write the list to a JSON file
     with open('data/' + lang + '/api/countries.json','w') as ofile:
@@ -322,21 +334,35 @@ def main():
     # Generate the CSV
     fn = export_dir + lang + '/download/climatescope-main.csv'
     df_main.to_csv(fn,encoding='UTF-8')
-  sys.exit(0)
+  
 
   # 2.2 Generate the regional CSV and JSON
   for region in regions:
     # Build a set with the admin areas for this region
     aa_region = build_set(region,'region','iso',src_meta_aa)
     aal = list(aa_region)
+    # Remove states from this set, leaving countries
+    c_region = aa_region.difference(states)
     
     # Filter the main dataframe of the current edition on region
     df_region = df_main.loc[aal,:]
 
-
-
-
     for lang in langs:
+
+      # Generate the regional JSONs
+      # The JSON contains a dict
+      json_data = {}
+
+      # Add the id, the name of the region and the country list
+      json_data['id'] = region
+      json_data['name'] = df_meta_aa.ix[region,'name:' + lang]
+      json_data['countries'] = build_main_json(lang,c_region,df_region)
+
+      # Write the list to a JSON file
+      with open('data/' + lang + '/api/regions/' + region + '.json','w') as ofile:
+        json.dump(json_data, ofile)
+
+      # Generate the CSV files    
       fn = export_dir + lang + '/download/regions/climatescope-' + region + '.csv'
       df_region.to_csv(fn,encoding='UTF-8')
 
