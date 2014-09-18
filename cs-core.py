@@ -198,14 +198,12 @@ def build_json_aa(aa,df_data,lang,detailed=False,historic=False,single_p=None):
     aa_data['score'] = round(df_aa.loc[(0),current_yr],5)
 
 
+  rankings = { 9001: 'overall_ranking', 9002: 'regional_ranking', 9003: 'state_ranking' }
   # Not every type of admin area has all the rankings
-  # Check if it exists in the index
-  if 'or' in df_aa.index and pd.notnull(df_aa.ix[(9901),current_yr]):
-    aa_data['overall_ranking'] = int(df_aa.loc[(9901),current_yr])
-  if 'rr' in df_aa.index and pd.notnull(df_aa.ix[(9902),current_yr]):
-    aa_data['regional_ranking'] = int(df_aa.loc[(9902),current_yr])
-  if 'sr' in df_aa.index and pd.notnull(df_aa.ix[(9903),current_yr]):
-    aa_data['state_ranking'] = int(df_aa.loc[(9903),current_yr])
+  # Check if it exists in the index and if so, add it.
+  for key, value in rankings.iteritems():
+    if key in df_aa.index and pd.notnull(df_aa.ix[(key),current_yr]):
+      aa_data[value] = int(df_aa.loc[(key),current_yr])
 
 
   # In case all parameters are processed (single_p == None), the data is 
