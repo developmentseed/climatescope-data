@@ -200,26 +200,25 @@ def build_json_aa(aa,df_data,lang,detailed=False,historic=False,single_p=None):
 
   # Not every type of admin area has all the rankings
   # Check if it exists in the index
-  if 'or' in df_aa.index and pd.notnull(df_aa.ix[('or'),current_yr]):
-    aa_data['overall_ranking'] = int(df_aa.loc[('or'),current_yr])
-  if 'rr' in df_aa.index and pd.notnull(df_aa.ix[('rr'),current_yr]):
-    aa_data['regional_ranking'] = int(df_aa.loc[('rr'),current_yr])
-  if 'sr' in df_aa.index and pd.notnull(df_aa.ix[('sr'),current_yr]):
-    aa_data['state_ranking'] = int(df_aa.loc[('sr'),current_yr])
+  if 'or' in df_aa.index and pd.notnull(df_aa.ix[(9901),current_yr]):
+    aa_data['overall_ranking'] = int(df_aa.loc[(9901),current_yr])
+  if 'rr' in df_aa.index and pd.notnull(df_aa.ix[(9902),current_yr]):
+    aa_data['regional_ranking'] = int(df_aa.loc[(9902),current_yr])
+  if 'sr' in df_aa.index and pd.notnull(df_aa.ix[(9903),current_yr]):
+    aa_data['state_ranking'] = int(df_aa.loc[(9903),current_yr])
 
 
-  # The parameters are stored as a list with dicts. By default, it returns the
-  # value for the current edition.
-  # If detailed is set to True, then data for all parameters and indicators 
-  # are returned.
-  # If a single_p is defined, data about one parameter is returned. If not,
-  # then all parameters are processed.
+  # In case all parameters are processed (single_p == None), the data is 
+  # returned in a parameters list.
+  # If single_p is defined, its data is added straight to the aa_data dict
 
   # Check if all parameters should be processed (default), or one in particular
   if single_p == None:
     params = index_param
   else:
-    params = single_p
+    params = set([single_p])
+  print params
+  print type(params)
 
   param_list = []
   for param in params:
@@ -324,6 +323,22 @@ def build_json_aa(aa,df_data,lang,detailed=False,historic=False,single_p=None):
   return aa_data
 
 
+def pivot_df(df,ind,col,val):
+  """Pivot a dataframe
+
+  Parameters
+  ----------
+  df        : DataFrame
+              A DataFrame that is indexed on iso and id
+  """
+  # Reset the index, so we can pivot the df
+  df = df.reset_index()
+  # Pivot the dataframe
+  df = df.pivot(index=ind,columns=col,values=val)
+
+  return df
+
+
 def get_rank(aa,vid,df,name):
   """Build a dataframe that ranks the score of a list of administrative areas
   for a particular variable. 
@@ -354,27 +369,35 @@ def get_rank(aa,vid,df,name):
 
 
 def main():
+
+  #############################################################################
+  # 0.
+  #
+
   # Check if tmp folder exists, otherwise create it
   if check_dir(tmp_dir) == True:
     sys.exit(0)
   else:
     os.makedirs(tmp_dir)
 
-  # Build the different sets with things we have to loop over.
+  # Build the different sets of admin areas with things we have to loop over.
   regions = build_set('region','type','iso',src_meta_aa)
   countries = build_set('country','type','iso',src_meta_aa)
   states = build_set('state','type','iso',src_meta_aa)
   admin_areas = countries | states
-  index_score = build_set('score','type','id',src_meta_index)
-  years = get_years()
   
-  # Store the current year
+  # Build sets for the variables we loop over
+  global index_param
+  index_param = build_set('param','type','id',src_meta_index)
+  index_score = build_set('score','type','id',src_meta_index)
+  rankings = set([9001,9002,9003])
+  spr = list(index_score | index_param | rankings)
+
+  # Build set for the years we're interested in
+  years = get_years()
   global current_yr
   current_yr = max(years)
 
-  # Build a set with parameters available in the meta file.
-  global index_param
-  index_param = build_set('param','type','id',src_meta_index)
 
   # Read in the files with meta-data and set the scope to global
   global df_meta_aa
@@ -382,8 +405,10 @@ def main():
   global df_meta_index
   df_meta_index = pd.read_csv(src_meta_index,index_col='id')
 
+  #############################################################################
+  # 1. Store the relevant core data in one DF and calculate rankings
+  #
 
-  # 1. Store the relevant core data for each year in one big CSV
   first_yr = True
 
   for year in years:
@@ -408,20 +433,20 @@ def main():
     df_yr.sortlevel(inplace=True)
     
 
-    # Calculate the Overall Rank (or)
+    # Calculate the Overall Rank (9001)
 
     # To be able to use multi-index slicing, the countries set is converted to a list.
     cl = list(countries)
 
     # Get the rank for the score
-    df_yr_or = get_rank(cl,0,df_yr,'or')
+    df_yr_or = get_rank(cl,0,df_yr,9001)
 
     # Append it to the DF with the yearly data
     df_yr = df_yr.append(df_yr_or)
     df_yr.sortlevel(inplace=True)
   
 
-    # Calculate the Regional Rank (rr)
+    # Calculate the Regional Rank (9002)
     for region in regions:
       # Build a set with the admin areas for this region
       aa_region = build_set(region,'region','iso',src_meta_aa)
@@ -431,14 +456,14 @@ def main():
       cl = list(c_region)
 
       # Build the regional rank
-      df_rr = get_rank(cl,0,df_yr,'rr')
+      df_rr = get_rank(cl,0,df_yr,9002)
 
       # Append it to the DF with the yearly data
       df_yr = df_yr.append(df_rr)
       df_yr.sortlevel(inplace=True)
 
 
-    # Add the in-country rank to the states/provinces
+    # Add the in-country rank to the states/provinces (9003)
     for country in countries:
       # Check if there are any states or provinces for this country
       country_states = build_set(country,'country','iso',src_meta_aa)
@@ -448,7 +473,7 @@ def main():
         sl = list(country_states)
 
         # Build the state rank
-        df_sr = get_rank(sl,0,df_yr,'sr')
+        df_sr = get_rank(sl,0,df_yr,9003)
 
         # Append it to the DF with the yearly data
         df_yr = df_yr.append(df_sr)
@@ -468,13 +493,93 @@ def main():
       # Make sure the floats are rounded to 2 decimals
       df_full = np.round(df_full,2)
 
-  df_full.to_csv(exp_core_csv,encoding='UTF-8')
+
+  #############################################################################
+  # 2. CSV downloads
+  #
+  # For all the CSV exports, prepare a dataframe that combines the data with
+  # the meta.
+  
+  # The full DF is a multi-index. Since the meta-files have a single index,
+  # it is necessary to reset the indexes before joining on the column.
+
+  df_full_csv = df_full.reset_index()
+  df_meta_aa_csv = df_meta_aa.reset_index()
+  df_meta_index_csv = df_meta_index.reset_index()
+
+  # Merge the country meta
+  df_full_csv = pd.merge(df_full_csv,df_meta_aa_csv,on='iso')
+  # Merge the index meta data
+  df_full_csv = pd.merge(df_full_csv,df_meta_index_csv,on='id',suffixes=('_aa','_var'))
+
+  # Re-index the DF on iso & id  and make sure it's sorted
+  df_full_csv.set_index(['iso','id'],inplace=True)
+  df_full_csv.sortlevel(inplace=True)
 
 
-  # 2.1 Generate the main CSV and JSON
+  # 2.0 Export the full dataset to CSV
+
   for lang in langs:
+    # Build a list with the meta-data that needs to be included
+    columns = ['name:' + lang + '_aa','name:' + lang + '_var','type_var']
+    columns = columns + list(years)
 
-    # Generate the main JSON
+    df_full_csv.loc[slice(None),columns].to_csv(export_dir + lang + '/download/climatescope-full.csv',encoding='UTF-8',index=False)
+  
+
+  # 2.1 Generate the main CSV files
+
+  # Slice the DF to only contain the score and parameters for the current year.
+  df_main_csv = df_full_csv.loc[(slice(None),spr),:]
+
+  for lang in langs:
+    # Pivot the DF and export it
+    pivot_df(df_main_csv,'name:' + lang + '_aa','name:' + lang + '_var',current_yr).to_csv(export_dir + lang + '/download/climatescope-' + current_yr + '.csv',encoding='UTF-8')
+
+
+  # 2.2 Generate the regional CSV files
+  for region in regions:
+    # Build a set with the admin areas for this region
+    aa_region = build_set(region,'region','iso',src_meta_aa)
+    aal = list(aa_region)
+    
+    # Filter the main csv on region. Used to generate CSV.
+    df_region_csv = df_main_csv.loc[aal,:]
+    for lang in langs:
+      # Pivot the DF and and generate the CSV files
+      pivot_df(df_region_csv,'name:' + lang + '_aa','name:' + lang + '_var',current_yr).to_csv(export_dir + lang + '/download/regions/climatescope-' + region + '.csv',encoding='UTF-8')
+
+
+  # 2.3 Generate the country + state CSV files
+  for aa in admin_areas:
+    # Select the data of this admin area
+    df_aa_csv = df_full_csv.loc[(aa,slice(None)),:]
+    for lang in langs:
+      # Include the name of the var, its type and the years
+      columns = ['name:' + lang + '_var','type_var'] + list(years)
+
+      # Select the proper columns and generate the CSV      
+      df_aa_csv.loc[slice(None),columns].to_csv(export_dir + lang + '/download/countries/climatescope-' + aa.lower() + '.csv',encoding='UTF-8',index=False)
+
+
+  # 2.4 Generate the parameter JSON files
+  for p in index_param:
+    # Select data of the parameter being dealt with
+    df_param = df_full_csv.loc[(slice(None),p),:]
+    for lang in langs:
+      # Include the name of the country and the years
+      columns = ['name:' + lang + '_aa'] + list(years)
+
+      # Select the proper columns and generate the CSV
+      df_param.loc[slice(None),columns].to_csv(export_dir + lang + '/download/topic/climatescope-' + str(int(p)) + '.csv',encoding='UTF-8',index=False)
+
+
+  #############################################################################
+  # 3. JSON api
+  #
+
+  # 3.1 Generate the main JSON file
+  for lang in langs:
     # The JSON will contain a list with dicts
     json_data = []
     
@@ -488,23 +593,7 @@ def main():
       json.dump(json_data, ofile)
 
 
-    # Generate the CSV
-    # Only interested in the score, the parameters and the rankings
-    rankings = set(['or','rr','sr'])
-    spr = list(index_param | index_score | rankings)
-    
-    # Slice the DF to only contain the score and parameters for the current year.
-    df_main_csv = df_full.loc[(slice(None)),current_yr]
-    # Reset the index, so we can pivot the df
-    df_main_csv = df_main_csv.reset_index()
-    # Pivot the dataframe
-    df_main_csv = df_main_csv.pivot(index='iso',columns='id',values=current_yr)
-    
-    fn = export_dir + lang + '/download/climatescope-main.csv'
-    df_main_csv.to_csv(fn,encoding='UTF-8')
-
-
-  # 2.2 Generate the regional CSV and JSON
+  # 3.2 Generate the regional JSON files
   for region in regions:
     # Build a set with the admin areas for this region
     aa_region = build_set(region,'region','iso',src_meta_aa)
@@ -512,12 +601,8 @@ def main():
 
     # Remove states from this set, leaving countries
     c_region = aa_region.difference(states)
-    
-    # Filter the main csv on region. Used to generate CSV.
-    df_region_csv = df_main_csv.loc[aal,:]
 
     for lang in langs:
-      # Generate the regional JSONs
       # The JSON contains a dict with id, name and a countries list
       json_data = {}
       json_data['id'] = region
@@ -536,44 +621,20 @@ def main():
       with open('data/' + lang + '/api/regions/' + region + '.json','w') as ofile:
         json.dump(json_data, ofile)
 
-      # Generate the CSV files
-      fn = export_dir + lang + '/download/regions/climatescope-' + region + '.csv'
-      df_region_csv.to_csv(fn,encoding='UTF-8')
 
-
-  # 2.3 Generate the country + state files
+  # 3.3 Generate the country + state JSON files
   for aa in admin_areas:
-
-    # Only include data for the administrative area in the dataframe. Used to generate CSV.
-    df_aa = df_full.loc[aa,:]
-
     for lang in langs:
-      # Generate the country and state JSON's
+      # Get the data for this admin area in a dict
       json_data = build_json_aa(aa,df_full,lang,detailed=True,historic=True)
       
-      # Write the list to a JSON file
+      # Write the dict to a JSON file
       with open('data/' + lang + '/api/countries/' + aa.lower() + '.json','w') as ofile:
         json.dump(json_data, ofile)
-      
-
-      # Generate the CVS files
-      # The previous .loc removed the iso code from the index, but we still need it
-      # Reset the index
-      df_aa = df_aa.reset_index()
-      # Add a column with the iso code
-      df_aa['iso'] = aa
-      # Set the index of the DF to the ISO code and ID of the indicator
-      df_aa.set_index(['iso','id'],inplace=True)
-      # Make sure the index is sorted so slicing works well
-      df_aa.sortlevel(inplace=True)
-
-      fn = export_dir + lang + '/download/admin-areas/climatescope-' + aa.lower() + '.csv'
-      df_aa.to_csv(fn)
 
 
-  # 2.4 Generate the parameter CSVs
+  # 3.4 Generate the parameter JSON files
   for p in index_param:
-    df_param = df_full.loc[(slice(None)),:]
     for lang in langs:
       
       json_data = {}
@@ -591,12 +652,8 @@ def main():
       json_data['countries'] = country_list
 
       # Generate the parameter JSONs
-      with open('data/' + lang + '/api/topic/' + p + '.json','w') as ofile:
+      with open('data/' + lang + '/api/topic/' + str(int(p)) + '.json','w') as ofile:
         json.dump(json_data, ofile)
-
-      # Generate the CSV
-      fn = export_dir + lang + '/download/parameters/climatescope-' + str(p) + '.csv'
-      df_param.to_csv(fn,encoding='UTF-8')
 
 
   # Fully remove the temp directory
