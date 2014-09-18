@@ -308,10 +308,9 @@ def build_json_aa(aa,df_data,lang,detailed=False,historic=False,single_p=None):
     state_list = []
     if country_states:
       for state in country_states:
-        # Call this function for all the states. All optional parameters are 
-        # passed on, except for detailed. For the children, we're only
-        # interested in high level data.
-        state_data = build_json_aa(state,df_data,lang,detailed=False,historic=historic,single_p=single_p)
+        # Call this function for all the states. At this point, only interested in
+        # non-detailed data for the current version.
+        state_data = build_json_aa(state,df_data,lang,detailed=False,historic=False,single_p=single_p)
         state_list.append(state_data)
 
     # Even when there are no states, an empty list has to be printed
