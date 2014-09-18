@@ -273,6 +273,7 @@ def build_json_aa(aa,df_data,lang,detailed=False,historic=False,single_p=None):
             ind_data = {}
             ind_data['id'] = ind
             ind_data['name'] = df_meta_index.ix[ind,'name:' + lang]
+            ind_data['description'] = df_meta_index.ix[ind,'description:' + lang]
             
             if historic:
               # Provide values for all editions
