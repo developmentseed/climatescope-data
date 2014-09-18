@@ -189,13 +189,13 @@ def build_json_aa(aa,df_data,lang,detailed=False,historic=False,single_p=None):
     for yr in years:
       # For each year, we're storing an object with year and the value
       yr_data = {}
-      yr_data['value'] = round(df_aa.loc[(0),yr],2)
+      yr_data['value'] = round(df_aa.loc[(0),yr],5)
       yr_data['year'] = int(yr)
       sl.append(yr_data)
     aa_data['score'] = sl
   else:
     # Add the score for this year
-    aa_data['score'] = round(df_aa.loc[(0),current_yr],2)
+    aa_data['score'] = round(df_aa.loc[(0),current_yr],5)
 
 
   # Not every type of admin area has all the rankings
@@ -217,8 +217,6 @@ def build_json_aa(aa,df_data,lang,detailed=False,historic=False,single_p=None):
     params = index_param
   else:
     params = set([single_p])
-  print params
-  print type(params)
 
   param_list = []
   for param in params:
@@ -231,7 +229,7 @@ def build_json_aa(aa,df_data,lang,detailed=False,historic=False,single_p=None):
       # If all parameters are processed, include meta information
       proper_dict['id'] = int(param)
       proper_dict['name'] = df_meta_index.ix[param,'name:' + lang]
-      proper_dict['weight'] = round(df_meta_index.ix[param,'weight'],2)
+      proper_dict['weight'] = round(df_meta_index.ix[param,'weight'],5)
     else:
       # If dealing with a single parameter, add everything straight to the
       # aa_data dict
@@ -244,14 +242,14 @@ def build_json_aa(aa,df_data,lang,detailed=False,historic=False,single_p=None):
       for yr in years:
         # For each year, we're storing an object with year and the value
         yr_data = {}
-        yr_data['value'] = round(df_aa.loc[(float(param)),yr],2)
+        yr_data['value'] = round(df_aa.loc[(float(param)),yr],5)
         yr_data['year'] = int(yr)
         pl.append(yr_data)
       # Add the list with historic data to the correct dict
       proper_dict['data'] = pl
     else:
       # Otherwise just provide the value for the current year
-      proper_dict['value'] = round(df_aa.loc[(float(param)),current_yr],2)
+      proper_dict['value'] = round(df_aa.loc[(float(param)),current_yr],5)
 
 
     if detailed:
@@ -282,13 +280,13 @@ def build_json_aa(aa,df_data,lang,detailed=False,historic=False,single_p=None):
               for yr in years:
                 # For each year, we're storing an object with year and the value
                 yr_data = {}
-                yr_data['value'] = round(df_aa.ix[float(ind),yr],2)
+                yr_data['value'] = round(df_aa.ix[float(ind),yr],5)
                 yr_data['year'] = int(yr)
                 ind_yr.append(yr_data)
               ind_data['data'] = ind_yr
             else:
               # Provide the value for the current edition only
-              ind_data['value'] = round(df_aa.ix[float(ind),current_yr],2)
+              ind_data['value'] = round(df_aa.ix[float(ind),current_yr],5)
             il.append(ind_data)
         group_data['indicators'] = il
 
@@ -324,12 +322,18 @@ def build_json_aa(aa,df_data,lang,detailed=False,historic=False,single_p=None):
 
 
 def pivot_df(df,ind,col,val):
-  """Pivot a dataframe
+  """Pivot a dataframe.
 
   Parameters
   ----------
   df        : DataFrame
               A DataFrame that is indexed on iso and id
+  ind:      : string
+              The column to use as index
+  col:      : string
+              The column use as column headers
+  val:      : string
+              The column to use for the values
   """
   # Reset the index, so we can pivot the df
   df = df.reset_index()
@@ -406,7 +410,7 @@ def main():
   df_meta_index = pd.read_csv(src_meta_index,index_col='id')
 
   #############################################################################
-  # 1. Store the relevant core data in one DF and calculate rankings
+  # 1. Store the relevant core data in one DF (df_full) and calculate rankings
   #
 
   first_yr = True
@@ -490,8 +494,6 @@ def main():
     else:
       # Every subsequent year will have to be merged into df_full
       df_full = pd.merge(df_full,df_yr,left_index=True,right_index=True)
-      # Make sure the floats are rounded to 2 decimals
-      df_full = np.round(df_full,2)
 
 
   #############################################################################
@@ -499,11 +501,13 @@ def main():
   #
   # For all the CSV exports, prepare a dataframe that combines the data with
   # the meta.
-  
+
+  # Make sure the floats are rounded to 3 decimals
+  df_full_csv = np.round(df_full,3)
+
   # The full DF is a multi-index. Since the meta-files have a single index,
   # it is necessary to reset the indexes before joining on the column.
-
-  df_full_csv = df_full.reset_index()
+  df_full_csv = df_full_csv.reset_index()
   df_meta_aa_csv = df_meta_aa.reset_index()
   df_meta_index_csv = df_meta_index.reset_index()
 
