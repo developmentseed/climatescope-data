@@ -150,7 +150,7 @@ def build_col_index(fn,sheet):
   return cols_index
 
 
-def build_json_aa(aa,df_data,lang,detailed=False):
+def build_json_aa(aa,df_data,lang,detailed=False,historic=False,single_p=None):
   """Build the dict with data for a particular administrative area for export
   to JSON.
   
@@ -162,8 +162,14 @@ def build_json_aa(aa,df_data,lang,detailed=False):
               The dataframe containing the data.
   lang      : string
               The active language
-  detailed  : boolean (default = False)
-              When set to True, detailed and historic data will be provided.
+  detailed  : boolean (optional, default = False)
+              When set to True, detailed indicator data will be provided.
+  historic  : boolean (optional, default = False)
+              When set to True, data of previous years will be included.
+  single_p  : int (optional, default = None)
+              By default, the function returns data for all parameters. When
+              the id of a single parameter is passed, only data for that 
+              parameter is returned.
   """
 
   aa_data = {}
@@ -172,7 +178,6 @@ def build_json_aa(aa,df_data,lang,detailed=False):
   # Slice the dataframe to only contain the data for the administrative area
   df_aa = df_data.loc[aa]
   
-
   # Load metadata for the admin areas
   aa_data['iso'] = aa.lower()
   aa_data['name'] = df_meta_aa.ix[aa,'name:' + lang]
@@ -192,8 +197,9 @@ def build_json_aa(aa,df_data,lang,detailed=False):
     # Add the score for this year
     aa_data['score'] = round(df_aa.loc[(0),current_yr],2)
 
+
   # Not every type of admin area has all the rankings
-  # Check if it exists in 
+  # Check if it exists in the index
   if 'or' in df_aa.index and pd.notnull(df_aa.ix[('or'),current_yr]):
     aa_data['overall_ranking'] = int(df_aa.loc[('or'),current_yr])
   if 'rr' in df_aa.index and pd.notnull(df_aa.ix[('rr'),current_yr]):
@@ -202,17 +208,38 @@ def build_json_aa(aa,df_data,lang,detailed=False):
     aa_data['state_ranking'] = int(df_aa.loc[('sr'),current_yr])
 
 
-  # The parameters are stored as a list with dicts. By default, it returns the value for the current edition.
-  # If detailed is set to True, then historic data for all parameters and indicators are returned.
-  param_list = []
-  for param in index_param:
+  # The parameters are stored as a list with dicts. By default, it returns the
+  # value for the current edition.
+  # If detailed is set to True, then data for all parameters and indicators 
+  # are returned.
+  # If a single_p is defined, data about one parameter is returned. If not,
+  # then all parameters are processed.
 
+  # Check if all parameters should be processed (default), or one in particular
+  if single_p == None:
+    params = index_param
+  else:
+    params = single_p
+
+  param_list = []
+  for param in params:
     param_data = {}
-    param_data['id'] = int(param)
-    param_data['name'] = df_meta_index.ix[param,'name:' + lang]
-    param_data['weight'] = round(df_meta_index.ix[param,'weight'],2)
     
-    if detailed:
+    if single_p == None:
+      # Add data to the param_data dict
+      proper_dict = param_data
+
+      # If all parameters are processed, include meta information
+      proper_dict['id'] = int(param)
+      proper_dict['name'] = df_meta_index.ix[param,'name:' + lang]
+      proper_dict['weight'] = round(df_meta_index.ix[param,'weight'],2)
+    else:
+      # If dealing with a single parameter, add everything straight to the
+      # aa_data dict
+      proper_dict = aa_data
+
+    
+    if historic:
       # Provide the value for all editions
       pl = []
       for yr in years:
@@ -221,11 +248,17 @@ def build_json_aa(aa,df_data,lang,detailed=False):
         yr_data['value'] = round(df_aa.loc[(float(param)),yr],2)
         yr_data['year'] = int(yr)
         pl.append(yr_data)
-      param_data['data'] = pl
+      # Add the list with historic data to the correct dict
+      proper_dict['data'] = pl
+    else:
+      # Otherwise just provide the value for the current year
+      proper_dict['value'] = round(df_aa.loc[(float(param)),current_yr],2)
 
+
+    if detailed:
+      # If detailed is True, then provide data on all indicators
 
       # The indicator_group is a list with dicts for each indicator
-
       # Fetch the indicator groups for this parameter
       param_groups = build_set(param,'parent','id',src_meta_index)
       gl = []
@@ -239,32 +272,35 @@ def build_json_aa(aa,df_data,lang,detailed=False):
         il = []
         for ind in group_inds:
           # Not every country has data on every indicator. Check if it's in the index.
-          if float(ind) in df_data.index:
+          if float(ind) in df_aa.index:
             ind_data = {}
             ind_data['id'] = ind
             ind_data['name'] = df_meta_index.ix[ind,'name:' + lang]
             
-            ind_yr = []
-            for yr in years:
-              # For each year, we're storing an object with year and the value
-              yr_data = {}
-              yr_data['value'] = round(df_aa.loc[(float(ind)),yr],2)
-              yr_data['year'] = int(yr)
-              ind_yr.append(yr_data)
-            ind_data['data'] = ind_yr
-
+            if historic:
+              # Provide values for all editions
+              ind_yr = []
+              for yr in years:
+                # For each year, we're storing an object with year and the value
+                yr_data = {}
+                yr_data['value'] = round(df_aa.ix[float(ind),yr],2)
+                yr_data['year'] = int(yr)
+                ind_yr.append(yr_data)
+              ind_data['data'] = ind_yr
+            else:
+              # Provide the value for the current edition only
+              ind_data['value'] = round(df_aa.ix[float(ind),current_yr],2)
             il.append(ind_data)
-
         group_data['indicators'] = il
 
-      param_data['indicator_groups'] = gl
-
-    else:
-      param_data['value'] = round(df_aa.loc[(float(param)),current_yr],2)
+      proper_dict['indicator_groups'] = gl
 
     param_list.append(param_data)
 
-  aa_data['parameters'] = param_list
+  if single_p == None:
+    # Only append the parameter list to the country dict if dealing with
+    # multiple parameters
+    aa_data['parameters'] = param_list
 
 
   # When dealing with a country, add data about the states
@@ -276,7 +312,10 @@ def build_json_aa(aa,df_data,lang,detailed=False):
     state_list = []
     if country_states:
       for state in country_states:
-        state_data = build_json_aa(state,df_data,lang)
+        # Call this function for all the states. All optional parameters are 
+        # passed on, except for detailed. For the children, we're only
+        # interested in high level data.
+        state_data = build_json_aa(state,df_data,lang,detailed=False,historic=historic,single_p=single_p)
         state_list.append(state_data)
 
     # Even when there are no states, an empty list has to be printed
@@ -474,8 +513,10 @@ def main():
     # Remove states from this set, leaving countries
     c_region = aa_region.difference(states)
     
-    for lang in langs:
+    # Filter the main csv on region. Used to generate CSV.
+    df_region_csv = df_main_csv.loc[aal,:]
 
+    for lang in langs:
       # Generate the regional JSONs
       # The JSON contains a dict with id, name and a countries list
       json_data = {}
@@ -496,17 +537,19 @@ def main():
         json.dump(json_data, ofile)
 
       # Generate the CSV files
-      # Filter the main csv on region
-      df_region_csv = df_main_csv.loc[aal,:]
       fn = export_dir + lang + '/download/regions/climatescope-' + region + '.csv'
       df_region_csv.to_csv(fn,encoding='UTF-8')
 
 
   # 2.3 Generate the country + state files
   for aa in admin_areas:
+
+    # Only include data for the administrative area in the dataframe. Used to generate CSV.
+    df_aa = df_full.loc[aa,:]
+
     for lang in langs:
       # Generate the country and state JSON's
-      json_data = build_json_aa(aa,df_full,lang,detailed=True)
+      json_data = build_json_aa(aa,df_full,lang,detailed=True,historic=True)
       
       # Write the list to a JSON file
       with open('data/' + lang + '/api/countries/' + aa.lower() + '.json','w') as ofile:
@@ -514,9 +557,6 @@ def main():
       
 
       # Generate the CVS files
-      # Only include data for the administrative area in the dataframe
-      df_aa = df_full.loc[aa,:]
-
       # The previous .loc removed the iso code from the index, but we still need it
       # Reset the index
       df_aa = df_aa.reset_index()
@@ -532,10 +572,30 @@ def main():
 
 
   # 2.4 Generate the parameter CSVs
-  for param in index_param:
+  for p in index_param:
     df_param = df_full.loc[(slice(None)),:]
     for lang in langs:
-      fn = export_dir + lang + '/download/parameters/climatescope-' + str(param) + '.csv'
+      
+      json_data = {}
+      json_data['id'] = int(p)
+      json_data['name'] = df_meta_index.ix[p,'name:' + lang]
+      json_data['weight'] = round(df_meta_index.ix[p,'weight'],2)
+
+      # The JSON will contain a list with dicts
+      country_list = []
+      # Loop over the countries
+      for country in countries:
+        country_data = build_json_aa(country,df_full,lang,detailed=False,historic=True,single_p=p)
+        country_list.append(country_data)
+
+      json_data['countries'] = country_list
+
+      # Generate the parameter JSONs
+      with open('data/' + lang + '/api/topic/' + p + '.json','w') as ofile:
+        json.dump(json_data, ofile)
+
+      # Generate the CSV
+      fn = export_dir + lang + '/download/parameters/climatescope-' + str(p) + '.csv'
       df_param.to_csv(fn,encoding='UTF-8')
 
 
