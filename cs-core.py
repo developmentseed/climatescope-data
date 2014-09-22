@@ -573,7 +573,7 @@ def main():
       columns = ['name:' + lang + '_aa'] + list(years)
 
       # Select the proper columns and generate the CSV
-      df_param.loc[slice(None),columns].to_csv(export_dir + lang + '/download/topic/climatescope-' + str(int(p)) + '.csv',encoding='UTF-8',index=False)
+      df_param.loc[slice(None),columns].to_csv(export_dir + lang + '/download/parameters/climatescope-' + str(int(p)) + '.csv',encoding='UTF-8',index=False)
 
 
   #############################################################################
@@ -654,7 +654,7 @@ def main():
       json_data['countries'] = country_list
 
       # Generate the parameter JSONs
-      with open('data/' + lang + '/api/topic/' + str(int(p)) + '.json','w') as ofile:
+      with open('data/' + lang + '/api/parameters/' + str(int(p)) + '.json','w') as ofile:
         json.dump(json_data, ofile)
 
 
