@@ -150,6 +150,33 @@ def build_col_index(fn,sheet):
   return cols_index
 
 
+def indicator_active(aa,ind):
+  """Whether an indicator is used to calculate the overall score, depends on a
+  country's grid status. This function checks whether an indicator is used to
+  calculate the score for a given country / state.
+
+  Parameters
+  ----------
+  aa        : string
+              The ISO 3166-alpha2 code of the administrative area.
+  ind       : float
+              The ID of the indicator.
+  """
+
+  ind_grid = df_meta_index.loc[ind,'grid']
+  aa_grid = df_meta_aa.ix[aa,'grid']
+  
+  ind_active = False
+
+  if ind_grid == 'both':
+    # If indicator is valid for both on and off-grid countries, return True
+    ind_active = True
+  elif ind_grid == aa_grid:
+    ind_active = True
+
+  return ind_active
+
+
 def build_json_aa(aa,df_data,lang,detailed=False,historic=False,single_p=None):
   """Build the dict with data for a particular administrative area for export
   to JSON.
@@ -272,6 +299,7 @@ def build_json_aa(aa,df_data,lang,detailed=False,historic=False,single_p=None):
             ind_data['id'] = ind
             ind_data['name'] = df_meta_index.ix[ind,'name:' + lang]
             ind_data['description'] = df_meta_index.ix[ind,'description:' + lang]
+            ind_data['active'] = indicator_active(aa,ind)
             
             if historic:
               # Provide values for all editions
@@ -406,6 +434,7 @@ def main():
   df_meta_aa = pd.read_csv(src_meta_aa,index_col='iso')
   global df_meta_index
   df_meta_index = pd.read_csv(src_meta_index,index_col='id')
+
 
   #############################################################################
   # 1. Store the relevant core data in one DF (df_full) and calculate rankings
@@ -573,7 +602,7 @@ def main():
       columns = ['name:' + lang + '_aa'] + list(years)
 
       # Select the proper columns and generate the CSV
-      df_param.loc[slice(None),columns].to_csv(export_dir + lang + '/download/topic/climatescope-' + str(int(p)) + '.csv',encoding='UTF-8',index=False)
+      df_param.loc[slice(None),columns].to_csv(export_dir + lang + '/download/parameters/climatescope-' + str(int(p)) + '.csv',encoding='UTF-8',index=False)
 
 
   #############################################################################
@@ -654,7 +683,7 @@ def main():
       json_data['countries'] = country_list
 
       # Generate the parameter JSONs
-      with open('data/' + lang + '/api/topic/' + str(int(p)) + '.json','w') as ofile:
+      with open('data/' + lang + '/api/parameters/' + str(int(p)) + '.json','w') as ofile:
         json.dump(json_data, ofile)
 
 
