@@ -177,6 +177,34 @@ def indicator_active(aa,ind):
   return ind_active
 
 
+def rank_dict(df,ind,yr):
+  """Returns a dict with type of ranking as key and the rank as value.
+  Eg. { 'overall_ranking': 16, 'regional_ranking': 9 }
+
+  Parameters
+  ----------
+  df        : dataframe
+              The dataframe to fetch the rank from
+  ind       : float
+              The indicator we're building the rank for
+  yr        : int
+              The year we're interested in
+  """
+
+  # Add the rankings
+  rankings = { 'gr': 'overall_ranking', 'rr': 'regional_ranking', 'sr': 'state_ranking' }
+  aa_ranks = {}
+
+  # Not every type of admin area has all the rankings
+  # Check if it is not null and if so, add it.
+  for key, value in rankings.iteritems():
+    rank = df.loc[ind,(yr,key)]
+    if pd.notnull(rank):
+      aa_ranks[value] = int(rank)
+
+  return aa_ranks
+
+
 def build_json_aa(aa,df_data,lang,detailed=False,historic=False,single_p=None):
   """Build the dict with data for a particular administrative area for export
   to JSON.
@@ -204,7 +232,7 @@ def build_json_aa(aa,df_data,lang,detailed=False,historic=False,single_p=None):
 
   # Slice the dataframe to only contain the data for the administrative area
   df_aa = df_data.loc[aa]
-  
+
   # Load metadata for the admin areas
   aa_data['iso'] = aa.lower()
   aa_data['name'] = df_meta_aa.ix[aa,'name:' + lang]
@@ -216,21 +244,18 @@ def build_json_aa(aa,df_data,lang,detailed=False,historic=False,single_p=None):
     for yr in years:
       # For each year, we're storing an object with year and the value
       yr_data = {}
-      yr_data['value'] = round(df_aa.loc[(0),yr],5)
+      yr_data['value'] = round(df_aa.loc[(0),(yr,'value')],5)
       yr_data['year'] = int(yr)
       sl.append(yr_data)
     aa_data['score'] = sl
   else:
     # Add the score for this year
-    aa_data['score'] = round(df_aa.loc[(0),current_yr],5)
+    aa_data['score'] = round(df_aa.loc[(0),(current_yr,'value')],5)
 
 
-  rankings = { 9001: 'overall_ranking', 9002: 'regional_ranking', 9003: 'state_ranking' }
-  # Not every type of admin area has all the rankings
-  # Check if it exists in the index and if so, add it.
-  for key, value in rankings.iteritems():
-    if key in df_aa.index and pd.notnull(df_aa.ix[(key),current_yr]):
-      aa_data[value] = int(df_aa.loc[(key),current_yr])
+  # Fetch the rankings for the scores and update the aa_data dict with them
+  aa_ranks = rank_dict(df_aa,0,current_yr)
+  aa_data.update(aa_ranks)
 
 
   # In case all parameters are processed (single_p == None), the data is 
@@ -267,14 +292,23 @@ def build_json_aa(aa,df_data,lang,detailed=False,historic=False,single_p=None):
       for yr in years:
         # For each year, we're storing an object with year and the value
         yr_data = {}
-        yr_data['value'] = round(df_aa.loc[(float(param)),yr],5)
+        yr_data['value'] = round(df_aa.loc[(float(param)),(yr,'value')],5)
         yr_data['year'] = int(yr)
+
+        # Fetch the rankings for the param and update the yr_dict with them
+        aa_ranks = rank_dict(df_aa,param,yr)
+        yr_data.update(aa_ranks)
+
         pl.append(yr_data)
       # Add the list with historic data to the correct dict
       proper_dict['data'] = pl
     else:
       # Otherwise just provide the value for the current year
-      proper_dict['value'] = round(df_aa.loc[(float(param)),current_yr],5)
+      proper_dict['value'] = round(df_aa.loc[(float(param)),(current_yr,'value')],5)
+
+      # Fetch the rankings for the param and update the proper dict with them
+      aa_ranks = rank_dict(df_aa,param,current_yr)
+      proper_dict.update(aa_ranks)
 
 
     if detailed:
@@ -307,13 +341,24 @@ def build_json_aa(aa,df_data,lang,detailed=False,historic=False,single_p=None):
               for yr in years:
                 # For each year, we're storing an object with year and the value
                 yr_data = {}
-                yr_data['value'] = round(df_aa.ix[float(ind),yr],5)
+                yr_data['value'] = round(df_aa.ix[float(ind),(yr,'value')],5)
                 yr_data['year'] = int(yr)
+
+                # Fetch the rankings for the indicator and update the yr_dict with them
+                aa_ranks = rank_dict(df_aa,ind,yr)
+                yr_data.update(aa_ranks)
+                
                 ind_yr.append(yr_data)
+
               ind_data['data'] = ind_yr
             else:
               # Provide the value for the current edition only
-              ind_data['value'] = round(df_aa.ix[float(ind),current_yr],5)
+              ind_data['value'] = round(df_aa.ix[float(ind),(current_yr,'value')],5)
+
+              # Fetch the rankings for the indicator and update the yr_dict with them
+              aa_ranks = rank_dict(df_aa,ind,current_yr)
+              ind_data.update(aa_ranks)
+
             il.append(ind_data)
         group_data['indicators'] = il
 
@@ -369,33 +414,35 @@ def pivot_df(df,ind,col,val):
   return df
 
 
-def get_rank(aa,vid,df,name):
-  """Build a dataframe that ranks the score of a list of administrative areas
-  for a particular variable. 
+def get_rank(aal,df,name):
+  """Build a dataframe that ranks a list of administrative areas on every
+  variable available (score, parameter, indicator)
 
   Parameters
   ----------
-  aa        : list
+  aal       : list
               A list of iso codes (strings) to process
-  id        : float
-              The id of the variable (score/param/indicator) to rank
   df        : dataframe
-              The dataframe to process, multi-indexed on 'iso' and 'id'
+              The dataframe to process, multi-indexed on 'iso' and 'id'. The
+              columns also have a hierarchy (year, 'value')
   name      : string
               The name of the rank (eg. 'or').
   """
 
-  # Slice the DF to only contain the administrative areas and the score/parameter/indicator ranking on. Then calculate the rank.
-  df_rank = df.loc[(aa,vid),:].rank(ascending=False)
+  # Initialize an empty dataframe
+  df_rank = pd.DataFrame()
 
-  # Reset the index, so we can override the parameter ID to the name
-  df_rank.reset_index(inplace=True)
-  df_rank['id'] = name
+  for year in years:
+    # For each year, slice the DF on the list of administrative areas, then
+    # group by the indicator and build a rank.
+    # The rank is stored in the empty DF to ensure no previous values get
+    # overridden by NaN.
+    df_rank[(year, name)] = df.loc[(aal,slice(None)),(year,'value')].groupby(level=1).rank(ascending=False)
+
+  # Overwrite the NaN values in the original DF with values in the df_rank
+  df.update(df_rank)
   
-  # Re-index it again.
-  df_rank.set_index(['iso','id'],inplace=True)
-
-  return df_rank
+  return df
 
 
 def main():
@@ -420,10 +467,10 @@ def main():
   global index_param
   index_param = build_set('param','type','id',src_meta_index)
   index_score = build_set('score','type','id',src_meta_index)
-  rankings = set([9001,9002,9003])
-  spr = list(index_score | index_param | rankings)
+  sp = list(index_score | index_param)
 
   # Build set for the years we're interested in
+  global years
   years = get_years()
   global current_yr
   current_yr = max(years)
@@ -437,8 +484,17 @@ def main():
 
 
   #############################################################################
-  # 1. Store the relevant core data in one DF (df_full) and calculate rankings
+  # 1. Store the relevant core data in one DF (df_full)
   #
+  #
+  # Output: df_full
+  #
+  #             2014    2015
+  # iso   id
+  # AR    0     1.2420  1.2235
+  #       1.01  0.1802  0.1795
+  # ...
+
 
   first_yr = True
 
@@ -462,54 +518,6 @@ def main():
     df_yr.set_index(['iso','id'],inplace=True)
     # Make sure the index is sorted so the slicing works well
     df_yr.sortlevel(inplace=True)
-    
-
-    # Calculate the Overall Rank (9001)
-
-    # To be able to use multi-index slicing, the countries set is converted to a list.
-    cl = list(countries)
-
-    # Get the rank for the score
-    df_yr_or = get_rank(cl,0,df_yr,9001)
-
-    # Append it to the DF with the yearly data
-    df_yr = df_yr.append(df_yr_or)
-    df_yr.sortlevel(inplace=True)
-  
-
-    # Calculate the Regional Rank (9002)
-    for region in regions:
-      # Build a set with the admin areas for this region
-      aa_region = build_set(region,'region','iso',src_meta_aa)
-      # Filter out the states and provinces, leaving only the countries
-      c_region = aa_region.difference(states)
-      # Turn the set into a list to be able to build the rank
-      cl = list(c_region)
-
-      # Build the regional rank
-      df_rr = get_rank(cl,0,df_yr,9002)
-
-      # Append it to the DF with the yearly data
-      df_yr = df_yr.append(df_rr)
-      df_yr.sortlevel(inplace=True)
-
-
-    # Add the in-country rank to the states/provinces (9003)
-    for country in countries:
-      # Check if there are any states or provinces for this country
-      country_states = build_set(country,'country','iso',src_meta_aa)
-
-      if country_states:
-        # Turn the set into a list
-        sl = list(country_states)
-
-        # Build the state rank
-        df_sr = get_rank(sl,0,df_yr,9003)
-
-        # Append it to the DF with the yearly data
-        df_yr = df_yr.append(df_sr)
-        df_yr.sortlevel(inplace=True)
-
 
     # Rename the column 'score' to year
     df_yr.rename(columns={'score':year}, inplace=True)
@@ -561,7 +569,7 @@ def main():
   # 2.1 Generate the main CSV files
 
   # Slice the DF to only contain the score and parameters for the current year.
-  df_main_csv = df_full_csv.loc[(slice(None),spr),:]
+  df_main_csv = df_full_csv.loc[(slice(None),sp),:]
 
   for lang in langs:
     # Pivot the DF and export it
@@ -606,10 +614,64 @@ def main():
 
 
   #############################################################################
-  # 3. JSON api
+  # 3. Calculate the rankings
+  #
+  #
+  # Output: df_full
+  #
+  #             2014                  2015
+  #             value   gr  rr  sr    value   gr  rr  sr
+  # iso   id
+  # AR    0     1.2420  13  6   NaN   1.2235  12  8   NaN
+  #       1.01  0.1802  5   3   NaN   0.1795  6   3   NaN
+  # ...
+
+
+  # 3.0 Prepare the structure
+  # Create list that repeats 'value' for the amount of years available
+  c = ['value'] * len(df_full.columns)
+  # Add a level to the cols, resulting in (2014, 'value'), (2015, 'value') etc
+  df_full.columns = [df_full.columns, c]
+
+  # Add placeholder cols with NaN that can be updated later with df.update()
+  for year in years:
+    for rank in ('gr', 'rr', 'sr'):
+      df_full[(year,rank)] = np.nan
+  # Make sure its sorted
+  df_full.sortlevel(axis=1,inplace=True)
+
+ 
+  # 3.1 Global rank
+  # The global rank (gr) is a rank of all the COUNTRIES in the project
+  df_full = get_rank(countries,df_full,'gr')
+
+
+  # 3.2 Regional rank
+  # The regional rank (rr) is a rank of all the COUNTRIES in a region
+  for region in regions:
+    # Build a set with the admin areas for this region
+    aa_region = build_set(region,'region','iso',src_meta_aa)
+    # Filter out the states and provinces, leaving only the countries
+    cr = aa_region.difference(states)
+
+    df_full = get_rank(cr,df_full,'rr')
+
+
+  # 3.3 State rank
+  # The state rank ('sr') ranks the STATES of a particular country
+  for country in countries:
+    # Check if there are any states or provinces for this country
+    cs = build_set(country,'country','iso',src_meta_aa)
+    if cs:
+      df_full = get_rank(cs,df_full,'sr')
+
+
+  #############################################################################
+  # 4. JSON api
   #
 
-  # 3.1 Generate the main JSON file
+
+  # 4.1 Generate the main JSON file
   for lang in langs:
     # The JSON will contain a list with dicts
     json_data = []
@@ -624,7 +686,7 @@ def main():
       json.dump(json_data, ofile)
 
 
-  # 3.2 Generate the regional JSON files
+  # 4.2 Generate the regional JSON files
   for region in regions:
     # Build a set with the admin areas for this region
     aa_region = build_set(region,'region','iso',src_meta_aa)
@@ -653,7 +715,7 @@ def main():
         json.dump(json_data, ofile)
 
 
-  # 3.3 Generate the country + state JSON files
+  # 4.3 Generate the country + state JSON files
   for aa in admin_areas:
     for lang in langs:
       # Get the data for this admin area in a dict
@@ -664,7 +726,7 @@ def main():
         json.dump(json_data, ofile)
 
 
-  # 3.4 Generate the parameter JSON files
+  # 4.4 Generate the parameter JSON files
   for p in index_param:
     for lang in langs:
       
