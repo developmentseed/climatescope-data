@@ -467,7 +467,6 @@ def main():
   global index_param
   index_param = build_set('param','type','id',src_meta_index)
   index_score = build_set('score','type','id',src_meta_index)
-##rankings = set([9001,9002,9003])
   sp = list(index_score | index_param)
 
   # Build set for the years we're interested in
