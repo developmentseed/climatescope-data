@@ -21,7 +21,6 @@
 #
 # TECH DEBT / TODO
 # - build_col_index(): reading in the whole excel sheet to just fetch the header
-# - check what's up with CN-65 & CD. Has strange character that needs to be sanitized
 # - automatically generate all the folders
 
 
@@ -30,6 +29,7 @@ import os
 import os.path
 import shutil
 import json
+import re
 import numpy as np
 import pandas as pd
 import glob
@@ -526,6 +526,10 @@ def main():
 
       # Read Excel (parsing only relevant cols)
       df_sheet = pd.read_excel(fn,sheet,parse_cols=cols_index)
+
+      # Ensure that the iso codes don't contain strange characters. They can only
+      # contain letters, numbers and hyphens. (eg. CN, CN-65 or IN-MP)
+      df_sheet['iso'].replace(to_replace='[^a-zA-Z0-9-]', value='',inplace=True,regex=True) 
 
       # Append each sheet to a dataframe holding the data for that year
       df_yr = df_yr.append(df_sheet)
