@@ -205,7 +205,7 @@ def rank_dict(df,ind,yr):
   return aa_ranks
 
 
-def build_json_aa(aa,df_data,lang,detailed=False,historic=False,single_p=None):
+def build_json_aa(aa,df_data,lang,indicators=False,historic=False,single_p=None):
   """Build the dict with data for a particular administrative area for export
   to JSON.
   
@@ -217,7 +217,7 @@ def build_json_aa(aa,df_data,lang,detailed=False,historic=False,single_p=None):
               The dataframe containing the data.
   lang      : string
               The active language
-  detailed  : boolean (optional, default = False)
+  indicators : boolean (optional, default = False)
               When set to True, detailed indicator data will be provided.
   historic  : boolean (optional, default = False)
               When set to True, data of previous years will be included.
@@ -238,7 +238,18 @@ def build_json_aa(aa,df_data,lang,detailed=False,historic=False,single_p=None):
   aa_data['name'] = df_meta_aa.ix[aa,'name:' + lang]
   aa_data['grid'] = df_meta_aa.ix[aa,'grid']
   
-  if detailed:
+  # Add region for the countries
+  if df_meta_aa.ix[aa,'type'] == 'country':
+    aa_region = {}
+    region = df_meta_aa.ix[aa,'region']
+    # Add the id of the region
+    aa_region['id'] = region
+    # Fetch the name of the region from the meta file
+    aa_region['name'] = df_meta_aa.ix[region,'name:' + lang]
+    aa_data['region'] = aa_region
+
+
+  if historic:
     # Provide the score for all editions
     sl = []
     for yr in years:
@@ -246,16 +257,21 @@ def build_json_aa(aa,df_data,lang,detailed=False,historic=False,single_p=None):
       yr_data = {}
       yr_data['value'] = round(df_aa.loc[(0),(yr,'value')],5)
       yr_data['year'] = int(yr)
+
+      # Fetch the scores and update the yr_data dict with them
+      aa_ranks = rank_dict(df_aa,0,yr)
+      yr_data.update(aa_ranks)
+
       sl.append(yr_data)
+
     aa_data['score'] = sl
   else:
     # Add the score for this year
     aa_data['score'] = round(df_aa.loc[(0),(current_yr,'value')],5)
 
-
-  # Fetch the rankings for the scores and update the aa_data dict with them
-  aa_ranks = rank_dict(df_aa,0,current_yr)
-  aa_data.update(aa_ranks)
+    # Fetch the rankings for the scores and update the aa_data dict with them
+    aa_ranks = rank_dict(df_aa,0,current_yr)
+    aa_data.update(aa_ranks)
 
 
   # In case all parameters are processed (single_p == None), the data is 
@@ -311,8 +327,8 @@ def build_json_aa(aa,df_data,lang,detailed=False,historic=False,single_p=None):
       proper_dict.update(aa_ranks)
 
 
-    if detailed:
-      # If detailed is True, then provide data on all indicators
+    if indicators:
+      # If indicators is True, then provide data on all indicators
 
       # The indicator_group is a list with dicts for each indicator
       # Fetch the indicator groups for this parameter
@@ -383,7 +399,7 @@ def build_json_aa(aa,df_data,lang,detailed=False,historic=False,single_p=None):
       for state in country_states:
         # Call this function for all the states. At this point, only interested in
         # non-detailed data for the current version.
-        state_data = build_json_aa(state,df_data,lang,detailed=False,historic=False,single_p=single_p)
+        state_data = build_json_aa(state,df_data,lang,indicators=False,historic=False,single_p=single_p)
         state_list.append(state_data)
 
     # Even when there are no states, an empty list has to be printed
@@ -719,7 +735,7 @@ def main():
   for aa in admin_areas:
     for lang in langs:
       # Get the data for this admin area in a dict
-      json_data = build_json_aa(aa,df_full,lang,detailed=True,historic=True)
+      json_data = build_json_aa(aa,df_full,lang,indicators=True,historic=True)
       
       # Write the dict to a JSON file
       with open('data/' + lang + '/api/countries/' + aa.lower() + '.json','w') as ofile:
@@ -739,7 +755,7 @@ def main():
       country_list = []
       # Loop over the countries
       for country in countries:
-        country_data = build_json_aa(country,df_full,lang,detailed=False,historic=True,single_p=p)
+        country_data = build_json_aa(country,df_full,lang,indicators=False,historic=True,single_p=p)
         country_list.append(country_data)
 
       json_data['countries'] = country_list
