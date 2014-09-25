@@ -29,7 +29,6 @@ import os
 import os.path
 import shutil
 import json
-import re
 import numpy as np
 import pandas as pd
 import glob
@@ -450,10 +449,11 @@ def get_rank(aal,df,name):
 
   for year in years:
     # For each year, slice the DF on the list of administrative areas, then
-    # group by the indicator and build a rank.
+    # group by the indicator and build a rank. In case of equal values, the
+    # lowest rank will assigned. (1, 2, 2, 2, 5, 6, 7, etc)
     # The rank is stored in the empty DF to ensure no previous values get
     # overridden by NaN.
-    df_rank[(year, name)] = df.loc[(aal,slice(None)),(year,'value')].groupby(level=1).rank(ascending=False)
+    df_rank[(year, name)] = df.loc[(aal,slice(None)),(year,'value')].groupby(level=1).rank(method='min',ascending=False)
 
   # Overwrite the NaN values in the original DF with values in the df_rank
   df.update(df_rank)
@@ -472,6 +472,8 @@ def main():
     sys.exit(0)
   else:
     os.makedirs(tmp_dir)
+
+  print "Loading the core and meta data..."
 
   # Build the different sets of admin areas with things we have to loop over.
   regions = build_set('region','type','iso',src_meta_aa)
@@ -557,8 +559,10 @@ def main():
   # For all the CSV exports, prepare a dataframe that combines the data with
   # the meta.
 
-  # Make sure the floats are rounded to 3 decimals
-  df_full_csv = np.round(df_full,3)
+  print "Building the CSV files for the download section..."
+
+  # Make sure the floats are rounded to 5 decimals
+  df_full_csv = np.round(df_full,5)
 
   # The full DF is a multi-index. Since the meta-files have a single index,
   # it is necessary to reset the indexes before joining on the column.
@@ -646,6 +650,7 @@ def main():
   #       1.01  0.1802  5   3   NaN   0.1795  6   3   NaN
   # ...
 
+  print "Calculating the ranking..."
 
   # 3.0 Prepare the structure
   # Create list that repeats 'value' for the amount of years available
@@ -690,6 +695,7 @@ def main():
   # 4. JSON api
   #
 
+  print "Building the JSON files for the API..."
 
   # 4.1 Generate the main JSON file
   for lang in langs:
@@ -771,6 +777,8 @@ def main():
 
   # Fully remove the temp directory
   clean_tmp(True)
+
+  print "All done. The data has been prepared for use on globalclimatescope.org."
 
 if __name__ == "__main__":
   main()
