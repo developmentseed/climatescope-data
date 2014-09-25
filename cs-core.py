@@ -29,6 +29,7 @@ import os
 import os.path
 import shutil
 import json
+import re
 import numpy as np
 import pandas as pd
 import glob
@@ -66,18 +67,33 @@ def check_dir(d):
 
 
 def get_years(current=True):
-  """Return a set with the years there is core data for.
+  """Return a set with the years there is core data for. To determine this, the
+  function loops over the contents of the source folder and checks the names of
+  the files for properly formatted years.
 
   Parameters
   ----------
   current   : boolean
-              If set to false, only the previous years are returned.
+              If set to false, only the previous years are returned. Assumes 
+              that the current year is the highest year in the range.
   """
    # Check which years are available
   years = set()
-  for fn in os.listdir(src_core):
-    years.add(os.path.splitext(fn)[0])
-  
+  fn_pattern = re.compile('^20[0-9]{2}$')
+
+  for f in os.listdir(src_core):
+    fn = os.path.splitext(f)[0]
+    ext = os.path.splitext(f)[-1].lower()
+    path = os.path.join(src_core, fn)
+
+    if not os.path.isdir(path):
+      # Only continue if dealing with file, ignore the folders
+      if ext == ".xlsx":
+        # Check if dealing with an .xlsx
+        if fn_pattern.match(fn):
+          # If the file-name is a properly formatted year, add it
+          years.add(fn)
+
   if not current:
     current_yr = max(years)
     years.remove(current_yr)
@@ -472,6 +488,34 @@ def main():
     sys.exit(0)
   else:
     os.makedirs(tmp_dir)
+
+  # Run some checks on the source folder with core data.
+  if not get_years():
+    # Is there anything in the source folder to begin with?
+    print "We were not able to find a XLSX file with core data in the folder: "\
+          "%s. Make sure this folder contains at least one XLSX file named "\
+          "after the year (eg. 2014.xlsx). Check the readme for more info "\
+          "about the required structure of these files.\n"\
+          "Quiting..." % (src_core)
+    sys.exit(0)
+
+  # Provide feedback that the script only processes XLSX files with properly
+  # formatted filenames. (eg. 2014.xlsx)
+  fn_pattern = re.compile('^20[0-9]{2}$')
+  for f in os.listdir(src_core):
+    fn = os.path.splitext(f)[0]
+    ext = os.path.splitext(f)[-1].lower()
+    path = os.path.join(src_core, fn)
+    
+    if not os.path.isdir(path):
+      # Only check files
+      if ext == ".xlsx":
+        if not fn_pattern.match(fn):
+          print "The XLSX file %s doesn't have a properly formatted year as "\
+                "filename and will be ignored." % (f)
+      else:
+        print "The script only processes XLSX files. %s will be ignored." % (f)
+
 
   print "Loading the core and meta data..."
 
