@@ -220,6 +220,48 @@ def rank_dict(df,ind,yr):
   return aa_ranks
 
 
+def get_basic_stats(aal,df,ind):
+  """Returns a list with statistics for a list of administrative areas, for a
+  particular score/parameter/indicator. If more than one year is available, it
+  will return historic data.
+  Eg. [{ 'year': 2014, min': 0.23, 'max': 2.54, 'avg': 1.68 }]
+
+  Parameters
+  ----------
+  aal       : list
+              A list of iso codes (strings) to process
+  df        : dataframe
+              The dataframe to process, multi-indexed on 'iso' and 'id'. The
+              columns also have a hierarchy (year, 'value')
+  ind       : float
+              The score/param/indicator we're building the rank for
+  """
+
+  data = []
+
+  # Slice the full DF so it only contains data for the relevant indicator and
+  # countries.
+  df_aal = df.loc[(aal,ind),(slice(None),'value')]
+
+  for yr in years:
+    # Slice the aal DF so it only contains the year
+    df_aal_yr = df_aal.loc[slice(None),yr]
+
+    # For each year, we're storing an object with year and the value
+    yr_data = {}
+    yr_data['year'] = int(yr)
+
+    # Group the DF by the indicator, calculate the mean and store the value in
+    # the dict.
+    yr_data['mean'] = round(df_aal_yr.groupby(level=1).mean().iloc[0]['value'],5)
+    yr_data['min'] = round(df_aal_yr.groupby(level=1).min().iloc[0]['value'],5)
+    yr_data['max'] = round(df_aal_yr.groupby(level=1).max().iloc[0]['value'],5)
+
+    data.append(yr_data)
+
+  return data
+
+
 def build_json_aa(aa,df_data,lang,indicators=False,historic=False,single_p=None):
   """Build the dict with data for a particular administrative area for export
   to JSON.
@@ -817,6 +859,46 @@ def main():
       # Generate the parameter JSONs
       with open('data/' + lang + '/api/parameters/' + str(int(p)) + '.json','w') as ofile:
         json.dump(json_data, ofile)
+
+
+  # 4.5 Generate the JSON files with derived statistics
+  for lang in langs:
+
+    json_data = {}
+    
+    # Generate regional statistics
+    region_list = []
+    for region in regions:
+      # Build a set with the admin areas for this region
+      aa_region = build_set(region,'region','iso',src_meta_aa)
+
+      # Remove states from this set, leaving countries
+      c_region = list(aa_region.difference(states))
+
+      # The JSON contains a dict with id, name and a countries list
+      region_data = {}
+      region_data['id'] = region
+      region_data['name'] = df_meta_aa.ix[region,'name:' + lang]
+
+      region_data['score'] = get_basic_stats(c_region,df_full,0)
+
+      param_list = []
+      for param in index_param:
+        param_data = {}
+        param_data['id'] = int(param)
+        param_data['name'] = df_meta_index.ix[param,'name:' + lang]
+        param_data['data'] = get_basic_stats(c_region,df_full,param)
+        param_list.append(param_data)
+
+      region_data['parameters'] = param_list
+
+      region_list.append(region_data)
+      
+    json_data['regions'] = region_list
+
+    # Write the list to a JSON file
+    with open('data/' + lang + '/api/stats.json','w') as ofile:
+      json.dump(json_data, ofile)
 
 
   # Fully remove the temp directory
