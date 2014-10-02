@@ -50,7 +50,7 @@ exp_core_csv = export_dir + 'cs-core.csv'
 
 # Source structure
 core_data_sheets = ['score', 'param', 'ind']
-core_data_cols = ['id', 'iso', 'score']
+core_data_cols = ['id', 'iso', 'score', 'data']
 
 # Languages
 langs = ['en','es']
@@ -593,18 +593,18 @@ def main():
   #
   # Output: df_full
   #
-  #             2014    2015
-  # iso   id
-  # AR    0     1.2420  1.2235
-  #       1.01  0.1802  0.1795
+  #             2014            2015
+  # iso   ind   value   data    value   data
+  # AR    0     1.2420  NaN     1.2235  NaN
+  #       1.01  0.1802  78.17   0.1795  75.16
   # ...
 
 
   first_yr = True
 
-  for year in years:
+  for yr in years:
     # All core data files are named after the year of the edition
-    fn = src_core + year + '.xlsx'
+    fn = src_core + yr + '.xlsx'
 
     df_yr = pd.DataFrame()
     for sheet in core_data_sheets:
@@ -627,8 +627,17 @@ def main():
     # Make sure the index is sorted so the slicing works well
     df_yr.sortlevel(inplace=True)
 
-    # Rename the column 'score' to year
-    df_yr.rename(columns={'score':year}, inplace=True)
+    # Rename the column 'score' to value
+    df_yr.rename(columns={'score':'value'}, inplace=True)
+
+    
+    # Add an extra level in the hierarchy of the columns (Mutli-index)
+    # containing an indication of the year
+
+    # Create list that repeats 'value' for the amount of years available
+    c = [yr] * len(df_yr.columns)
+    # Add a level to the cols
+    df_yr.columns = [c, df_yr.columns]
 
     if first_yr:
       # If it's the first year, we initialize the full DataFrame
@@ -638,6 +647,7 @@ def main():
       # Every subsequent year will have to be merged into df_full
       df_full = pd.merge(df_full,df_yr,left_index=True,right_index=True)
 
+  df_full.sortlevel(axis=1,inplace=True)
 
   #############################################################################
   # 2. CSV downloads
@@ -647,8 +657,9 @@ def main():
 
   print "Building the CSV files for the download section..."
 
-  # Make sure the floats are rounded to 5 decimals
-  df_full_csv = np.round(df_full,5)
+  # For the CSV, we're only interested in the value column of each year
+  df_full_csv = df_full.loc[:,(slice(None),'value')]
+  df_full_csv.columns = df_full_csv.columns.get_level_values(0)
 
   # The full DF is a multi-index. Since the meta-files have a single index,
   # it is necessary to reset the indexes before joining on the column.
@@ -658,6 +669,7 @@ def main():
 
   # Merge the country meta
   df_full_csv = pd.merge(df_full_csv,df_meta_aa_csv,on='iso')
+
   # Merge the index meta data
   df_full_csv = pd.merge(df_full_csv,df_meta_index_csv,on='id',suffixes=('_aa','_var'))
 
@@ -722,6 +734,7 @@ def main():
       # Select the proper columns and generate the CSV
       df_param.loc[slice(None),columns].to_csv(export_dir + lang + '/download/parameters/climatescope-' + str(int(p)) + '.csv',encoding='UTF-8',index=False)
 
+  sys,exit(0)
 
   #############################################################################
   # 3. Calculate the rankings
@@ -729,21 +742,17 @@ def main():
   #
   # Output: df_full
   #
-  #             2014                  2015
-  #             value   gr  rr  sr    value   gr  rr  sr
+  #             2014                         2015
+  #             value   data  gr  rr  sr    value  data  gr  rr  sr
   # iso   id
-  # AR    0     1.2420  13  6   NaN   1.2235  12  8   NaN
-  #       1.01  0.1802  5   3   NaN   0.1795  6   3   NaN
+  # AR    0     1.2420  NaN   13  6   NaN   1.2235 NaN   12  8   NaN
+  #       1.01  0.1802  73.1  5   3   NaN   0.1795 75.8  6   3   NaN
   # ...
+
 
   print "Calculating the ranking..."
 
   # 3.0 Prepare the structure
-  # Create list that repeats 'value' for the amount of years available
-  c = ['value'] * len(df_full.columns)
-  # Add a level to the cols, resulting in (2014, 'value'), (2015, 'value') etc
-  df_full.columns = [df_full.columns, c]
-
   # Add placeholder cols with NaN that can be updated later with df.update()
   for year in years:
     for rank in ('gr', 'rr', 'sr'):
