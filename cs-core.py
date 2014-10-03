@@ -214,7 +214,9 @@ def rank_dict(df,ind,yr):
   # Check if it is not null and if so, add it.
   for key, value in rankings.iteritems():
     rank = df.loc[ind,(yr,key)]
-    if pd.notnull(rank):
+    if pd.isnull(rank):
+      aa_ranks[value] = None
+    else:
       aa_ranks[value] = int(rank)
 
   return aa_ranks
@@ -291,6 +293,44 @@ def get_basic_stats(aal,df,ind):
     data.append(yr_data)
 
   return data
+
+
+def get_rank(aal,df,name):
+  """Build a dataframe that ranks a list of administrative areas on every
+  variable available (score, parameter, indicator)
+
+  Parameters
+  ----------
+  aal       : list
+              A list of iso codes (strings) to process
+  df        : dataframe
+              The dataframe to process, multi-indexed on 'iso' and 'id'. The
+              columns also have a hierarchy (year, 'value')
+  name      : string
+              The name of the rank (eg. 'or').
+  """
+
+  # Initialize an empty dataframe
+  df_rank = pd.DataFrame()
+
+  for year in years:
+    
+    # For each year, slice the DF on the list of administrative areas
+    df_yr = df.loc[(aal,slice(None)),(year,'value')]
+    
+    # Substitute all the 0 value for NaN, these will not receive a ranking
+    df_yr.replace(to_replace=0,value=np.nan,inplace=True)
+    
+    # Group by the indicator and build a rank. In case of equal values, the
+    # lowest rank will assigned. (1, 2, 2, 2, 5, 6, 7, etc)
+    # The rank is stored in the empty DF to ensure no previous values get
+    # overridden by NaN.
+    df_rank[(year, name)] = df_yr.groupby(level=1).rank(method='min',ascending=False)
+  
+  # Overwrite the NaN values in the original DF with values in the df_rank
+  df.update(df_rank)
+  
+  return df
 
 
 def build_json_aa(aa,df_data,lang,indicators=False,historic=False,single_p=None):
@@ -522,38 +562,6 @@ def pivot_df(df,ind,col,val):
   # Pivot the dataframe
   df = df.pivot(index=ind,columns=col,values=val)
 
-  return df
-
-
-def get_rank(aal,df,name):
-  """Build a dataframe that ranks a list of administrative areas on every
-  variable available (score, parameter, indicator)
-
-  Parameters
-  ----------
-  aal       : list
-              A list of iso codes (strings) to process
-  df        : dataframe
-              The dataframe to process, multi-indexed on 'iso' and 'id'. The
-              columns also have a hierarchy (year, 'value')
-  name      : string
-              The name of the rank (eg. 'or').
-  """
-
-  # Initialize an empty dataframe
-  df_rank = pd.DataFrame()
-
-  for year in years:
-    # For each year, slice the DF on the list of administrative areas, then
-    # group by the indicator and build a rank. In case of equal values, the
-    # lowest rank will assigned. (1, 2, 2, 2, 5, 6, 7, etc)
-    # The rank is stored in the empty DF to ensure no previous values get
-    # overridden by NaN.
-    df_rank[(year, name)] = df.loc[(aal,slice(None)),(year,'value')].groupby(level=1).rank(method='min',ascending=False)
-
-  # Overwrite the NaN values in the original DF with values in the df_rank
-  df.update(df_rank)
-  
   return df
 
 
