@@ -220,6 +220,37 @@ def rank_dict(df,ind,yr):
   return aa_ranks
 
 
+def get_raw_data(df,ind,lang,yr):
+  """Returns a dict with the value and unit of the raw data for an indicator.
+
+  Parameters
+  ----------
+  df        : dataframe
+              The dataframe to fetch the rank from
+  ind       : float
+              The indicator we're building the rank for
+  lang      : string
+              The active language
+  yr        : int
+              The year we're interested in
+  """
+
+  # Fetch the raw data that underlies the score of this indicator
+  raw_data = {}
+  raw_value = df.ix[float(ind),(yr,'data')]
+
+  if pd.isnull(raw_value):
+    # By default Pandas returns NaN, for the JSON this needs to be null
+    raw_data['value'] = None
+    raw_data['unit'] = None
+  else:
+    # If there is data, fetch the value and the unit in the proper language
+    raw_data['value'] = round(raw_value,5)
+    raw_data['unit'] = df_meta_index.ix[ind,'unit:' + lang]
+
+  return raw_data
+
+
 def get_basic_stats(aal,df,ind):
   """Returns a list with statistics for a list of administrative areas, for a
   particular score/parameter/indicator. If more than one year is available, it
@@ -420,10 +451,14 @@ def build_json_aa(aa,df_data,lang,indicators=False,historic=False,single_p=None)
                 # Fetch the rankings for the indicator and update the yr_dict with them
                 aa_ranks = rank_dict(df_aa,ind,yr)
                 yr_data.update(aa_ranks)
+
+                # Fetch the raw data that underlies the score of this indicator
+                yr_data['raw'] = get_raw_data(df_aa,ind,lang,yr)
                 
                 ind_yr.append(yr_data)
 
               ind_data['data'] = ind_yr
+
             else:
               # Provide the value for the current edition only
               ind_data['value'] = round(df_aa.ix[float(ind),(current_yr,'value')],5)
@@ -431,6 +466,9 @@ def build_json_aa(aa,df_data,lang,indicators=False,historic=False,single_p=None)
               # Fetch the rankings for the indicator and update the yr_dict with them
               aa_ranks = rank_dict(df_aa,ind,current_yr)
               ind_data.update(aa_ranks)
+
+              # Fetch the raw data that underlies the score of this indicator
+              yr_data['raw'] = get_raw_data(df_aa,ind,lang,current_yr)
 
             il.append(ind_data)
         group_data['indicators'] = il
@@ -734,7 +772,6 @@ def main():
       # Select the proper columns and generate the CSV
       df_param.loc[slice(None),columns].to_csv(export_dir + lang + '/download/parameters/climatescope-' + str(int(p)) + '.csv',encoding='UTF-8',index=False)
 
-  sys,exit(0)
 
   #############################################################################
   # 3. Calculate the rankings
