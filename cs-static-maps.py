@@ -41,9 +41,12 @@ exp_dir = 'data/assets/images/content/maps/'
 tm_dir = '/usr/share/tilemill/'
 tm_project = 'cs-single-country'
 
+# Languages to generate images for
+langs = ('en','es')
+
 # Approximate desired height and width in pixels
-width = 2880
-height = 1024
+width = 512
+height = 512
 
 
 #http://www.johndcook.com/python_longitude_latitude.html
@@ -163,22 +166,36 @@ def calculate_bbox(lon1,lat1,lon2,lat2,offset_lon1=0,offset_lat1=0,offset_lon2=0
   new_bbox = '"%s,%s,%s,%s"' % (new_lon1, new_lat1, new_lon2, new_lat2)
   return new_bbox
 
-def generate_cartocss(aa_type,active,full_list,parent=False):
-  "Write the stylesheet for the map. Type = country or state, active = the iso of the active area, full_list = the full list of active countries"
-  cartocss_template =\
-    '''\
-    Map { background-color: #f2f2f2; }
-    #countries {
-      ::outline { line-color: #fff; }
-      polygon-fill: #fff;
-    '''
+def generate_cartocss(aa_type,active,lang):
+  "Write the stylesheet for the map. Type = country or state, active = the iso of the active area, lang = language"
   if aa_type == 'c':
-    for country in full_list:
-      cartocss_template += '[ISO_A2 = "' + country + '"] { polygon-fill: #E5E5E5; }\n'
-    # Finish the MSS template by adding the active color
-    cartocss_template += '[ISO_A2 = "' + active + '"] { polygon-fill: #C3D500; }\n}'
+    layer = 'countries'
+    iso_id = 'ISO_A2'
   elif aa_type == 's':
-    cartocss_template += '[ISO_A2 = "' + parent + '"] { polygon-fill: #E5E5E5; }\n}\n#states { ::outline { line-color: #fff; }\n[iso_3166_2 = "' + active + '"] {polygon-fill: #C3D500; }}'
+    layer = 'states'
+    iso_id = 'iso_3166_2'
+
+  cartocss_template =\
+  '''\
+  Map { background-color: #f2f2f2; }
+  #%s [%s = "%s"] {
+    ::outline { line-color: #fff; line-width: 2px; }
+    polygon-fill: #C3D500;
+  }
+  #capitals [iso = "%s"] {
+    text-name: [capital:%s];
+    text-size: 32px;
+    text-fill: #333;
+    text-halo-fill: #fff;
+    text-halo-radius: .75;
+    text-face-name: 'Calibri Regular';
+    text-dy: -16px;
+    marker-width: 12;
+    marker-fill: #fff;
+    marker-line-color: #333;
+    marker-line-width: 2px;
+  }
+  ''' % (layer,iso_id,active,active,lang)
 
   return cartocss_template
 
@@ -229,28 +246,23 @@ def main():
         lat2 = env[3]
 
         # Get the new bbox for the desired size in px.
-        new_bbox = calculate_bbox(lon1,lat1,lon2,lat2,1440,0,200,0)
+        new_bbox = calculate_bbox(lon1,lat1,lon2,lat2,48,48,48,48)
 
-        if aa == 's':
-          # If dealing with a state, also pass the iso of the parent country
-          parent = iso[:2]
-        else:
-          parent = False
+        for lang in langs:
+          # Make sure we highlight the correct country
+          cartocss_template = generate_cartocss(aa,iso,lang)
+          
+          with open('./tilemill/project/' + tm_project + '/style.mss','w') as mss:
+            mss.write(cartocss_template)
 
-        # Make sure we highlight the correct country
-        cartocss_template = generate_cartocss(aa,iso,admin_areas,parent)
-        
-        with open('./tilemill/project/' + tm_project + '/style.mss','w') as mss:
-          mss.write(cartocss_template)
+          # For the file export, we want the iso code lowercase
+          iso_fn = iso.lower()
 
-        # For the file export, we want the iso code lowercase
-        iso_fn = iso.lower()
-
-        # Build the export command
-        command = "node %sindex.js export %s %s%s.png --format=png --width=%s --height=%s --bbox=%s --files='tilemill'" % (tm_dir, tm_project, exp_dir, iso_fn, width, height, new_bbox)
-        # shlex makes sure that all arguments are correctly passed, most notably the bounding box
-        args = shlex.split(command)
-        subprocess.call(args)
+          # Build the export command
+          command = "node %sindex.js export %s %s%s/%s.png --format=png --width=%s --height=%s --bbox=%s --files='tilemill'" % (tm_dir, tm_project, exp_dir, lang, iso_fn, width, height, new_bbox)
+          # shlex makes sure that all arguments are correctly passed, most notably the bounding box
+          args = shlex.split(command)
+          subprocess.call(args)
 
 if __name__ == "__main__":
   main()
