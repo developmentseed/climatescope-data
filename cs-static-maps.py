@@ -89,19 +89,24 @@ def calculate_bbox(lon1,lat1,lon2,lat2,offset_lon1=0,offset_lat1=0,offset_lon2=0
   core_width = width - total_offset_lon
   core_height = height - total_offset_lat
 
+  # Calculate amount of degrees longitude and latitude for the original bbox.
+  degrees_lon = lon2 - lon1
+  degrees_lat = lat2 - lat1
   # Get the center coordinates
-  center_lon = (lon2 - lon1) / 2 + lon1
-  center_lat = (lat2 - lat1) / 2 + lat1
+  center_lon = degrees_lon / 2 + lon1
+  center_lat = degrees_lat / 2 + lat1
 
   # By default, no shift
   shift_core_lon = 0
   shift_core_lat = 0
 
-  # First, decide whether dealing with a wide or narrow shape
-  # Check the ratio of the original bounding box, by calculating distance from center
-  dist_lat = distance_on_unit_sphere(center_lon, center_lat, center_lon, lat2)
-  dist_lon = distance_on_unit_sphere(center_lon, center_lat, lon2, center_lat)
-  ratio_original_bbox = dist_lon / dist_lat
+  # Calculate the length of the original bbox. For the longitude, calculate at center lat
+  length_lat = distance_on_unit_sphere(lon1, lat1, lon1, lat2)
+  length_lon = distance_on_unit_sphere(lon1, center_lat, lon2, center_lat)
+
+  # Calculate the ratio of the original bbox to decide whether dealing with a wide or narrow shape
+  ratio_original_bbox = length_lon / length_lat
+  
   # Ratio of the desired core bbox (without offset)
   # Convert to float, otherwise it's an int division, returning an int as well
   ratio_core_bbox = core_width / float(core_height)
@@ -110,17 +115,17 @@ def calculate_bbox(lon1,lat1,lon2,lat2,offset_lon1=0,offset_lat1=0,offset_lon2=0
   if ratio_core_bbox < ratio_original_bbox: 
     # In this case, the longitudes fit the core box exactly. Therefore, we can
     # calculate the amount of px per arc, at the center latitude
-    px_distance_arc_lon = core_width / distance_on_unit_sphere(lon1, center_lat, lon2, center_lat)
+    px_distance_arc_lon = core_width / length_lon
     # Determine the height in px of the original bbox
-    px_distance_lat = px_distance_arc_lon * distance_on_unit_sphere(lon1, lat1, lon1, lat2)
+    px_distance_lat = px_distance_arc_lon * length_lat
 
     # Amount of pixels to add to top AND bottom to get the desired core bbox
     px_to_add = (core_height - px_distance_lat) / 2
 
     # Calculate the amount of pixels per degree longitude
-    px_per_degree_lon = core_width / (lon2 - lon1)
+    px_per_degree_lon = core_width / degrees_lon
     # Calculate the amount of pixels per degree latitude
-    px_per_degree_lat = px_distance_lat / (lat2 - lat1)
+    px_per_degree_lat = px_distance_lat / degrees_lat
 
     # Degree that the bbox has to be shifted (left and right) to fit the desired core bbox.
     shift_core_lat = px_to_add / px_per_degree_lat
@@ -129,17 +134,17 @@ def calculate_bbox(lon1,lat1,lon2,lat2,offset_lon1=0,offset_lat1=0,offset_lon2=0
   else:
     # In this case, the latitudes fit the core box exactly. Therefore, we can
     # calculate the amount of px per arc
-    px_distance_arc_lat = core_height / distance_on_unit_sphere(lon1, lat1, lon1, lat2)
+    px_distance_arc_lat = core_height / length_lat
     # Determine the width in px of the original bbox
-    px_distance_lon = px_distance_arc_lat * distance_on_unit_sphere(lon1, center_lat, lon2, center_lat)
+    px_distance_lon = px_distance_arc_lat * length_lon
 
     # Amount of pixels to add to left AND right to get the desired core bbox
     px_to_add = (core_width - px_distance_lon) / 2
 
     # Calculate the amount of pixels per degree longitude
-    px_per_degree_lon = px_distance_lon / (lon2 - lon1)
+    px_per_degree_lon = px_distance_lon / degrees_lon
     # Calculate the amount of pixels per degree latitude
-    px_per_degree_lat = core_height / (lat2 - lat1)
+    px_per_degree_lat = core_height / degrees_lat
 
     # Degree that the bbox has to be shifted (left and right) to fit the desired core bbox.
     shift_core_lon = px_to_add / px_per_degree_lon
