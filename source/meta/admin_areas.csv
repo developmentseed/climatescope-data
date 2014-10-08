@@ -1,84 +1,84 @@
-"iso","type","name:en","name:es","grid","region","country"
-"africa","region","Africa","África",,,
-"asia","region","Asia","Asia",,,
-"lac","region","Latin America and the Caribbean","América Latina y el Caribe",,,
-"AR","country","Argentina","Argentina","on","lac",
-"BS","country","Bahamas","Bahamas","on","lac",
-"BD","country","Bangladesh","Banglades","off","asia",
-"BB","country","Barbados","Barbados","on","lac",
-"BZ","country","Belize","Belice","on","lac",
-"BO","country","Bolivia","Bolivia","on","lac",
-"BW","country","Botswana","Botsuana","off","africa",
-"BR","country","Brazil","Brasil","on","lac",
-"CM","country","Cameroon","Camerun","off","africa",
-"CL","country","Chile","Chile","on","lac",
-"CN","country","China","China","on","asia",
-"CO","country","Colombia","Colombia","on","lac",
-"CD","country","DR Congo","RD Congo","off","africa",
-"CR","country","Costa Rica","Costa Rica","on","lac",
-"CI","country","Côte d'Ivoire","Costa de Marfil","off","africa",
-"DO","country","Dominican Republic","Republica Dominicana","on","lac",
-"EC","country","Ecuador","Ecuador","on","lac",
-"SV","country","El Salvador","El Salvador","on","lac",
-"ET","country","Ethiopia","Etiopia","off","africa",
-"GH","country","Ghana","Ghana","off","africa",
-"GT","country","Guatemala","Guatemala","on","lac",
-"GY","country","Guyana","Guyana","on","lac",
-"HT","country","Haiti","Haiti","off","lac",
-"HN","country","Honduras","Honduras","on","lac",
-"IN","country","India","India","on","asia",
-"ID","country","Indonesia","Indonesia","on","asia",
-"JM","country","Jamaica","Jamaica","on","lac",
-"KE","country","Kenya","Kenia","off","africa",
-"LR","country","Liberia","Liberia","off","africa",
-"MW","country","Malawi","Malaui","off","africa",
-"MX","country","Mexico","Mexico","on","lac",
-"MZ","country","Mozambique","Mozambique","off","africa",
-"MM","country","Myanmar","Birmania","off","asia",
-"NP","country","Nepal","Nepal","off","asia",
-"NI","country","Nicaragua","Nicaragua","on","lac",
-"NG","country","Nigeria","Nigeria","off","africa",
-"PK","country","Pakistan","Pakistan","off","asia",
-"PA","country","Panama","Panama","on","lac",
-"PY","country","Paraguay","Paraguay","on","lac",
-"PE","country","Peru","Peru","on","lac",
-"RW","country","Rwanda","Ruanda","off","africa",
-"SN","country","Senegal","Senegal","off","africa",
-"SL","country","Sierra Leone","Sierra Leona","off","africa",
-"ZA","country","South africa","Sudafrica","on","africa",
-"LK","country","Sri Lanka","Sri Lanka","on","asia",
-"SR","country","Suriname","Surinam","on","lac",
-"TJ","country","Tajikistan","Tayikistan","on","asia",
-"TZ","country","Tanzania","Tanzania","off","africa",
-"TT","country","Trinidad and Tobago","Trinidad y Tobago","on","lac",
-"UG","country","Uganda","Uganda","off","africa",
-"UY","country","Uruguay","Uruguay","on","lac",
-"VE","country","Venezuela","Venezuela","on","lac",
-"VN","country","Vietnam","Vietnam","on","asia",
-"ZM","country","Zambia","Zambia","off","africa",
-"ZW","country","Zimbabwe","Zimbabue","off","africa",
-"CN-35","state","Fujian","Fujian","on","asia","CN"
-"CN-62","state","Gansu","Gansu","on","asia","CN"
-"CN-44","state","Guangdong","Guangdong","on","asia","CN"
-"CN-13","state","Hebei","Hebei","on","asia","CN"
-"CN-23","state","Heilongjiang","Heilongjiang","on","asia","CN"
-"CN-42","state","Hubei","Hubei","on","asia","CN"
-"CN-32","state","Jiangsu","Jiangsu","on","asia","CN"
-"CN-22","state","Jilin","Jilin","on","asia","CN"
-"CN-15","state","Nei Mongol","Nei Mongol","on","asia","CN"
-"CN-63","state","Qinghai","Qinghai","on","asia","CN"
-"CN-37","state","Shandong","Shandong","on","asia","CN"
-"CN-51","state","Sichuan","Sichuan","on","asia","CN"
-"CN-65","state","Xinjiang","Xinjiang","on","asia","CN"
-"CN-54","state","Xizang","Xizang","on","asia","CN"
-"CN-53","state","Yunnan","Yunnan","on","asia","CN"
-"IN-AP","state","Andhra Pradesh","Andhra Pradesh","on","asia","IN"
-"IN-GJ","state","Gujarat","Gujarat","on","asia","IN"
-"IN-MP","state","Madhya Pradesh","Madhya Pradesh","on","asia","IN"
-"IN-MH","state","Maharashtra","Maharashtra","on","asia","IN"
-"IN-KA","state","Karnataka","Karnataka","on","asia","IN"
-"IN-PB","state","Punjab","Punjab","on","asia","IN"
-"IN-RJ","state","Rajasthan","Rajasthan","on","asia","IN"
-"IN-TN","state","Tamil Nadu","Tamil Nadu","on","asia","IN"
-"IN-UP","state","Uttar Pradesh","Uttar Pradesh","on","asia","IN"
-"IN-WB","state","West Bengal","West Bengal","on","asia","IN"
+"iso","type","name:en","name:es","grid","region","country","capital:en","capital:es","lat","lon"
+"africa","region","Africa","África",,,,,,,
+"asia","region","Asia","Asia",,,,,,,
+"lac","region","Latin America and the Caribbean","América Latina y el Caribe",,,,,,,
+"AR","country","Argentina","Argentina","on","lac",,"Buenos Aires","Buenos Aires",-34.5833333333,-58.666667
+"BB","country","Barbados","Barbados","on","lac",,"Bridgetown","Bridgetown",13.1,-59.616667
+"BD","country","Bangladesh","Banglades","off","asia",,"Dhaka","Daca",23.7166666667,90.4
+"BO","country","Bolivia","Bolivia","on","lac",,"La Paz","La Paz",-16.5,-68.15
+"BR","country","Brazil","Brasil","on","lac",,"Brasilia","Brasilia",-15.7833333333,-47.916667
+"BS","country","Bahamas","Bahamas","on","lac",,"Nassau","Nasáu",25.0833333333,-77.35
+"BW","country","Botswana","Botsuana","off","africa",,"Gaborone","Gaborone",-24.6333333333,25.9
+"BZ","country","Belize","Belice","on","lac",,"Belmopan","Belmopán",17.25,-88.766667
+"CD","country","DR Congo","RD Congo","off","africa",,"Kinshasa","Kinshasa",-4.3166666667,15.3
+"CI","country","Côte d'Ivoire","Costa de Marfil","off","africa",,"Yamoussoukro","Yamusukro",6.8166666667,-5.266667
+"CL","country","Chile","Chile","on","lac",,"Santiago","Santiago de Chile",-33.45,-70.666667
+"CM","country","Cameroon","Camerun","off","africa",,"Yaounde","Yaundé",3.8666666667,11.516667
+"CN","country","China","China","on","asia",,"Beijing","Pekín",39.9166666667,116.383333
+"CO","country","Colombia","Colombia","on","lac",,"Bogota","Bogotá",4.6,-74.083333
+"CR","country","Costa Rica","Costa Rica","on","lac",,"San Jose","San José",9.9333333333,-84.083333
+"DO","country","Dominican Republic","Republica Dominicana","on","lac",,"Santo Domingo","Santo Domingo",18.4666666667,-69.9
+"EC","country","Ecuador","Ecuador","on","lac",,"Quito","Quito",-0.2166666667,-78.5
+"ET","country","Ethiopia","Etiopia","off","africa",,"Addis Ababa","Adís Abeba",9.0333333333,38.7
+"GH","country","Ghana","Ghana","off","africa",,"Accra","Accra",5.55,-0.216667
+"GT","country","Guatemala","Guatemala","on","lac",,"Guatemala City","Ciudad de Guatemala",14.6166666667,-90.516667
+"GY","country","Guyana","Guyana","on","lac",,"Georgetown","Georgetown",6.8,-58.15
+"HN","country","Honduras","Honduras","on","lac",,"Tegucigalpa","Tegucigalpa",14.1,-87.216667
+"HT","country","Haiti","Haiti","off","lac",,"Port-au-Prince","Puerto Príncipe",18.5333333333,-72.333333
+"ID","country","Indonesia","Indonesia","on","asia",,"Jakarta","Yakarta",-6.1666666667,106.816667
+"IN","country","India","India","on","asia",,"New Delhi","Nueva Delhi",28.6,77.2
+"JM","country","Jamaica","Jamaica","on","lac",,"Kingston","Kingston",18,-76.8
+"KE","country","Kenya","Kenia","off","africa",,"Nairobi","Nairobi",-1.2833333333,36.816667
+"LK","country","Sri Lanka","Sri Lanka","on","asia",,"Colombo","Colombo",6.9166666667,79.833333
+"LR","country","Liberia","Liberia","off","africa",,"Monrovia","Monrovia",6.3,-10.8
+"MM","country","Myanmar","Birmania","off","asia",,"Naypyidaw","Naipyidó",19.75,96.1
+"MW","country","Malawi","Malaui","off","africa",,"Lilongwe","Lilongüe",-13.9666666667,33.783333
+"MX","country","Mexico","Mexico","on","lac",,"Mexico City","Ciudad de México",19.4333333333,-99.133333
+"MZ","country","Mozambique","Mozambique","off","africa",,"Maputo","Maputo",-25.95,32.583333
+"NG","country","Nigeria","Nigeria","off","africa",,"Abuja","Abuja",9.0833333333,7.533333
+"NI","country","Nicaragua","Nicaragua","on","lac",,"Managua","Managua",12.1333333333,-86.25
+"NP","country","Nepal","Nepal","off","asia",,"Kathmandu","Katmandú",27.7166666667,85.316667
+"PA","country","Panama","Panamá","on","lac",,"Panama City","Panamá",8.9666666667,-79.533333
+"PE","country","Peru","Perú","on","lac",,"Lima","Lima",-12.05,-77.05
+"PK","country","Pakistan","Pakistán","off","asia",,"Islamabad","Islamabad",33.6833333333,73.05
+"PY","country","Paraguay","Paraguay","on","lac",,"Asuncion","Asunción",-25.2666666667,-57.666667
+"RW","country","Rwanda","Ruanda","off","africa",,"Kigali","Kigali",-1.95,30.05
+"SL","country","Sierra Leone","Sierra Leona","off","africa",,"Freetown","Freetown",8.4833333333,-13.233333
+"SN","country","Senegal","Senegal","off","africa",,"Dakar","Dakar",14.7333333333,-17.633333
+"SR","country","Suriname","Surinam","on","lac",,"Paramaribo","Paramaribo",5.8333333333,-55.166667
+"SV","country","El Salvador","El Salvador","on","lac",,"San Salvador","San Salvador",13.7,-89.2
+"TJ","country","Tajikistan","Tayikistan","on","asia",,"Dushanbe","Dusambé",38.55,68.766667
+"TT","country","Trinidad and Tobago","Trinidad y Tobago","on","lac",,"Port of Spain","Puerto España",10.65,-61.516667
+"TZ","country","Tanzania","Tanzania","off","africa",,"Dodoma","Dodoma",-6.1802,35.7468
+"UG","country","Uganda","Uganda","off","africa",,"Kampala","Kampala",0.3166666667,32.55
+"UY","country","Uruguay","Uruguay","on","lac",,"Montevideo","Montevideo",-34.85,-56.166667
+"VE","country","Venezuela","Venezuela","on","lac",,"Caracas","Caracas",10.4833333333,-66.866667
+"VN","country","Vietnam","Vietnam","on","asia",,"Hanoi","Hanói",21.0333333333,105.85
+"ZA","country","South africa","Sudafrica","on","africa",,"Pretoria","Pretoria",-25.7,28.216667
+"ZM","country","Zambia","Zambia","off","africa",,"Lusaka","Lusaka",-15.4166666667,28.283333
+"ZW","country","Zimbabwe","Zimbabue","off","africa",,"Harare","Harare",-17.8166666667,31.033333
+"CN-35","state","Fujian","Fujian","on","asia","CN","Fuzhou","Fuzhou",26.07611111,119.3063889
+"CN-62","state","Gansu","Gansu","on","asia","CN","Lanzhou","Lanzhou",36.03333333,103.8
+"CN-44","state","Guangdong","Guangdong","on","asia","CN","Guangzhou","Guangzhou",23.13333333,113.2666667
+"CN-13","state","Hebei","Hebei","on","asia","CN","Shijiazhuang","Shijiazhuang",38.06666667,114.4833333
+"CN-23","state","Heilongjiang","Heilongjiang","on","asia","CN","Harbin","Harbin",45.75,126.6333333
+"CN-42","state","Hubei","Hubei","on","asia","CN","Wuhan","Wuhan",30.58333333,114.2833333
+"CN-32","state","Jiangsu","Jiangsu","on","asia","CN","Nanjing","Nanjing",32.05,118.7666667
+"CN-22","state","Jilin","Jilin","on","asia","CN","Changchun","Changchun",43.9,125.2
+"CN-15","state","Nei Mongol","Nei Mongol","on","asia","CN","Hohhot","Hohhot",40.81666667,111.65
+"CN-63","state","Qinghai","Qinghai","on","asia","CN","Xining","Xining",36.63333333,101.7666667
+"CN-37","state","Shandong","Shandong","on","asia","CN","Jinan","Jinan",36.66666667,116.9833333
+"CN-51","state","Sichuan","Sichuan","on","asia","CN","Chengdu","Chengdu",30.65861111,104.0647222
+"CN-65","state","Xinjiang","Xinjiang","on","asia","CN","Ürümqi","Ürümqi",43.825,87.6
+"CN-54","state","Xizang","Xizang","on","asia","CN","Lhasa","Lhasa",29.65,91.11666667
+"CN-53","state","Yunnan","Yunnan","on","asia","CN","Kunming","Kunming",25.06666667,102.6833333
+"IN-AP","state","Andhra Pradesh","Andhra Pradesh","on","asia","IN","Hyderabad","Hyderabad",17.366,78.476
+"IN-GJ","state","Gujarat","Gujarat","on","asia","IN","Gandhinagar","Gandhinagar",23.22,72.68
+"IN-MP","state","Madhya Pradesh","Madhya Pradesh","on","asia","IN","Bhopal","Bhopal",23.25,77.41666667
+"IN-MH","state","Maharashtra","Maharashtra","on","asia","IN","Mumbai","Mumbai",18.975,72.82583333
+"IN-KA","state","Karnataka","Karnataka","on","asia","IN","Bangalore","Bangalore",12.96666667,77.56666667
+"IN-PB","state","Punjab","Punjab","on","asia","IN","Chandigarh","Chandigarh",30.75,76.78
+"IN-RJ","state","Rajasthan","Rajasthan","on","asia","IN","Jaipur","Jaipur",26.926,75.8235
+"IN-TN","state","Tamil Nadu","Tamil Nadu","on","asia","IN","Chennai","Chennai",13.08389,80.27
+"IN-UP","state","Uttar Pradesh","Uttar Pradesh","on","asia","IN","Lucknow","Lucknow",26.847,80.947
+"IN-WB","state","West Bengal","West Bengal","on","asia","IN","Kolkata","Kolkata",22.56666667,88.36666667

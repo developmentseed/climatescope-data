@@ -59,6 +59,25 @@
       "srs": "",
       "advanced": {},
       "name": "states"
+    },
+    {
+      "geometry": "point",
+      "extent": [
+        -175.2,
+        -54.283333,
+        179.216667,
+        78.21666666666667
+      ],
+      "id": "capitals",
+      "class": "",
+      "Datasource": {
+        "file": "../../../source/meta/admin_areas.csv"
+      },
+      "layer": null,
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "capitals"
     }
   ],
   "scale": 1,

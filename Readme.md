@@ -32,3 +32,8 @@ Any extra columns or sheets will be ignored by the script.
 Notes:
 - the header of the different sheets should not have filters enabled
 - the structure of the files was proposed by BNEF for the first edition of the Global Climatescope
+
+## Sources
+
+Shapefiles: Natural Earth
+Country and state capitals: Wikipedia
