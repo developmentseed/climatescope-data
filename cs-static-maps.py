@@ -83,85 +83,79 @@ def distance_on_unit_sphere(lon1, lat1, lon2, lat2):
 def calculate_bbox(lon1,lat1,lon2,lat2,offset_lon1=0,offset_lat1=0,offset_lon2=0,offset_lat2=0):
   "Calculate a new bbox based on the desired height and width in pixels. If no offset is provided, the polygon is simply centered in the new bbox."
 
-  # Get the center coordinates
-  center_lon = (lon2 - lon1) / 2 + lon1
-  center_lat = (lat2 - lat1) / 2 + lat1
-
-  # Calculate the arc of one degree latitude
-  arc_height = distance_on_unit_sphere(lon1, lat1, lon1, lat2) / (lat2 - lat1)
-  # Arc of one longitude degree at miny
-  arc_lat1 =  distance_on_unit_sphere(lon1, lat1, lon2, lat1) / (lon2 - lon1)
-  # Arc of one longitude degree at maxy
-  arc_lat2 = distance_on_unit_sphere(lon1, lat2, lon2, lat2) / (lon2 - lon1)
-  # Arc of one longitude degree at center latitude
-  arc_lat_center = distance_on_unit_sphere(lon1, center_lat, lon2, center_lat) / (lon2 - lon1)
-  
-  # Check the ratio of the original bounding box, by calculating distance from center
-  dist_lat = distance_on_unit_sphere(center_lon, center_lat, center_lon, lat2)
-  dist_lon = distance_on_unit_sphere(center_lon, center_lat, lon2, center_lat)
-  ratio_original_bbox = dist_lon / dist_lat
-
-
   # The desired core bounding box, removing the optional offset.
   total_offset_lon = offset_lon1 + offset_lon2
   total_offset_lat = offset_lat1 + offset_lat2
   core_width = width - total_offset_lon
   core_height = height - total_offset_lat
 
+  # Get the center coordinates
+  center_lon = (lon2 - lon1) / 2 + lon1
+  center_lat = (lat2 - lat1) / 2 + lat1
+
+  # By default, no shift
+  shift_core_lon = 0
+  shift_core_lat = 0
+
+  # First, decide whether dealing with a wide or narrow shape
+  # Check the ratio of the original bounding box, by calculating distance from center
+  dist_lat = distance_on_unit_sphere(center_lon, center_lat, center_lon, lat2)
+  dist_lon = distance_on_unit_sphere(center_lon, center_lat, lon2, center_lat)
+  ratio_original_bbox = dist_lon / dist_lat
   # Ratio of the desired core bbox (without offset)
   # Convert to float, otherwise it's an int division, returning an int as well
   ratio_core_bbox = core_width / float(core_height)
 
   # If the original bbox is wider than the desired core bbox, add space to top and bottom
   if ratio_core_bbox < ratio_original_bbox: 
-    # Pixels per lon degree
-    pix_width = core_width / (lon2 - lon1)
+    # In this case, the longitudes fit the core box exactly. Therefore, we can
+    # calculate the amount of px per arc, at the center latitude
+    px_distance_arc_lon = core_width / distance_on_unit_sphere(lon1, center_lat, lon2, center_lat)
+    # Determine the height in px of the original bbox
+    px_distance_lat = px_distance_arc_lon * distance_on_unit_sphere(lon1, lat1, lon1, lat2)
 
-    # Pixels per degree for the height (we use the width of the center lat)
-    pix_height = pix_width * arc_lat_center / arc_height
+    # Amount of pixels to add to top AND bottom to get the desired core bbox
+    px_to_add = (core_height - px_distance_lat) / 2
 
-    # Degrees the longitudes need to be shifted for the offset
-    shift_offset_lon1 = offset_lon1 / pix_width
-    shift_offset_lon2 = offset_lon2 / pix_width
-    # Degrees that the latitudes need to be shifted for the offset
-    shift_offset_lat1 = offset_lat1 / pix_height
-    shift_offset_lat2 = offset_lat2 / pix_height
+    # Calculate the amount of pixels per degree longitude
+    px_per_degree_lon = core_width / (lon2 - lon1)
+    # Calculate the amount of pixels per degree latitude
+    px_per_degree_lat = px_distance_lat / (lat2 - lat1)
 
-    # Calculate how many degrees the lats needs to be shifted from center (without offset)
-    shift_core_lat = (core_height / 2 / pix_height)
-
-    # Calculate new lon, lats + bbox
-    new_lon1 = lon1 - shift_offset_lon1
-    new_lat1 = center_lat - shift_core_lat - shift_offset_lat1
-    new_lon2 = lon2 + shift_offset_lon2
-    new_lat2 = center_lat + shift_core_lat + shift_offset_lat2
+    # Degree that the bbox has to be shifted (left and right) to fit the desired core bbox.
+    shift_core_lat = px_to_add / px_per_degree_lat
 
   # ... otherwise add space on the left and right
   else:
-    # Pixels per degree for the height
-    pix_height = core_height / (lat2 - lat1)
-    # Pixels per lon degree at miny
-    pix_width_lat1 = pix_height * arc_height / arc_lat1
-    # Pixels per lon degree at maxy
-    pix_width_lat2 = pix_height * arc_height / arc_lat2
-    
-    # Degrees the longitudes need to be shifted for the offset
-    shift_offset_lon1 = offset_lon1 / pix_width_lat1
-    shift_offset_lon2 = offset_lon2 / pix_width_lat2
-    # Degrees that the latitudes need to be shifted for the offset
-    shift_offset_lat1 = offset_lat1 / pix_height
-    shift_offset_lat2 = offset_lat2 / pix_height
+    # In this case, the latitudes fit the core box exactly. Therefore, we can
+    # calculate the amount of px per arc
+    px_distance_arc_lat = core_height / distance_on_unit_sphere(lon1, lat1, lon1, lat2)
+    # Determine the width in px of the original bbox
+    px_distance_lon = px_distance_arc_lat * distance_on_unit_sphere(lon1, center_lat, lon2, center_lat)
 
-    # Calculate how many degrees minx needs to be shifted from center (without offset)
-    shift_core_lon1 = core_width / 2 / pix_width_lat1
-    # Calculate how many degrees maxx needs to be shifted from center (without offset)
-    shift_core_lon2 = core_width / 2 / pix_width_lat2
+    # Amount of pixels to add to left AND right to get the desired core bbox
+    px_to_add = (core_width - px_distance_lon) / 2
 
-    # Calculate new lon, lats + bbox
-    new_lon1 = center_lon - shift_core_lon1 - shift_offset_lon1
-    new_lat1 = lat1 - shift_offset_lat1
-    new_lon2 = center_lon + shift_core_lon2 + shift_offset_lon2
-    new_lat2 = lat2 + shift_offset_lat2
+    # Calculate the amount of pixels per degree longitude
+    px_per_degree_lon = px_distance_lon / (lon2 - lon1)
+    # Calculate the amount of pixels per degree latitude
+    px_per_degree_lat = core_height / (lat2 - lat1)
+
+    # Degree that the bbox has to be shifted (left and right) to fit the desired core bbox.
+    shift_core_lon = px_to_add / px_per_degree_lon
+
+  # Degrees the longitudes need to be shifted for the offset
+  shift_offset_lon1 = offset_lon1 / px_per_degree_lon
+  shift_offset_lon2 = offset_lon2 / px_per_degree_lon
+  # Degrees that the latitudes need to be shifted for the offset
+  shift_offset_lat1 = offset_lat1 / px_per_degree_lat
+  shift_offset_lat2 = offset_lat2 / px_per_degree_lat
+
+  # Calculate new lon, lats + bbox
+  new_lon1 = lon1 - shift_core_lon - shift_offset_lon1
+  new_lat1 = center_lat - shift_core_lat - shift_offset_lat1
+  new_lon2 = lon2 + shift_core_lon + shift_offset_lon2
+  new_lat2 = center_lat + shift_core_lat + shift_offset_lat2
 
   new_bbox = '"%s,%s,%s,%s"' % (new_lon1, new_lat1, new_lon2, new_lat2)
   return new_bbox
@@ -212,6 +206,9 @@ def main():
   # Build the lists with countries and states to generate a map for.  
   countries = build_set('country','type','iso',src_meta_aa)
   states = build_set('state','type','iso',src_meta_aa)
+  #countries = ('CN','TZ','KZ','ZA')
+  #states = ()
+
 
   # Country are treated slightly different than states and provinces.
   for aa in 'c','s':
