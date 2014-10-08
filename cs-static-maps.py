@@ -7,7 +7,7 @@
 #
 # Based on the original bounding box in degrees, we calculate a new bounding 
 # box for the desired height and width. By default, it scales the polygon and
-# centers it. It is also possible to specify offsets.
+# centers it. It is also possible to specify paddings.
 #
 # The bulk of the calculations is done to re-calculate the bounding box 
 # properly, taking into account the different distances between the longitudes
@@ -22,15 +22,13 @@
 # Todo:
 # - check if Natural Earth shapefiles exist and if not, download them
 # - runs Tilemill in the standard Ubuntu install folder
-# - add a check if the total offset does not excede height or width
-# - China has a bug, not centered
-# - India states not being generated. NE's state data for India doesn't have the correct ISO codes.
 # - Optimize the PNG's
 
 
 import subprocess
 import shlex
 import math
+import sys
 import pandas as pd
 from osgeo import ogr
 
@@ -47,7 +45,8 @@ langs = ('en','es')
 # Approximate desired height and width in pixels
 width = 512
 height = 512
-
+# Define the padding for each of the 4 sides (top, right, bottom, left)
+padding = (48,48,48,48)
 
 #http://www.johndcook.com/python_longitude_latitude.html
 def distance_on_unit_sphere(lon1, lat1, lon2, lat2):
@@ -80,14 +79,14 @@ def distance_on_unit_sphere(lon1, lat1, lon2, lat2):
   # in your favorite set of units to get length.
   return arc
 
-def calculate_bbox(lon1,lat1,lon2,lat2,offset_lon1=0,offset_lat1=0,offset_lon2=0,offset_lat2=0):
-  "Calculate a new bbox based on the desired height and width in pixels. If no offset is provided, the polygon is simply centered in the new bbox."
+def calculate_bbox(lon1,lat1,lon2,lat2,padding=(0,0,0,0)):
+  "Calculate a new bbox based on the desired height and width in pixels. If no padding is provided, the polygon is simply centered in the new bbox."
 
-  # The desired core bounding box, removing the optional offset.
-  total_offset_lon = offset_lon1 + offset_lon2
-  total_offset_lat = offset_lat1 + offset_lat2
-  core_width = width - total_offset_lon
-  core_height = height - total_offset_lat
+  # The desired core bounding box, removing the optional padding.
+  total_padding_lon = padding[1] + padding[3]
+  total_padding_lat = padding[0] + padding[2]
+  core_width = width - total_padding_lon
+  core_height = height - total_padding_lat
 
   # Calculate amount of degrees longitude and latitude for the original bbox.
   degrees_lon = lon2 - lon1
@@ -107,7 +106,7 @@ def calculate_bbox(lon1,lat1,lon2,lat2,offset_lon1=0,offset_lat1=0,offset_lon2=0
   # Calculate the ratio of the original bbox to decide whether dealing with a wide or narrow shape
   ratio_original_bbox = length_lon / length_lat
   
-  # Ratio of the desired core bbox (without offset)
+  # Ratio of the desired core bbox (without padding)
   # Convert to float, otherwise it's an int division, returning an int as well
   ratio_core_bbox = core_width / float(core_height)
 
@@ -149,18 +148,18 @@ def calculate_bbox(lon1,lat1,lon2,lat2,offset_lon1=0,offset_lat1=0,offset_lon2=0
     # Degree that the bbox has to be shifted (left and right) to fit the desired core bbox.
     shift_core_lon = px_to_add / px_per_degree_lon
 
-  # Degrees the longitudes need to be shifted for the offset
-  shift_offset_lon1 = offset_lon1 / px_per_degree_lon
-  shift_offset_lon2 = offset_lon2 / px_per_degree_lon
-  # Degrees that the latitudes need to be shifted for the offset
-  shift_offset_lat1 = offset_lat1 / px_per_degree_lat
-  shift_offset_lat2 = offset_lat2 / px_per_degree_lat
+  # Degrees the longitudes need to be shifted for the padding
+  shift_padding_lon1 = padding[3] / px_per_degree_lon
+  shift_padding_lon2 = padding[1] / px_per_degree_lon
+  # Degrees that the latitudes need to be shifted for the padding
+  shift_padding_lat1 = padding[2] / px_per_degree_lat
+  shift_padding_lat2 = padding[0] / px_per_degree_lat
 
   # Calculate new lon, lats + bbox
-  new_lon1 = lon1 - shift_core_lon - shift_offset_lon1
-  new_lat1 = center_lat - shift_core_lat - shift_offset_lat1
-  new_lon2 = lon2 + shift_core_lon + shift_offset_lon2
-  new_lat2 = center_lat + shift_core_lat + shift_offset_lat2
+  new_lon1 = lon1 - shift_core_lon - shift_padding_lon1
+  new_lat1 = center_lat - shift_core_lat - shift_padding_lat1
+  new_lon2 = lon2 + shift_core_lon + shift_padding_lon2
+  new_lat2 = center_lat + shift_core_lat + shift_padding_lat2
 
   new_bbox = '"%s,%s,%s,%s"' % (new_lon1, new_lat1, new_lon2, new_lat2)
   return new_bbox
@@ -208,13 +207,20 @@ def build_set(search,search_col,result,csv):
   return s
 
 def main():
+
+  if height < (padding[0] + padding[2]):
+    print "ABORT. ABORT.\n"\
+          "The combined padding for the top and bottom exceeds the desired height."
+    sys.exit(0)
+  elif width < (padding[1] + padding[3]):
+    print "ABORT. ABORT.\n"\
+          "The combined padding for the left and right exceeds the desired width."
+    sys.exit(0)
+
   # Build the lists with countries and states to generate a map for.  
   countries = build_set('country','type','iso',src_meta_aa)
   states = build_set('state','type','iso',src_meta_aa)
-  #countries = ('CN','TZ','KZ','ZA')
-  #states = ()
-
-
+  
   # Country are treated slightly different than states and provinces.
   for aa in 'c','s':
     if aa == 'c':
@@ -248,7 +254,7 @@ def main():
         lat2 = env[3]
 
         # Get the new bbox for the desired size in px.
-        new_bbox = calculate_bbox(lon1,lat1,lon2,lat2,48,48,48,48)
+        new_bbox = calculate_bbox(lon1,lat1,lon2,lat2,padding)
 
         for lang in langs:
           # Make sure we highlight the correct country
