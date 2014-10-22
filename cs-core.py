@@ -731,7 +731,7 @@ def main():
     columns = ['name:' + lang + '_aa','name:' + lang + '_var','type_var']
     columns = columns + list(years)
 
-    df_full_csv.loc[slice(None),columns].to_csv(export_dir + lang + '/download/climatescope-full.csv',encoding='UTF-8',index=False)
+    df_full_csv.loc[slice(None),columns].to_csv(export_dir + lang + '/download/data/climatescope-full.csv',encoding='UTF-8',index=False)
   
 
   # 2.1 Generate the main CSV files
@@ -741,7 +741,7 @@ def main():
 
   for lang in langs:
     # Pivot the DF and export it
-    pivot_df(df_main_csv,'name:' + lang + '_aa','name:' + lang + '_var',current_yr).to_csv(export_dir + lang + '/download/climatescope-' + current_yr + '.csv',encoding='UTF-8')
+    pivot_df(df_main_csv,'name:' + lang + '_aa','name:' + lang + '_var',current_yr).to_csv(export_dir + lang + '/download/data/climatescope-' + current_yr + '.csv',encoding='UTF-8')
 
 
   # 2.2 Generate the regional CSV files
@@ -754,7 +754,7 @@ def main():
     df_region_csv = df_main_csv.loc[aal,:]
     for lang in langs:
       # Pivot the DF and and generate the CSV files
-      pivot_df(df_region_csv,'name:' + lang + '_aa','name:' + lang + '_var',current_yr).to_csv(export_dir + lang + '/download/regions/climatescope-' + region + '.csv',encoding='UTF-8')
+      pivot_df(df_region_csv,'name:' + lang + '_aa','name:' + lang + '_var',current_yr).to_csv(export_dir + lang + '/download/data/regions/climatescope-' + current_yr + '-' + region + '.csv',encoding='UTF-8')
 
 
   # 2.3 Generate the country + state CSV files
@@ -766,7 +766,7 @@ def main():
       columns = ['name:' + lang + '_var','type_var'] + list(years)
 
       # Select the proper columns and generate the CSV      
-      df_aa_csv.loc[slice(None),columns].to_csv(export_dir + lang + '/download/countries/climatescope-' + aa.lower() + '.csv',encoding='UTF-8',index=False)
+      df_aa_csv.loc[slice(None),columns].to_csv(export_dir + lang + '/download/data/countries/climatescope-' + aa.lower() + '.csv',encoding='UTF-8',index=False)
 
 
   # 2.4 Generate the parameter JSON files
@@ -778,7 +778,7 @@ def main():
       columns = ['name:' + lang + '_aa'] + list(years)
 
       # Select the proper columns and generate the CSV
-      df_param.loc[slice(None),columns].to_csv(export_dir + lang + '/download/parameters/climatescope-' + str(int(p)) + '.csv',encoding='UTF-8',index=False)
+      df_param.loc[slice(None),columns].to_csv(export_dir + lang + '/download/data/parameters/climatescope-' + str(int(p)) + '.csv',encoding='UTF-8',index=False)
 
 
   #############################################################################
@@ -958,7 +958,7 @@ def main():
   # Fully remove the temp directory
   clean_tmp(True)
 
-  print "All done. The data has been prepared for use on globalclimatescope.org."
+  print "All done. The data has been prepared for use on global-climatescope.org."
 
 if __name__ == "__main__":
   main()
