@@ -25,8 +25,9 @@ data_year = 2013
 # How much back should we go to search for data.
 data_year_max_search = data_year - 10
 langs = ['en', 'es']
-indicators = {
-    "NY.GDP.PCAP.KD": {  # GDP per capita (constant 2005 US$)
+indicators = [
+    {
+        "id": "NY.GDP.PCAP.KD",  # GDP per capita (constant 2005 US$)
         "name": {
             "en": "GDP per capita",
             "es": "PIB per cápita"
@@ -34,23 +35,25 @@ indicators = {
         "unit": "USD",
         "conversion": "round2"
     },
-    "NY.GDP.PCAP.KD.ZG": {  # GDP per capita growth (annual %)
+    {
+        "id": "NY.GDP.PCAP.KD.ZG",   # GDP per capita growth (annual %)
         "name": {
             "en": "GDP growth per capita",
             "es": "Crecimiento del PIB per cápita"
         },
-        "unit": "USD",
+        "unit": "%",
         "conversion": "round2"
     },
-    "SP.POP.TOTL": {  # Population, total
+    {
+        "id": "SP.POP.TOTL",  # Population, total
         "name": {
             "en": "Population",
             "es": "Población"
         },
-        "unit": "M",
+        "unit": "m",
         "conversion": "million|round2"
-    },  # Population, total
-}
+    },
+]
 
 def debug(data):
     """
@@ -164,7 +167,7 @@ def query_worldbank_indicator_api_recursive(lang, country, indicator, preferred_
     if preferred_yr < max_yr:
         # The recursiveness has to come to an end.
         # If no data was found return null.
-        debug("  No data until {year} for: {lang} - {country} - {indicator}".format(lang=lang, country=country, indicator=indicator, year=preferred_yr))
+        debug("  No data until {year} for: {lang} - {country} - {indicator}".format(lang=lang, country=country, indicator=indicator, year=max_yr))
         return None
     
     debug("  {lang} - {country} - {indicator} - {year}".format(lang=lang, country=country, indicator=indicator, year=preferred_yr))
@@ -246,10 +249,10 @@ def main():
         for lang in langs:
             # Init with defaults.
             country_data = { 'name': None, 'iso': iso, 'indicators': [] }
-            for indicatorId, indicator in indicators.iteritems():
+            for indicator in indicators:
                 # # Get data recursively.
-                data = query_worldbank_indicator_api_recursive(lang, iso, indicatorId, data_year)
-                indicator_to_append = { 'id': indicatorId, 'name': indicator['name'][lang], 'value': None, 'year': None, 'unit': indicator['unit'], 'exp_year':  data_year}
+                data = query_worldbank_indicator_api_recursive(lang, iso, indicator['id'], data_year)
+                indicator_to_append = { 'id': indicator['id'], 'name': indicator['name'][lang], 'value': None, 'year': None, 'unit': indicator['unit'], 'exp_year':  data_year}
                 
                 if data == None or data['value'] == None:
                     country_data['indicators'].append(indicator_to_append)
