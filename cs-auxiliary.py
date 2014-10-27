@@ -209,7 +209,10 @@ def main():
             if aa == row["iso"] and serie["source-id"] == row["sub_indicator"]:
               values_to_append = []
               for yr in ind["years"]:
-                yr_to_append = {"year": yr, "value":row[str(yr)]}
+                if row[str(yr)] == '-':
+                  yr_to_append = {"year": yr, "value": 0}
+                else:
+                  yr_to_append = {"year": yr, "value": float(row[str(yr)])}
                 values_to_append.append(yr_to_append)
               serie_to_append["values"] = values_to_append
 
