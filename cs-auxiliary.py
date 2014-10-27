@@ -46,7 +46,19 @@ current_edition = 2014
 indicators = [
   {
     "id": 107,
-    "name": 'installed-capacity',
+    "export": 'installed-capacity',
+    "title": {
+      "en": 'Installed capacity',
+      "es": 'Capacidad instalada'
+    },
+    "labelx": {
+      "en": 'year',
+      "es": 'año'
+    },
+    "labely": {
+      "en": 'MW',
+      "es": 'MW'
+    },
     "subindicators": [
       {
         "en": 'All Energy',
@@ -61,7 +73,19 @@ indicators = [
   },
   {
     "id": 201,
-    "name": 'clean-energy-investments',
+    "export": 'clean-energy-investments',
+    "title": {
+      "en": 'Clean energy investments',
+      "es": 'Inversiones en energías limpias'
+    },
+    "labelx": {
+      "en": 'year',
+      "es": 'año'
+    },
+    "labely": {
+      "en": 'USDm',
+      "es": 'USDm'
+    },
     "subindicators": [
       {
         "en": 'Clean energy investments',
@@ -82,26 +106,16 @@ def check_dir(d):
     return False
 
 
-def build_set(search,search_col,result,csv):
-  """Perform a lookup and return the matching results for the row in a set
-  
-  Parameters
-  ----------
-  search    : string
-              The value to search for
-  search_col: string
-              The column to perform the search on
-  result    : string
-              The column with the result
-  csv       : string
-              The name of the CSV file to be parsed
+def get_aa_list():
   """
-  df = pd.read_csv(csv)
-  s = set()
-  for index, row in df.iterrows():
-    if row[search_col] == search:
-      s.add(row[result])
-  return s
+  Returns a list of iso codes for the states and countries from the admin_areas.csv
+  """
+  aareas = [];
+  ifile = csv.DictReader(open(src_meta_aa))
+  for row in ifile:
+    if row["type"] == 'country' or row["type"] == 'state':
+      aareas.append(row["iso"])
+  return aareas
 
 
 def clean_tmp(full = False):
@@ -136,18 +150,16 @@ def main():
   else:
     os.makedirs(tmp_dir)
 
-  # Build the different sets of admin areas with things we have to loop over.
-  countries = build_set('country','type','iso',src_meta_aa)
-  states = build_set('state','type','iso',src_meta_aa)
-  admin_areas = countries | states
-  
+  # Build the list with countries and states
+  admin_areas = get_aa_list()
+
   for ind in indicators:
     fn_source = src_auxiliary + str(current_edition) + '-' + str(ind["id"]) + '.csv'
 
     for aa in admin_areas:
       for lang in langs:
         # Initialize the array that will be written to JSON
-        json_data = []
+        json_data = {"title": ind["title"][lang], "label-x": ind["labelx"][lang], "label-y": ind["labely"][lang], "data": []}
 
         for si in ind["subindicators"]:
           # Initialize the object for the subindicator    
@@ -156,7 +168,7 @@ def main():
           # Read in the CSV file
           ifile = csv.DictReader(open(fn_source))
           for row in ifile:
-            # The name of the subindicators are always in English
+            # The name of the subindicators in the source file are in English
             if aa == row["iso"] and si["en"] == row["sub_indicator"]:
               values_to_append = []
               for yr in ind["years"]:
@@ -164,10 +176,10 @@ def main():
                 values_to_append.append(yr_to_append)
               si_to_append["values"] = values_to_append
 
-          json_data.append(si_to_append)
+          json_data["data"].append(si_to_append)
 
         # Write the list to a JSON file
-        with open(export_dir + lang + '/api/auxiliary/' + ind["name"] + '/' + aa.lower() + '.json','w') as ofile:
+        with open(export_dir + lang + '/api/auxiliary/' + ind["export"] + '/' + aa.lower() + '.json','w') as ofile:
           json.dump(json_data, ofile)
 
   print "All done. The auxiliary data has been prepared for use on global-climatescope.org."
