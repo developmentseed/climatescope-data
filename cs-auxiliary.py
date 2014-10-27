@@ -21,7 +21,6 @@ import sys
 import os
 import os.path
 import csv
-import pandas as pd
 import shutil
 import json
 
@@ -182,6 +181,9 @@ def main():
         with open(export_dir + lang + '/api/auxiliary/' + ind["export"] + '/' + aa.lower() + '.json','w') as ofile:
           json.dump(json_data, ofile)
 
+  # Fully remove the temp directory
+  clean_tmp(True)
+  
   print "All done. The auxiliary data has been prepared for use on global-climatescope.org."
 
 if __name__ == "__main__":
