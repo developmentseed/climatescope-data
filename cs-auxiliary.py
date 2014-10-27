@@ -34,6 +34,9 @@ tmp_dir = 'tmp/'
 src_auxiliary = src_dir + 'cs-auxiliary/'
 src_meta_aa = src_dir + 'meta/admin_areas.csv'
 
+# Export filename of the json files
+export_ind = export_dir + '{lang}/api/auxiliary/{indicator}/{aa}.json'
+
 # Languages
 langs = ['en','es']
 # Years we have want data for
@@ -44,31 +47,42 @@ current_edition = 2014
 
 indicators = [
   {
-    "id": 107,
-    "export": 'installed-capacity',
-    "title": {
+    "id": 107, # The source file contains an indication of the id
+    "custom": True,
+    "export": 'installed-capacity', # Folder for the exported data
+    "title": { # Title of the chart
       "en": 'Installed capacity',
       "es": 'Capacidad instalada'
     },
-    "labelx": {
+    "labelx": { # Label of the x-axis
       "en": 'year',
       "es": 'año'
     },
-    "labely": {
+    "labely": { # Label of the y-axis
       "en": 'MW',
       "es": 'MW'
     },
-    "subindicators": [
+    "series": [
       {
-        "en": 'All Energy',
-        "es": 'All Energy'
+        "id": 'non-clean-energy', # The id used in the export
+        "source-id": 'Non-clean Energy', # The id in the source CSV
+        "level": "country", # Data on country level. When 'regional' or 'global' is used, averages are calculated
+        "name": {
+          "en": 'Non-clean Energy',
+          "es": 'Energía no limpia'
+        }
       },
       {
-        "en": 'Clean Energy',
-        "es": 'Clean Energy'
+        "id": 'clean-energy', # The id used in the export
+        "source-id": 'Clean Energy', # The id in the source CSV
+        "level": "country",
+        "name": {
+          "en": 'Clean Energy',
+          "es": 'Energía limpia'
+        }
       }
     ],
-    "years": yrs
+    "years": yrs # List with years to process
   },
   {
     "id": 201,
@@ -85,10 +99,29 @@ indicators = [
       "en": 'USDm',
       "es": 'USDm'
     },
-    "subindicators": [
+    "series": [
       {
-        "en": 'Clean energy investments',
-        "es": 'Clean energy investments'
+        "id": 'country',
+        "source-id": "Clean energy investments",
+        "level": "country",
+      },
+      {
+        "id": 'regional',
+        "source-id": "Clean energy investments",
+        "level": "regional",
+        "name": {
+          "en": 'Regional average',
+          "es": 'Media regional'
+        }
+      },
+      {
+        "id": 'global',
+        "source-id": "Clean energy investments",
+        "level": "global",
+        "name": {
+          "en": 'Global average',
+          "es": 'Media global'
+        }
       },
     ],
     "years": yrs
@@ -106,8 +139,7 @@ def check_dir(d):
 
 
 def get_aa_list():
-  """
-  Returns a list of iso codes for the states and countries from the admin_areas.csv
+  """  Returns a list of iso codes for the states and countries from the admin_areas.csv
   """
   aareas = [];
   ifile = csv.DictReader(open(src_meta_aa))
@@ -135,7 +167,7 @@ def clean_tmp(full = False):
         os.unlink(file_path)
       except Exception, e:
         print e
-   
+
 
 def main():
 
@@ -153,37 +185,44 @@ def main():
   admin_areas = get_aa_list()
 
   for ind in indicators:
-    fn_source = src_auxiliary + str(current_edition) + '-' + str(ind["id"]) + '.csv'
+    ind_source = src_auxiliary + str(current_edition) + '-' + str(ind["id"]) + '.csv'
 
     for aa in admin_areas:
+      iso = aa.lower()
       for lang in langs:
         # Initialize the array that will be written to JSON
-        json_data = {"title": ind["title"][lang], "label-x": ind["labelx"][lang], "label-y": ind["labely"][lang], "data": []}
+        json_data = {"name": iso, "iso": iso, "meta": {"title": ind["title"][lang], "label-x": ind["labelx"][lang], "label-y": ind["labely"][lang]}, "data": []}
 
-        for si in ind["subindicators"]:
-          # Initialize the object for the subindicator    
-          si_to_append = {"name": si[lang], "values": []}
+        for serie in ind["series"]:
+          if serie["id"] == 'country':
+            # If we're dealing with a country, use the country name as label of serie
+            serie_name = aa
+          else:
+            serie_name = serie["name"][lang]
+
+          # Initialize the object for the serie    
+          serie_to_append = {"name": serie_name, "id": serie["id"], "values": []}
 
           # Read in the CSV file
-          ifile = csv.DictReader(open(fn_source))
-          for row in ifile:
-            # The name of the subindicators in the source file are in English
-            if aa == row["iso"] and si["en"] == row["sub_indicator"]:
+          ind_data = csv.DictReader(open(ind_source))
+          for row in ind_data:
+            if aa == row["iso"] and serie["source-id"] == row["sub_indicator"]:
               values_to_append = []
               for yr in ind["years"]:
                 yr_to_append = {"year": yr, "value":row[str(yr)]}
                 values_to_append.append(yr_to_append)
-              si_to_append["values"] = values_to_append
+              serie_to_append["values"] = values_to_append
 
-          json_data["data"].append(si_to_append)
+          json_data["data"].append(serie_to_append)
 
         # Write the list to a JSON file
-        with open(export_dir + lang + '/api/auxiliary/' + ind["export"] + '/' + aa.lower() + '.json','w') as ofile:
+        file_path = (export_ind).format(lang=lang,indicator=ind["export"],aa=iso)
+        with open(file_path,'w') as ofile:
           json.dump(json_data, ofile)
 
   # Fully remove the temp directory
   clean_tmp(True)
-  
+
   print "All done. The auxiliary data has been prepared for use on global-climatescope.org."
 
 if __name__ == "__main__":
