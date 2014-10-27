@@ -38,7 +38,7 @@ indicators = [
     "id": "gdp",
     "name": {
       "en": "GDP",
-      "es": "GDP"
+      "es": "PIB"
     },
     "unit": {
       "en": "$bn",
@@ -49,7 +49,7 @@ indicators = [
     "id": "growth_rate",
     "name": {
       "en": "Five-year economic growth rate",
-      "es": "Five-year economic growth rate"
+      "es": "Tasa de Crecimiento Anual Compuesto del PIB en 5 Años"
     },
     "unit": {
       "en": "%",
@@ -61,7 +61,7 @@ indicators = [
     "id": "population",
     "name": {
       "en": "Population",
-      "es": "Populación"
+      "es": "Población"
     },
     "unit": {
       "en": "m",
@@ -72,7 +72,7 @@ indicators = [
     "id": "clean_energy_investments",
     "name": {
       "en": "Total clean energy investments, 2006-2013",
-      "es": "Total clean energy investments, 2006-2013"
+      "es": "Total de Inversiones Acumuladas de Energía Limpia, 2006-2013"
     },
     "unit": {
       "en": "$bn",
@@ -83,18 +83,18 @@ indicators = [
     "id": "installed_power_capacity",
     "name": {
       "en": "Installed power capacity",
-      "es": "Installed power capacity"
+      "es": "Potencia Instalada"
     },
     "unit": {
-      "en": "GWh",
-      "es": "GWh"
+      "en": "GW",
+      "es": "GW"
     }
   },
   {
     "id": "renewable_share",
     "name": {
       "en": "Renewable share",
-      "es": "Renewable share"
+      "es": "Proporción de Renovables"
     },
     "unit": {
       "en": "%",
@@ -106,7 +106,7 @@ indicators = [
     "id": "clean_energy_generation",
     "name": {
       "en": "Total clean energy generation",
-      "es": "Total clean energy generation"
+      "es": "Generación Total de Energía Limpia"
     },
     "unit": {
       "en": "GWh",
