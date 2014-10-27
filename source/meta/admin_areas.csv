@@ -17,7 +17,7 @@
 "CN","country","China","China","on","asia",,"Beijing","Pekín",39.9166666667,116.383333
 "CO","country","Colombia","Colombia","on","lac",,"Bogota","Bogotá",4.6,-74.083333
 "CR","country","Costa Rica","Costa Rica","on","lac",,"San Jose","San José",9.9333333333,-84.083333
-"DO","country","Dominican Republic","Republica Dominicana","on","lac",,"Santo Domingo","Santo Domingo",18.4666666667,-69.9
+"DO","country","Dominican Republic","República Dominicana","on","lac",,"Santo Domingo","Santo Domingo",18.4666666667,-69.9
 "EC","country","Ecuador","Ecuador","on","lac",,"Quito","Quito",-0.2166666667,-78.5
 "ET","country","Ethiopia","Etiopia","off","africa",,"Addis Ababa","Adís Abeba",9.0333333333,38.7
 "GH","country","Ghana","Ghana","off","africa",,"Accra","Accra",5.55,-0.216667
@@ -33,7 +33,7 @@
 "LR","country","Liberia","Liberia","off","africa",,"Monrovia","Monrovia",6.3,-10.8
 "MM","country","Myanmar","Birmania","off","asia",,"Naypyidaw","Naipyidó",19.75,96.1
 "MW","country","Malawi","Malaui","off","africa",,"Lilongwe","Lilongüe",-13.9666666667,33.783333
-"MX","country","Mexico","Mexico","on","lac",,"Mexico City","Ciudad de México",19.4333333333,-99.133333
+"MX","country","Mexico","México","on","lac",,"Mexico City","Ciudad de México",19.4333333333,-99.133333
 "MZ","country","Mozambique","Mozambique","off","africa",,"Maputo","Maputo",-25.95,32.583333
 "NG","country","Nigeria","Nigeria","off","africa",,"Abuja","Abuja",9.0833333333,7.533333
 "NI","country","Nicaragua","Nicaragua","on","lac",,"Managua","Managua",12.1333333333,-86.25
