@@ -4,7 +4,7 @@
 "lac","region","Latin America and the Caribbean","América Latina y el Caribe",,,,,,,
 "AR","country","Argentina","Argentina","on","lac",,"Buenos Aires","Buenos Aires",-34.5833333333,-58.666667
 "BB","country","Barbados","Barbados","on","lac",,"Bridgetown","Bridgetown",13.1,-59.616667
-"BD","country","Bangladesh","Banglades","off","asia",,"Dhaka","Daca",23.7166666667,90.4
+"BD","country","Bangladesh","Bangladés","off","asia",,"Dhaka","Daca",23.7166666667,90.4
 "BO","country","Bolivia","Bolivia","on","lac",,"La Paz","La Paz",-16.5,-68.15
 "BR","country","Brazil","Brasil","on","lac",,"Brasilia","Brasilia",-15.7833333333,-47.916667
 "BS","country","Bahamas","Bahamas","on","lac",,"Nassau","Nasáu",25.0833333333,-77.35
@@ -13,7 +13,7 @@
 "CD","country","DR Congo","RD Congo","off","africa",,"Kinshasa","Kinshasa",-4.3166666667,15.3
 "CI","country","Côte d'Ivoire","Costa de Marfil","off","africa",,"Yamoussoukro","Yamusukro",6.8166666667,-5.266667
 "CL","country","Chile","Chile","on","lac",,"Santiago","Santiago de Chile",-33.45,-70.666667
-"CM","country","Cameroon","Camerun","off","africa",,"Yaounde","Yaundé",3.8666666667,11.516667
+"CM","country","Cameroon","Camerún","off","africa",,"Yaounde","Yaundé",3.8666666667,11.516667
 "CN","country","China","China","on","asia",,"Beijing","Pekín",39.9166666667,116.383333
 "CO","country","Colombia","Colombia","on","lac",,"Bogota","Bogotá",4.6,-74.083333
 "CR","country","Costa Rica","Costa Rica","on","lac",,"San Jose","San José",9.9333333333,-84.083333
