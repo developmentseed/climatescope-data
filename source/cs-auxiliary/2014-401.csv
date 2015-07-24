@@ -1,0 +1,481 @@
+iso,indicator,sub_indicator,2014
+AR,4.01,Power generation,19
+AR,4.01,Methane,8
+AR,4.01,Forestry,1
+AR,4.01,Waste,11
+AR,4.01,Energy efficiency,6
+AR,4.01,Other,4
+BB,4.01,Power generation,0
+BB,4.01,Methane,0
+BB,4.01,Forestry,0
+BB,4.01,Waste,0
+BB,4.01,Energy efficiency,0
+BB,4.01,Other,0
+BD,4.01,Power generation,0
+BD,4.01,Methane,0
+BD,4.01,Forestry,0
+BD,4.01,Waste,2
+BD,4.01,Energy efficiency,2
+BD,4.01,Other,0
+BO,4.01,Power generation,1
+BO,4.01,Methane,0
+BO,4.01,Forestry,2
+BO,4.01,Waste,1
+BO,4.01,Energy efficiency,2
+BO,4.01,Other,0
+BR,4.01,Power generation,239
+BR,4.01,Methane,80
+BR,4.01,Forestry,14
+BR,4.01,Waste,53
+BR,4.01,Energy efficiency,13
+BR,4.01,Other,10
+BS,4.01,Power generation,0
+BS,4.01,Methane,0
+BS,4.01,Forestry,0
+BS,4.01,Waste,1
+BS,4.01,Energy efficiency,0
+BS,4.01,Other,0
+BW,4.01,Power generation,0
+BW,4.01,Methane,0
+BW,4.01,Forestry,0
+BW,4.01,Waste,0
+BW,4.01,Energy efficiency,0
+BW,4.01,Other,0
+BZ,4.01,Power generation,0
+BZ,4.01,Methane,0
+BZ,4.01,Forestry,3
+BZ,4.01,Waste,0
+BZ,4.01,Energy efficiency,0
+BZ,4.01,Other,0
+CD,4.01,Power generation,0
+CD,4.01,Methane,0
+CD,4.01,Forestry,1
+CD,4.01,Waste,1
+CD,4.01,Energy efficiency,0
+CD,4.01,Other,0
+CI,4.01,Power generation,2
+CI,4.01,Methane,0
+CI,4.01,Forestry,0
+CI,4.01,Waste,2
+CI,4.01,Energy efficiency,1
+CI,4.01,Other,0
+CL,4.01,Power generation,83
+CL,4.01,Methane,8
+CL,4.01,Forestry,5
+CL,4.01,Waste,16
+CL,4.01,Energy efficiency,3
+CL,4.01,Other,5
+CM,4.01,Power generation,0
+CM,4.01,Methane,0
+CM,4.01,Forestry,0
+CM,4.01,Waste,2
+CM,4.01,Energy efficiency,1
+CM,4.01,Other,0
+CN,4.01,Power generation,3423
+CN,4.01,Methane,164
+CN,4.01,Forestry,6
+CN,4.01,Waste,114
+CN,4.01,Energy efficiency,308
+CN,4.01,Other,89
+CN-13,4.01,Power generation,164
+CN-13,4.01,Methane,13
+CN-13,4.01,Forestry,0
+CN-13,4.01,Waste,6
+CN-13,4.01,Energy efficiency,15
+CN-13,4.01,Other,5
+CN-15,4.01,Power generation,366
+CN-15,4.01,Methane,4
+CN-15,4.01,Forestry,1
+CN-15,4.01,Waste,0
+CN-15,4.01,Energy efficiency,12
+CN-15,4.01,Other,2
+CN-22,4.01,Power generation,133
+CN-22,4.01,Methane,9
+CN-22,4.01,Forestry,0
+CN-22,4.01,Waste,1
+CN-22,4.01,Energy efficiency,3
+CN-22,4.01,Other,0
+CN-23,4.01,Power generation,123
+CN-23,4.01,Methane,2
+CN-23,4.01,Forestry,0
+CN-23,4.01,Waste,1
+CN-23,4.01,Energy efficiency,2
+CN-23,4.01,Other,3
+CN-32,4.01,Power generation,50
+CN-32,4.01,Methane,4
+CN-32,4.01,Forestry,0
+CN-32,4.01,Waste,11
+CN-32,4.01,Energy efficiency,16
+CN-32,4.01,Other,4
+CN-35,4.01,Power generation,79
+CN-35,4.01,Methane,0
+CN-35,4.01,Forestry,0
+CN-35,4.01,Waste,5
+CN-35,4.01,Energy efficiency,7
+CN-35,4.01,Other,0
+CN-37,4.01,Power generation,160
+CN-37,4.01,Methane,6
+CN-37,4.01,Forestry,0
+CN-37,4.01,Waste,7
+CN-37,4.01,Energy efficiency,24
+CN-37,4.01,Other,7
+CN-42,4.01,Power generation,69
+CN-42,4.01,Methane,2
+CN-42,4.01,Forestry,0
+CN-42,4.01,Waste,8
+CN-42,4.01,Energy efficiency,12
+CN-42,4.01,Other,0
+CN-44,4.01,Power generation,78
+CN-44,4.01,Methane,2
+CN-44,4.01,Forestry,0
+CN-44,4.01,Waste,8
+CN-44,4.01,Energy efficiency,14
+CN-44,4.01,Other,0
+CN-51,4.01,Power generation,357
+CN-51,4.01,Methane,4
+CN-51,4.01,Forestry,2
+CN-51,4.01,Waste,5
+CN-51,4.01,Energy efficiency,14
+CN-51,4.01,Other,8
+CN-53,4.01,Power generation,373
+CN-53,4.01,Methane,2
+CN-53,4.01,Forestry,0
+CN-53,4.01,Waste,4
+CN-53,4.01,Energy efficiency,3
+CN-53,4.01,Other,4
+CN-54,4.01,Power generation,178
+CN-54,4.01,Methane,2
+CN-54,4.01,Forestry,0
+CN-54,4.01,Waste,1
+CN-54,4.01,Energy efficiency,8
+CN-54,4.01,Other,4
+CN-62,4.01,Power generation,256
+CN-62,4.01,Methane,0
+CN-62,4.01,Forestry,0
+CN-62,4.01,Waste,1
+CN-62,4.01,Energy efficiency,6
+CN-62,4.01,Other,3
+CN-63,4.01,Power generation,53
+CN-63,4.01,Methane,0
+CN-63,4.01,Forestry,0
+CN-63,4.01,Waste,1
+CN-63,4.01,Energy efficiency,3
+CN-63,4.01,Other,0
+CN-65,4.01,Power generation,0
+CN-65,4.01,Methane,0
+CN-65,4.01,Forestry,0
+CN-65,4.01,Waste,0
+CN-65,4.01,Energy efficiency,0
+CN-65,4.01,Other,0
+CO,4.01,Power generation,25
+CO,4.01,Methane,5
+CO,4.01,Forestry,9
+CO,4.01,Waste,20
+CO,4.01,Energy efficiency,1
+CO,4.01,Other,9
+CR,4.01,Power generation,13
+CR,4.01,Methane,0
+CR,4.01,Forestry,1
+CR,4.01,Waste,2
+CR,4.01,Energy efficiency,0
+CR,4.01,Other,0
+DO,4.01,Power generation,13
+DO,4.01,Methane,0
+DO,4.01,Forestry,0
+DO,4.01,Waste,1
+DO,4.01,Energy efficiency,1
+DO,4.01,Other,0
+EC,4.01,Power generation,22
+EC,4.01,Methane,7
+EC,4.01,Forestry,0
+EC,4.01,Waste,2
+EC,4.01,Energy efficiency,1
+EC,4.01,Other,0
+ET,4.01,Power generation,0
+ET,4.01,Methane,0
+ET,4.01,Forestry,1
+ET,4.01,Waste,1
+ET,4.01,Energy efficiency,0
+ET,4.01,Other,0
+GH,4.01,Power generation,0
+GH,4.01,Methane,1
+GH,4.01,Forestry,1
+GH,4.01,Waste,0
+GH,4.01,Energy efficiency,4
+GH,4.01,Other,0
+GT,4.01,Power generation,14
+GT,4.01,Methane,5
+GT,4.01,Forestry,1
+GT,4.01,Waste,1
+GT,4.01,Energy efficiency,0
+GT,4.01,Other,1
+GY,4.01,Power generation,1
+GY,4.01,Methane,0
+GY,4.01,Forestry,0
+GY,4.01,Waste,0
+GY,4.01,Energy efficiency,0
+GY,4.01,Other,0
+HN,4.01,Power generation,25
+HN,4.01,Methane,7
+HN,4.01,Forestry,0
+HN,4.01,Waste,0
+HN,4.01,Energy efficiency,2
+HN,4.01,Other,1
+HT,4.01,Power generation,0
+HT,4.01,Methane,0
+HT,4.01,Forestry,0
+HT,4.01,Waste,0
+HT,4.01,Energy efficiency,0
+HT,4.01,Other,0
+ID,4.01,Power generation,54
+ID,4.01,Methane,68
+ID,4.01,Forestry,1
+ID,4.01,Waste,10
+ID,4.01,Energy efficiency,20
+ID,4.01,Other,5
+IN,4.01,Power generation,1608
+IN,4.01,Methane,29
+IN,4.01,Forestry,13
+IN,4.01,Waste,25
+IN,4.01,Energy efficiency,301
+IN,4.01,Other,29
+IN-AP,4.01,Power generation,67
+IN-AP,4.01,Methane,4
+IN-AP,4.01,Forestry,1
+IN-AP,4.01,Waste,2
+IN-AP,4.01,Energy efficiency,26
+IN-AP,4.01,Other,1
+IN-GJ,4.01,Power generation,202
+IN-GJ,4.01,Methane,0
+IN-GJ,4.01,Forestry,0
+IN-GJ,4.01,Waste,0
+IN-GJ,4.01,Energy efficiency,37
+IN-GJ,4.01,Other,3
+IN-KA,4.01,Power generation,172
+IN-KA,4.01,Methane,5
+IN-KA,4.01,Forestry,1
+IN-KA,4.01,Waste,5
+IN-KA,4.01,Energy efficiency,16
+IN-KA,4.01,Other,0
+IN-MH,4.01,Power generation,165
+IN-MH,4.01,Methane,6
+IN-MH,4.01,Forestry,0
+IN-MH,4.01,Waste,2
+IN-MH,4.01,Energy efficiency,42
+IN-MH,4.01,Other,10
+IN-MP,4.01,Power generation,32
+IN-MP,4.01,Methane,0
+IN-MP,4.01,Forestry,0
+IN-MP,4.01,Waste,0
+IN-MP,4.01,Energy efficiency,4
+IN-MP,4.01,Other,0
+IN-PB,4.01,Power generation,44
+IN-PB,4.01,Methane,4
+IN-PB,4.01,Forestry,0
+IN-PB,4.01,Waste,1
+IN-PB,4.01,Energy efficiency,9
+IN-PB,4.01,Other,3
+IN-RJ,4.01,Power generation,193
+IN-RJ,4.01,Methane,0
+IN-RJ,4.01,Forestry,0
+IN-RJ,4.01,Waste,0
+IN-RJ,4.01,Energy efficiency,17
+IN-RJ,4.01,Other,1
+IN-TN,4.01,Power generation,326
+IN-TN,4.01,Methane,4
+IN-TN,4.01,Forestry,2
+IN-TN,4.01,Waste,2
+IN-TN,4.01,Energy efficiency,11
+IN-TN,4.01,Other,2
+IN-UP,4.01,Power generation,54
+IN-UP,4.01,Methane,2
+IN-UP,4.01,Forestry,1
+IN-UP,4.01,Waste,3
+IN-UP,4.01,Energy efficiency,20
+IN-UP,4.01,Other,0
+IN-WB,4.01,Power generation,10
+IN-WB,4.01,Methane,2
+IN-WB,4.01,Forestry,0
+IN-WB,4.01,Waste,0
+IN-WB,4.01,Energy efficiency,20
+IN-WB,4.01,Other,0
+JM,4.01,Power generation,2
+JM,4.01,Methane,0
+JM,4.01,Forestry,0
+JM,4.01,Waste,0
+JM,4.01,Energy efficiency,0
+JM,4.01,Other,0
+KE,4.01,Power generation,13
+KE,4.01,Methane,1
+KE,4.01,Forestry,15
+KE,4.01,Waste,0
+KE,4.01,Energy efficiency,12
+KE,4.01,Other,0
+LK,4.01,Power generation,0
+LK,4.01,Methane,0
+LK,4.01,Forestry,0
+LK,4.01,Waste,0
+LK,4.01,Energy efficiency,0
+LK,4.01,Other,0
+LR,4.01,Power generation,0
+LR,4.01,Methane,0
+LR,4.01,Forestry,0
+LR,4.01,Waste,1
+LR,4.01,Energy efficiency,0
+LR,4.01,Other,0
+ME,4.01,Power generation,51
+ME,4.01,Methane,100
+ME,4.01,Forestry,0
+ME,4.01,Waste,28
+ME,4.01,Energy efficiency,7
+ME,4.01,Other,8
+MM,4.01,Power generation,1
+MM,4.01,Methane,0
+MM,4.01,Forestry,0
+MM,4.01,Waste,0
+MM,4.01,Energy efficiency,0
+MM,4.01,Other,0
+MW,4.01,Power generation,1
+MW,4.01,Methane,0
+MW,4.01,Forestry,1
+MW,4.01,Waste,0
+MW,4.01,Energy efficiency,0
+MW,4.01,Other,0
+MZ,4.01,Power generation,0
+MZ,4.01,Methane,0
+MZ,4.01,Forestry,1
+MZ,4.01,Waste,0
+MZ,4.01,Energy efficiency,1
+MZ,4.01,Other,0
+NG,4.01,Power generation,2
+NG,4.01,Methane,0
+NG,4.01,Forestry,0
+NG,4.01,Waste,2
+NG,4.01,Energy efficiency,7
+NG,4.01,Other,0
+NI,4.01,Power generation,12
+NI,4.01,Methane,1
+NI,4.01,Forestry,2
+NI,4.01,Waste,0
+NI,4.01,Energy efficiency,1
+NI,4.01,Other,0
+NP,4.01,Power generation,1
+NP,4.01,Methane,4
+NP,4.01,Forestry,0
+NP,4.01,Waste,1
+NP,4.01,Energy efficiency,1
+NP,4.01,Other,0
+PA,4.01,Power generation,18
+PA,4.01,Methane,0
+PA,4.01,Forestry,0
+PA,4.01,Waste,1
+PA,4.01,Energy efficiency,0
+PA,4.01,Other,0
+PE,4.01,Power generation,49
+PE,4.01,Methane,2
+PE,4.01,Forestry,11
+PE,4.01,Waste,4
+PE,4.01,Energy efficiency,8
+PE,4.01,Other,2
+PK,4.01,Power generation,16
+PK,4.01,Methane,1
+PK,4.01,Forestry,0
+PK,4.01,Waste,3
+PK,4.01,Energy efficiency,12
+PK,4.01,Other,2
+PY,4.01,Power generation,0
+PY,4.01,Methane,0
+PY,4.01,Forestry,2
+PY,4.01,Waste,0
+PY,4.01,Energy efficiency,0
+PY,4.01,Other,1
+RW,4.01,Power generation,0
+RW,4.01,Methane,0
+RW,4.01,Forestry,0
+RW,4.01,Waste,0
+RW,4.01,Energy efficiency,4
+RW,4.01,Other,0
+SL,4.01,Power generation,1
+SL,4.01,Methane,0
+SL,4.01,Forestry,0
+SL,4.01,Waste,0
+SL,4.01,Energy efficiency,0
+SL,4.01,Other,0
+SN,4.01,Power generation,3
+SN,4.01,Methane,0
+SN,4.01,Forestry,2
+SN,4.01,Waste,0
+SN,4.01,Energy efficiency,0
+SN,4.01,Other,0
+SR,4.01,Power generation,0
+SR,4.01,Methane,0
+SR,4.01,Forestry,0
+SR,4.01,Waste,0
+SR,4.01,Energy efficiency,0
+SR,4.01,Other,0
+SV,4.01,Power generation,6
+SV,4.01,Methane,0
+SV,4.01,Forestry,0
+SV,4.01,Waste,1
+SV,4.01,Energy efficiency,0
+SV,4.01,Other,0
+TJ,4.01,Power generation,1
+TJ,4.01,Methane,0
+TJ,4.01,Forestry,0
+TJ,4.01,Waste,0
+TJ,4.01,Energy efficiency,0
+TJ,4.01,Other,0
+TT,4.01,Power generation,0
+TT,4.01,Methane,0
+TT,4.01,Forestry,0
+TT,4.01,Waste,0
+TT,4.01,Energy efficiency,0
+TT,4.01,Other,0
+TZ,4.01,Power generation,2
+TZ,4.01,Methane,0
+TZ,4.01,Forestry,1
+TZ,4.01,Waste,1
+TZ,4.01,Energy efficiency,1
+TZ,4.01,Other,0
+UG,4.01,Power generation,6
+UG,4.01,Methane,1
+UG,4.01,Forestry,15
+UG,4.01,Waste,1
+UG,4.01,Energy efficiency,2
+UG,4.01,Other,0
+UY,4.01,Power generation,24
+UY,4.01,Methane,1
+UY,4.01,Forestry,7
+UY,4.01,Waste,1
+UY,4.01,Energy efficiency,0
+UY,4.01,Other,0
+VE,4.01,Power generation,0
+VE,4.01,Methane,0
+VE,4.01,Forestry,0
+VE,4.01,Waste,0
+VE,4.01,Energy efficiency,0
+VE,4.01,Other,0
+VN,4.01,Power generation,233
+VN,4.01,Methane,22
+VN,4.01,Forestry,1
+VN,4.01,Waste,9
+VN,4.01,Energy efficiency,5
+VN,4.01,Other,0
+ZA,4.01,Power generation,22
+ZA,4.01,Methane,4
+ZA,4.01,Forestry,2
+ZA,4.01,Waste,9
+ZA,4.01,Energy efficiency,18
+ZA,4.01,Other,6
+ZM,4.01,Power generation,1
+ZM,4.01,Methane,0
+ZM,4.01,Forestry,1
+ZM,4.01,Waste,0
+ZM,4.01,Energy efficiency,4
+ZM,4.01,Other,0
+ZW,4.01,Power generation,0
+ZW,4.01,Methane,0
+ZW,4.01,Forestry,1
+ZW,4.01,Waste,0
+ZW,4.01,Energy efficiency,0
+ZW,4.01,Other,1

@@ -126,7 +126,80 @@ indicators = [
     ],
     "years": yrs
   },
+  {
+    "id": 401,
+    "export": 'carbon-offset',
+    "title": {
+      "en": 'Carbon offset',
+      "es": 'Compensaciones de carbono'
+    },
+    "labelx": {
+      "en": 'category',
+      "es": 'categoria'
+    },
+    "labely": {
+      "en": '?',
+      "es": '?'
+    },
+    "series": [
+      {
+        "id": 'power-generation',
+        "source-id": "Power generation",
+        "level": "country",
+        "name": {
+          "en": 'Power generation',
+          "es": 'Generación eléctrica'
+        }
+      },
+      {
+        "id": 'methane',
+        "source-id": "Methane",
+        "level": "country",
+        "name": {
+          "en": 'Methane',
+          "es": 'Methane'
+        }
+      },
+      {
+        "id": 'forestry',
+        "source-id": "Forestry",
+        "level": "country",
+        "name": {
+          "en": 'Forestry',
+          "es": 'Forestry'
+        }
+      },
+      {
+        "id": 'waste',
+        "source-id": "Waste",
+        "level": "country",
+        "name": {
+          "en": 'Waste',
+          "es": 'Waste'
+        }
+      },
+      {
+        "id": 'energy-efficiency',
+        "source-id": "Energy efficiency",
+        "level": "country",
+        "name": {
+          "en": 'Energy efficiency',
+          "es": 'Eficiencia energética'
+        }
+      },
+      {
+        "id": 'other',
+        "source-id": "Other",
+        "name": {
+          "en": 'Other',
+          "es": 'Otro'
+        }
+      },
+    ],
+    "years": [2014]
+  },
 ]
+
 
 def check_dir(d):
   """Check if a folder (d) exists. If so, ask user to delete it first.
