@@ -2,3 +2,4 @@
 tilemill/cache
 .pydevproject
 .project
+*.pyc
