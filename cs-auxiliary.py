@@ -104,42 +104,24 @@ indicators = [
         "id": 'country',
         "source-id": "Clean energy investments",
         "level": "country",
-      },
-      {
-        "id": 'regional',
-        "source-id": "Clean energy investments",
-        "level": "regional",
-        "name": {
-          "en": 'Regional average',
-          "es": 'Media regional'
-        }
-      },
-      {
-        "id": 'global',
-        "source-id": "Clean energy investments",
-        "level": "global",
-        "name": {
-          "en": 'Global average',
-          "es": 'Media global'
-        }
-      },
+      }
     ],
     "years": yrs
   },
   {
     "id": 401,
-    "export": 'carbon-offset',
+    "export": 'carbon-offset-projects',
     "title": {
-      "en": 'Carbon offset',
-      "es": 'Compensaciones de carbono'
+      "en": 'Carbon offset projects by sector',
+      "es": 'Compensaciones de carbono por sector'
     },
     "labelx": {
       "en": 'category',
       "es": 'categoria'
     },
     "labely": {
-      "en": '?',
-      "es": '?'
+      "en": '',
+      "es": ''
     },
     "series": [
       {
@@ -157,7 +139,7 @@ indicators = [
         "level": "country",
         "name": {
           "en": 'Methane',
-          "es": 'Methane'
+          "es": 'Metano'
         }
       },
       {
@@ -166,7 +148,7 @@ indicators = [
         "level": "country",
         "name": {
           "en": 'Forestry',
-          "es": 'Forestry'
+          "es": 'Silvicultura'
         }
       },
       {
@@ -175,7 +157,7 @@ indicators = [
         "level": "country",
         "name": {
           "en": 'Waste',
-          "es": 'Waste'
+          "es": 'Residuos'
         }
       },
       {
