@@ -797,9 +797,12 @@ def main():
       country_data = build_json_aa(country,df_full,lang)
       json_data.append(country_data)
 
+    # Sort the list of countries by name
+    sorted_data = sorted(json_data, key=lambda k: k['name'])
+
     # Write the list to a JSON file
     file_path = (settings.exp_core).format(lang=lang)
-    write_json(file_path, json_data)
+    write_json(file_path, sorted_data)
 
 
   # 4.2 Generate the regional JSON files
