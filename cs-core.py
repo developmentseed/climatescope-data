@@ -27,13 +27,12 @@
 import sys
 import os
 import os.path
-import json
 import re
 import numpy as np
 import pandas as pd
 import glob
 
-from utils.utils import check_dir, clean_dir
+from utils.utils import check_dir, clean_dir, write_json
 import settings
 
 
@@ -799,8 +798,8 @@ def main():
       json_data.append(country_data)
 
     # Write the list to a JSON file
-    with open('data/' + lang + '/api/countries.json','w') as ofile:
-      json.dump(json_data, ofile)
+    file_path = (settings.exp_core).format(lang=lang)
+    write_json(file_path, json_data)
 
 
   # 4.2 Generate the regional JSON files
@@ -828,8 +827,8 @@ def main():
       json_data['countries'] = country_list
   
       # Write the list to a JSON file
-      with open('data/' + lang + '/api/regions/' + region + '.json','w') as ofile:
-        json.dump(json_data, ofile)
+      file_path = (settings.exp_region).format(lang=lang,region=region)
+      write_json(file_path, json_data)
 
 
   # 4.3 Generate the country + state JSON files
@@ -837,10 +836,10 @@ def main():
     for lang in settings.langs:
       # Get the data for this admin area in a dict
       json_data = build_json_aa(aa,df_full,lang,indicators=True,historic=True)
-      
+
       # Write the dict to a JSON file
-      with open('data/' + lang + '/api/countries/' + aa.lower() + '.json','w') as ofile:
-        json.dump(json_data, ofile)
+      file_path = (settings.exp_aa).format(lang=lang,aa=aa.lower())
+      write_json(file_path, json_data)
 
 
   # 4.4 Generate the parameter JSON files
@@ -862,8 +861,8 @@ def main():
       json_data['countries'] = country_list
 
       # Generate the parameter JSONs
-      with open('data/' + lang + '/api/parameters/' + str(int(p)) + '.json','w') as ofile:
-        json.dump(json_data, ofile)
+      file_path = (settings.exp_params).format(lang=lang,p=str(int(p)))
+      write_json(file_path, json_data)
 
 
   # 4.5 Generate the JSON files with derived statistics
@@ -902,8 +901,8 @@ def main():
     json_data['regions'] = region_list
 
     # Write the list to a JSON file
-    with open('data/' + lang + '/api/stats.json','w') as ofile:
-      json.dump(json_data, ofile)
+    file_path = (settings.exp_stats).format(lang=lang)
+    write_json(file_path, json_data)
 
 
   # Fully remove the temp directory

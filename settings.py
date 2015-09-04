@@ -16,8 +16,13 @@ src_auxiliary = src_dir + 'cs-auxiliary/'
 src_meta_aa = src_dir + 'meta/admin_areas.csv'
 src_meta_index = src_dir + 'meta/index.csv'
 
-# Export filename of the json files
+# Export filenames
 exp_core_csv = export_dir + 'cs-core.csv'
+exp_core = export_dir + '{lang}/api/countries.json'
+exp_aa = export_dir + '{lang}/api/countries/{aa}.json'
+exp_region = export_dir + '{lang}/api/regions/{region}.json'
+exp_params = export_dir + '{lang}/api/parameters/{p}.json'
+exp_stats = export_dir + '{lang}/api/stats.json'
 exp_aux_json = export_dir + '{lang}/api/auxiliary/{indicator}/{aa}.json'
 
 # Source structure
@@ -32,6 +37,8 @@ yrs = [2006,2007,2008,2009,2010,2011,2012,2013]
 # The current edition
 current_edition = 2014
 
+
+# The indicators for the auxiliary data
 
 indicators = [
   {

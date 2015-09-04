@@ -1,5 +1,6 @@
 # Climatescope utils
 
+import json
 import os.path
 import shutil
 
@@ -51,3 +52,17 @@ def clean_dir(d, full = False):
         os.unlink(file_path)
       except Exception, e:
         print e
+
+
+def write_json(f,data):
+  """Write data to a json file
+
+  :param f:
+    Path to the file
+  :param f:
+    String
+  :param data:
+    Data to write to the file
+  """
+  with open(f ,'w') as ofile:
+    json.dump(data, ofile)

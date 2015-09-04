@@ -86,9 +86,8 @@ def main():
           json_data["data"].append(serie_to_append)
 
         # Write the list to a JSON file
-        file_path = (settings.exp_aux_json).format(lang=lang,indicator=ind["export"],aa=iso)
-        with open(file_path,'w') as ofile:
-          json.dump(json_data, ofile)
+        file_path = (settings.exp_aux_json).format(lang=lang,indicator=ind["export"],aa=iso)  
+        write_json(file_path, json_data)
 
   # Fully remove the temp directory
   clean_dir(settings.tmp_dir, True)
