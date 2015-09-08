@@ -27,43 +27,13 @@
 import sys
 import os
 import os.path
-import shutil
-import json
 import re
 import numpy as np
 import pandas as pd
 import glob
 
-
-# Directory structure
-src_dir = 'source/'
-export_dir = 'data/'
-tmp_dir = 'tmp/'
-
-# Source - filenames / dirs
-src_core = src_dir + 'cs-core/'
-src_meta_aa = src_dir + 'meta/admin_areas.csv'
-src_meta_index = src_dir + 'meta/index.csv'
-
-# Export - filenames / dirs
-exp_core_csv = export_dir + 'cs-core.csv'
-
-# Source structure
-core_data_sheets = ['score', 'param', 'ind']
-core_data_cols = ['id', 'iso', 'score', 'data']
-
-# Languages
-langs = ['en','es']
-
-
-def check_dir(d):
-  """Check if a folder (d) exists. If so, ask user to delete it first.
-  """
-  if os.path.exists(d):
-    print 'The directory \'%s\' seems to exist already. Please remove it and run this script again.' % (d)
-    return True
-  else:
-    return False
+from utils.utils import check_dir, clean_dir, write_json
+import settings
 
 
 def get_years(current=True):
@@ -81,10 +51,10 @@ def get_years(current=True):
   years = set()
   fn_pattern = re.compile('^20[0-9]{2}$')
 
-  for f in os.listdir(src_core):
+  for f in os.listdir(settings.src_core):
     fn = os.path.splitext(f)[0]
     ext = os.path.splitext(f)[-1].lower()
-    path = os.path.join(src_core, fn)
+    path = os.path.join(settings.src_core, fn)
 
     if not os.path.isdir(path):
       # Only continue if dealing with file, ignore the folders
@@ -121,26 +91,6 @@ def build_set(search,search_col,result,csv):
     if row[search_col] == search:
       s.add(row[result])
   return s
-
-
-def clean_tmp(full = False):
-  """Clean up the temporary directory.
-
-  Parameters
-  ----------
-  full      : boolean
-              If full is set to True, the tmp directory itself will be deleted
-              as well.
-  """
-  if full:
-    shutil.rmtree(tmp_dir)
-  else:
-    for fn in os.listdir(tmp_dir):
-      file_path = os.path.join(tmp_dir, fn)
-      try:
-        os.unlink(file_path)
-      except Exception, e:
-        print e
    
 
 def build_col_index(fn,sheet):
@@ -160,7 +110,7 @@ def build_col_index(fn,sheet):
 
   # Index the relevant columns
   cols_index = []
-  for col in core_data_cols:
+  for col in settings.core_data_cols:
     cols_index.append(cols_src.index(col))
   return cols_index
 
@@ -460,7 +410,7 @@ def build_json_aa(aa,df_data,lang,indicators=False,historic=False,single_p=None)
 
       # The indicator_group is a list with dicts for each indicator
       # Fetch the indicator groups for this parameter
-      param_groups = build_set(param,'parent','id',src_meta_index)
+      param_groups = build_set(param,'parent','id',settings.src_meta_index)
       gl = []
       for group in param_groups:
         group_data = {}
@@ -468,7 +418,7 @@ def build_json_aa(aa,df_data,lang,indicators=False,historic=False,single_p=None)
         gl.append(group_data)
 
         # Build a set with all the indicators for this group
-        group_inds = build_set(group,'parent','id',src_meta_index)
+        group_inds = build_set(group,'parent','id',settings.src_meta_index)
         il = []
         for ind in group_inds:
           # Not every country has data on every indicator. Check if it's in the index.
@@ -526,7 +476,7 @@ def build_json_aa(aa,df_data,lang,indicators=False,historic=False,single_p=None)
   # When dealing with a country, add data about the states
   if df_meta_aa.ix[aa,'type'] == 'country':
     # Check if there are any states or provinces for this country
-    country_states = build_set(aa,'country','iso',src_meta_aa)
+    country_states = build_set(aa,'country','iso',settings.src_meta_aa)
 
     # Loop over the country states
     state_list = []
@@ -572,10 +522,10 @@ def main():
   #
 
   # Check if tmp folder exists, otherwise create it
-  if check_dir(tmp_dir) == True:
+  if check_dir(settings.tmp_dir) == True:
     sys.exit(0)
   else:
-    os.makedirs(tmp_dir)
+    os.makedirs(settings.tmp_dir)
 
   # Run some checks on the source folder with core data.
   if not get_years():
@@ -584,16 +534,16 @@ def main():
           "%s. Make sure this folder contains at least one XLSX file named "\
           "after the year (eg. 2014.xlsx). Check the readme for more info "\
           "about the required structure of these files.\n"\
-          "Quiting..." % (src_core)
+          "Quiting..." % (settings.src_core)
     sys.exit(0)
 
   # Provide feedback that the script only processes XLSX files with properly
   # formatted filenames. (eg. 2014.xlsx)
   fn_pattern = re.compile('^20[0-9]{2}$')
-  for f in os.listdir(src_core):
+  for f in os.listdir(settings.src_core):
     fn = os.path.splitext(f)[0]
     ext = os.path.splitext(f)[-1].lower()
-    path = os.path.join(src_core, fn)
+    path = os.path.join(settings.src_core, fn)
     
     if not os.path.isdir(path):
       # Only check files
@@ -608,15 +558,15 @@ def main():
   print "Loading the core and meta data..."
 
   # Build the different sets of admin areas with things we have to loop over.
-  regions = build_set('region','type','iso',src_meta_aa)
-  countries = build_set('country','type','iso',src_meta_aa)
-  states = build_set('state','type','iso',src_meta_aa)
+  regions = build_set('region','type','iso',settings.src_meta_aa)
+  countries = build_set('country','type','iso',settings.src_meta_aa)
+  states = build_set('state','type','iso',settings.src_meta_aa)
   admin_areas = countries | states
   
   # Build sets for the variables we loop over
   global index_param
-  index_param = build_set('param','type','id',src_meta_index)
-  index_score = build_set('score','type','id',src_meta_index)
+  index_param = build_set('param','type','id',settings.src_meta_index)
+  index_score = build_set('score','type','id',settings.src_meta_index)
   sp = list(index_score | index_param)
 
   # Build set for the years we're interested in
@@ -628,9 +578,9 @@ def main():
 
   # Read in the files with meta-data and set the scope to global
   global df_meta_aa
-  df_meta_aa = pd.read_csv(src_meta_aa,index_col='iso')
+  df_meta_aa = pd.read_csv(settings.src_meta_aa,index_col='iso')
   global df_meta_index
-  df_meta_index = pd.read_csv(src_meta_index,index_col='id')
+  df_meta_index = pd.read_csv(settings.src_meta_index,index_col='id')
 
 
   #############################################################################
@@ -650,10 +600,10 @@ def main():
 
   for yr in years:
     # All core data files are named after the year of the edition
-    fn = src_core + yr + '.xlsx'
+    fn = settings.src_core + yr + '.xlsx'
 
     df_yr = pd.DataFrame()
-    for sheet in core_data_sheets:
+    for sheet in settings.core_data_sheets:
       
       # Build an index to parse only the relevant columns
       cols_index = build_col_index(fn,sheet)
@@ -726,12 +676,13 @@ def main():
 
   # 2.0 Export the full dataset to CSV
 
-  for lang in langs:
+  for lang in settings.langs:
     # Build a list with the meta-data that needs to be included
     columns = ['name:' + lang + '_aa','name:' + lang + '_var','type_var']
     columns = columns + list(years)
 
-    df_full_csv.loc[slice(None),columns].to_csv(export_dir + lang + '/download/data/climatescope-full.csv',encoding='UTF-8',index=False)
+    file_path = (settings.exp_full_csv).format(lang=lang)
+    df_full_csv.loc[slice(None),columns].to_csv(file_path,encoding='UTF-8',index=False)
   
 
   # 2.1 Generate the main CSV files
@@ -739,46 +690,50 @@ def main():
   # Slice the DF to only contain the score and parameters for the current year.
   df_main_csv = df_full_csv.loc[(slice(None),sp),:]
 
-  for lang in langs:
+  for lang in settings.langs:
     # Pivot the DF and export it
-    pivot_df(df_main_csv,'name:' + lang + '_aa','name:' + lang + '_var',current_yr).to_csv(export_dir + lang + '/download/data/climatescope-' + current_yr + '.csv',encoding='UTF-8')
+    file_path = (settings.exp_current_csv).format(lang=lang, yr=current_yr)
+    pivot_df(df_main_csv,'name:' + lang + '_aa','name:' + lang + '_var',current_yr).to_csv(file_path,encoding='UTF-8')
 
 
   # 2.2 Generate the regional CSV files
   for region in regions:
     # Build a set with the admin areas for this region
-    aa_region = build_set(region,'region','iso',src_meta_aa)
+    aa_region = build_set(region,'region','iso',settings.src_meta_aa)
     aal = list(aa_region)
     
     # Filter the main csv on region. Used to generate CSV.
     df_region_csv = df_main_csv.loc[aal,:]
-    for lang in langs:
+    for lang in settings.langs:
       # Pivot the DF and and generate the CSV files
-      pivot_df(df_region_csv,'name:' + lang + '_aa','name:' + lang + '_var',current_yr).to_csv(export_dir + lang + '/download/data/regions/climatescope-' + current_yr + '-' + region + '.csv',encoding='UTF-8')
+      file_path = (settings.exp_region_csv).format(lang=lang, yr=current_yr, region=region)
+      pivot_df(df_region_csv,'name:' + lang + '_aa','name:' + lang + '_var',current_yr).to_csv(file_path,encoding='UTF-8')
 
 
   # 2.3 Generate the country + state CSV files
   for aa in admin_areas:
     # Select the data of this admin area
     df_aa_csv = df_full_csv.loc[(aa,slice(None)),:]
-    for lang in langs:
+    for lang in settings.langs:
       # Include the name of the var, its type and the years
       columns = ['name:' + lang + '_var','type_var'] + list(years)
 
-      # Select the proper columns and generate the CSV      
-      df_aa_csv.loc[slice(None),columns].to_csv(export_dir + lang + '/download/data/countries/climatescope-' + aa.lower() + '.csv',encoding='UTF-8',index=False)
+      # Select the proper columns and generate the CSV
+      file_path = (settings.exp_aa_csv).format(lang = lang, aa = aa.lower())
+      df_aa_csv.loc[slice(None),columns].to_csv(file_path,encoding='UTF-8',index=False)
 
 
   # 2.4 Generate the parameter JSON files
   for p in index_param:
     # Select data of the parameter being dealt with
     df_param = df_full_csv.loc[(slice(None),p),:]
-    for lang in langs:
+    for lang in settings.langs:
       # Include the name of the country and the years
       columns = ['name:' + lang + '_aa'] + list(years)
 
       # Select the proper columns and generate the CSV
-      df_param.loc[slice(None),columns].to_csv(export_dir + lang + '/download/data/parameters/climatescope-' + str(int(p)) + '.csv',encoding='UTF-8',index=False)
+      file_path = (settings.exp_params_csv).format(lang=lang, p=str(int(p)))
+      df_param.loc[slice(None),columns].to_csv(file_path,encoding='UTF-8',index=False)
 
 
   #############################################################################
@@ -815,7 +770,7 @@ def main():
   # The regional rank (rr) is a rank of all the COUNTRIES in a region
   for region in regions:
     # Build a set with the admin areas for this region
-    aa_region = build_set(region,'region','iso',src_meta_aa)
+    aa_region = build_set(region,'region','iso',settings.src_meta_aa)
     # Filter out the states and provinces, leaving only the countries
     cr = aa_region.difference(states)
 
@@ -826,7 +781,7 @@ def main():
   # The state rank ('sr') ranks the STATES of a particular country
   for country in countries:
     # Check if there are any states or provinces for this country
-    cs = build_set(country,'country','iso',src_meta_aa)
+    cs = build_set(country,'country','iso',settings.src_meta_aa)
     if cs:
       df_full = get_rank(cs,df_full,'sr')
 
@@ -838,30 +793,36 @@ def main():
   print "Building the JSON files for the API..."
 
   # 4.1 Generate the main JSON file
-  for lang in langs:
+  for lang in settings.langs:
     # The JSON will contain a list with dicts
     json_data = []
     
     # Loop over the countries list
     for country in countries:
       country_data = build_json_aa(country,df_full,lang)
+      # Sort the list of states / provinces
+      if country_data['states']:
+        country_data['states'] = sorted(country_data['states'], key=lambda k: k['name'])
       json_data.append(country_data)
 
+    # Sort the list of countries by name
+    sorted_data = sorted(json_data, key=lambda k: k['name'])
+
     # Write the list to a JSON file
-    with open('data/' + lang + '/api/countries.json','w') as ofile:
-      json.dump(json_data, ofile)
+    file_path = (settings.exp_core).format(lang=lang)
+    write_json(file_path, sorted_data)
 
 
   # 4.2 Generate the regional JSON files
   for region in regions:
     # Build a set with the admin areas for this region
-    aa_region = build_set(region,'region','iso',src_meta_aa)
+    aa_region = build_set(region,'region','iso',settings.src_meta_aa)
     aal = list(aa_region)
 
     # Remove states from this set, leaving countries
     c_region = aa_region.difference(states)
 
-    for lang in langs:
+    for lang in settings.langs:
       # The JSON contains a dict with id, name and a countries list
       json_data = {}
       json_data['id'] = region
@@ -877,24 +838,24 @@ def main():
       json_data['countries'] = country_list
   
       # Write the list to a JSON file
-      with open('data/' + lang + '/api/regions/' + region + '.json','w') as ofile:
-        json.dump(json_data, ofile)
+      file_path = (settings.exp_region).format(lang=lang,region=region)
+      write_json(file_path, json_data)
 
 
   # 4.3 Generate the country + state JSON files
   for aa in admin_areas:
-    for lang in langs:
+    for lang in settings.langs:
       # Get the data for this admin area in a dict
       json_data = build_json_aa(aa,df_full,lang,indicators=True,historic=True)
-      
+
       # Write the dict to a JSON file
-      with open('data/' + lang + '/api/countries/' + aa.lower() + '.json','w') as ofile:
-        json.dump(json_data, ofile)
+      file_path = (settings.exp_aa).format(lang=lang,aa=aa.lower())
+      write_json(file_path, json_data)
 
 
   # 4.4 Generate the parameter JSON files
   for p in index_param:
-    for lang in langs:
+    for lang in settings.langs:
       
       json_data = {}
       json_data['id'] = int(p)
@@ -911,12 +872,12 @@ def main():
       json_data['countries'] = country_list
 
       # Generate the parameter JSONs
-      with open('data/' + lang + '/api/parameters/' + str(int(p)) + '.json','w') as ofile:
-        json.dump(json_data, ofile)
+      file_path = (settings.exp_params).format(lang=lang,p=str(int(p)))
+      write_json(file_path, json_data)
 
 
   # 4.5 Generate the JSON files with derived statistics
-  for lang in langs:
+  for lang in settings.langs:
 
     json_data = {}
     
@@ -924,7 +885,7 @@ def main():
     region_list = []
     for region in regions:
       # Build a set with the admin areas for this region
-      aa_region = build_set(region,'region','iso',src_meta_aa)
+      aa_region = build_set(region,'region','iso',settings.src_meta_aa)
 
       # Remove states from this set, leaving countries
       c_region = list(aa_region.difference(states))
@@ -951,12 +912,12 @@ def main():
     json_data['regions'] = region_list
 
     # Write the list to a JSON file
-    with open('data/' + lang + '/api/stats.json','w') as ofile:
-      json.dump(json_data, ofile)
+    file_path = (settings.exp_stats).format(lang=lang)
+    write_json(file_path, json_data)
 
 
   # Fully remove the temp directory
-  clean_tmp(True)
+  clean_dir(settings.tmp_dir , True)
 
   print "All done. The data has been prepared for use on global-climatescope.org."
 
