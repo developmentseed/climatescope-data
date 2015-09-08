@@ -18,6 +18,12 @@ src_meta_index = src_dir + 'meta/index.csv'
 
 # Export filenames
 exp_core_csv = export_dir + 'cs-core.csv'
+exp_full_csv = export_dir + '{lang}/download/data/climatescope-full.csv'
+exp_current_csv = export_dir + '{lang}/download/data/climatescope-{yr}.csv'
+exp_aa_csv = export_dir + '{lang}/download/data/countries/climatescope-{aa}.csv'
+exp_region_csv = export_dir + '{lang}/download/data/regions/climatescope-{yr}-{region}.csv'
+exp_params_csv =  export_dir + '{lang}/download/data/parameters/climatescope-{p}.csv'
+
 exp_core = export_dir + '{lang}/api/countries.json'
 exp_aa = export_dir + '{lang}/api/countries/{aa}.json'
 exp_region = export_dir + '{lang}/api/regions/{region}.json'

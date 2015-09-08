@@ -681,7 +681,8 @@ def main():
     columns = ['name:' + lang + '_aa','name:' + lang + '_var','type_var']
     columns = columns + list(years)
 
-    df_full_csv.loc[slice(None),columns].to_csv(settings.export_dir + lang + '/download/data/climatescope-full.csv',encoding='UTF-8',index=False)
+    file_path = (settings.exp_full_csv).format(lang=lang)
+    df_full_csv.loc[slice(None),columns].to_csv(file_path,encoding='UTF-8',index=False)
   
 
   # 2.1 Generate the main CSV files
@@ -691,7 +692,8 @@ def main():
 
   for lang in settings.langs:
     # Pivot the DF and export it
-    pivot_df(df_main_csv,'name:' + lang + '_aa','name:' + lang + '_var',current_yr).to_csv(settings.export_dir + lang + '/download/data/climatescope-' + current_yr + '.csv',encoding='UTF-8')
+    file_path = (settings.exp_current_csv).format(lang=lang, yr=current_yr)
+    pivot_df(df_main_csv,'name:' + lang + '_aa','name:' + lang + '_var',current_yr).to_csv(file_path,encoding='UTF-8')
 
 
   # 2.2 Generate the regional CSV files
@@ -704,7 +706,8 @@ def main():
     df_region_csv = df_main_csv.loc[aal,:]
     for lang in settings.langs:
       # Pivot the DF and and generate the CSV files
-      pivot_df(df_region_csv,'name:' + lang + '_aa','name:' + lang + '_var',current_yr).to_csv(settings.export_dir + lang + '/download/data/regions/climatescope-' + current_yr + '-' + region + '.csv',encoding='UTF-8')
+      file_path = (settings.exp_region_csv).format(lang=lang, yr=current_yr, region=region)
+      pivot_df(df_region_csv,'name:' + lang + '_aa','name:' + lang + '_var',current_yr).to_csv(file_path,encoding='UTF-8')
 
 
   # 2.3 Generate the country + state CSV files
@@ -715,8 +718,9 @@ def main():
       # Include the name of the var, its type and the years
       columns = ['name:' + lang + '_var','type_var'] + list(years)
 
-      # Select the proper columns and generate the CSV      
-      df_aa_csv.loc[slice(None),columns].to_csv(settings.export_dir + lang + '/download/data/countries/climatescope-' + aa.lower() + '.csv',encoding='UTF-8',index=False)
+      # Select the proper columns and generate the CSV
+      file_path = (settings.exp_aa_csv).format(lang = lang, aa = aa.lower())
+      df_aa_csv.loc[slice(None),columns].to_csv(file_path,encoding='UTF-8',index=False)
 
 
   # 2.4 Generate the parameter JSON files
@@ -728,7 +732,8 @@ def main():
       columns = ['name:' + lang + '_aa'] + list(years)
 
       # Select the proper columns and generate the CSV
-      df_param.loc[slice(None),columns].to_csv(settings.export_dir + lang + '/download/data/parameters/climatescope-' + str(int(p)) + '.csv',encoding='UTF-8',index=False)
+      file_path = (settings.exp_params_csv).format(lang=lang, p=str(int(p)))
+      df_param.loc[slice(None),columns].to_csv(file_path,encoding='UTF-8',index=False)
 
 
   #############################################################################
@@ -795,6 +800,9 @@ def main():
     # Loop over the countries list
     for country in countries:
       country_data = build_json_aa(country,df_full,lang)
+      # Sort the list of states / provinces
+      if country_data['states']:
+        country_data['states'] = sorted(country_data['states'], key=lambda k: k['name'])
       json_data.append(country_data)
 
     # Sort the list of countries by name
