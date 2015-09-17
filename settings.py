@@ -37,15 +37,16 @@ core_data_cols = ['id', 'iso', 'score', 'data']
 
 # Languages
 langs = ['en','es']
-# Years we have want data for
-yrs = [2006,2007,2008,2009,2010,2011,2012,2013]
 
 # The current edition
-current_edition = 2014
+current_edition = 2015
 
+
+
+# Auxiliary data - Years we have want data for
+yrs = [2006,2007,2008,2009,2010,2011,2012,2013]
 
 # The indicators for the auxiliary data
-
 indicators = [
   {
     "id": 107, # The source file contains an indication of the id
