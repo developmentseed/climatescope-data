@@ -21,11 +21,12 @@ import sys
 import os
 import os.path
 import csv
+import numpy as np
 import shutil
 import json
 
 import settings
-from utils.utils import check_dir, clean_dir, check_create_folder
+from utils.utils import check_dir, clean_dir, check_create_folder, write_json
 
 
 def get_aa_list():
@@ -51,16 +52,16 @@ def main():
   # Build the list with countries and states
   admin_areas = get_aa_list()
 
-  for ind in settings.indicators:
-    ind_source = settings.src_auxiliary + str(settings.current_edition) + '-' + str(ind["id"]) + '.csv'
+  for chart in settings.charts:
+    ind_source = settings.src_auxiliary + str(settings.current_edition) + '-' + str(chart["id"]) + '.csv'
 
     for aa in admin_areas:
       iso = aa.lower()
       for lang in settings.langs:
         # Initialize the array that will be written to JSON
-        json_data = {"name": iso, "iso": iso, "meta": {"title": ind["title"][lang], "label-x": ind["labelx"][lang], "label-y": ind["labely"][lang]}, "data": []}
+        json_data = {"name": iso, "iso": iso, "meta": {"title": chart["title"][lang], "label-x": chart["labelx"][lang], "label-y": chart["labely"][lang]}, "data": []}
 
-        for serie in ind["series"]:
+        for serie in chart["series"]:
           if serie["id"] == 'country':
             # If we're dealing with a country, use the country name as label of serie
             serie_name = aa
@@ -75,18 +76,18 @@ def main():
           for row in ind_data:
             if aa == row["iso"] and serie["source-id"] == row["sub_indicator"]:
               values_to_append = []
-              for yr in ind["years"]:
-                if row[str(yr)] == '-':
-                  yr_to_append = {"year": yr, "value": 0}
-                else:
+              for yr in chart["years"]:
+                try:
                   yr_to_append = {"year": yr, "value": float(row[str(yr)])}
+                except ValueError:
+                  yr_to_append = {"year": yr, "value": 0}
                 values_to_append.append(yr_to_append)
               serie_to_append["values"] = values_to_append
 
           json_data["data"].append(serie_to_append)
 
         # Write the list to a JSON file
-        file_path = (settings.exp_aux_json).format(lang=lang,indicator=ind["export"],aa=iso)  
+        file_path = (settings.exp_aux_json).format(lang=lang,indicator=chart["export"],aa=iso)
         write_json(file_path, json_data)
 
   # Fully remove the temp directory
