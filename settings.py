@@ -47,7 +47,7 @@ current_edition = 2015
 yrs = [2006,2007,2008,2009,2010,2011,2012,2013]
 
 # The indicators for the auxiliary data
-indicators = [
+charts = [
   {
     "id": 107, # The source file contains an indication of the id
     "custom": True,
@@ -85,6 +85,107 @@ indicators = [
       }
     ],
     "years": yrs # List with years to process
+  },
+  {
+    "id": 903,
+    "export": 'price-attractiveness-electricity',
+    "title": {
+      "en": 'Price attractiveness',
+      "es": 'Atractivo del precio'
+    },
+    "labelx": {
+      "en": 'USD/MWh',
+      "es": 'USD/MWh'
+    },
+    "labely": {
+      "en": '',
+      "es": ''
+    },
+    "series": [
+      {
+        "id": 'spot_electricity',
+        "source-id": "spot_electricity",
+        "level": "country",
+        "name": {
+          "en": 'Spot',
+          "es": 'Spot'
+        }
+      },
+      {
+        "id": 'retail_electricity',
+        "source-id": "retail_electricity",
+        "level": "country",
+        "name": {
+          "en": 'Retail',
+          "es": 'Al por menor'
+        }
+      },
+      {
+        "id": 'residential_electricity',
+        "source-id": "residential_electricity",
+        "level": "country",
+        "name": {
+          "en": 'Residential',
+          "es": 'Residencial'
+        }
+      },
+      {
+        "id": 'commercial_electricity',
+        "source-id": "commercial_electricity",
+        "level": "country",
+        "name": {
+          "en": 'Commercial',
+          "es": 'Comercial'
+        }
+      },
+      {
+        "id": 'industrial_electricity',
+        "source-id": "industrial_electricity",
+        "level": "country",
+        "name": {
+          "en": 'Industrial',
+          "es": 'Industrial'
+        }
+      }
+    ],
+    "years": [2014]
+  },
+  {
+    "id": 903,
+    "export": 'price-attractiveness-fuel',
+    "title": {
+      "en": 'Price attractiveness',
+      "es": 'Atractivo del precio'
+    },
+    "labelx": {
+      "en": 'USD/Liter',
+      "es": 'USD/Litro'
+    },
+    "labely": {
+      "en": '',
+      "es": ''
+    },
+    "series": [
+      {
+        "id": 'diesel',
+        "source-id": "diesel",
+        "level": "country",
+        "name": {
+          "en": 'Diesel',
+          "es": 'Diesel'
+        }
+      },
+      {
+        "id": 'kerosene',
+        "source-id": "kerosene",
+        "level": "country",
+        "name": {
+          "en": 'Kerosene',
+          "es": 'Queroseno'
+        }
+      }
+    ],
+    "years": [2014]
   },
   {
     "id": 201,
