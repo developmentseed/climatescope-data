@@ -799,7 +799,7 @@ def main():
     
     # Loop over the countries list
     for country in countries:
-      country_data = build_json_aa(country,df_full,lang)
+      country_data = build_json_aa(country,df_full,lang, historic=True)
       # Sort the list of states / provinces
       if country_data['states']:
         country_data['states'] = sorted(country_data['states'], key=lambda k: k['name'])
