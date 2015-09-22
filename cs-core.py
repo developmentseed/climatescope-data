@@ -484,7 +484,7 @@ def build_json_aa(aa,df_data,lang,indicators=False,historic=False,single_p=None)
       for state in country_states:
         # Call this function for all the states. At this point, only interested in
         # non-detailed data for the current version.
-        state_data = build_json_aa(state,df_data,lang,indicators=False,historic=False,single_p=single_p)
+        state_data = build_json_aa(state,df_data,lang,indicators=False,historic=True,single_p=single_p)
         state_list.append(state_data)
 
     # Even when there are no states, an empty list has to be printed
