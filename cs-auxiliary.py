@@ -74,7 +74,7 @@ def main():
           # Read in the CSV file
           ind_data = csv.DictReader(open(ind_source))
           for row in ind_data:
-            if aa == row["iso"] and serie["source-id"] == row["sub_indicator"]:
+            if aa == row["iso"] and serie["source-id"].strip() == row["sub_indicator"].strip():
               values_to_append = []
               for yr in chart["years"]:
                 try:
