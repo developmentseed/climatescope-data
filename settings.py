@@ -2,7 +2,7 @@
 # -*- coding: latin-1 -*-
 
 # The main settings to process the Climatescope data
-
+import cs_auxiliary
 
 # Directory structure
 src_dir = 'source/'
@@ -44,13 +44,13 @@ current_edition = 2015
 
 
 # Auxiliary data - Years we have want data for
-yrs = [2006,2007,2008,2009,2010,2011,2012,2013]
+yrs = [2006,2007,2008,2009,2010,2011,2012,2013,2014]
 
 # The indicators for the auxiliary data
 charts = [
   {
     "id": 107, # The source file contains an indication of the id
-    "custom": True,
+    "function": cs_auxiliary.default_chart,
     "export": 'installed-capacity', # Folder for the exported data
     "title": { # Title of the chart
       "en": 'Installed capacity',
@@ -88,6 +88,7 @@ charts = [
   },
   {
     "id": 903,
+    "function": cs_auxiliary.default_chart,
     "export": 'price-attractiveness-electricity',
     "title": {
       "en": 'Price attractiveness',
@@ -104,7 +105,7 @@ charts = [
     "series": [
       {
         "id": 'spot_electricity',
-        "source-id": "spot_electricity",
+        "source-id": "Average electricity spot prices ($/MWh)",
         "level": "country",
         "name": {
           "en": 'Spot',
@@ -113,7 +114,7 @@ charts = [
       },
       {
         "id": 'retail_electricity',
-        "source-id": "retail_electricity",
+        "source-id": "Average retail electricity prices ($/MWh)",
         "level": "country",
         "name": {
           "en": 'Retail',
@@ -122,7 +123,7 @@ charts = [
       },
       {
         "id": 'residential_electricity',
-        "source-id": "residential_electricity",
+        "source-id": "Average residential electricity prices ($/MWh)",
         "level": "country",
         "name": {
           "en": 'Residential',
@@ -131,7 +132,7 @@ charts = [
       },
       {
         "id": 'commercial_electricity',
-        "source-id": "commercial_electricity",
+        "source-id": "Average commercial  electricity prices ($/MWh)",
         "level": "country",
         "name": {
           "en": 'Commercial',
@@ -140,7 +141,7 @@ charts = [
       },
       {
         "id": 'industrial_electricity',
-        "source-id": "industrial_electricity",
+        "source-id": "Average industrial electricity prices ($/MWh)",
         "level": "country",
         "name": {
           "en": 'Industrial',
@@ -152,6 +153,7 @@ charts = [
   },
   {
     "id": 903,
+    "function": cs_auxiliary.default_chart,
     "export": 'price-attractiveness-fuel',
     "title": {
       "en": 'Price attractiveness',
@@ -168,7 +170,7 @@ charts = [
     "series": [
       {
         "id": 'diesel',
-        "source-id": "diesel",
+        "source-id": "Average diesel prices ($/l)",
         "level": "country",
         "name": {
           "en": 'Diesel',
@@ -177,7 +179,7 @@ charts = [
       },
       {
         "id": 'kerosene',
-        "source-id": "kerosene",
+        "source-id": "Average kerosene prices ($/l)",
         "level": "country",
         "name": {
           "en": 'Kerosene',
@@ -189,6 +191,7 @@ charts = [
   },
   {
     "id": 201,
+    "function": cs_auxiliary.default_chart,
     "export": 'clean-energy-investments',
     "title": {
       "en": 'Clean energy investments',
@@ -209,10 +212,11 @@ charts = [
         "level": "country",
       }
     ],
-    "years": yrs
+    "years": [2010, 2011, 2012, 2013, 2014]
   },
   {
     "id": 401,
+    "function": cs_auxiliary.default_chart,
     "export": 'carbon-offset-projects',
     "title": {
       "en": 'Carbon offset projects by sector',
