@@ -287,4 +287,316 @@ charts = [
     ],
     "years": [2014]
   },
+  {
+    "id": 910,
+    "function": cs_auxiliary.value_chains,
+    "export": 'value-chains',
+    "title": {
+      "en": 'Value chains',
+      "es": 'Cadenas de valor'
+    },
+    "labelx": {
+      "en": '',
+      "es": ''
+    },
+    "labely": {
+      "en": '',
+      "es": ''
+    },
+    "series": [
+      {
+        "id": 'biofuels',
+        "source-id": "Biofuels",
+        "name": {
+          "en": 'Biofuels',
+          "es": 'Biocombustible'
+        },
+        "subchains": [
+          { "source-id": "Biofuels -Distribution and Blending ",
+            "name": {
+              "en": 'Distribution and Blending',
+              "es": 'Distribución y Mezcla'
+            }
+          },
+          { "source-id": "Biofuels - Engineering (Value)",
+            "name": {
+              "en": 'Engineering',
+              "es": 'Ingeniería'
+            }
+          },
+          { "source-id": "Biofuels - Equipment Manufacturing",
+            "name": {
+              "en": 'Equipment Manufacturing',
+              "es": 'Manufactura de equipos'
+            }
+          },
+          { "source-id": "Biofuels - O&M (Value)",
+            "name": {
+              "en": 'O&M',
+              "es": 'O&M'
+            }
+          },
+          { "source-id": "Biofuels - Producers (Valeue)",
+            "name": {
+              "en": 'Producers',
+              "es": 'Productores'
+            }
+          }
+        ]
+      },
+      {
+        "id": 'biomass',
+        "source-id": "Biomass",
+        "level": "country",
+        "name": {
+          "en": 'Biomass',
+          "es": 'Biomasa y Resíduos'
+        },
+        "subchains": [
+          { "source-id": "Biomass & Waste - Engineering",
+            "name": {
+              "en": 'Engineering',
+              "es": 'Ingeniería'
+            }
+          },
+          { "source-id": "Biomass & Waste - Equipment Manufacturing",
+            "name": {
+              "en": 'Equipment manufacturing',
+              "es": 'Manufactura de equipos'
+            }
+          },
+          { "source-id": "Biomass & Waste - Feedstock Supply",
+            "name": {
+              "en": 'Feedstock supply',
+              "es": 'Abastecimiento de materia prima'
+            }
+          },
+          { "source-id": "Biomass & Waste - O&M",
+            "name": {
+              "en": 'O&M',
+              "es": 'O&M'
+            }
+          },
+          { "source-id": "Biomass & Waste - Project Development",
+            "name": {
+              "en": 'Project development',
+              "es": 'Desarrollo de proyectos'
+            }
+          }
+        ]
+      },
+      {
+        "id": 'geothermal',
+        "source-id": "Geothermal",
+        "level": "country",
+        "name": {
+          "en": 'Geothermal',
+          "es": 'Geotérmia'
+        },
+        "subchains": [
+          { "source-id": "Geothermal - Balance of Plant",
+            "name": {
+              "en": 'Balance of plant',
+              "es": 'Balance de planta'
+            }
+          },
+          { "source-id": "Geothermal - Engineering",
+            "name": {
+              "en": 'Engineering',
+              "es": 'Ingeniería'
+            }
+          },
+          { "source-id": "Geothermal - O&M",
+            "name": {
+              "en": 'O&M',
+              "es": 'O&M'
+            }
+          },
+          { "source-id": "Geothermal - Project Development",
+            "name": {
+              "en": 'Project development',
+              "es": 'Desarrollo de proyectos'
+            }
+          },
+          { "source-id": "Geothermal - Resource Development",
+            "name": {
+              "en": 'Resource development',
+              "es": 'Desarrollo de recursos'
+            }
+          },
+          { "source-id": "Geothermal - Turbines",
+            "name": {
+              "en": 'Turbines',
+              "es": 'Turbinas'
+            }
+          }
+        ]
+      },
+      {
+        "id": 'small-hydro',
+        "source-id": "Small Hydro",
+        "level": "country",
+        "name": {
+          "en": 'Small Hydro',
+          "es": 'Pequeñas Centrales Hidroeléctricas'
+        },
+        "subchains": [
+          { "source-id": "Small Hydro - Balance of Plant",
+            "name": {
+              "en": 'Balance of plant',
+              "es": 'Balance de planta'
+            }
+          },
+          { "source-id": "Small Hydro - Engineering ",
+            "name": {
+              "en": 'Engineering',
+              "es": 'Ingeniería'
+            }
+          },
+          { "source-id": "Small Hydro - O&M",
+            "name": {
+              "en": 'O&M',
+              "es": 'O&M'
+            }
+          },
+          { "source-id": "Small Hydro - Project Development",
+            "name": {
+              "en": 'Project development',
+              "es": 'Desarrollo de proyectos'
+            }
+          },
+          { "source-id": "Small Hydro - Turbines",
+            "name": {
+              "en": 'Turbines',
+              "es": 'Turbinas'
+            }
+          }
+        ]
+      },
+      {
+        "id": 'solar',
+        "source-id": "Solar",
+        "level": "country",
+        "name": {
+          "en": 'Solar',
+          "es": 'Solar'
+        },
+        "subchains": [
+          { "source-id": "Solar - Balance of Plan",
+            "name": {
+              "en": 'Balance of plant',
+              "es": 'Balance de planta'
+            }
+          },
+          { "source-id": "Solar - Cells",
+            "name": {
+              "en": 'Cells',
+              "es": 'Células'
+            }
+          },
+          { "source-id": "Solar - Engineering",
+            "name": {
+              "en": 'Engineering',
+              "es": 'Ingeniería'
+            }
+          },
+          { "source-id": "Solar - Inverters",
+            "name": {
+              "en": 'Inverters',
+              "es": 'Inversores'
+            }
+          },
+          { "source-id": "Solar - Modules",
+            "name": {
+              "en": 'Modules',
+              "es": 'Módulos'
+            }
+          },
+          { "source-id": "Solar - O&M",
+            "name": {
+              "en": 'O&M',
+              "es": 'O&M'
+            }
+          },
+          { "source-id": "Solar - Polysilicon/ingots",
+            "name": {
+              "en": 'Polysilicon/ingots',
+              "es": 'Polisilicio/lingotes'
+            }
+          },
+          { "source-id": "Solar - Project Development",
+            "name": {
+              "en": 'Project development',
+              "es": 'Desarrollo de proyectos'
+            }
+          },
+          { "source-id": "Solar - Wafers",
+            "name": {
+              "en": 'Wafers',
+              "es": 'Obleas'
+            }
+          }
+        ]
+      },
+      {
+        "id": 'wind',
+        "source-id": "Wind",
+        "name": {
+          "en": 'Wind',
+          "es": 'Eólica'
+        },
+        "subchains": [
+          { "source-id": "Wind - Project Development",
+            "name": {
+              "en": 'Project development',
+              "es": 'Desarrollo de proyectos'
+            }
+          },
+          { "source-id": "Wind - Engineering",
+            "name": {
+              "en": 'Engineering',
+              "es": 'Ingeniería'
+            }
+          },
+          { "source-id": "Wind - O&M ",
+            "name": {
+              "en": 'O&M',
+              "es": 'O&M'
+            }
+          },
+          { "source-id": "Wind - Turbines",
+            "name": {
+              "en": 'Turbines',
+              "es": 'Turbinas'
+            }
+          },
+          { "source-id": "Wind - Blades",
+            "name": {
+              "en": 'Blades',
+              "es": 'Palas'
+            }
+          },
+          { "source-id": "Wind - Gearboxes ",
+            "name": {
+              "en": 'Gearboxes',
+              "es": 'Cajas de cambio'
+            }
+          },
+          { "source-id": "Wind - Towers ",
+            "name": {
+              "en": 'Towers',
+              "es": 'Torres'
+            }
+          },
+          { "source-id": "Wind - Balance of Plant",
+            "name": {
+              "en": 'Balance of plant',
+              "es": 'Balance de planta'
+            }
+          }
+        ]
+      },
+    ],
+    "years": [2014]
+  }
 ]

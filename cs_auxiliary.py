@@ -40,47 +40,37 @@ def get_aa_list():
   return aareas
 
 
-def default_chart(chart, admin_areas):
-  """ The default charts
+def default_chart(serie, ind_source, lang, aa, years):
+  """ Generate the data for the charts in the default structure
   """
+  # Read in the CSV file
+  ind_data = csv.DictReader(open(ind_source))
+  data = []
+  for row in ind_data:
+    if aa == row["iso"] and serie["source-id"].strip() == row["sub_indicator"].strip():
+      for yr in years:
+        try:
+          yr_to_append = {"year": yr, "value": float(row[str(yr)])}
+        except ValueError:
+          yr_to_append = {"year": yr, "value": 0}
+        data.append(yr_to_append)
+  return data
 
-  ind_source = settings.src_auxiliary + str(settings.current_edition) + '-' + str(chart["id"]) + '.csv'
 
-  for aa in admin_areas:
-    iso = aa.lower()
-    for lang in settings.langs:
-      # Initialize the array that will be written to JSON
-      json_data = {"name": iso, "iso": iso, "meta": {"title": chart["title"][lang], "label-x": chart["labelx"][lang], "label-y": chart["labely"][lang]}, "data": []}
-
-      for serie in chart["series"]:
-        if serie["id"] == 'country':
-          # If we're dealing with a country, use the country name as label of serie
-          serie_name = aa
-        else:
-          serie_name = serie["name"][lang]
-
-        # Initialize the object for the serie    
-        serie_to_append = {"name": serie_name, "id": serie["id"], "values": []}
-
-        # Read in the CSV file
-        ind_data = csv.DictReader(open(ind_source))
-        for row in ind_data:
-          if aa == row["iso"] and serie["source-id"].strip() == row["sub_indicator"].strip():
-            values_to_append = []
-            for yr in chart["years"]:
-              try:
-                yr_to_append = {"year": yr, "value": float(row[str(yr)])}
-              except ValueError:
-                yr_to_append = {"year": yr, "value": 0}
-              values_to_append.append(yr_to_append)
-            serie_to_append["values"] = values_to_append
-
-        json_data["data"].append(serie_to_append)
-
-      # Write the list to a JSON file
-      file_path = (settings.exp_aux_json).format(lang=lang,indicator=chart["export"],aa=iso)
-      write_json(file_path, json_data)
-
+def value_chains(serie, ind_source, lang, aa, years):
+  """ The chart data for the value chain
+  """
+  # Read in the CSV file
+  data = []
+  for sc in serie["subchains"]:
+    # This makes the process very lengthy. Check better way.
+    ind_data = csv.DictReader(open(ind_source))
+    for row in ind_data:
+      if aa == row["iso"] and sc["source-id"].strip() == row["sub_chain"].strip():
+        for yr in years:
+          sc_to_append = {"year": yr, "name": sc["name"][lang], "active": bool(int(row[str(yr)]))}
+          data.append(sc_to_append)
+  return data
 
 def main():
 
@@ -95,7 +85,32 @@ def main():
   admin_areas = get_aa_list()
 
   for chart in settings.charts:
-    chart['function'](chart, admin_areas)
+    ind_source = settings.src_auxiliary + str(settings.current_edition) + '-' + str(chart["id"]) + '.csv'
+
+    for aa in admin_areas:
+      iso = aa.lower()
+      for lang in settings.langs:
+        # Initialize the array that will be written to JSON
+        json_data = {"name": iso, "iso": iso, "meta": {"title": chart["title"][lang], "label-x": chart["labelx"][lang], "label-y": chart["labely"][lang]}, "data": []}
+
+        for serie in chart["series"]:
+          if serie["id"] == 'country':
+            # If we're dealing with a country, use the country name as label of serie
+            serie_name = aa
+          else:
+            serie_name = serie["name"][lang]
+
+          # Initialize the object for the serie    
+          serie_to_append = {"name": serie_name, "id": serie["id"], "values": []}
+          
+          # Generate the actual data
+          serie_to_append["values"] = chart['function'](serie, ind_source, lang, aa, chart["years"])
+
+          json_data["data"].append(serie_to_append)
+
+        # Write the list to a JSON file
+        file_path = (settings.exp_aux_json).format(lang=lang,indicator=chart["export"],aa=iso)
+        write_json(file_path, json_data)
   
   # Fully remove the temp directory
   clean_dir(settings.tmp_dir, True)

@@ -1,561 +1,561 @@
 iso,sub_indicator,2014
-AR,spot_electricity,48.01
-AR,retail_electricity,49.06
-AR,residential_electricity,44.66
-AR,commercial_electricity,64.55
-AR,industrial_electricity,37.96
-AR,diesel,
-AR,kerosene,
-BS,spot_electricity,
-BS,retail_electricity,295.81
-BS,residential_electricity,277.3
-BS,commercial_electricity,312.28
-BS,industrial_electricity,297.86
-BS,diesel,
-BS,kerosene,
-BD,spot_electricity,60.16
-BD,retail_electricity,88
-BD,residential_electricity,54
-BD,commercial_electricity,113
-BD,industrial_electricity,98
-BD,diesel,1.27
-BD,kerosene,0.87
-BB,spot_electricity,
-BB,retail_electricity,373.26
-BB,residential_electricity,354.31
-BB,commercial_electricity,397.78
-BB,industrial_electricity,367.68
-BB,diesel,
-BB,kerosene,
-BZ,spot_electricity,
-BZ,retail_electricity,198.71
-BZ,residential_electricity,219.96
-BZ,commercial_electricity,221.21
-BZ,industrial_electricity,154.97
-BZ,diesel,
-BZ,kerosene,
-BO,spot_electricity,17.98
-BO,retail_electricity,86.87
-BO,residential_electricity,80.33
-BO,commercial_electricity,121.88
-BO,industrial_electricity,58.39
-BO,diesel,
-BO,kerosene,
-BW,spot_electricity,
-BW,retail_electricity,202.62
-BW,residential_electricity,
-BW,commercial_electricity,
-BW,industrial_electricity,
-BW,diesel,0.81
-BW,kerosene,0.94
-BR,spot_electricity,273.73
-BR,retail_electricity,120.38
-BR,residential_electricity,130.08
-BR,commercial_electricity,124.87
-BR,industrial_electricity,106.18
-BR,diesel,
-BR,kerosene,
-CM,spot_electricity,
-CM,retail_electricity,79.53
-CM,residential_electricity,58.59
-CM,commercial_electricity,100.47
-CM,industrial_electricity,
-CM,diesel,1.08
-CM,kerosene,0.58
-CL,spot_electricity,104.4
-CL,retail_electricity,140
-CL,residential_electricity,176
-CL,commercial_electricity,108
-CL,industrial_electricity,135
-CL,diesel,
-CL,kerosene,
-CN,spot_electricity,
-CN,retail_electricity,90.78
-CN,residential_electricity,82.05
-CN,commercial_electricity,131.19
-CN,industrial_electricity,142.71
-CN,diesel,
-CN,kerosene,
-CN-35,spot_electricity,
-CN-35,retail_electricity,98.94
-CN-35,residential_electricity,80.02
-CN-35,commercial_electricity,122.59
-CN-35,industrial_electricity,157.34
-CN-35,diesel,
-CN-35,kerosene,
-CN-62,spot_electricity,
-CN-62,retail_electricity,106.22
-CN-62,residential_electricity,90.94
-CN-62,commercial_electricity,143.65
-CN-62,industrial_electricity,84.08
-CN-62,diesel,
-CN-62,kerosene,
-CN-44,spot_electricity,
-CN-44,retail_electricity,118.98
-CN-44,residential_electricity,98.46
-CN-44,commercial_electricity,147.05
-CN-44,industrial_electricity,111.43
-CN-44,diesel,
-CN-44,kerosene,
-CN-13,spot_electricity,
-CN-13,retail_electricity,96.62
-CN-13,residential_electricity,78.65
-CN-13,commercial_electricity,125.45
-CN-13,industrial_electricity,85.77
-CN-13,diesel,
-CN-13,kerosene,
-CN-23,spot_electricity,
-CN-23,retail_electricity,109.18
-CN-23,residential_electricity,81.16
-CN-23,commercial_electricity,150.22
-CN-23,industrial_electricity,96.15
-CN-23,diesel,
-CN-23,kerosene,
-CN-42,spot_electricity,
-CN-42,retail_electricity,110.71
-CN-42,residential_electricity,91.3
-CN-42,commercial_electricity,149.93
-CN-42,industrial_electricity,90.89
-CN-42,diesel,
-CN-42,kerosene,
-CN-15,spot_electricity,
-CN-15,retail_electricity,87.91
-CN-15,residential_electricity,74.39
-CN-15,commercial_electricity,113.24
-CN-15,industrial_electricity,76.1
-CN-15,diesel,
-CN-15,kerosene,
-CN-32,spot_electricity,
-CN-32,retail_electricity,91.29
-CN-32,residential_electricity,77.31
-CN-32,commercial_electricity,117.19
-CN-32,industrial_electricity,79.37
-CN-32,diesel,
-CN-32,kerosene,
-CN-22,spot_electricity,
-CN-22,retail_electricity,110.18
-CN-22,residential_electricity,84.13
-CN-22,commercial_electricity,151.27
-CN-22,industrial_electricity,95.13
-CN-22,diesel,
-CN-22,kerosene,
-CN-63,spot_electricity,
-CN-63,retail_electricity,77.78
-CN-63,residential_electricity,71.97
-CN-63,commercial_electricity,100.97
-CN-63,industrial_electricity,60.41
-CN-63,diesel,
-CN-63,kerosene,
-CN-37,spot_electricity,
-CN-37,retail_electricity,101.8
-CN-37,residential_electricity,84.38
-CN-37,commercial_electricity,122.01
-CN-37,industrial_electricity,99.01
-CN-37,diesel,
-CN-37,kerosene,
-CN-51,spot_electricity,
-CN-51,retail_electricity,101.55
-CN-51,residential_electricity,83.7
-CN-51,commercial_electricity,130.66
-CN-51,industrial_electricity,90.29
-CN-51,diesel,
-CN-51,kerosene,
-CN-54,spot_electricity,
-CN-54,retail_electricity,92.83
-CN-54,residential_electricity,81.84
-CN-54,commercial_electricity,81.84
-CN-54,industrial_electricity,114.82
-CN-54,diesel,
-CN-54,kerosene,
-CN-65 ,spot_electricity,
-CN-65 ,retail_electricity,65.11
-CN-65 ,residential_electricity,68.82
-CN-65 ,commercial_electricity,79.34
-CN-65 ,industrial_electricity,47.18
-CN-65 ,diesel,
-CN-65 ,kerosene,
-CN-53,spot_electricity,
-CN-53,retail_electricity,91.29
-CN-53,residential_electricity,77.31
-CN-53,commercial_electricity,117.19
-CN-53,industrial_electricity,79.37
-CN-53,diesel,
-CN-53,kerosene,
-CO,spot_electricity,114.61
-CO,retail_electricity,145.86
-CO,residential_electricity,161.07
-CO,commercial_electricity,154.78
-CO,industrial_electricity,121.74
-CO,diesel,
-CO,kerosene,
-CR,spot_electricity,
-CR,retail_electricity,171.61
-CR,residential_electricity,167.01
-CR,commercial_electricity,195.16
-CR,industrial_electricity,152.66
-CR,diesel,
-CR,kerosene,
-CI,spot_electricity,
-CI,retail_electricity,175.36
-CI,residential_electricity,139.09
-CI,commercial_electricity,265.14
-CI,industrial_electricity,121.85
-CI,diesel,1.22
-CI,kerosene,1.19
-CD,spot_electricity,
-CD,retail_electricity,66
-CD,residential_electricity,47
-CD,commercial_electricity,
-CD,industrial_electricity,
-CD,diesel,1.55
-CD,kerosene,1.19
-DO,spot_electricity,183.4
-DO,retail_electricity,194.25
-DO,residential_electricity,150.04
-DO,commercial_electricity,246.8
-DO,industrial_electricity,185.9
-DO,diesel,
-DO,kerosene,
-EC,spot_electricity,72.2
-EC,retail_electricity,86.82
-EC,residential_electricity,99.72
-EC,commercial_electricity,89.16
-EC,industrial_electricity,71.57
-EC,diesel,
-EC,kerosene,
-SV,spot_electricity,
-SV,retail_electricity,236.33
-SV,residential_electricity,260.7
-SV,commercial_electricity,240.4
-SV,industrial_electricity,207.9
-SV,diesel,
-SV,kerosene,
-ET,spot_electricity,
-ET,retail_electricity,30.86
-ET,residential_electricity,27.47
-ET,commercial_electricity,39.68
-ET,industrial_electricity,28.89
-ET,diesel,0.87
-ET,kerosene,0.76
-GH,spot_electricity,
-GH,retail_electricity,154.42
-GH,residential_electricity,99.09
-GH,commercial_electricity,205.92
-GH,industrial_electricity,158.26
-GH,diesel,1.02
-GH,kerosene,0.99
-GT,spot_electricity,103.66
-GT,retail_electricity,228.67
-GT,residential_electricity,285.92
-GT,commercial_electricity,200.52
-GT,industrial_electricity,199.57
-GT,diesel,
-GT,kerosene,
-GY,spot_electricity,
-GY,retail_electricity,309.4
-GY,residential_electricity,265.45
-GY,commercial_electricity,354.95
-GY,industrial_electricity,307.8
-GY,diesel,
-GY,kerosene,
-HT,spot_electricity,
-HT,retail_electricity,328.55
-HT,residential_electricity,221.48
-HT,commercial_electricity,373.13
-HT,industrial_electricity,391.06
-HT,diesel,0.93
-HT,kerosene,0.93
-HN,spot_electricity,
-HN,retail_electricity,186.78
-HN,residential_electricity,139.28
-HN,commercial_electricity,227.65
-HN,industrial_electricity,193.4
-HN,diesel,
-HN,kerosene,
-IN,spot_electricity,58.2
-IN,retail_electricity,86.93
-IN,residential_electricity,75.96
-IN,commercial_electricity,115.25
-IN,industrial_electricity,98.31
-IN,diesel,0.9
-IN,kerosene,0.25
-IN-AP,spot_electricity,58.2
-IN-AP,retail_electricity,98
-IN-AP,residential_electricity,83.7
-IN-AP,commercial_electricity,143.28
-IN-AP,industrial_electricity,104.87
-IN-AP,diesel,0.91
-IN-AP,kerosene,0.24
-IN-GJ,spot_electricity,58.2
-IN-GJ,retail_electricity,69
-IN-GJ,residential_electricity,64.24
-IN-GJ,commercial_electricity,74.65
-IN-GJ,industrial_electricity,77.87
-IN-GJ,diesel,0.93
-IN-GJ,kerosene,0.24
-IN-KA,spot_electricity,58.2
-IN-KA,retail_electricity,87
-IN-KA,residential_electricity,74.22
-IN-KA,commercial_electricity,121.55
-IN-KA,industrial_electricity,94.37
-IN-KA,diesel,0.9
-IN-KA,kerosene,0.28
-IN-MP,spot_electricity,58.2
-IN-MP,retail_electricity,86
-IN-MP,residential_electricity,91.63
-IN-MP,commercial_electricity,103.82
-IN-MP,industrial_electricity,91.53
-IN-MP,diesel,0.92
-IN-MP,kerosene,0.26
-IN-MH,spot_electricity,58.2
-IN-MH,retail_electricity,102.72
-IN-MH,residential_electricity,85.62
-IN-MH,commercial_electricity,143.48
-IN-MH,industrial_electricity,123.57
-IN-MH,diesel,0.95
-IN-MH,kerosene,0.26
-IN-PB,spot_electricity,58.2
-IN-PB,retail_electricity,93.01
-IN-PB,residential_electricity,87.18
-IN-PB,commercial_electricity,104.15
-IN-PB,industrial_electricity,122.49
-IN-PB,diesel,0.83
-IN-PB,kerosene,0.26
-IN-RJ,spot_electricity,58.2
-IN-RJ,retail_electricity,95.22
-IN-RJ,residential_electricity,98.07
-IN-RJ,commercial_electricity,120.74
-IN-RJ,industrial_electricity,103.85
-IN-RJ,diesel,0.88
-IN-RJ,kerosene,0.26
-IN-TN,spot_electricity,58.2
-IN-TN,retail_electricity,83
-IN-TN,residential_electricity,59.69
-IN-TN,commercial_electricity,117.49
-IN-TN,industrial_electricity,95.76
-IN-TN,diesel,0.89
-IN-TN,kerosene,0.22
-IN-UP,spot_electricity,58.2
-IN-UP,retail_electricity,92.84
-IN-UP,residential_electricity,62.96
-IN-UP,commercial_electricity,128.52
-IN-UP,industrial_electricity,121.69
-IN-UP,diesel,0.91
-IN-UP,kerosene,0.26
-IN-WB,spot_electricity,58.2
-IN-WB,retail_electricity,86.67
-IN-WB,residential_electricity,90.08
-IN-WB,commercial_electricity,99.73
-IN-WB,industrial_electricity,98.68
-IN-WB,diesel,0.89
-IN-WB,kerosene,0.24
-ID,spot_electricity,
-ID,retail_electricity,83.52
-ID,residential_electricity,77.81
-ID,commercial_electricity,107.42
-ID,industrial_electricity,80.61
-ID,diesel,
-ID,kerosene,
-JM,spot_electricity,
-JM,retail_electricity,334.05
-JM,residential_electricity,369.9
-JM,commercial_electricity,345.69
-JM,industrial_electricity,286.56
-JM,diesel,
-JM,kerosene,
-KE,spot_electricity,
-KE,retail_electricity,243.84
-KE,residential_electricity,203.18
-KE,commercial_electricity,188.03
-KE,industrial_electricity,340.32
-KE,diesel,1.14
-KE,kerosene,1.24
-LR,spot_electricity,
-LR,retail_electricity,570
-LR,residential_electricity,
-LR,commercial_electricity,
-LR,industrial_electricity,
-LR,diesel,1.03
-LR,kerosene,0.89
-MW,spot_electricity,
-MW,retail_electricity,84.62
-MW,residential_electricity,90.1
-MW,commercial_electricity,1112.22
-MW,industrial_electricity,79.46
-MW,diesel,2
-MW,kerosene,1.73
-MX,spot_electricity,
-MX,retail_electricity,118.88
-MX,residential_electricity,90.12
-MX,commercial_electricity,228.26
-MX,industrial_electricity,121.51
-MX,diesel,
-MX,kerosene,
-MZ,spot_electricity,
-MZ,retail_electricity,95.4
-MZ,residential_electricity,97.9
-MZ,commercial_electricity,144.33
-MZ,industrial_electricity,43.96
-MZ,diesel,1.22
-MZ,kerosene,0.89
-MM,spot_electricity,
-MM,retail_electricity,51.79
-MM,residential_electricity,34.31
-MM,commercial_electricity,34.31
-MM,industrial_electricity,73.53
-MM,diesel,1.07
-MM,kerosene,0.76
-NP,spot_electricity,
-NP,retail_electricity,93
-NP,residential_electricity,80
-NP,commercial_electricity,114
-NP,industrial_electricity,85
-NP,diesel,1.07
-NP,kerosene,1.07
-NI,spot_electricity,157.38
-NI,retail_electricity,243.45
-NI,residential_electricity,224.77
-NI,commercial_electricity,286.81
-NI,industrial_electricity,218.76
-NI,diesel,
-NI,kerosene,
-NG,spot_electricity,76.41
-NG,retail_electricity,129.57
-NG,residential_electricity,135.82
-NG,commercial_electricity,167.48
-NG,industrial_electricity,146.85
-NG,diesel,0.91
-NG,kerosene,0.73
-PK,spot_electricity,
-PK,retail_electricity,146
-PK,residential_electricity,133
-PK,commercial_electricity,157
-PK,industrial_electricity,147
-PK,diesel,0.98
-PK,kerosene,1.05
-PA,spot_electricity,213.76
-PA,retail_electricity,164.53
-PA,residential_electricity,225.9
-PA,commercial_electricity,192.7
-PA,industrial_electricity,75
-PA,diesel,
-PA,kerosene,
-PY,spot_electricity,
-PY,retail_electricity,69.45
-PY,residential_electricity,80.07
-PY,commercial_electricity,75.13
-PY,industrial_electricity,55.62
-PY,diesel,
-PY,kerosene,
-PE,spot_electricity,25.24
-PE,retail_electricity,115
-PE,residential_electricity,150
-PE,commercial_electricity,117
-PE,industrial_electricity,78
-PE,diesel,
-PE,kerosene,
-RW,spot_electricity,
-RW,retail_electricity,190.2
-RW,residential_electricity,196.05
-RW,commercial_electricity,
-RW,industrial_electricity,184.34
-RW,diesel,1.47
-RW,kerosene,1.46
-SN,spot_electricity,
-SN,retail_electricity,236.84
-SN,residential_electricity,222.75
-SN,commercial_electricity,301.7
-SN,industrial_electricity,219.67
-SN,diesel,1.48
-SN,kerosene,1.09
-SL,spot_electricity,
-SL,retail_electricity,280
-SL,residential_electricity,
-SL,commercial_electricity,
-SL,industrial_electricity,
-SL,diesel,0.85
-SL,kerosene,0.85
-ZA,spot_electricity,
-ZA,retail_electricity,69.7
-ZA,residential_electricity,85.18
-ZA,commercial_electricity,76.19
-ZA,industrial_electricity,47.73
-ZA,diesel,1.15
-ZA,kerosene,0.86
-LK,spot_electricity,
-LK,retail_electricity,126.4
-LK,residential_electricity,42.6
-LK,commercial_electricity,137
-LK,industrial_electricity,200
-LK,diesel,1.33
-LK,kerosene,0.61
-SR,spot_electricity,
-SR,retail_electricity,44.14
-SR,residential_electricity,36.5
-SR,commercial_electricity,50.72
-SR,industrial_electricity,45.2
-SR,diesel,
-SR,kerosene,
-TJ,spot_electricity,
-TJ,retail_electricity,38
-TJ,residential_electricity,38
-TJ,commercial_electricity,23
-TJ,industrial_electricity,36
-TJ,diesel,1.12
-TJ,kerosene,1.61
-TZ,spot_electricity,
-TZ,retail_electricity,164.67
-TZ,residential_electricity,224.37
-TZ,commercial_electricity,150.31
-TZ,industrial_electricity,119.51
-TZ,diesel,1.25
-TZ,kerosene,1.22
-TT,spot_electricity,
-TT,retail_electricity,56
-TT,residential_electricity,51
-TT,commercial_electricity,67
-TT,industrial_electricity,50
-TT,diesel,
-TT,kerosene,
-UG,spot_electricity,
-UG,retail_electricity,176
-UG,residential_electricity,200
-UG,commercial_electricity,182
-UG,industrial_electricity,146
-UG,diesel,1.19
-UG,kerosene,1.08
-UY,spot_electricity,75
-UY,retail_electricity,223
-UY,residential_electricity,248.8
-UY,commercial_electricity,250.9
-UY,industrial_electricity,169.4
-UY,diesel,
-UY,kerosene,
-VE,spot_electricity,
-VE,retail_electricity,20.21
-VE,residential_electricity,19.32
-VE,commercial_electricity,19.78
-VE,industrial_electricity,21.54
-VE,diesel,
-VE,kerosene,
-VN,spot_electricity,
-VN,retail_electricity,71.65
-VN,residential_electricity,76.44
-VN,commercial_electricity,108.51
-VN,industrial_electricity,64.87
-VN,diesel,
-VN,kerosene,
-ZM,spot_electricity,
-ZM,retail_electricity,46.42
-ZM,residential_electricity,52.75
-ZM,commercial_electricity,63.53
-ZM,industrial_electricity,22.96
-ZM,diesel,1.62
-ZM,kerosene,1.21
-ZW,spot_electricity,
-ZW,retail_electricity,99.62
-ZW,residential_electricity,104.03
-ZW,commercial_electricity,106.45
-ZW,industrial_electricity,88.38
-ZW,diesel,1.39
-ZW,kerosene,1.27
+AR,Average electricity spot prices ($/MWh),48.0062
+AR,Average retail electricity prices ($/MWh),49.0586
+AR,Average residential electricity prices ($/MWh),44.6610
+AR,Average commercial  electricity prices ($/MWh),64.5504
+AR,Average industrial electricity prices ($/MWh),37.9642
+AR,Average diesel prices ($/l),
+AR,Average kerosene prices ($/l),
+BS,Average electricity spot prices ($/MWh),
+BS,Average retail electricity prices ($/MWh),295.8145
+BS,Average residential electricity prices ($/MWh),277.2960
+BS,Average commercial  electricity prices ($/MWh),312.2840
+BS,Average industrial electricity prices ($/MWh),297.8635
+BS,Average diesel prices ($/l),
+BS,Average kerosene prices ($/l),
+BD,Average electricity spot prices ($/MWh),60.1600
+BD,Average retail electricity prices ($/MWh),88.0000
+BD,Average residential electricity prices ($/MWh),54.0000
+BD,Average commercial  electricity prices ($/MWh),113.0000
+BD,Average industrial electricity prices ($/MWh),98.0000
+BD,Average diesel prices ($/l),1.2700
+BD,Average kerosene prices ($/l),0.8700
+BB,Average electricity spot prices ($/MWh),
+BB,Average retail electricity prices ($/MWh),373.2552
+BB,Average residential electricity prices ($/MWh),354.3051
+BB,Average commercial  electricity prices ($/MWh),397.7801
+BB,Average industrial electricity prices ($/MWh),367.6804
+BB,Average diesel prices ($/l),
+BB,Average kerosene prices ($/l),
+BZ,Average electricity spot prices ($/MWh),
+BZ,Average retail electricity prices ($/MWh),198.7103
+BZ,Average residential electricity prices ($/MWh),219.9560
+BZ,Average commercial  electricity prices ($/MWh),221.2058
+BZ,Average industrial electricity prices ($/MWh),154.9690
+BZ,Average diesel prices ($/l),
+BZ,Average kerosene prices ($/l),
+BO,Average electricity spot prices ($/MWh),17.9800
+BO,Average retail electricity prices ($/MWh),86.8700
+BO,Average residential electricity prices ($/MWh),80.3300
+BO,Average commercial  electricity prices ($/MWh),121.8800
+BO,Average industrial electricity prices ($/MWh),58.3900
+BO,Average diesel prices ($/l),
+BO,Average kerosene prices ($/l),
+BW,Average electricity spot prices ($/MWh),
+BW,Average retail electricity prices ($/MWh),202.6200
+BW,Average residential electricity prices ($/MWh),
+BW,Average commercial  electricity prices ($/MWh),
+BW,Average industrial electricity prices ($/MWh),
+BW,Average diesel prices ($/l),0.8100
+BW,Average kerosene prices ($/l),0.9400
+BR,Average electricity spot prices ($/MWh),273.7300
+BR,Average retail electricity prices ($/MWh),120.3802
+BR,Average residential electricity prices ($/MWh),130.0848
+BR,Average commercial  electricity prices ($/MWh),124.8723
+BR,Average industrial electricity prices ($/MWh),106.1835
+BR,Average diesel prices ($/l),
+BR,Average kerosene prices ($/l),
+CM,Average electricity spot prices ($/MWh),
+CM,Average retail electricity prices ($/MWh),79.5300
+CM,Average residential electricity prices ($/MWh),58.5900
+CM,Average commercial  electricity prices ($/MWh),100.4700
+CM,Average industrial electricity prices ($/MWh),
+CM,Average diesel prices ($/l),1.0800
+CM,Average kerosene prices ($/l),0.5800
+CL,Average electricity spot prices ($/MWh),104.4000
+CL,Average retail electricity prices ($/MWh),140.0000
+CL,Average residential electricity prices ($/MWh),176.0000
+CL,Average commercial  electricity prices ($/MWh),108.0000
+CL,Average industrial electricity prices ($/MWh),135.0000
+CL,Average diesel prices ($/l),
+CL,Average kerosene prices ($/l),
+CN,Average electricity spot prices ($/MWh),
+CN,Average retail electricity prices ($/MWh),90.7800
+CN,Average residential electricity prices ($/MWh),82.0500
+CN,Average commercial  electricity prices ($/MWh),131.1900
+CN,Average industrial electricity prices ($/MWh),142.7100
+CN,Average diesel prices ($/l),
+CN,Average kerosene prices ($/l),
+CN-35,Average electricity spot prices ($/MWh),
+CN-35,Average retail electricity prices ($/MWh),98.9388
+CN-35,Average residential electricity prices ($/MWh),80.0188
+CN-35,Average commercial  electricity prices ($/MWh),122.5900
+CN-35,Average industrial electricity prices ($/MWh),157.3400
+CN-35,Average diesel prices ($/l),
+CN-35,Average kerosene prices ($/l),
+CN-62,Average electricity spot prices ($/MWh),
+CN-62,Average retail electricity prices ($/MWh),106.2200
+CN-62,Average residential electricity prices ($/MWh),90.9400
+CN-62,Average commercial  electricity prices ($/MWh),143.6500
+CN-62,Average industrial electricity prices ($/MWh),84.0800
+CN-62,Average diesel prices ($/l),
+CN-62,Average kerosene prices ($/l),
+CN-44,Average electricity spot prices ($/MWh),
+CN-44,Average retail electricity prices ($/MWh),118.9786
+CN-44,Average residential electricity prices ($/MWh),98.4572
+CN-44,Average commercial  electricity prices ($/MWh),147.0529
+CN-44,Average industrial electricity prices ($/MWh),111.4258
+CN-44,Average diesel prices ($/l),
+CN-44,Average kerosene prices ($/l),
+CN-13,Average electricity spot prices ($/MWh),
+CN-13,Average retail electricity prices ($/MWh),96.6227
+CN-13,Average residential electricity prices ($/MWh),78.6527
+CN-13,Average commercial  electricity prices ($/MWh),125.4467
+CN-13,Average industrial electricity prices ($/MWh),85.7687
+CN-13,Average diesel prices ($/l),
+CN-13,Average kerosene prices ($/l),
+CN-23,Average electricity spot prices ($/MWh),
+CN-23,Average retail electricity prices ($/MWh),109.1751
+CN-23,Average residential electricity prices ($/MWh),81.1550
+CN-23,Average commercial  electricity prices ($/MWh),150.2179
+CN-23,Average industrial electricity prices ($/MWh),96.1524
+CN-23,Average diesel prices ($/l),
+CN-23,Average kerosene prices ($/l),
+CN-42,Average electricity spot prices ($/MWh),
+CN-42,Average retail electricity prices ($/MWh),110.7089
+CN-42,Average residential electricity prices ($/MWh),91.2994
+CN-42,Average commercial  electricity prices ($/MWh),149.9339
+CN-42,Average industrial electricity prices ($/MWh),90.8936
+CN-42,Average diesel prices ($/l),
+CN-42,Average kerosene prices ($/l),
+CN-15,Average electricity spot prices ($/MWh),
+CN-15,Average retail electricity prices ($/MWh),87.9098
+CN-15,Average residential electricity prices ($/MWh),74.3921
+CN-15,Average commercial  electricity prices ($/MWh),113.2410
+CN-15,Average industrial electricity prices ($/MWh),76.0963
+CN-15,Average diesel prices ($/l),
+CN-15,Average kerosene prices ($/l),
+CN-32,Average electricity spot prices ($/MWh),
+CN-32,Average retail electricity prices ($/MWh),91.2904
+CN-32,Average residential electricity prices ($/MWh),77.3137
+CN-32,Average commercial  electricity prices ($/MWh),117.1878
+CN-32,Average industrial electricity prices ($/MWh),79.3696
+CN-32,Average diesel prices ($/l),
+CN-32,Average kerosene prices ($/l),
+CN-22,Average electricity spot prices ($/MWh),
+CN-22,Average retail electricity prices ($/MWh),110.1760
+CN-22,Average residential electricity prices ($/MWh),84.1253
+CN-22,Average commercial  electricity prices ($/MWh),151.2729
+CN-22,Average industrial electricity prices ($/MWh),95.1299
+CN-22,Average diesel prices ($/l),
+CN-22,Average kerosene prices ($/l),
+CN-63,Average electricity spot prices ($/MWh),
+CN-63,Average retail electricity prices ($/MWh),77.7844
+CN-63,Average residential electricity prices ($/MWh),71.9683
+CN-63,Average commercial  electricity prices ($/MWh),100.9731
+CN-63,Average industrial electricity prices ($/MWh),60.4118
+CN-63,Average diesel prices ($/l),
+CN-63,Average kerosene prices ($/l),
+CN-37,Average electricity spot prices ($/MWh),
+CN-37,Average retail electricity prices ($/MWh),101.8008
+CN-37,Average residential electricity prices ($/MWh),84.3850
+CN-37,Average commercial  electricity prices ($/MWh),122.0084
+CN-37,Average industrial electricity prices ($/MWh),99.0091
+CN-37,Average diesel prices ($/l),
+CN-37,Average kerosene prices ($/l),
+CN-51,Average electricity spot prices ($/MWh),
+CN-51,Average retail electricity prices ($/MWh),101.5520
+CN-51,Average residential electricity prices ($/MWh),83.7033
+CN-51,Average commercial  electricity prices ($/MWh),130.6596
+CN-51,Average industrial electricity prices ($/MWh),90.2931
+CN-51,Average diesel prices ($/l),
+CN-51,Average kerosene prices ($/l),
+CN-54,Average electricity spot prices ($/MWh),
+CN-54,Average retail electricity prices ($/MWh),92.8319
+CN-54,Average residential electricity prices ($/MWh),81.8397
+CN-54,Average commercial  electricity prices ($/MWh),81.8397
+CN-54,Average industrial electricity prices ($/MWh),114.8162
+CN-54,Average diesel prices ($/l),
+CN-54,Average kerosene prices ($/l),
+CN-65 ,Average electricity spot prices ($/MWh),
+CN-65 ,Average retail electricity prices ($/MWh),65.1134
+CN-65 ,Average residential electricity prices ($/MWh),68.8194
+CN-65 ,Average commercial  electricity prices ($/MWh),79.3425
+CN-65 ,Average industrial electricity prices ($/MWh),47.1781
+CN-65 ,Average diesel prices ($/l),
+CN-65 ,Average kerosene prices ($/l),
+CN-53,Average electricity spot prices ($/MWh),
+CN-53,Average retail electricity prices ($/MWh),91.2904
+CN-53,Average residential electricity prices ($/MWh),77.3137
+CN-53,Average commercial  electricity prices ($/MWh),117.1878
+CN-53,Average industrial electricity prices ($/MWh),79.3696
+CN-53,Average diesel prices ($/l),
+CN-53,Average kerosene prices ($/l),
+CO,Average electricity spot prices ($/MWh),114.6100
+CO,Average retail electricity prices ($/MWh),145.8632
+CO,Average residential electricity prices ($/MWh),161.0677
+CO,Average commercial  electricity prices ($/MWh),154.7809
+CO,Average industrial electricity prices ($/MWh),121.7411
+CO,Average diesel prices ($/l),
+CO,Average kerosene prices ($/l),
+CR,Average electricity spot prices ($/MWh),
+CR,Average retail electricity prices ($/MWh),171.6123
+CR,Average residential electricity prices ($/MWh),167.0144
+CR,Average commercial  electricity prices ($/MWh),195.1608
+CR,Average industrial electricity prices ($/MWh),152.6616
+CR,Average diesel prices ($/l),
+CR,Average kerosene prices ($/l),
+CI,Average electricity spot prices ($/MWh),
+CI,Average retail electricity prices ($/MWh),175.3600
+CI,Average residential electricity prices ($/MWh),139.0900
+CI,Average commercial  electricity prices ($/MWh),265.1400
+CI,Average industrial electricity prices ($/MWh),121.8500
+CI,Average diesel prices ($/l),1.2200
+CI,Average kerosene prices ($/l),1.1900
+CD,Average electricity spot prices ($/MWh),
+CD,Average retail electricity prices ($/MWh),66.0000
+CD,Average residential electricity prices ($/MWh),47.0000
+CD,Average commercial  electricity prices ($/MWh),
+CD,Average industrial electricity prices ($/MWh),
+CD,Average diesel prices ($/l),1.5500
+CD,Average kerosene prices ($/l),1.1900
+DO,Average electricity spot prices ($/MWh),183.4000
+DO,Average retail electricity prices ($/MWh),194.2467
+DO,Average residential electricity prices ($/MWh),150.0400
+DO,Average commercial  electricity prices ($/MWh),246.8000
+DO,Average industrial electricity prices ($/MWh),185.9000
+DO,Average diesel prices ($/l),
+DO,Average kerosene prices ($/l),
+EC,Average electricity spot prices ($/MWh),72.2000
+EC,Average retail electricity prices ($/MWh),86.8155
+EC,Average residential electricity prices ($/MWh),99.7167
+EC,Average commercial  electricity prices ($/MWh),89.1618
+EC,Average industrial electricity prices ($/MWh),71.5681
+EC,Average diesel prices ($/l),
+EC,Average kerosene prices ($/l),
+SV,Average electricity spot prices ($/MWh),
+SV,Average retail electricity prices ($/MWh),236.3333
+SV,Average residential electricity prices ($/MWh),260.7000
+SV,Average commercial  electricity prices ($/MWh),240.4000
+SV,Average industrial electricity prices ($/MWh),207.9000
+SV,Average diesel prices ($/l),
+SV,Average kerosene prices ($/l),
+ET,Average electricity spot prices ($/MWh),
+ET,Average retail electricity prices ($/MWh),30.8600
+ET,Average residential electricity prices ($/MWh),27.4700
+ET,Average commercial  electricity prices ($/MWh),39.6800
+ET,Average industrial electricity prices ($/MWh),28.8900
+ET,Average diesel prices ($/l),0.8700
+ET,Average kerosene prices ($/l),0.7600
+GH,Average electricity spot prices ($/MWh),
+GH,Average retail electricity prices ($/MWh),154.4200
+GH,Average residential electricity prices ($/MWh),99.0900
+GH,Average commercial  electricity prices ($/MWh),205.9200
+GH,Average industrial electricity prices ($/MWh),158.2600
+GH,Average diesel prices ($/l),1.0200
+GH,Average kerosene prices ($/l),0.9900
+GT,Average electricity spot prices ($/MWh),103.6600
+GT,Average retail electricity prices ($/MWh),228.6700
+GT,Average residential electricity prices ($/MWh),285.9200
+GT,Average commercial  electricity prices ($/MWh),200.5200
+GT,Average industrial electricity prices ($/MWh),199.5700
+GT,Average diesel prices ($/l),
+GT,Average kerosene prices ($/l),
+GY,Average electricity spot prices ($/MWh),
+GY,Average retail electricity prices ($/MWh),309.4000
+GY,Average residential electricity prices ($/MWh),265.4500
+GY,Average commercial  electricity prices ($/MWh),354.9500
+GY,Average industrial electricity prices ($/MWh),307.8000
+GY,Average diesel prices ($/l),
+GY,Average kerosene prices ($/l),
+HT,Average electricity spot prices ($/MWh),
+HT,Average retail electricity prices ($/MWh),328.5538
+HT,Average residential electricity prices ($/MWh),221.4800
+HT,Average commercial  electricity prices ($/MWh),373.1260
+HT,Average industrial electricity prices ($/MWh),391.0553
+HT,Average diesel prices ($/l),0.9300
+HT,Average kerosene prices ($/l),0.9300
+HN,Average electricity spot prices ($/MWh),
+HN,Average retail electricity prices ($/MWh),186.7768
+HN,Average residential electricity prices ($/MWh),139.2761
+HN,Average commercial  electricity prices ($/MWh),227.6509
+HN,Average industrial electricity prices ($/MWh),193.4033
+HN,Average diesel prices ($/l),
+HN,Average kerosene prices ($/l),
+IN,Average electricity spot prices ($/MWh),58.2000
+IN,Average retail electricity prices ($/MWh),86.9300
+IN,Average residential electricity prices ($/MWh),75.9600
+IN,Average commercial  electricity prices ($/MWh),115.2500
+IN,Average industrial electricity prices ($/MWh),98.3100
+IN,Average diesel prices ($/l),0.9000
+IN,Average kerosene prices ($/l),0.2500
+IN-AP,Average electricity spot prices ($/MWh),58.2000
+IN-AP,Average retail electricity prices ($/MWh),98.0000
+IN-AP,Average residential electricity prices ($/MWh),83.7000
+IN-AP,Average commercial  electricity prices ($/MWh),143.2800
+IN-AP,Average industrial electricity prices ($/MWh),104.8700
+IN-AP,Average diesel prices ($/l),0.9100
+IN-AP,Average kerosene prices ($/l),0.2400
+IN-GJ,Average electricity spot prices ($/MWh),58.2000
+IN-GJ,Average retail electricity prices ($/MWh),69.0000
+IN-GJ,Average residential electricity prices ($/MWh),64.2400
+IN-GJ,Average commercial  electricity prices ($/MWh),74.6500
+IN-GJ,Average industrial electricity prices ($/MWh),77.8700
+IN-GJ,Average diesel prices ($/l),0.9300
+IN-GJ,Average kerosene prices ($/l),0.2400
+IN-KA,Average electricity spot prices ($/MWh),58.2000
+IN-KA,Average retail electricity prices ($/MWh),87.0000
+IN-KA,Average residential electricity prices ($/MWh),74.2200
+IN-KA,Average commercial  electricity prices ($/MWh),121.5500
+IN-KA,Average industrial electricity prices ($/MWh),94.3700
+IN-KA,Average diesel prices ($/l),0.9000
+IN-KA,Average kerosene prices ($/l),0.2800
+IN-MP,Average electricity spot prices ($/MWh),58.2000
+IN-MP,Average retail electricity prices ($/MWh),86.0000
+IN-MP,Average residential electricity prices ($/MWh),91.6300
+IN-MP,Average commercial  electricity prices ($/MWh),103.8200
+IN-MP,Average industrial electricity prices ($/MWh),91.5300
+IN-MP,Average diesel prices ($/l),0.9200
+IN-MP,Average kerosene prices ($/l),0.2600
+IN-MH,Average electricity spot prices ($/MWh),58.2000
+IN-MH,Average retail electricity prices ($/MWh),102.7200
+IN-MH,Average residential electricity prices ($/MWh),85.6200
+IN-MH,Average commercial  electricity prices ($/MWh),143.4800
+IN-MH,Average industrial electricity prices ($/MWh),123.5700
+IN-MH,Average diesel prices ($/l),0.9500
+IN-MH,Average kerosene prices ($/l),0.2600
+IN-PB,Average electricity spot prices ($/MWh),58.2000
+IN-PB,Average retail electricity prices ($/MWh),93.0100
+IN-PB,Average residential electricity prices ($/MWh),87.1800
+IN-PB,Average commercial  electricity prices ($/MWh),104.1500
+IN-PB,Average industrial electricity prices ($/MWh),122.4900
+IN-PB,Average diesel prices ($/l),0.8300
+IN-PB,Average kerosene prices ($/l),0.2600
+IN-RJ,Average electricity spot prices ($/MWh),58.2000
+IN-RJ,Average retail electricity prices ($/MWh),95.2200
+IN-RJ,Average residential electricity prices ($/MWh),98.0700
+IN-RJ,Average commercial  electricity prices ($/MWh),120.7400
+IN-RJ,Average industrial electricity prices ($/MWh),103.8500
+IN-RJ,Average diesel prices ($/l),0.8800
+IN-RJ,Average kerosene prices ($/l),0.2600
+IN-TN,Average electricity spot prices ($/MWh),58.2000
+IN-TN,Average retail electricity prices ($/MWh),83.0000
+IN-TN,Average residential electricity prices ($/MWh),59.6900
+IN-TN,Average commercial  electricity prices ($/MWh),117.4900
+IN-TN,Average industrial electricity prices ($/MWh),95.7600
+IN-TN,Average diesel prices ($/l),0.8900
+IN-TN,Average kerosene prices ($/l),0.2200
+IN-UP,Average electricity spot prices ($/MWh),58.2000
+IN-UP,Average retail electricity prices ($/MWh),92.8400
+IN-UP,Average residential electricity prices ($/MWh),62.9600
+IN-UP,Average commercial  electricity prices ($/MWh),128.5200
+IN-UP,Average industrial electricity prices ($/MWh),121.6900
+IN-UP,Average diesel prices ($/l),0.9100
+IN-UP,Average kerosene prices ($/l),0.2600
+IN-WB,Average electricity spot prices ($/MWh),58.2000
+IN-WB,Average retail electricity prices ($/MWh),86.6700
+IN-WB,Average residential electricity prices ($/MWh),90.0800
+IN-WB,Average commercial  electricity prices ($/MWh),99.7300
+IN-WB,Average industrial electricity prices ($/MWh),98.6800
+IN-WB,Average diesel prices ($/l),0.8900
+IN-WB,Average kerosene prices ($/l),0.2400
+ID,Average electricity spot prices ($/MWh),
+ID,Average retail electricity prices ($/MWh),83.5200
+ID,Average residential electricity prices ($/MWh),77.8100
+ID,Average commercial  electricity prices ($/MWh),107.4200
+ID,Average industrial electricity prices ($/MWh),80.6100
+ID,Average diesel prices ($/l),
+ID,Average kerosene prices ($/l),
+JM,Average electricity spot prices ($/MWh),
+JM,Average retail electricity prices ($/MWh),334.0500
+JM,Average residential electricity prices ($/MWh),369.9000
+JM,Average commercial  electricity prices ($/MWh),345.6900
+JM,Average industrial electricity prices ($/MWh),286.5600
+JM,Average diesel prices ($/l),
+JM,Average kerosene prices ($/l),
+KE,Average electricity spot prices ($/MWh),
+KE,Average retail electricity prices ($/MWh),243.8434
+KE,Average residential electricity prices ($/MWh),203.1801
+KE,Average commercial  electricity prices ($/MWh),188.0348
+KE,Average industrial electricity prices ($/MWh),340.3152
+KE,Average diesel prices ($/l),1.1400
+KE,Average kerosene prices ($/l),1.2400
+LR,Average electricity spot prices ($/MWh),
+LR,Average retail electricity prices ($/MWh),570.0000
+LR,Average residential electricity prices ($/MWh),
+LR,Average commercial  electricity prices ($/MWh),
+LR,Average industrial electricity prices ($/MWh),
+LR,Average diesel prices ($/l),1.0300
+LR,Average kerosene prices ($/l),0.8900
+MW,Average electricity spot prices ($/MWh),
+MW,Average retail electricity prices ($/MWh),84.6200
+MW,Average residential electricity prices ($/MWh),90.1000
+MW,Average commercial  electricity prices ($/MWh),1112.2200
+MW,Average industrial electricity prices ($/MWh),79.4600
+MW,Average diesel prices ($/l),2.0000
+MW,Average kerosene prices ($/l),1.7300
+MX,Average electricity spot prices ($/MWh),
+MX,Average retail electricity prices ($/MWh),118.8802
+MX,Average residential electricity prices ($/MWh),90.1150
+MX,Average commercial  electricity prices ($/MWh),228.2617
+MX,Average industrial electricity prices ($/MWh),121.5132
+MX,Average diesel prices ($/l),
+MX,Average kerosene prices ($/l),
+MZ,Average electricity spot prices ($/MWh),
+MZ,Average retail electricity prices ($/MWh),95.3975
+MZ,Average residential electricity prices ($/MWh),97.9011
+MZ,Average commercial  electricity prices ($/MWh),144.3316
+MZ,Average industrial electricity prices ($/MWh),43.9600
+MZ,Average diesel prices ($/l),1.2209
+MZ,Average kerosene prices ($/l),0.8902
+MM,Average electricity spot prices ($/MWh),
+MM,Average retail electricity prices ($/MWh),51.7900
+MM,Average residential electricity prices ($/MWh),34.3100
+MM,Average commercial  electricity prices ($/MWh),34.3100
+MM,Average industrial electricity prices ($/MWh),73.5300
+MM,Average diesel prices ($/l),1.0700
+MM,Average kerosene prices ($/l),0.7600
+NP,Average electricity spot prices ($/MWh),
+NP,Average retail electricity prices ($/MWh),93.0000
+NP,Average residential electricity prices ($/MWh),80.0000
+NP,Average commercial  electricity prices ($/MWh),114.0000
+NP,Average industrial electricity prices ($/MWh),85.0000
+NP,Average diesel prices ($/l),1.0700
+NP,Average kerosene prices ($/l),1.0700
+NI,Average electricity spot prices ($/MWh),157.3778
+NI,Average retail electricity prices ($/MWh),243.4500
+NI,Average residential electricity prices ($/MWh),224.7700
+NI,Average commercial  electricity prices ($/MWh),286.8100
+NI,Average industrial electricity prices ($/MWh),218.7600
+NI,Average diesel prices ($/l),
+NI,Average kerosene prices ($/l),
+NG,Average electricity spot prices ($/MWh),76.4100
+NG,Average retail electricity prices ($/MWh),129.5700
+NG,Average residential electricity prices ($/MWh),135.8200
+NG,Average commercial  electricity prices ($/MWh),167.4800
+NG,Average industrial electricity prices ($/MWh),146.8500
+NG,Average diesel prices ($/l),0.9100
+NG,Average kerosene prices ($/l),0.7300
+PK,Average electricity spot prices ($/MWh),
+PK,Average retail electricity prices ($/MWh),146.0000
+PK,Average residential electricity prices ($/MWh),133.0000
+PK,Average commercial  electricity prices ($/MWh),157.0000
+PK,Average industrial electricity prices ($/MWh),147.0000
+PK,Average diesel prices ($/l),0.9800
+PK,Average kerosene prices ($/l),1.0455
+PA,Average electricity spot prices ($/MWh),213.7600
+PA,Average retail electricity prices ($/MWh),164.5333
+PA,Average residential electricity prices ($/MWh),225.9000
+PA,Average commercial  electricity prices ($/MWh),192.7000
+PA,Average industrial electricity prices ($/MWh),75.0000
+PA,Average diesel prices ($/l),
+PA,Average kerosene prices ($/l),
+PY,Average electricity spot prices ($/MWh),
+PY,Average retail electricity prices ($/MWh),69.4540
+PY,Average residential electricity prices ($/MWh),80.0707
+PY,Average commercial  electricity prices ($/MWh),75.1304
+PY,Average industrial electricity prices ($/MWh),55.6189
+PY,Average diesel prices ($/l),
+PY,Average kerosene prices ($/l),
+PE,Average electricity spot prices ($/MWh),25.2400
+PE,Average retail electricity prices ($/MWh),115.0000
+PE,Average residential electricity prices ($/MWh),150.0000
+PE,Average commercial  electricity prices ($/MWh),117.0000
+PE,Average industrial electricity prices ($/MWh),78.0000
+PE,Average diesel prices ($/l),
+PE,Average kerosene prices ($/l),
+RW,Average electricity spot prices ($/MWh),
+RW,Average retail electricity prices ($/MWh),190.2000
+RW,Average residential electricity prices ($/MWh),196.0500
+RW,Average commercial  electricity prices ($/MWh),
+RW,Average industrial electricity prices ($/MWh),184.3400
+RW,Average diesel prices ($/l),1.4700
+RW,Average kerosene prices ($/l),1.4600
+SN,Average electricity spot prices ($/MWh),
+SN,Average retail electricity prices ($/MWh),236.8400
+SN,Average residential electricity prices ($/MWh),222.7500
+SN,Average commercial  electricity prices ($/MWh),301.7000
+SN,Average industrial electricity prices ($/MWh),219.6700
+SN,Average diesel prices ($/l),1.4800
+SN,Average kerosene prices ($/l),1.0900
+SL,Average electricity spot prices ($/MWh),
+SL,Average retail electricity prices ($/MWh),280.0000
+SL,Average residential electricity prices ($/MWh),
+SL,Average commercial  electricity prices ($/MWh),
+SL,Average industrial electricity prices ($/MWh),
+SL,Average diesel prices ($/l),0.8500
+SL,Average kerosene prices ($/l),0.8500
+ZA,Average electricity spot prices ($/MWh),
+ZA,Average retail electricity prices ($/MWh),69.7000
+ZA,Average residential electricity prices ($/MWh),85.1800
+ZA,Average commercial  electricity prices ($/MWh),76.1900
+ZA,Average industrial electricity prices ($/MWh),47.7300
+ZA,Average diesel prices ($/l),1.1500
+ZA,Average kerosene prices ($/l),0.8600
+LK,Average electricity spot prices ($/MWh),
+LK,Average retail electricity prices ($/MWh),126.4000
+LK,Average residential electricity prices ($/MWh),42.6000
+LK,Average commercial  electricity prices ($/MWh),137.0000
+LK,Average industrial electricity prices ($/MWh),200.0000
+LK,Average diesel prices ($/l),1.3300
+LK,Average kerosene prices ($/l),0.6100
+SR,Average electricity spot prices ($/MWh),
+SR,Average retail electricity prices ($/MWh),44.1432
+SR,Average residential electricity prices ($/MWh),36.5034
+SR,Average commercial  electricity prices ($/MWh),50.7231
+SR,Average industrial electricity prices ($/MWh),45.2032
+SR,Average diesel prices ($/l),
+SR,Average kerosene prices ($/l),
+TJ,Average electricity spot prices ($/MWh),
+TJ,Average retail electricity prices ($/MWh),38.0000
+TJ,Average residential electricity prices ($/MWh),38.0000
+TJ,Average commercial  electricity prices ($/MWh),23.0000
+TJ,Average industrial electricity prices ($/MWh),36.0000
+TJ,Average diesel prices ($/l),1.1160
+TJ,Average kerosene prices ($/l),1.6131
+TZ,Average electricity spot prices ($/MWh),
+TZ,Average retail electricity prices ($/MWh),164.6700
+TZ,Average residential electricity prices ($/MWh),224.3700
+TZ,Average commercial  electricity prices ($/MWh),150.3100
+TZ,Average industrial electricity prices ($/MWh),119.5100
+TZ,Average diesel prices ($/l),1.2500
+TZ,Average kerosene prices ($/l),1.2200
+TT,Average electricity spot prices ($/MWh),
+TT,Average retail electricity prices ($/MWh),56.0000
+TT,Average residential electricity prices ($/MWh),51.0000
+TT,Average commercial  electricity prices ($/MWh),67.0000
+TT,Average industrial electricity prices ($/MWh),50.0000
+TT,Average diesel prices ($/l),
+TT,Average kerosene prices ($/l),
+UG,Average electricity spot prices ($/MWh),
+UG,Average retail electricity prices ($/MWh),176.0000
+UG,Average residential electricity prices ($/MWh),200.0000
+UG,Average commercial  electricity prices ($/MWh),182.0000
+UG,Average industrial electricity prices ($/MWh),146.0000
+UG,Average diesel prices ($/l),1.1900
+UG,Average kerosene prices ($/l),1.0800
+UY,Average electricity spot prices ($/MWh),75.0000
+UY,Average retail electricity prices ($/MWh),223.0000
+UY,Average residential electricity prices ($/MWh),248.8000
+UY,Average commercial  electricity prices ($/MWh),250.9000
+UY,Average industrial electricity prices ($/MWh),169.4000
+UY,Average diesel prices ($/l),
+UY,Average kerosene prices ($/l),
+VE,Average electricity spot prices ($/MWh),
+VE,Average retail electricity prices ($/MWh),20.2147
+VE,Average residential electricity prices ($/MWh),19.3222
+VE,Average commercial  electricity prices ($/MWh),19.7831
+VE,Average industrial electricity prices ($/MWh),21.5389
+VE,Average diesel prices ($/l),
+VE,Average kerosene prices ($/l),
+VN,Average electricity spot prices ($/MWh),
+VN,Average retail electricity prices ($/MWh),71.6500
+VN,Average residential electricity prices ($/MWh),76.4400
+VN,Average commercial  electricity prices ($/MWh),108.5100
+VN,Average industrial electricity prices ($/MWh),64.8700
+VN,Average diesel prices ($/l),
+VN,Average kerosene prices ($/l),
+ZM,Average electricity spot prices ($/MWh),
+ZM,Average retail electricity prices ($/MWh),46.4200
+ZM,Average residential electricity prices ($/MWh),52.7500
+ZM,Average commercial  electricity prices ($/MWh),63.5300
+ZM,Average industrial electricity prices ($/MWh),22.9600
+ZM,Average diesel prices ($/l),1.6200
+ZM,Average kerosene prices ($/l),1.2100
+ZW,Average electricity spot prices ($/MWh),
+ZW,Average retail electricity prices ($/MWh),99.6200
+ZW,Average residential electricity prices ($/MWh),104.0300
+ZW,Average commercial  electricity prices ($/MWh),106.4500
+ZW,Average industrial electricity prices ($/MWh),88.3800
+ZW,Average diesel prices ($/l),1.3900
+ZW,Average kerosene prices ($/l),1.2700

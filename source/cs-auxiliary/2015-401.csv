@@ -1,0 +1,401 @@
+iso,sub_indicator,2014
+AR,Power generation ,19
+AR,Methane  ,8
+AR,Forestry,1
+AR,Waste ,11
+AR,Energy efficiency ,6
+BS,Power generation ,0
+BS,Methane  ,0
+BS,Forestry,0
+BS,Waste ,1
+BS,Energy efficiency ,0
+BD,Power generation ,1
+BD,Methane  ,0
+BD,Forestry,0
+BD,Waste ,2
+BD,Energy efficiency ,2
+BB,Power generation ,0
+BB,Methane  ,0
+BB,Forestry,0
+BB,Waste ,0
+BB,Energy efficiency ,0
+BZ,Power generation ,0
+BZ,Methane  ,0
+BZ,Forestry,3
+BZ,Waste ,1
+BZ,Energy efficiency ,0
+BO,Power generation ,1
+BO,Methane  ,0
+BO,Forestry,2
+BO,Waste ,1
+BO,Energy efficiency ,2
+BW,Power generation ,0
+BW,Methane  ,0
+BW,Forestry,0
+BW,Waste ,0
+BW,Energy efficiency ,0
+BR,Power generation ,252
+BR,Methane  ,79
+BR,Forestry,16
+BR,Waste ,54
+BR,Energy efficiency ,13
+CM,Power generation ,0
+CM,Methane  ,0
+CM,Forestry,0
+CM,Waste ,2
+CM,Energy efficiency ,1
+CL,Power generation ,84
+CL,Methane  ,9
+CL,Forestry,5
+CL,Waste ,16
+CL,Energy efficiency ,3
+CN,Power generation ,3459
+CN,Methane  ,164
+CN,Forestry,7
+CN,Waste ,165
+CN,Energy efficiency ,314
+CN-35,Power generation ,80
+CN-35,Methane  ,0
+CN-35,Forestry,0
+CN-35,Waste ,5
+CN-35,Energy efficiency ,7
+CN-62,Power generation ,260
+CN-62,Methane  ,0
+CN-62,Forestry,0
+CN-62,Waste ,1
+CN-62,Energy efficiency ,6
+CN-44,Power generation ,78
+CN-44,Methane  ,2
+CN-44,Forestry,0
+CN-44,Waste ,8
+CN-44,Energy efficiency ,14
+CN-13,Power generation ,164
+CN-13,Methane  ,13
+CN-13,Forestry,0
+CN-13,Waste ,6
+CN-13,Energy efficiency ,16
+CN-23,Power generation ,123
+CN-23,Methane  ,2
+CN-23,Forestry,0
+CN-23,Waste ,1
+CN-23,Energy efficiency ,2
+CN-42,Power generation ,69
+CN-42,Methane  ,2
+CN-42,Forestry,0
+CN-42,Waste ,8
+CN-42,Energy efficiency ,12
+CN-15,Power generation ,370
+CN-15,Methane  ,4
+CN-15,Forestry,1
+CN-15,Waste ,0
+CN-15,Energy efficiency ,12
+CN-32,Power generation ,51
+CN-32,Methane  ,4
+CN-32,Forestry,0
+CN-32,Waste ,11
+CN-32,Energy efficiency ,16
+CN-22,Power generation ,135
+CN-22,Methane  ,9
+CN-22,Forestry,0
+CN-22,Waste ,1
+CN-22,Energy efficiency ,3
+CN-63,Power generation ,55
+CN-63,Methane  ,0
+CN-63,Forestry,0
+CN-63,Waste ,1
+CN-63,Energy efficiency ,3
+CN-37,Power generation ,162
+CN-37,Methane  ,6
+CN-37,Forestry,0
+CN-37,Waste ,7
+CN-37,Energy efficiency ,24
+CN-51,Power generation ,360
+CN-51,Methane  ,4
+CN-51,Forestry,3
+CN-51,Waste ,56
+CN-51,Energy efficiency ,15
+CN-54,Power generation ,0
+CN-54,Methane  ,0
+CN-54,Forestry,0
+CN-54,Waste ,0
+CN-54,Energy efficiency ,0
+CN-65 ,Power generation ,178
+CN-65 ,Methane  ,2
+CN-65 ,Forestry,0
+CN-65 ,Waste ,1
+CN-65 ,Energy efficiency ,8
+CN-53,Power generation ,378
+CN-53,Methane  ,2
+CN-53,Forestry,0
+CN-53,Waste ,4
+CN-53,Energy efficiency ,3
+CO,Power generation ,28
+CO,Methane  ,5
+CO,Forestry,9
+CO,Waste ,20
+CO,Energy efficiency ,1
+CR,Power generation ,14
+CR,Methane  ,0
+CR,Forestry,1
+CR,Waste ,2
+CR,Energy efficiency ,0
+CI,Power generation ,2
+CI,Methane  ,0
+CI,Forestry,0
+CI,Waste ,2
+CI,Energy efficiency ,1
+CD,Power generation ,0
+CD,Methane  ,0
+CD,Forestry,4
+CD,Waste ,1
+CD,Energy efficiency ,0
+DO,Power generation ,13
+DO,Methane  ,0
+DO,Forestry,0
+DO,Waste ,1
+DO,Energy efficiency ,1
+EC,Power generation ,23
+EC,Methane  ,7
+EC,Forestry,0
+EC,Waste ,2
+EC,Energy efficiency ,1
+SV,Power generation ,6
+SV,Methane  ,0
+SV,Forestry,0
+SV,Waste ,1
+SV,Energy efficiency ,0
+ET,Power generation ,0
+ET,Methane  ,0
+ET,Forestry,1
+ET,Waste ,1
+ET,Energy efficiency ,0
+GH,Power generation ,0
+GH,Methane  ,1
+GH,Forestry,1
+GH,Waste ,0
+GH,Energy efficiency ,4
+GT,Power generation ,14
+GT,Methane  ,5
+GT,Forestry,1
+GT,Waste ,1
+GT,Energy efficiency ,1
+GY,Power generation ,1
+GY,Methane  ,0
+GY,Forestry,0
+GY,Waste ,0
+GY,Energy efficiency ,0
+HT,Power generation ,0
+HT,Methane  ,0
+HT,Forestry,0
+HT,Waste ,0
+HT,Energy efficiency ,0
+HN,Power generation ,26
+HN,Methane  ,7
+HN,Forestry,0
+HN,Waste ,0
+HN,Energy efficiency ,3
+IN,Power generation ,1669
+IN,Methane  ,32
+IN,Forestry,14
+IN,Waste ,28
+IN,Energy efficiency ,326
+IN-AP,Power generation ,73
+IN-AP,Methane  ,5
+IN-AP,Forestry,3
+IN-AP,Waste ,2
+IN-AP,Energy efficiency ,28
+IN-GJ,Power generation ,205
+IN-GJ,Methane  ,0
+IN-GJ,Forestry,0
+IN-GJ,Waste ,0
+IN-GJ,Energy efficiency ,39
+IN-KA,Power generation ,177
+IN-KA,Methane  ,5
+IN-KA,Forestry,1
+IN-KA,Waste ,5
+IN-KA,Energy efficiency ,18
+IN-MP,Power generation ,37
+IN-MP,Methane  ,0
+IN-MP,Forestry,0
+IN-MP,Waste ,0
+IN-MP,Energy efficiency ,4
+IN-MH,Power generation ,199
+IN-MH,Methane  ,6
+IN-MH,Forestry,0
+IN-MH,Waste ,3
+IN-MH,Energy efficiency ,43
+IN-PB,Power generation ,45
+IN-PB,Methane  ,4
+IN-PB,Forestry,0
+IN-PB,Waste ,1
+IN-PB,Energy efficiency ,10
+IN-RJ,Power generation ,196
+IN-RJ,Methane  ,0
+IN-RJ,Forestry,0
+IN-RJ,Waste ,0
+IN-RJ,Energy efficiency ,17
+IN-TN,Power generation ,319
+IN-TN,Methane  ,6
+IN-TN,Forestry,1
+IN-TN,Waste ,2
+IN-TN,Energy efficiency ,12
+IN-UP,Power generation ,54
+IN-UP,Methane  ,2
+IN-UP,Forestry,1
+IN-UP,Waste ,3
+IN-UP,Energy efficiency ,28
+IN-WB,Power generation ,12
+IN-WB,Methane  ,2
+IN-WB,Forestry,0
+IN-WB,Waste ,0
+IN-WB,Energy efficiency ,21
+ID,Power generation ,56
+ID,Methane  ,68
+ID,Forestry,1
+ID,Waste ,11
+ID,Energy efficiency ,20
+JM,Power generation ,2
+JM,Methane  ,0
+JM,Forestry,0
+JM,Waste ,0
+JM,Energy efficiency ,0
+KE,Power generation ,15
+KE,Methane  ,1
+KE,Forestry,15
+KE,Waste ,0
+KE,Energy efficiency ,13
+LR,Power generation ,0
+LR,Methane  ,0
+LR,Forestry,0
+LR,Waste ,1
+LR,Energy efficiency ,0
+MW,Power generation ,1
+MW,Methane  ,0
+MW,Forestry,2
+MW,Waste ,0
+MW,Energy efficiency ,2
+MX,Power generation ,52
+MX,Methane  ,100
+MX,Forestry,1
+MX,Waste ,28
+MX,Energy efficiency ,7
+MZ,Power generation ,0
+MZ,Methane  ,0
+MZ,Forestry,1
+MZ,Waste ,0
+MZ,Energy efficiency ,1
+MM,Power generation ,1
+MM,Methane  ,0
+MM,Forestry,0
+MM,Waste ,0
+MM,Energy efficiency ,0
+NP,Power generation ,1
+NP,Methane  ,4
+NP,Forestry,0
+NP,Waste ,0
+NP,Energy efficiency ,1
+NI,Power generation ,12
+NI,Methane  ,1
+NI,Forestry,2
+NI,Waste ,0
+NI,Energy efficiency ,1
+NG,Power generation ,2
+NG,Methane  ,0
+NG,Forestry,0
+NG,Waste ,2
+NG,Energy efficiency ,9
+PK,Power generation ,17
+PK,Methane  ,1
+PK,Forestry,0
+PK,Waste ,3
+PK,Energy efficiency ,13
+PA,Power generation ,20
+PA,Methane  ,0
+PA,Forestry,0
+PA,Waste ,1
+PA,Energy efficiency ,0
+PY,Power generation ,0
+PY,Methane  ,0
+PY,Forestry,2
+PY,Waste ,0
+PY,Energy efficiency ,0
+PE,Power generation ,50
+PE,Methane  ,2
+PE,Forestry,12
+PE,Waste ,4
+PE,Energy efficiency ,10
+RW,Power generation ,0
+RW,Methane  ,0
+RW,Forestry,0
+RW,Waste ,0
+RW,Energy efficiency ,7
+SN,Power generation ,2
+SN,Methane  ,0
+SN,Forestry,3
+SN,Waste ,0
+SN,Energy efficiency ,1
+SL,Power generation ,1
+SL,Methane  ,0
+SL,Forestry,0
+SL,Waste ,0
+SL,Energy efficiency ,0
+ZA,Power generation ,24
+ZA,Methane  ,4
+ZA,Forestry,4
+ZA,Waste ,9
+ZA,Energy efficiency ,23
+LK,Power generation ,0
+LK,Methane  ,0
+LK,Forestry,0
+LK,Waste ,0
+LK,Energy efficiency ,0
+SR,Power generation ,0
+SR,Methane  ,0
+SR,Forestry,0
+SR,Waste ,0
+SR,Energy efficiency ,0
+TJ,Power generation ,1
+TJ,Methane  ,0
+TJ,Forestry,0
+TJ,Waste ,0
+TJ,Energy efficiency ,0
+TZ,Power generation ,2
+TZ,Methane  ,0
+TZ,Forestry,1
+TZ,Waste ,1
+TZ,Energy efficiency ,1
+TT,Power generation ,0
+TT,Methane  ,0
+TT,Forestry,0
+TT,Waste ,0
+TT,Energy efficiency ,0
+UG,Power generation ,7
+UG,Methane  ,1
+UG,Forestry,15
+UG,Waste ,1
+UG,Energy efficiency ,2
+UY,Power generation ,25
+UY,Methane  ,1
+UY,Forestry,7
+UY,Waste ,1
+UY,Energy efficiency ,0
+VE,Power generation ,0
+VE,Methane  ,0
+VE,Forestry,0
+VE,Waste ,0
+VE,Energy efficiency ,0
+VN,Power generation ,236
+VN,Methane  ,22
+VN,Forestry,1
+VN,Waste ,9
+VN,Energy efficiency ,5
+ZM,Power generation ,1
+ZM,Methane  ,0
+ZM,Forestry,1
+ZM,Waste ,0
+ZM,Energy efficiency ,4
+ZW,Power generation ,0
+ZW,Methane  ,0
+ZW,Forestry,1
+ZW,Waste ,0
+ZW,Energy efficiency ,0

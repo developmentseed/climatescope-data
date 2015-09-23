@@ -1,0 +1,3041 @@
+iso,chain,sub_chain,2014
+AR,Biofuels,Biofuels -Distribution and Blending ,1
+AR,Biofuels,Biofuels - Engineering (Value),1
+AR,Biofuels,Biofuels - Equipment Manufacturing,1
+AR,Biofuels,Biofuels - O&M (Value),1
+AR,Biofuels,Biofuels - Producers (Valeue),1
+AR,Biomass,Biomass & Waste - Engineering,1
+AR,Biomass,Biomass & Waste - Equipment Manufacturing,1
+AR,Biomass,Biomass & Waste - Feedstock Supply,1
+AR,Biomass,Biomass & Waste - O&M,1
+AR,Biomass,Biomass & Waste - Project Development,1
+AR,Geothermal,Geothermal - Balance of Plant,1
+AR,Geothermal,Geothermal - Engineering,1
+AR,Geothermal,Geothermal - O&M,1
+AR,Geothermal,Geothermal - Project Development,1
+AR,Geothermal,Geothermal - Resource Development,1
+AR,Geothermal,Geothermal - Turbines,1
+AR,Small Hydro,Small Hydro - Balance of Plant,1
+AR,Small Hydro,Small Hydro - Engineering ,1
+AR,Small Hydro,Small Hydro - O&M,1
+AR,Small Hydro,Small Hydro - Project Development,1
+AR,Small Hydro,Small Hydro - Turbines,1
+AR,Solar,Solar - Balance of Plan,0
+AR,Solar,Solar - Cells,0
+AR,Solar,Solar - Engineering,1
+AR,Solar,Solar - Inverters,1
+AR,Solar,Solar - Modules,1
+AR,Solar,Solar - O&M,1
+AR,Solar,Solar - Polysilicon/ingots,0
+AR,Solar,Solar - Project Development,1
+AR,Solar,Solar - Wafers,0
+AR,Wind,Wind - Project Development,1
+AR,Wind,Wind - Engineering,1
+AR,Wind,Wind - O&M ,1
+AR,Wind,Wind - Turbines,1
+AR,Wind,Wind - Blades,1
+AR,Wind,Wind - Gearboxes ,1
+AR,Wind,Wind - Towers ,1
+AR,Wind,Wind - Balance of Plant,1
+BS,Biofuels,Biofuels -Distribution and Blending ,0
+BS,Biofuels,Biofuels - Engineering (Value),0
+BS,Biofuels,Biofuels - Equipment Manufacturing,0
+BS,Biofuels,Biofuels - O&M (Value),0
+BS,Biofuels,Biofuels - Producers (Valeue),1
+BS,Biomass,Biomass & Waste - Engineering,0
+BS,Biomass,Biomass & Waste - Equipment Manufacturing,0
+BS,Biomass,Biomass & Waste - Feedstock Supply,1
+BS,Biomass,Biomass & Waste - O&M,0
+BS,Biomass,Biomass & Waste - Project Development,0
+BS,Geothermal,Geothermal - Balance of Plant,0
+BS,Geothermal,Geothermal - Engineering,0
+BS,Geothermal,Geothermal - O&M,0
+BS,Geothermal,Geothermal - Project Development,0
+BS,Geothermal,Geothermal - Resource Development,0
+BS,Geothermal,Geothermal - Turbines,0
+BS,Small Hydro,Small Hydro - Balance of Plant,0
+BS,Small Hydro,Small Hydro - Engineering ,0
+BS,Small Hydro,Small Hydro - O&M,0
+BS,Small Hydro,Small Hydro - Project Development,0
+BS,Small Hydro,Small Hydro - Turbines,0
+BS,Solar,Solar - Balance of Plan,0
+BS,Solar,Solar - Cells,0
+BS,Solar,Solar - Engineering,1
+BS,Solar,Solar - Inverters,0
+BS,Solar,Solar - Modules,0
+BS,Solar,Solar - O&M,0
+BS,Solar,Solar - Polysilicon/ingots,0
+BS,Solar,Solar - Project Development,1
+BS,Solar,Solar - Wafers,0
+BS,Wind,Wind - Project Development,1
+BS,Wind,Wind - Engineering,0
+BS,Wind,Wind - O&M ,0
+BS,Wind,Wind - Turbines,0
+BS,Wind,Wind - Blades,0
+BS,Wind,Wind - Gearboxes ,0
+BS,Wind,Wind - Towers ,0
+BS,Wind,Wind - Balance of Plant,0
+BD,Biofuels,Biofuels -Distribution and Blending ,0
+BD,Biofuels,Biofuels - Engineering (Value),0
+BD,Biofuels,Biofuels - Equipment Manufacturing,0
+BD,Biofuels,Biofuels - O&M (Value),0
+BD,Biofuels,Biofuels - Producers (Valeue),0
+BD,Biomass,Biomass & Waste - Engineering,0
+BD,Biomass,Biomass & Waste - Equipment Manufacturing,0
+BD,Biomass,Biomass & Waste - Feedstock Supply,0
+BD,Biomass,Biomass & Waste - O&M,0
+BD,Biomass,Biomass & Waste - Project Development,0
+BD,Geothermal,Geothermal - Balance of Plant,0
+BD,Geothermal,Geothermal - Engineering,0
+BD,Geothermal,Geothermal - O&M,0
+BD,Geothermal,Geothermal - Project Development,0
+BD,Geothermal,Geothermal - Resource Development,0
+BD,Geothermal,Geothermal - Turbines,0
+BD,Small Hydro,Small Hydro - Balance of Plant,0
+BD,Small Hydro,Small Hydro - Engineering ,0
+BD,Small Hydro,Small Hydro - O&M,0
+BD,Small Hydro,Small Hydro - Project Development,0
+BD,Small Hydro,Small Hydro - Turbines,0
+BD,Solar,Solar - Balance of Plan,0
+BD,Solar,Solar - Cells,0
+BD,Solar,Solar - Engineering,1
+BD,Solar,Solar - Inverters,1
+BD,Solar,Solar - Modules,1
+BD,Solar,Solar - O&M,1
+BD,Solar,Solar - Polysilicon/ingots,0
+BD,Solar,Solar - Project Development,1
+BD,Solar,Solar - Wafers,0
+BD,Wind,Wind - Project Development,0
+BD,Wind,Wind - Engineering,0
+BD,Wind,Wind - O&M ,0
+BD,Wind,Wind - Turbines,0
+BD,Wind,Wind - Blades,0
+BD,Wind,Wind - Gearboxes ,0
+BD,Wind,Wind - Towers ,0
+BD,Wind,Wind - Balance of Plant,0
+BB,Biofuels,Biofuels -Distribution and Blending ,0
+BB,Biofuels,Biofuels - Engineering (Value),0
+BB,Biofuels,Biofuels - Equipment Manufacturing,0
+BB,Biofuels,Biofuels - O&M (Value),0
+BB,Biofuels,Biofuels - Producers (Valeue),1
+BB,Biomass,Biomass & Waste - Engineering,0
+BB,Biomass,Biomass & Waste - Equipment Manufacturing,0
+BB,Biomass,Biomass & Waste - Feedstock Supply,1
+BB,Biomass,Biomass & Waste - O&M,0
+BB,Biomass,Biomass & Waste - Project Development,0
+BB,Geothermal,Geothermal - Balance of Plant,0
+BB,Geothermal,Geothermal - Engineering,0
+BB,Geothermal,Geothermal - O&M,0
+BB,Geothermal,Geothermal - Project Development,0
+BB,Geothermal,Geothermal - Resource Development,0
+BB,Geothermal,Geothermal - Turbines,0
+BB,Small Hydro,Small Hydro - Balance of Plant,0
+BB,Small Hydro,Small Hydro - Engineering ,0
+BB,Small Hydro,Small Hydro - O&M,0
+BB,Small Hydro,Small Hydro - Project Development,0
+BB,Small Hydro,Small Hydro - Turbines,0
+BB,Solar,Solar - Balance of Plan,0
+BB,Solar,Solar - Cells,0
+BB,Solar,Solar - Engineering,1
+BB,Solar,Solar - Inverters,0
+BB,Solar,Solar - Modules,0
+BB,Solar,Solar - O&M,0
+BB,Solar,Solar - Polysilicon/ingots,0
+BB,Solar,Solar - Project Development,1
+BB,Solar,Solar - Wafers,0
+BB,Wind,Wind - Project Development,1
+BB,Wind,Wind - Engineering,0
+BB,Wind,Wind - O&M ,0
+BB,Wind,Wind - Turbines,0
+BB,Wind,Wind - Blades,0
+BB,Wind,Wind - Gearboxes ,0
+BB,Wind,Wind - Towers ,0
+BB,Wind,Wind - Balance of Plant,0
+BZ,Biofuels,Biofuels -Distribution and Blending ,0
+BZ,Biofuels,Biofuels - Engineering (Value),0
+BZ,Biofuels,Biofuels - Equipment Manufacturing,0
+BZ,Biofuels,Biofuels - O&M (Value),0
+BZ,Biofuels,Biofuels - Producers (Valeue),1
+BZ,Biomass,Biomass & Waste - Engineering,0
+BZ,Biomass,Biomass & Waste - Equipment Manufacturing,0
+BZ,Biomass,Biomass & Waste - Feedstock Supply,0
+BZ,Biomass,Biomass & Waste - O&M,0
+BZ,Biomass,Biomass & Waste - Project Development,1
+BZ,Geothermal,Geothermal - Balance of Plant,0
+BZ,Geothermal,Geothermal - Engineering,0
+BZ,Geothermal,Geothermal - O&M,0
+BZ,Geothermal,Geothermal - Project Development,0
+BZ,Geothermal,Geothermal - Resource Development,0
+BZ,Geothermal,Geothermal - Turbines,0
+BZ,Small Hydro,Small Hydro - Balance of Plant,0
+BZ,Small Hydro,Small Hydro - Engineering ,1
+BZ,Small Hydro,Small Hydro - O&M,0
+BZ,Small Hydro,Small Hydro - Project Development,1
+BZ,Small Hydro,Small Hydro - Turbines,0
+BZ,Solar,Solar - Balance of Plan,0
+BZ,Solar,Solar - Cells,0
+BZ,Solar,Solar - Engineering,1
+BZ,Solar,Solar - Inverters,0
+BZ,Solar,Solar - Modules,0
+BZ,Solar,Solar - O&M,0
+BZ,Solar,Solar - Polysilicon/ingots,0
+BZ,Solar,Solar - Project Development,1
+BZ,Solar,Solar - Wafers,0
+BZ,Wind,Wind - Project Development,0
+BZ,Wind,Wind - Engineering,1
+BZ,Wind,Wind - O&M ,0
+BZ,Wind,Wind - Turbines,0
+BZ,Wind,Wind - Blades,0
+BZ,Wind,Wind - Gearboxes ,0
+BZ,Wind,Wind - Towers ,0
+BZ,Wind,Wind - Balance of Plant,0
+BO,Biofuels,Biofuels -Distribution and Blending ,0
+BO,Biofuels,Biofuels - Engineering (Value),0
+BO,Biofuels,Biofuels - Equipment Manufacturing,0
+BO,Biofuels,Biofuels - O&M (Value),0
+BO,Biofuels,Biofuels - Producers (Valeue),0
+BO,Biomass,Biomass & Waste - Engineering,0
+BO,Biomass,Biomass & Waste - Equipment Manufacturing,0
+BO,Biomass,Biomass & Waste - Feedstock Supply,1
+BO,Biomass,Biomass & Waste - O&M,0
+BO,Biomass,Biomass & Waste - Project Development,1
+BO,Geothermal,Geothermal - Balance of Plant,0
+BO,Geothermal,Geothermal - Engineering,0
+BO,Geothermal,Geothermal - O&M,0
+BO,Geothermal,Geothermal - Project Development,0
+BO,Geothermal,Geothermal - Resource Development,0
+BO,Geothermal,Geothermal - Turbines,0
+BO,Small Hydro,Small Hydro - Balance of Plant,0
+BO,Small Hydro,Small Hydro - Engineering ,0
+BO,Small Hydro,Small Hydro - O&M,0
+BO,Small Hydro,Small Hydro - Project Development,1
+BO,Small Hydro,Small Hydro - Turbines,0
+BO,Solar,Solar - Balance of Plan,0
+BO,Solar,Solar - Cells,0
+BO,Solar,Solar - Engineering,0
+BO,Solar,Solar - Inverters,0
+BO,Solar,Solar - Modules,0
+BO,Solar,Solar - O&M,0
+BO,Solar,Solar - Polysilicon/ingots,0
+BO,Solar,Solar - Project Development,1
+BO,Solar,Solar - Wafers,0
+BO,Wind,Wind - Project Development,1
+BO,Wind,Wind - Engineering,0
+BO,Wind,Wind - O&M ,0
+BO,Wind,Wind - Turbines,0
+BO,Wind,Wind - Blades,0
+BO,Wind,Wind - Gearboxes ,0
+BO,Wind,Wind - Towers ,0
+BO,Wind,Wind - Balance of Plant,0
+BW,Biofuels,Biofuels -Distribution and Blending ,1
+BW,Biofuels,Biofuels - Engineering (Value),0
+BW,Biofuels,Biofuels - Equipment Manufacturing,0
+BW,Biofuels,Biofuels - O&M (Value),0
+BW,Biofuels,Biofuels - Producers (Valeue),1
+BW,Biomass,Biomass & Waste - Engineering,0
+BW,Biomass,Biomass & Waste - Equipment Manufacturing,0
+BW,Biomass,Biomass & Waste - Feedstock Supply,0
+BW,Biomass,Biomass & Waste - O&M,0
+BW,Biomass,Biomass & Waste - Project Development,0
+BW,Geothermal,Geothermal - Balance of Plant,0
+BW,Geothermal,Geothermal - Engineering,0
+BW,Geothermal,Geothermal - O&M,0
+BW,Geothermal,Geothermal - Project Development,0
+BW,Geothermal,Geothermal - Resource Development,0
+BW,Geothermal,Geothermal - Turbines,0
+BW,Small Hydro,Small Hydro - Balance of Plant,0
+BW,Small Hydro,Small Hydro - Engineering ,0
+BW,Small Hydro,Small Hydro - O&M,0
+BW,Small Hydro,Small Hydro - Project Development,0
+BW,Small Hydro,Small Hydro - Turbines,0
+BW,Solar,Solar - Balance of Plan,0
+BW,Solar,Solar - Cells,0
+BW,Solar,Solar - Engineering,0
+BW,Solar,Solar - Inverters,0
+BW,Solar,Solar - Modules,0
+BW,Solar,Solar - O&M,0
+BW,Solar,Solar - Polysilicon/ingots,0
+BW,Solar,Solar - Project Development,0
+BW,Solar,Solar - Wafers,0
+BW,Wind,Wind - Project Development,0
+BW,Wind,Wind - Engineering,0
+BW,Wind,Wind - O&M ,0
+BW,Wind,Wind - Turbines,0
+BW,Wind,Wind - Blades,0
+BW,Wind,Wind - Gearboxes ,0
+BW,Wind,Wind - Towers ,0
+BW,Wind,Wind - Balance of Plant,0
+BR,Biofuels,Biofuels -Distribution and Blending ,1
+BR,Biofuels,Biofuels - Engineering (Value),1
+BR,Biofuels,Biofuels - Equipment Manufacturing,1
+BR,Biofuels,Biofuels - O&M (Value),1
+BR,Biofuels,Biofuels - Producers (Valeue),1
+BR,Biomass,Biomass & Waste - Engineering,1
+BR,Biomass,Biomass & Waste - Equipment Manufacturing,1
+BR,Biomass,Biomass & Waste - Feedstock Supply,1
+BR,Biomass,Biomass & Waste - O&M,1
+BR,Biomass,Biomass & Waste - Project Development,1
+BR,Geothermal,Geothermal - Balance of Plant,0
+BR,Geothermal,Geothermal - Engineering,0
+BR,Geothermal,Geothermal - O&M,0
+BR,Geothermal,Geothermal - Project Development,0
+BR,Geothermal,Geothermal - Resource Development,0
+BR,Geothermal,Geothermal - Turbines,0
+BR,Small Hydro,Small Hydro - Balance of Plant,1
+BR,Small Hydro,Small Hydro - Engineering ,1
+BR,Small Hydro,Small Hydro - O&M,1
+BR,Small Hydro,Small Hydro - Project Development,1
+BR,Small Hydro,Small Hydro - Turbines,1
+BR,Solar,Solar - Balance of Plan,1
+BR,Solar,Solar - Cells,0
+BR,Solar,Solar - Engineering,1
+BR,Solar,Solar - Inverters,1
+BR,Solar,Solar - Modules,1
+BR,Solar,Solar - O&M,1
+BR,Solar,Solar - Polysilicon/ingots,0
+BR,Solar,Solar - Project Development,1
+BR,Solar,Solar - Wafers,0
+BR,Wind,Wind - Project Development,1
+BR,Wind,Wind - Engineering,1
+BR,Wind,Wind - O&M ,1
+BR,Wind,Wind - Turbines,1
+BR,Wind,Wind - Blades,1
+BR,Wind,Wind - Gearboxes ,1
+BR,Wind,Wind - Towers ,1
+BR,Wind,Wind - Balance of Plant,1
+CM,Biofuels,Biofuels -Distribution and Blending ,0
+CM,Biofuels,Biofuels - Engineering (Value),0
+CM,Biofuels,Biofuels - Equipment Manufacturing,0
+CM,Biofuels,Biofuels - O&M (Value),0
+CM,Biofuels,Biofuels - Producers (Valeue),0
+CM,Biomass,Biomass & Waste - Engineering,0
+CM,Biomass,Biomass & Waste - Equipment Manufacturing,0
+CM,Biomass,Biomass & Waste - Feedstock Supply,0
+CM,Biomass,Biomass & Waste - O&M,1
+CM,Biomass,Biomass & Waste - Project Development,0
+CM,Geothermal,Geothermal - Balance of Plant,0
+CM,Geothermal,Geothermal - Engineering,0
+CM,Geothermal,Geothermal - O&M,0
+CM,Geothermal,Geothermal - Project Development,0
+CM,Geothermal,Geothermal - Resource Development,0
+CM,Geothermal,Geothermal - Turbines,0
+CM,Small Hydro,Small Hydro - Balance of Plant,0
+CM,Small Hydro,Small Hydro - Engineering ,0
+CM,Small Hydro,Small Hydro - O&M,0
+CM,Small Hydro,Small Hydro - Project Development,1
+CM,Small Hydro,Small Hydro - Turbines,0
+CM,Solar,Solar - Balance of Plan,0
+CM,Solar,Solar - Cells,0
+CM,Solar,Solar - Engineering,0
+CM,Solar,Solar - Inverters,0
+CM,Solar,Solar - Modules,0
+CM,Solar,Solar - O&M,0
+CM,Solar,Solar - Polysilicon/ingots,0
+CM,Solar,Solar - Project Development,1
+CM,Solar,Solar - Wafers,0
+CM,Wind,Wind - Project Development,0
+CM,Wind,Wind - Engineering,0
+CM,Wind,Wind - O&M ,0
+CM,Wind,Wind - Turbines,0
+CM,Wind,Wind - Blades,0
+CM,Wind,Wind - Gearboxes ,0
+CM,Wind,Wind - Towers ,0
+CM,Wind,Wind - Balance of Plant,0
+CL,Biofuels,Biofuels -Distribution and Blending ,0
+CL,Biofuels,Biofuels - Engineering (Value),0
+CL,Biofuels,Biofuels - Equipment Manufacturing,0
+CL,Biofuels,Biofuels - O&M (Value),0
+CL,Biofuels,Biofuels - Producers (Valeue),1
+CL,Biomass,Biomass & Waste - Engineering,0
+CL,Biomass,Biomass & Waste - Equipment Manufacturing,1
+CL,Biomass,Biomass & Waste - Feedstock Supply,1
+CL,Biomass,Biomass & Waste - O&M,1
+CL,Biomass,Biomass & Waste - Project Development,1
+CL,Geothermal,Geothermal - Balance of Plant,0
+CL,Geothermal,Geothermal - Engineering,1
+CL,Geothermal,Geothermal - O&M,0
+CL,Geothermal,Geothermal - Project Development,1
+CL,Geothermal,Geothermal - Resource Development,1
+CL,Geothermal,Geothermal - Turbines,0
+CL,Small Hydro,Small Hydro - Balance of Plant,0
+CL,Small Hydro,Small Hydro - Engineering ,1
+CL,Small Hydro,Small Hydro - O&M,1
+CL,Small Hydro,Small Hydro - Project Development,1
+CL,Small Hydro,Small Hydro - Turbines,1
+CL,Solar,Solar - Balance of Plan,1
+CL,Solar,Solar - Cells,0
+CL,Solar,Solar - Engineering,1
+CL,Solar,Solar - Inverters,0
+CL,Solar,Solar - Modules,0
+CL,Solar,Solar - O&M,1
+CL,Solar,Solar - Polysilicon/ingots,0
+CL,Solar,Solar - Project Development,1
+CL,Solar,Solar - Wafers,0
+CL,Wind,Wind - Project Development,1
+CL,Wind,Wind - Engineering,1
+CL,Wind,Wind - O&M ,1
+CL,Wind,Wind - Turbines,1
+CL,Wind,Wind - Blades,0
+CL,Wind,Wind - Gearboxes ,0
+CL,Wind,Wind - Towers ,0
+CL,Wind,Wind - Balance of Plant,0
+CN,Biofuels,Biofuels -Distribution and Blending ,1
+CN,Biofuels,Biofuels - Engineering (Value),1
+CN,Biofuels,Biofuels - Equipment Manufacturing,1
+CN,Biofuels,Biofuels - O&M (Value),1
+CN,Biofuels,Biofuels - Producers (Valeue),1
+CN,Biomass,Biomass & Waste - Engineering,1
+CN,Biomass,Biomass & Waste - Equipment Manufacturing,1
+CN,Biomass,Biomass & Waste - Feedstock Supply,1
+CN,Biomass,Biomass & Waste - O&M,1
+CN,Biomass,Biomass & Waste - Project Development,1
+CN,Geothermal,Geothermal - Balance of Plant,1
+CN,Geothermal,Geothermal - Engineering,1
+CN,Geothermal,Geothermal - O&M,1
+CN,Geothermal,Geothermal - Project Development,1
+CN,Geothermal,Geothermal - Resource Development,1
+CN,Geothermal,Geothermal - Turbines,1
+CN,Small Hydro,Small Hydro - Balance of Plant,1
+CN,Small Hydro,Small Hydro - Engineering ,1
+CN,Small Hydro,Small Hydro - O&M,1
+CN,Small Hydro,Small Hydro - Project Development,1
+CN,Small Hydro,Small Hydro - Turbines,1
+CN,Solar,Solar - Balance of Plan,1
+CN,Solar,Solar - Cells,1
+CN,Solar,Solar - Engineering,1
+CN,Solar,Solar - Inverters,1
+CN,Solar,Solar - Modules,1
+CN,Solar,Solar - O&M,1
+CN,Solar,Solar - Polysilicon/ingots,1
+CN,Solar,Solar - Project Development,1
+CN,Solar,Solar - Wafers,1
+CN,Wind,Wind - Project Development,1
+CN,Wind,Wind - Engineering,1
+CN,Wind,Wind - O&M ,1
+CN,Wind,Wind - Turbines,1
+CN,Wind,Wind - Blades,1
+CN,Wind,Wind - Gearboxes ,1
+CN,Wind,Wind - Towers ,1
+CN,Wind,Wind - Balance of Plant,1
+CN-35,Biofuels,Biofuels -Distribution and Blending ,0
+CN-35,Biofuels,Biofuels - Engineering (Value),1
+CN-35,Biofuels,Biofuels - Equipment Manufacturing,1
+CN-35,Biofuels,Biofuels - O&M (Value),1
+CN-35,Biofuels,Biofuels - Producers (Valeue),1
+CN-35,Biomass,Biomass & Waste - Engineering,1
+CN-35,Biomass,Biomass & Waste - Equipment Manufacturing,1
+CN-35,Biomass,Biomass & Waste - Feedstock Supply,1
+CN-35,Biomass,Biomass & Waste - O&M,1
+CN-35,Biomass,Biomass & Waste - Project Development,1
+CN-35,Geothermal,Geothermal - Balance of Plant,0
+CN-35,Geothermal,Geothermal - Engineering,0
+CN-35,Geothermal,Geothermal - O&M,0
+CN-35,Geothermal,Geothermal - Project Development,0
+CN-35,Geothermal,Geothermal - Resource Development,0
+CN-35,Geothermal,Geothermal - Turbines,0
+CN-35,Small Hydro,Small Hydro - Balance of Plant,1
+CN-35,Small Hydro,Small Hydro - Engineering ,1
+CN-35,Small Hydro,Small Hydro - O&M,1
+CN-35,Small Hydro,Small Hydro - Project Development,1
+CN-35,Small Hydro,Small Hydro - Turbines,1
+CN-35,Solar,Solar - Balance of Plan,1
+CN-35,Solar,Solar - Cells,1
+CN-35,Solar,Solar - Engineering,1
+CN-35,Solar,Solar - Inverters,1
+CN-35,Solar,Solar - Modules,1
+CN-35,Solar,Solar - O&M,1
+CN-35,Solar,Solar - Polysilicon/ingots,1
+CN-35,Solar,Solar - Project Development,1
+CN-35,Solar,Solar - Wafers,1
+CN-35,Wind,Wind - Project Development,1
+CN-35,Wind,Wind - Engineering,1
+CN-35,Wind,Wind - O&M ,1
+CN-35,Wind,Wind - Turbines,1
+CN-35,Wind,Wind - Blades,1
+CN-35,Wind,Wind - Gearboxes ,1
+CN-35,Wind,Wind - Towers ,1
+CN-35,Wind,Wind - Balance of Plant,1
+CN-62,Biofuels,Biofuels -Distribution and Blending ,1
+CN-62,Biofuels,Biofuels - Engineering (Value),1
+CN-62,Biofuels,Biofuels - Equipment Manufacturing,1
+CN-62,Biofuels,Biofuels - O&M (Value),1
+CN-62,Biofuels,Biofuels - Producers (Valeue),1
+CN-62,Biomass,Biomass & Waste - Engineering,1
+CN-62,Biomass,Biomass & Waste - Equipment Manufacturing,1
+CN-62,Biomass,Biomass & Waste - Feedstock Supply,1
+CN-62,Biomass,Biomass & Waste - O&M,1
+CN-62,Biomass,Biomass & Waste - Project Development,1
+CN-62,Geothermal,Geothermal - Balance of Plant,0
+CN-62,Geothermal,Geothermal - Engineering,0
+CN-62,Geothermal,Geothermal - O&M,0
+CN-62,Geothermal,Geothermal - Project Development,0
+CN-62,Geothermal,Geothermal - Resource Development,0
+CN-62,Geothermal,Geothermal - Turbines,0
+CN-62,Small Hydro,Small Hydro - Balance of Plant,1
+CN-62,Small Hydro,Small Hydro - Engineering ,1
+CN-62,Small Hydro,Small Hydro - O&M,1
+CN-62,Small Hydro,Small Hydro - Project Development,1
+CN-62,Small Hydro,Small Hydro - Turbines,1
+CN-62,Solar,Solar - Balance of Plan,1
+CN-62,Solar,Solar - Cells,1
+CN-62,Solar,Solar - Engineering,1
+CN-62,Solar,Solar - Inverters,1
+CN-62,Solar,Solar - Modules,1
+CN-62,Solar,Solar - O&M,1
+CN-62,Solar,Solar - Polysilicon/ingots,1
+CN-62,Solar,Solar - Project Development,1
+CN-62,Solar,Solar - Wafers,1
+CN-62,Wind,Wind - Project Development,1
+CN-62,Wind,Wind - Engineering,1
+CN-62,Wind,Wind - O&M ,1
+CN-62,Wind,Wind - Turbines,1
+CN-62,Wind,Wind - Blades,1
+CN-62,Wind,Wind - Gearboxes ,1
+CN-62,Wind,Wind - Towers ,1
+CN-62,Wind,Wind - Balance of Plant,1
+CN-44,Biofuels,Biofuels -Distribution and Blending ,0
+CN-44,Biofuels,Biofuels - Engineering (Value),1
+CN-44,Biofuels,Biofuels - Equipment Manufacturing,1
+CN-44,Biofuels,Biofuels - O&M (Value),1
+CN-44,Biofuels,Biofuels - Producers (Valeue),1
+CN-44,Biomass,Biomass & Waste - Engineering,1
+CN-44,Biomass,Biomass & Waste - Equipment Manufacturing,1
+CN-44,Biomass,Biomass & Waste - Feedstock Supply,1
+CN-44,Biomass,Biomass & Waste - O&M,1
+CN-44,Biomass,Biomass & Waste - Project Development,1
+CN-44,Geothermal,Geothermal - Balance of Plant,0
+CN-44,Geothermal,Geothermal - Engineering,0
+CN-44,Geothermal,Geothermal - O&M,0
+CN-44,Geothermal,Geothermal - Project Development,0
+CN-44,Geothermal,Geothermal - Resource Development,0
+CN-44,Geothermal,Geothermal - Turbines,0
+CN-44,Small Hydro,Small Hydro - Balance of Plant,1
+CN-44,Small Hydro,Small Hydro - Engineering ,1
+CN-44,Small Hydro,Small Hydro - O&M,1
+CN-44,Small Hydro,Small Hydro - Project Development,1
+CN-44,Small Hydro,Small Hydro - Turbines,1
+CN-44,Solar,Solar - Balance of Plan,1
+CN-44,Solar,Solar - Cells,1
+CN-44,Solar,Solar - Engineering,1
+CN-44,Solar,Solar - Inverters,1
+CN-44,Solar,Solar - Modules,1
+CN-44,Solar,Solar - O&M,1
+CN-44,Solar,Solar - Polysilicon/ingots,1
+CN-44,Solar,Solar - Project Development,1
+CN-44,Solar,Solar - Wafers,1
+CN-44,Wind,Wind - Project Development,1
+CN-44,Wind,Wind - Engineering,1
+CN-44,Wind,Wind - O&M ,1
+CN-44,Wind,Wind - Turbines,1
+CN-44,Wind,Wind - Blades,1
+CN-44,Wind,Wind - Gearboxes ,0
+CN-44,Wind,Wind - Towers ,1
+CN-44,Wind,Wind - Balance of Plant,1
+CN-13,Biofuels,Biofuels -Distribution and Blending ,1
+CN-13,Biofuels,Biofuels - Engineering (Value),1
+CN-13,Biofuels,Biofuels - Equipment Manufacturing,1
+CN-13,Biofuels,Biofuels - O&M (Value),1
+CN-13,Biofuels,Biofuels - Producers (Valeue),1
+CN-13,Biomass,Biomass & Waste - Engineering,1
+CN-13,Biomass,Biomass & Waste - Equipment Manufacturing,1
+CN-13,Biomass,Biomass & Waste - Feedstock Supply,1
+CN-13,Biomass,Biomass & Waste - O&M,1
+CN-13,Biomass,Biomass & Waste - Project Development,1
+CN-13,Geothermal,Geothermal - Balance of Plant,0
+CN-13,Geothermal,Geothermal - Engineering,0
+CN-13,Geothermal,Geothermal - O&M,0
+CN-13,Geothermal,Geothermal - Project Development,0
+CN-13,Geothermal,Geothermal - Resource Development,0
+CN-13,Geothermal,Geothermal - Turbines,0
+CN-13,Small Hydro,Small Hydro - Balance of Plant,1
+CN-13,Small Hydro,Small Hydro - Engineering ,1
+CN-13,Small Hydro,Small Hydro - O&M,1
+CN-13,Small Hydro,Small Hydro - Project Development,1
+CN-13,Small Hydro,Small Hydro - Turbines,1
+CN-13,Solar,Solar - Balance of Plan,1
+CN-13,Solar,Solar - Cells,1
+CN-13,Solar,Solar - Engineering,1
+CN-13,Solar,Solar - Inverters,1
+CN-13,Solar,Solar - Modules,1
+CN-13,Solar,Solar - O&M,1
+CN-13,Solar,Solar - Polysilicon/ingots,1
+CN-13,Solar,Solar - Project Development,1
+CN-13,Solar,Solar - Wafers,1
+CN-13,Wind,Wind - Project Development,1
+CN-13,Wind,Wind - Engineering,1
+CN-13,Wind,Wind - O&M ,0
+CN-13,Wind,Wind - Turbines,1
+CN-13,Wind,Wind - Blades,1
+CN-13,Wind,Wind - Gearboxes ,1
+CN-13,Wind,Wind - Towers ,1
+CN-13,Wind,Wind - Balance of Plant,1
+CN-23,Biofuels,Biofuels -Distribution and Blending ,1
+CN-23,Biofuels,Biofuels - Engineering (Value),1
+CN-23,Biofuels,Biofuels - Equipment Manufacturing,1
+CN-23,Biofuels,Biofuels - O&M (Value),1
+CN-23,Biofuels,Biofuels - Producers (Valeue),1
+CN-23,Biomass,Biomass & Waste - Engineering,1
+CN-23,Biomass,Biomass & Waste - Equipment Manufacturing,1
+CN-23,Biomass,Biomass & Waste - Feedstock Supply,1
+CN-23,Biomass,Biomass & Waste - O&M,1
+CN-23,Biomass,Biomass & Waste - Project Development,1
+CN-23,Geothermal,Geothermal - Balance of Plant,0
+CN-23,Geothermal,Geothermal - Engineering,0
+CN-23,Geothermal,Geothermal - O&M,0
+CN-23,Geothermal,Geothermal - Project Development,0
+CN-23,Geothermal,Geothermal - Resource Development,0
+CN-23,Geothermal,Geothermal - Turbines,0
+CN-23,Small Hydro,Small Hydro - Balance of Plant,1
+CN-23,Small Hydro,Small Hydro - Engineering ,1
+CN-23,Small Hydro,Small Hydro - O&M,1
+CN-23,Small Hydro,Small Hydro - Project Development,1
+CN-23,Small Hydro,Small Hydro - Turbines,1
+CN-23,Solar,Solar - Balance of Plan,1
+CN-23,Solar,Solar - Cells,1
+CN-23,Solar,Solar - Engineering,1
+CN-23,Solar,Solar - Inverters,1
+CN-23,Solar,Solar - Modules,1
+CN-23,Solar,Solar - O&M,1
+CN-23,Solar,Solar - Polysilicon/ingots,1
+CN-23,Solar,Solar - Project Development,1
+CN-23,Solar,Solar - Wafers,1
+CN-23,Wind,Wind - Project Development,1
+CN-23,Wind,Wind - Engineering,1
+CN-23,Wind,Wind - O&M ,1
+CN-23,Wind,Wind - Turbines,1
+CN-23,Wind,Wind - Blades,1
+CN-23,Wind,Wind - Gearboxes ,1
+CN-23,Wind,Wind - Towers ,1
+CN-23,Wind,Wind - Balance of Plant,1
+CN-42,Biofuels,Biofuels -Distribution and Blending ,1
+CN-42,Biofuels,Biofuels - Engineering (Value),1
+CN-42,Biofuels,Biofuels - Equipment Manufacturing,1
+CN-42,Biofuels,Biofuels - O&M (Value),1
+CN-42,Biofuels,Biofuels - Producers (Valeue),1
+CN-42,Biomass,Biomass & Waste - Engineering,1
+CN-42,Biomass,Biomass & Waste - Equipment Manufacturing,1
+CN-42,Biomass,Biomass & Waste - Feedstock Supply,1
+CN-42,Biomass,Biomass & Waste - O&M,1
+CN-42,Biomass,Biomass & Waste - Project Development,1
+CN-42,Geothermal,Geothermal - Balance of Plant,0
+CN-42,Geothermal,Geothermal - Engineering,0
+CN-42,Geothermal,Geothermal - O&M,0
+CN-42,Geothermal,Geothermal - Project Development,1
+CN-42,Geothermal,Geothermal - Resource Development,0
+CN-42,Geothermal,Geothermal - Turbines,0
+CN-42,Small Hydro,Small Hydro - Balance of Plant,0
+CN-42,Small Hydro,Small Hydro - Engineering ,0
+CN-42,Small Hydro,Small Hydro - O&M,0
+CN-42,Small Hydro,Small Hydro - Project Development,1
+CN-42,Small Hydro,Small Hydro - Turbines,0
+CN-42,Solar,Solar - Balance of Plan,1
+CN-42,Solar,Solar - Cells,1
+CN-42,Solar,Solar - Engineering,1
+CN-42,Solar,Solar - Inverters,1
+CN-42,Solar,Solar - Modules,1
+CN-42,Solar,Solar - O&M,1
+CN-42,Solar,Solar - Polysilicon/ingots,1
+CN-42,Solar,Solar - Project Development,1
+CN-42,Solar,Solar - Wafers,1
+CN-42,Wind,Wind - Project Development,1
+CN-42,Wind,Wind - Engineering,1
+CN-42,Wind,Wind - O&M ,1
+CN-42,Wind,Wind - Turbines,1
+CN-42,Wind,Wind - Blades,1
+CN-42,Wind,Wind - Gearboxes ,1
+CN-42,Wind,Wind - Towers ,1
+CN-42,Wind,Wind - Balance of Plant,1
+CN-15,Biofuels,Biofuels -Distribution and Blending ,1
+CN-15,Biofuels,Biofuels - Engineering (Value),1
+CN-15,Biofuels,Biofuels - Equipment Manufacturing,1
+CN-15,Biofuels,Biofuels - O&M (Value),1
+CN-15,Biofuels,Biofuels - Producers (Valeue),1
+CN-15,Biomass,Biomass & Waste - Engineering,1
+CN-15,Biomass,Biomass & Waste - Equipment Manufacturing,1
+CN-15,Biomass,Biomass & Waste - Feedstock Supply,1
+CN-15,Biomass,Biomass & Waste - O&M,1
+CN-15,Biomass,Biomass & Waste - Project Development,1
+CN-15,Geothermal,Geothermal - Balance of Plant,1
+CN-15,Geothermal,Geothermal - Engineering,1
+CN-15,Geothermal,Geothermal - O&M,1
+CN-15,Geothermal,Geothermal - Project Development,1
+CN-15,Geothermal,Geothermal - Resource Development,1
+CN-15,Geothermal,Geothermal - Turbines,1
+CN-15,Small Hydro,Small Hydro - Balance of Plant,1
+CN-15,Small Hydro,Small Hydro - Engineering ,1
+CN-15,Small Hydro,Small Hydro - O&M,1
+CN-15,Small Hydro,Small Hydro - Project Development,1
+CN-15,Small Hydro,Small Hydro - Turbines,1
+CN-15,Solar,Solar - Balance of Plan,1
+CN-15,Solar,Solar - Cells,1
+CN-15,Solar,Solar - Engineering,1
+CN-15,Solar,Solar - Inverters,1
+CN-15,Solar,Solar - Modules,1
+CN-15,Solar,Solar - O&M,1
+CN-15,Solar,Solar - Polysilicon/ingots,1
+CN-15,Solar,Solar - Project Development,1
+CN-15,Solar,Solar - Wafers,1
+CN-15,Wind,Wind - Project Development,1
+CN-15,Wind,Wind - Engineering,1
+CN-15,Wind,Wind - O&M ,1
+CN-15,Wind,Wind - Turbines,1
+CN-15,Wind,Wind - Blades,1
+CN-15,Wind,Wind - Gearboxes ,1
+CN-15,Wind,Wind - Towers ,1
+CN-15,Wind,Wind - Balance of Plant,1
+CN-32,Biofuels,Biofuels -Distribution and Blending ,1
+CN-32,Biofuels,Biofuels - Engineering (Value),1
+CN-32,Biofuels,Biofuels - Equipment Manufacturing,1
+CN-32,Biofuels,Biofuels - O&M (Value),1
+CN-32,Biofuels,Biofuels - Producers (Valeue),1
+CN-32,Biomass,Biomass & Waste - Engineering,1
+CN-32,Biomass,Biomass & Waste - Equipment Manufacturing,1
+CN-32,Biomass,Biomass & Waste - Feedstock Supply,1
+CN-32,Biomass,Biomass & Waste - O&M,1
+CN-32,Biomass,Biomass & Waste - Project Development,1
+CN-32,Geothermal,Geothermal - Balance of Plant,0
+CN-32,Geothermal,Geothermal - Engineering,0
+CN-32,Geothermal,Geothermal - O&M,0
+CN-32,Geothermal,Geothermal - Project Development,0
+CN-32,Geothermal,Geothermal - Resource Development,0
+CN-32,Geothermal,Geothermal - Turbines,0
+CN-32,Small Hydro,Small Hydro - Balance of Plant,1
+CN-32,Small Hydro,Small Hydro - Engineering ,1
+CN-32,Small Hydro,Small Hydro - O&M,1
+CN-32,Small Hydro,Small Hydro - Project Development,1
+CN-32,Small Hydro,Small Hydro - Turbines,1
+CN-32,Solar,Solar - Balance of Plan,1
+CN-32,Solar,Solar - Cells,1
+CN-32,Solar,Solar - Engineering,1
+CN-32,Solar,Solar - Inverters,1
+CN-32,Solar,Solar - Modules,1
+CN-32,Solar,Solar - O&M,1
+CN-32,Solar,Solar - Polysilicon/ingots,1
+CN-32,Solar,Solar - Project Development,1
+CN-32,Solar,Solar - Wafers,1
+CN-32,Wind,Wind - Project Development,1
+CN-32,Wind,Wind - Engineering,1
+CN-32,Wind,Wind - O&M ,1
+CN-32,Wind,Wind - Turbines,1
+CN-32,Wind,Wind - Blades,1
+CN-32,Wind,Wind - Gearboxes ,1
+CN-32,Wind,Wind - Towers ,1
+CN-32,Wind,Wind - Balance of Plant,1
+CN-22,Biofuels,Biofuels -Distribution and Blending ,1
+CN-22,Biofuels,Biofuels - Engineering (Value),1
+CN-22,Biofuels,Biofuels - Equipment Manufacturing,1
+CN-22,Biofuels,Biofuels - O&M (Value),1
+CN-22,Biofuels,Biofuels - Producers (Valeue),1
+CN-22,Biomass,Biomass & Waste - Engineering,1
+CN-22,Biomass,Biomass & Waste - Equipment Manufacturing,1
+CN-22,Biomass,Biomass & Waste - Feedstock Supply,1
+CN-22,Biomass,Biomass & Waste - O&M,1
+CN-22,Biomass,Biomass & Waste - Project Development,1
+CN-22,Geothermal,Geothermal - Balance of Plant,1
+CN-22,Geothermal,Geothermal - Engineering,1
+CN-22,Geothermal,Geothermal - O&M,1
+CN-22,Geothermal,Geothermal - Project Development,1
+CN-22,Geothermal,Geothermal - Resource Development,1
+CN-22,Geothermal,Geothermal - Turbines,1
+CN-22,Small Hydro,Small Hydro - Balance of Plant,1
+CN-22,Small Hydro,Small Hydro - Engineering ,1
+CN-22,Small Hydro,Small Hydro - O&M,1
+CN-22,Small Hydro,Small Hydro - Project Development,1
+CN-22,Small Hydro,Small Hydro - Turbines,1
+CN-22,Solar,Solar - Balance of Plan,1
+CN-22,Solar,Solar - Cells,1
+CN-22,Solar,Solar - Engineering,1
+CN-22,Solar,Solar - Inverters,1
+CN-22,Solar,Solar - Modules,1
+CN-22,Solar,Solar - O&M,1
+CN-22,Solar,Solar - Polysilicon/ingots,1
+CN-22,Solar,Solar - Project Development,1
+CN-22,Solar,Solar - Wafers,1
+CN-22,Wind,Wind - Project Development,1
+CN-22,Wind,Wind - Engineering,1
+CN-22,Wind,Wind - O&M ,1
+CN-22,Wind,Wind - Turbines,1
+CN-22,Wind,Wind - Blades,1
+CN-22,Wind,Wind - Gearboxes ,1
+CN-22,Wind,Wind - Towers ,1
+CN-22,Wind,Wind - Balance of Plant,1
+CN-63,Biofuels,Biofuels -Distribution and Blending ,1
+CN-63,Biofuels,Biofuels - Engineering (Value),1
+CN-63,Biofuels,Biofuels - Equipment Manufacturing,1
+CN-63,Biofuels,Biofuels - O&M (Value),1
+CN-63,Biofuels,Biofuels - Producers (Valeue),1
+CN-63,Biomass,Biomass & Waste - Engineering,1
+CN-63,Biomass,Biomass & Waste - Equipment Manufacturing,1
+CN-63,Biomass,Biomass & Waste - Feedstock Supply,1
+CN-63,Biomass,Biomass & Waste - O&M,1
+CN-63,Biomass,Biomass & Waste - Project Development,1
+CN-63,Geothermal,Geothermal - Balance of Plant,1
+CN-63,Geothermal,Geothermal - Engineering,1
+CN-63,Geothermal,Geothermal - O&M,1
+CN-63,Geothermal,Geothermal - Project Development,1
+CN-63,Geothermal,Geothermal - Resource Development,1
+CN-63,Geothermal,Geothermal - Turbines,1
+CN-63,Small Hydro,Small Hydro - Balance of Plant,1
+CN-63,Small Hydro,Small Hydro - Engineering ,1
+CN-63,Small Hydro,Small Hydro - O&M,1
+CN-63,Small Hydro,Small Hydro - Project Development,1
+CN-63,Small Hydro,Small Hydro - Turbines,1
+CN-63,Solar,Solar - Balance of Plan,1
+CN-63,Solar,Solar - Cells,1
+CN-63,Solar,Solar - Engineering,1
+CN-63,Solar,Solar - Inverters,1
+CN-63,Solar,Solar - Modules,1
+CN-63,Solar,Solar - O&M,1
+CN-63,Solar,Solar - Polysilicon/ingots,1
+CN-63,Solar,Solar - Project Development,1
+CN-63,Solar,Solar - Wafers,1
+CN-63,Wind,Wind - Project Development,1
+CN-63,Wind,Wind - Engineering,1
+CN-63,Wind,Wind - O&M ,1
+CN-63,Wind,Wind - Turbines,1
+CN-63,Wind,Wind - Blades,1
+CN-63,Wind,Wind - Gearboxes ,1
+CN-63,Wind,Wind - Towers ,1
+CN-63,Wind,Wind - Balance of Plant,1
+CN-37,Biofuels,Biofuels -Distribution and Blending ,1
+CN-37,Biofuels,Biofuels - Engineering (Value),1
+CN-37,Biofuels,Biofuels - Equipment Manufacturing,1
+CN-37,Biofuels,Biofuels - O&M (Value),1
+CN-37,Biofuels,Biofuels - Producers (Valeue),1
+CN-37,Biomass,Biomass & Waste - Engineering,1
+CN-37,Biomass,Biomass & Waste - Equipment Manufacturing,1
+CN-37,Biomass,Biomass & Waste - Feedstock Supply,1
+CN-37,Biomass,Biomass & Waste - O&M,1
+CN-37,Biomass,Biomass & Waste - Project Development,1
+CN-37,Geothermal,Geothermal - Balance of Plant,1
+CN-37,Geothermal,Geothermal - Engineering,1
+CN-37,Geothermal,Geothermal - O&M,1
+CN-37,Geothermal,Geothermal - Project Development,1
+CN-37,Geothermal,Geothermal - Resource Development,1
+CN-37,Geothermal,Geothermal - Turbines,1
+CN-37,Small Hydro,Small Hydro - Balance of Plant,1
+CN-37,Small Hydro,Small Hydro - Engineering ,1
+CN-37,Small Hydro,Small Hydro - O&M,1
+CN-37,Small Hydro,Small Hydro - Project Development,1
+CN-37,Small Hydro,Small Hydro - Turbines,1
+CN-37,Solar,Solar - Balance of Plan,1
+CN-37,Solar,Solar - Cells,1
+CN-37,Solar,Solar - Engineering,1
+CN-37,Solar,Solar - Inverters,1
+CN-37,Solar,Solar - Modules,1
+CN-37,Solar,Solar - O&M,1
+CN-37,Solar,Solar - Polysilicon/ingots,1
+CN-37,Solar,Solar - Project Development,1
+CN-37,Solar,Solar - Wafers,1
+CN-37,Wind,Wind - Project Development,1
+CN-37,Wind,Wind - Engineering,1
+CN-37,Wind,Wind - O&M ,1
+CN-37,Wind,Wind - Turbines,1
+CN-37,Wind,Wind - Blades,1
+CN-37,Wind,Wind - Gearboxes ,1
+CN-37,Wind,Wind - Towers ,1
+CN-37,Wind,Wind - Balance of Plant,1
+CN-51,Biofuels,Biofuels -Distribution and Blending ,1
+CN-51,Biofuels,Biofuels - Engineering (Value),1
+CN-51,Biofuels,Biofuels - Equipment Manufacturing,1
+CN-51,Biofuels,Biofuels - O&M (Value),1
+CN-51,Biofuels,Biofuels - Producers (Valeue),1
+CN-51,Biomass,Biomass & Waste - Engineering,1
+CN-51,Biomass,Biomass & Waste - Equipment Manufacturing,1
+CN-51,Biomass,Biomass & Waste - Feedstock Supply,1
+CN-51,Biomass,Biomass & Waste - O&M,1
+CN-51,Biomass,Biomass & Waste - Project Development,1
+CN-51,Geothermal,Geothermal - Balance of Plant,0
+CN-51,Geothermal,Geothermal - Engineering,0
+CN-51,Geothermal,Geothermal - O&M,0
+CN-51,Geothermal,Geothermal - Project Development,0
+CN-51,Geothermal,Geothermal - Resource Development,0
+CN-51,Geothermal,Geothermal - Turbines,0
+CN-51,Small Hydro,Small Hydro - Balance of Plant,1
+CN-51,Small Hydro,Small Hydro - Engineering ,1
+CN-51,Small Hydro,Small Hydro - O&M,1
+CN-51,Small Hydro,Small Hydro - Project Development,1
+CN-51,Small Hydro,Small Hydro - Turbines,1
+CN-51,Solar,Solar - Balance of Plan,1
+CN-51,Solar,Solar - Cells,1
+CN-51,Solar,Solar - Engineering,1
+CN-51,Solar,Solar - Inverters,1
+CN-51,Solar,Solar - Modules,1
+CN-51,Solar,Solar - O&M,1
+CN-51,Solar,Solar - Polysilicon/ingots,1
+CN-51,Solar,Solar - Project Development,1
+CN-51,Solar,Solar - Wafers,1
+CN-51,Wind,Wind - Project Development,1
+CN-51,Wind,Wind - Engineering,1
+CN-51,Wind,Wind - O&M ,1
+CN-51,Wind,Wind - Turbines,1
+CN-51,Wind,Wind - Blades,1
+CN-51,Wind,Wind - Gearboxes ,1
+CN-51,Wind,Wind - Towers ,1
+CN-51,Wind,Wind - Balance of Plant,1
+CN-54,Biofuels,Biofuels -Distribution and Blending ,0
+CN-54,Biofuels,Biofuels - Engineering (Value),0
+CN-54,Biofuels,Biofuels - Equipment Manufacturing,0
+CN-54,Biofuels,Biofuels - O&M (Value),0
+CN-54,Biofuels,Biofuels - Producers (Valeue),0
+CN-54,Biomass,Biomass & Waste - Engineering,0
+CN-54,Biomass,Biomass & Waste - Equipment Manufacturing,0
+CN-54,Biomass,Biomass & Waste - Feedstock Supply,0
+CN-54,Biomass,Biomass & Waste - O&M,0
+CN-54,Biomass,Biomass & Waste - Project Development,0
+CN-54,Geothermal,Geothermal - Balance of Plant,0
+CN-54,Geothermal,Geothermal - Engineering,0
+CN-54,Geothermal,Geothermal - O&M,0
+CN-54,Geothermal,Geothermal - Project Development,0
+CN-54,Geothermal,Geothermal - Resource Development,0
+CN-54,Geothermal,Geothermal - Turbines,0
+CN-54,Small Hydro,Small Hydro - Balance of Plant,0
+CN-54,Small Hydro,Small Hydro - Engineering ,0
+CN-54,Small Hydro,Small Hydro - O&M,0
+CN-54,Small Hydro,Small Hydro - Project Development,0
+CN-54,Small Hydro,Small Hydro - Turbines,0
+CN-54,Solar,Solar - Balance of Plan,0
+CN-54,Solar,Solar - Cells,0
+CN-54,Solar,Solar - Engineering,0
+CN-54,Solar,Solar - Inverters,0
+CN-54,Solar,Solar - Modules,0
+CN-54,Solar,Solar - O&M,0
+CN-54,Solar,Solar - Polysilicon/ingots,0
+CN-54,Solar,Solar - Project Development,0
+CN-54,Solar,Solar - Wafers,0
+CN-54,Wind,Wind - Project Development,0
+CN-54,Wind,Wind - Engineering,0
+CN-54,Wind,Wind - O&M ,0
+CN-54,Wind,Wind - Turbines,0
+CN-54,Wind,Wind - Blades,0
+CN-54,Wind,Wind - Gearboxes ,0
+CN-54,Wind,Wind - Towers ,0
+CN-54,Wind,Wind - Balance of Plant,0
+CN-65 ,Biofuels,Biofuels -Distribution and Blending ,1
+CN-65 ,Biofuels,Biofuels - Engineering (Value),1
+CN-65 ,Biofuels,Biofuels - Equipment Manufacturing,1
+CN-65 ,Biofuels,Biofuels - O&M (Value),1
+CN-65 ,Biofuels,Biofuels - Producers (Valeue),1
+CN-65 ,Biomass,Biomass & Waste - Engineering,1
+CN-65 ,Biomass,Biomass & Waste - Equipment Manufacturing,1
+CN-65 ,Biomass,Biomass & Waste - Feedstock Supply,1
+CN-65 ,Biomass,Biomass & Waste - O&M,1
+CN-65 ,Biomass,Biomass & Waste - Project Development,1
+CN-65 ,Geothermal,Geothermal - Balance of Plant,0
+CN-65 ,Geothermal,Geothermal - Engineering,0
+CN-65 ,Geothermal,Geothermal - O&M,0
+CN-65 ,Geothermal,Geothermal - Project Development,0
+CN-65 ,Geothermal,Geothermal - Resource Development,0
+CN-65 ,Geothermal,Geothermal - Turbines,0
+CN-65 ,Small Hydro,Small Hydro - Balance of Plant,1
+CN-65 ,Small Hydro,Small Hydro - Engineering ,1
+CN-65 ,Small Hydro,Small Hydro - O&M,1
+CN-65 ,Small Hydro,Small Hydro - Project Development,1
+CN-65 ,Small Hydro,Small Hydro - Turbines,1
+CN-65 ,Solar,Solar - Balance of Plan,1
+CN-65 ,Solar,Solar - Cells,1
+CN-65 ,Solar,Solar - Engineering,1
+CN-65 ,Solar,Solar - Inverters,1
+CN-65 ,Solar,Solar - Modules,1
+CN-65 ,Solar,Solar - O&M,1
+CN-65 ,Solar,Solar - Polysilicon/ingots,1
+CN-65 ,Solar,Solar - Project Development,1
+CN-65 ,Solar,Solar - Wafers,1
+CN-65 ,Wind,Wind - Project Development,1
+CN-65 ,Wind,Wind - Engineering,1
+CN-65 ,Wind,Wind - O&M ,1
+CN-65 ,Wind,Wind - Turbines,1
+CN-65 ,Wind,Wind - Blades,1
+CN-65 ,Wind,Wind - Gearboxes ,1
+CN-65 ,Wind,Wind - Towers ,1
+CN-65 ,Wind,Wind - Balance of Plant,1
+CN-53,Biofuels,Biofuels -Distribution and Blending ,1
+CN-53,Biofuels,Biofuels - Engineering (Value),1
+CN-53,Biofuels,Biofuels - Equipment Manufacturing,1
+CN-53,Biofuels,Biofuels - O&M (Value),1
+CN-53,Biofuels,Biofuels - Producers (Valeue),1
+CN-53,Biomass,Biomass & Waste - Engineering,1
+CN-53,Biomass,Biomass & Waste - Equipment Manufacturing,1
+CN-53,Biomass,Biomass & Waste - Feedstock Supply,1
+CN-53,Biomass,Biomass & Waste - O&M,1
+CN-53,Biomass,Biomass & Waste - Project Development,1
+CN-53,Geothermal,Geothermal - Balance of Plant,0
+CN-53,Geothermal,Geothermal - Engineering,0
+CN-53,Geothermal,Geothermal - O&M,0
+CN-53,Geothermal,Geothermal - Project Development,0
+CN-53,Geothermal,Geothermal - Resource Development,0
+CN-53,Geothermal,Geothermal - Turbines,0
+CN-53,Small Hydro,Small Hydro - Balance of Plant,1
+CN-53,Small Hydro,Small Hydro - Engineering ,1
+CN-53,Small Hydro,Small Hydro - O&M,1
+CN-53,Small Hydro,Small Hydro - Project Development,1
+CN-53,Small Hydro,Small Hydro - Turbines,1
+CN-53,Solar,Solar - Balance of Plan,1
+CN-53,Solar,Solar - Cells,1
+CN-53,Solar,Solar - Engineering,1
+CN-53,Solar,Solar - Inverters,0
+CN-53,Solar,Solar - Modules,1
+CN-53,Solar,Solar - O&M,1
+CN-53,Solar,Solar - Polysilicon/ingots,1
+CN-53,Solar,Solar - Project Development,1
+CN-53,Solar,Solar - Wafers,0
+CN-53,Wind,Wind - Project Development,1
+CN-53,Wind,Wind - Engineering,1
+CN-53,Wind,Wind - O&M ,1
+CN-53,Wind,Wind - Turbines,1
+CN-53,Wind,Wind - Blades,1
+CN-53,Wind,Wind - Gearboxes ,1
+CN-53,Wind,Wind - Towers ,1
+CN-53,Wind,Wind - Balance of Plant,1
+CO,Biofuels,Biofuels -Distribution and Blending ,1
+CO,Biofuels,Biofuels - Engineering (Value),0
+CO,Biofuels,Biofuels - Equipment Manufacturing,1
+CO,Biofuels,Biofuels - O&M (Value),1
+CO,Biofuels,Biofuels - Producers (Valeue),1
+CO,Biomass,Biomass & Waste - Engineering,0
+CO,Biomass,Biomass & Waste - Equipment Manufacturing,0
+CO,Biomass,Biomass & Waste - Feedstock Supply,1
+CO,Biomass,Biomass & Waste - O&M,0
+CO,Biomass,Biomass & Waste - Project Development,1
+CO,Geothermal,Geothermal - Balance of Plant,0
+CO,Geothermal,Geothermal - Engineering,0
+CO,Geothermal,Geothermal - O&M,0
+CO,Geothermal,Geothermal - Project Development,0
+CO,Geothermal,Geothermal - Resource Development,0
+CO,Geothermal,Geothermal - Turbines,0
+CO,Small Hydro,Small Hydro - Balance of Plant,1
+CO,Small Hydro,Small Hydro - Engineering ,1
+CO,Small Hydro,Small Hydro - O&M,1
+CO,Small Hydro,Small Hydro - Project Development,1
+CO,Small Hydro,Small Hydro - Turbines,1
+CO,Solar,Solar - Balance of Plan,0
+CO,Solar,Solar - Cells,0
+CO,Solar,Solar - Engineering,1
+CO,Solar,Solar - Inverters,0
+CO,Solar,Solar - Modules,0
+CO,Solar,Solar - O&M,0
+CO,Solar,Solar - Polysilicon/ingots,0
+CO,Solar,Solar - Project Development,1
+CO,Solar,Solar - Wafers,0
+CO,Wind,Wind - Project Development,1
+CO,Wind,Wind - Engineering,1
+CO,Wind,Wind - O&M ,1
+CO,Wind,Wind - Turbines,0
+CO,Wind,Wind - Blades,0
+CO,Wind,Wind - Gearboxes ,0
+CO,Wind,Wind - Towers ,0
+CO,Wind,Wind - Balance of Plant,0
+CR,Biofuels,Biofuels -Distribution and Blending ,0
+CR,Biofuels,Biofuels - Engineering (Value),0
+CR,Biofuels,Biofuels - Equipment Manufacturing,0
+CR,Biofuels,Biofuels - O&M (Value),0
+CR,Biofuels,Biofuels - Producers (Valeue),1
+CR,Biomass,Biomass & Waste - Engineering,1
+CR,Biomass,Biomass & Waste - Equipment Manufacturing,0
+CR,Biomass,Biomass & Waste - Feedstock Supply,1
+CR,Biomass,Biomass & Waste - O&M,1
+CR,Biomass,Biomass & Waste - Project Development,1
+CR,Geothermal,Geothermal - Balance of Plant,0
+CR,Geothermal,Geothermal - Engineering,0
+CR,Geothermal,Geothermal - O&M,0
+CR,Geothermal,Geothermal - Project Development,1
+CR,Geothermal,Geothermal - Resource Development,0
+CR,Geothermal,Geothermal - Turbines,0
+CR,Small Hydro,Small Hydro - Balance of Plant,0
+CR,Small Hydro,Small Hydro - Engineering ,1
+CR,Small Hydro,Small Hydro - O&M,1
+CR,Small Hydro,Small Hydro - Project Development,1
+CR,Small Hydro,Small Hydro - Turbines,0
+CR,Solar,Solar - Balance of Plan,0
+CR,Solar,Solar - Cells,0
+CR,Solar,Solar - Engineering,1
+CR,Solar,Solar - Inverters,0
+CR,Solar,Solar - Modules,0
+CR,Solar,Solar - O&M,0
+CR,Solar,Solar - Polysilicon/ingots,0
+CR,Solar,Solar - Project Development,1
+CR,Solar,Solar - Wafers,0
+CR,Wind,Wind - Project Development,1
+CR,Wind,Wind - Engineering,1
+CR,Wind,Wind - O&M ,1
+CR,Wind,Wind - Turbines,0
+CR,Wind,Wind - Blades,0
+CR,Wind,Wind - Gearboxes ,0
+CR,Wind,Wind - Towers ,0
+CR,Wind,Wind - Balance of Plant,0
+CI,Biofuels,Biofuels -Distribution and Blending ,0
+CI,Biofuels,Biofuels - Engineering (Value),0
+CI,Biofuels,Biofuels - Equipment Manufacturing,0
+CI,Biofuels,Biofuels - O&M (Value),0
+CI,Biofuels,Biofuels - Producers (Valeue),0
+CI,Biomass,Biomass & Waste - Engineering,1
+CI,Biomass,Biomass & Waste - Equipment Manufacturing,0
+CI,Biomass,Biomass & Waste - Feedstock Supply,1
+CI,Biomass,Biomass & Waste - O&M,1
+CI,Biomass,Biomass & Waste - Project Development,1
+CI,Geothermal,Geothermal - Balance of Plant,0
+CI,Geothermal,Geothermal - Engineering,0
+CI,Geothermal,Geothermal - O&M,0
+CI,Geothermal,Geothermal - Project Development,0
+CI,Geothermal,Geothermal - Resource Development,0
+CI,Geothermal,Geothermal - Turbines,0
+CI,Small Hydro,Small Hydro - Balance of Plant,1
+CI,Small Hydro,Small Hydro - Engineering ,0
+CI,Small Hydro,Small Hydro - O&M,1
+CI,Small Hydro,Small Hydro - Project Development,1
+CI,Small Hydro,Small Hydro - Turbines,0
+CI,Solar,Solar - Balance of Plan,0
+CI,Solar,Solar - Cells,0
+CI,Solar,Solar - Engineering,0
+CI,Solar,Solar - Inverters,0
+CI,Solar,Solar - Modules,0
+CI,Solar,Solar - O&M,0
+CI,Solar,Solar - Polysilicon/ingots,0
+CI,Solar,Solar - Project Development,1
+CI,Solar,Solar - Wafers,0
+CI,Wind,Wind - Project Development,0
+CI,Wind,Wind - Engineering,0
+CI,Wind,Wind - O&M ,0
+CI,Wind,Wind - Turbines,0
+CI,Wind,Wind - Blades,0
+CI,Wind,Wind - Gearboxes ,0
+CI,Wind,Wind - Towers ,0
+CI,Wind,Wind - Balance of Plant,0
+CD,Biofuels,Biofuels -Distribution and Blending ,0
+CD,Biofuels,Biofuels - Engineering (Value),0
+CD,Biofuels,Biofuels - Equipment Manufacturing,0
+CD,Biofuels,Biofuels - O&M (Value),0
+CD,Biofuels,Biofuels - Producers (Valeue),0
+CD,Biomass,Biomass & Waste - Engineering,0
+CD,Biomass,Biomass & Waste - Equipment Manufacturing,0
+CD,Biomass,Biomass & Waste - Feedstock Supply,1
+CD,Biomass,Biomass & Waste - O&M,1
+CD,Biomass,Biomass & Waste - Project Development,0
+CD,Geothermal,Geothermal - Balance of Plant,0
+CD,Geothermal,Geothermal - Engineering,0
+CD,Geothermal,Geothermal - O&M,0
+CD,Geothermal,Geothermal - Project Development,0
+CD,Geothermal,Geothermal - Resource Development,0
+CD,Geothermal,Geothermal - Turbines,0
+CD,Small Hydro,Small Hydro - Balance of Plant,0
+CD,Small Hydro,Small Hydro - Engineering ,1
+CD,Small Hydro,Small Hydro - O&M,0
+CD,Small Hydro,Small Hydro - Project Development,1
+CD,Small Hydro,Small Hydro - Turbines,0
+CD,Solar,Solar - Balance of Plan,0
+CD,Solar,Solar - Cells,0
+CD,Solar,Solar - Engineering,0
+CD,Solar,Solar - Inverters,0
+CD,Solar,Solar - Modules,0
+CD,Solar,Solar - O&M,0
+CD,Solar,Solar - Polysilicon/ingots,0
+CD,Solar,Solar - Project Development,0
+CD,Solar,Solar - Wafers,0
+CD,Wind,Wind - Project Development,0
+CD,Wind,Wind - Engineering,0
+CD,Wind,Wind - O&M ,0
+CD,Wind,Wind - Turbines,0
+CD,Wind,Wind - Blades,0
+CD,Wind,Wind - Gearboxes ,0
+CD,Wind,Wind - Towers ,0
+CD,Wind,Wind - Balance of Plant,0
+DO,Biofuels,Biofuels -Distribution and Blending ,0
+DO,Biofuels,Biofuels - Engineering (Value),0
+DO,Biofuels,Biofuels - Equipment Manufacturing,0
+DO,Biofuels,Biofuels - O&M (Value),0
+DO,Biofuels,Biofuels - Producers (Valeue),1
+DO,Biomass,Biomass & Waste - Engineering,0
+DO,Biomass,Biomass & Waste - Equipment Manufacturing,0
+DO,Biomass,Biomass & Waste - Feedstock Supply,0
+DO,Biomass,Biomass & Waste - O&M,0
+DO,Biomass,Biomass & Waste - Project Development,0
+DO,Geothermal,Geothermal - Balance of Plant,0
+DO,Geothermal,Geothermal - Engineering,0
+DO,Geothermal,Geothermal - O&M,0
+DO,Geothermal,Geothermal - Project Development,0
+DO,Geothermal,Geothermal - Resource Development,0
+DO,Geothermal,Geothermal - Turbines,0
+DO,Small Hydro,Small Hydro - Balance of Plant,0
+DO,Small Hydro,Small Hydro - Engineering ,0
+DO,Small Hydro,Small Hydro - O&M,0
+DO,Small Hydro,Small Hydro - Project Development,1
+DO,Small Hydro,Small Hydro - Turbines,0
+DO,Solar,Solar - Balance of Plan,0
+DO,Solar,Solar - Cells,0
+DO,Solar,Solar - Engineering,1
+DO,Solar,Solar - Inverters,0
+DO,Solar,Solar - Modules,0
+DO,Solar,Solar - O&M,0
+DO,Solar,Solar - Polysilicon/ingots,0
+DO,Solar,Solar - Project Development,1
+DO,Solar,Solar - Wafers,0
+DO,Wind,Wind - Project Development,1
+DO,Wind,Wind - Engineering,1
+DO,Wind,Wind - O&M ,1
+DO,Wind,Wind - Turbines,0
+DO,Wind,Wind - Blades,0
+DO,Wind,Wind - Gearboxes ,0
+DO,Wind,Wind - Towers ,0
+DO,Wind,Wind - Balance of Plant,0
+EC,Biofuels,Biofuels -Distribution and Blending ,0
+EC,Biofuels,Biofuels - Engineering (Value),0
+EC,Biofuels,Biofuels - Equipment Manufacturing,0
+EC,Biofuels,Biofuels - O&M (Value),0
+EC,Biofuels,Biofuels - Producers (Valeue),1
+EC,Biomass,Biomass & Waste - Engineering,0
+EC,Biomass,Biomass & Waste - Equipment Manufacturing,0
+EC,Biomass,Biomass & Waste - Feedstock Supply,1
+EC,Biomass,Biomass & Waste - O&M,0
+EC,Biomass,Biomass & Waste - Project Development,1
+EC,Geothermal,Geothermal - Balance of Plant,0
+EC,Geothermal,Geothermal - Engineering,0
+EC,Geothermal,Geothermal - O&M,0
+EC,Geothermal,Geothermal - Project Development,1
+EC,Geothermal,Geothermal - Resource Development,0
+EC,Geothermal,Geothermal - Turbines,0
+EC,Small Hydro,Small Hydro - Balance of Plant,0
+EC,Small Hydro,Small Hydro - Engineering ,0
+EC,Small Hydro,Small Hydro - O&M,0
+EC,Small Hydro,Small Hydro - Project Development,1
+EC,Small Hydro,Small Hydro - Turbines,1
+EC,Solar,Solar - Balance of Plan,0
+EC,Solar,Solar - Cells,0
+EC,Solar,Solar - Engineering,1
+EC,Solar,Solar - Inverters,0
+EC,Solar,Solar - Modules,0
+EC,Solar,Solar - O&M,1
+EC,Solar,Solar - Polysilicon/ingots,0
+EC,Solar,Solar - Project Development,1
+EC,Solar,Solar - Wafers,0
+EC,Wind,Wind - Project Development,1
+EC,Wind,Wind - Engineering,0
+EC,Wind,Wind - O&M ,0
+EC,Wind,Wind - Turbines,1
+EC,Wind,Wind - Blades,0
+EC,Wind,Wind - Gearboxes ,0
+EC,Wind,Wind - Towers ,0
+EC,Wind,Wind - Balance of Plant,0
+SV,Biofuels,Biofuels -Distribution and Blending ,0
+SV,Biofuels,Biofuels - Engineering (Value),0
+SV,Biofuels,Biofuels - Equipment Manufacturing,0
+SV,Biofuels,Biofuels - O&M (Value),0
+SV,Biofuels,Biofuels - Producers (Valeue),1
+SV,Biomass,Biomass & Waste - Engineering,0
+SV,Biomass,Biomass & Waste - Equipment Manufacturing,0
+SV,Biomass,Biomass & Waste - Feedstock Supply,0
+SV,Biomass,Biomass & Waste - O&M,0
+SV,Biomass,Biomass & Waste - Project Development,1
+SV,Geothermal,Geothermal - Balance of Plant,0
+SV,Geothermal,Geothermal - Engineering,1
+SV,Geothermal,Geothermal - O&M,0
+SV,Geothermal,Geothermal - Project Development,1
+SV,Geothermal,Geothermal - Resource Development,0
+SV,Geothermal,Geothermal - Turbines,0
+SV,Small Hydro,Small Hydro - Balance of Plant,0
+SV,Small Hydro,Small Hydro - Engineering ,0
+SV,Small Hydro,Small Hydro - O&M,0
+SV,Small Hydro,Small Hydro - Project Development,1
+SV,Small Hydro,Small Hydro - Turbines,0
+SV,Solar,Solar - Balance of Plan,0
+SV,Solar,Solar - Cells,0
+SV,Solar,Solar - Engineering,0
+SV,Solar,Solar - Inverters,0
+SV,Solar,Solar - Modules,1
+SV,Solar,Solar - O&M,1
+SV,Solar,Solar - Polysilicon/ingots,0
+SV,Solar,Solar - Project Development,1
+SV,Solar,Solar - Wafers,0
+SV,Wind,Wind - Project Development,1
+SV,Wind,Wind - Engineering,0
+SV,Wind,Wind - O&M ,0
+SV,Wind,Wind - Turbines,0
+SV,Wind,Wind - Blades,0
+SV,Wind,Wind - Gearboxes ,0
+SV,Wind,Wind - Towers ,0
+SV,Wind,Wind - Balance of Plant,0
+ET,Biofuels,Biofuels -Distribution and Blending ,1
+ET,Biofuels,Biofuels - Engineering (Value),1
+ET,Biofuels,Biofuels - Equipment Manufacturing,0
+ET,Biofuels,Biofuels - O&M (Value),1
+ET,Biofuels,Biofuels - Producers (Valeue),1
+ET,Biomass,Biomass & Waste - Engineering,1
+ET,Biomass,Biomass & Waste - Equipment Manufacturing,0
+ET,Biomass,Biomass & Waste - Feedstock Supply,1
+ET,Biomass,Biomass & Waste - O&M,1
+ET,Biomass,Biomass & Waste - Project Development,1
+ET,Geothermal,Geothermal - Balance of Plant,1
+ET,Geothermal,Geothermal - Engineering,1
+ET,Geothermal,Geothermal - O&M,1
+ET,Geothermal,Geothermal - Project Development,1
+ET,Geothermal,Geothermal - Resource Development,0
+ET,Geothermal,Geothermal - Turbines,0
+ET,Small Hydro,Small Hydro - Balance of Plant,1
+ET,Small Hydro,Small Hydro - Engineering ,1
+ET,Small Hydro,Small Hydro - O&M,1
+ET,Small Hydro,Small Hydro - Project Development,1
+ET,Small Hydro,Small Hydro - Turbines,0
+ET,Solar,Solar - Balance of Plan,1
+ET,Solar,Solar - Cells,0
+ET,Solar,Solar - Engineering,1
+ET,Solar,Solar - Inverters,0
+ET,Solar,Solar - Modules,1
+ET,Solar,Solar - O&M,1
+ET,Solar,Solar - Polysilicon/ingots,0
+ET,Solar,Solar - Project Development,1
+ET,Solar,Solar - Wafers,0
+ET,Wind,Wind - Project Development,1
+ET,Wind,Wind - Engineering,1
+ET,Wind,Wind - O&M ,1
+ET,Wind,Wind - Turbines,0
+ET,Wind,Wind - Blades,0
+ET,Wind,Wind - Gearboxes ,0
+ET,Wind,Wind - Towers ,0
+ET,Wind,Wind - Balance of Plant,1
+GH,Biofuels,Biofuels -Distribution and Blending ,1
+GH,Biofuels,Biofuels - Engineering (Value),1
+GH,Biofuels,Biofuels - Equipment Manufacturing,0
+GH,Biofuels,Biofuels - O&M (Value),1
+GH,Biofuels,Biofuels - Producers (Valeue),1
+GH,Biomass,Biomass & Waste - Engineering,0
+GH,Biomass,Biomass & Waste - Equipment Manufacturing,0
+GH,Biomass,Biomass & Waste - Feedstock Supply,1
+GH,Biomass,Biomass & Waste - O&M,1
+GH,Biomass,Biomass & Waste - Project Development,0
+GH,Geothermal,Geothermal - Balance of Plant,0
+GH,Geothermal,Geothermal - Engineering,0
+GH,Geothermal,Geothermal - O&M,0
+GH,Geothermal,Geothermal - Project Development,0
+GH,Geothermal,Geothermal - Resource Development,0
+GH,Geothermal,Geothermal - Turbines,0
+GH,Small Hydro,Small Hydro - Balance of Plant,0
+GH,Small Hydro,Small Hydro - Engineering ,0
+GH,Small Hydro,Small Hydro - O&M,0
+GH,Small Hydro,Small Hydro - Project Development,0
+GH,Small Hydro,Small Hydro - Turbines,0
+GH,Solar,Solar - Balance of Plan,0
+GH,Solar,Solar - Cells,0
+GH,Solar,Solar - Engineering,1
+GH,Solar,Solar - Inverters,0
+GH,Solar,Solar - Modules,0
+GH,Solar,Solar - O&M,1
+GH,Solar,Solar - Polysilicon/ingots,0
+GH,Solar,Solar - Project Development,1
+GH,Solar,Solar - Wafers,0
+GH,Wind,Wind - Project Development,1
+GH,Wind,Wind - Engineering,1
+GH,Wind,Wind - O&M ,0
+GH,Wind,Wind - Turbines,0
+GH,Wind,Wind - Blades,0
+GH,Wind,Wind - Gearboxes ,0
+GH,Wind,Wind - Towers ,0
+GH,Wind,Wind - Balance of Plant,0
+GT,Biofuels,Biofuels -Distribution and Blending ,0
+GT,Biofuels,Biofuels - Engineering (Value),0
+GT,Biofuels,Biofuels - Equipment Manufacturing,0
+GT,Biofuels,Biofuels - O&M (Value),0
+GT,Biofuels,Biofuels - Producers (Valeue),1
+GT,Biomass,Biomass & Waste - Engineering,0
+GT,Biomass,Biomass & Waste - Equipment Manufacturing,0
+GT,Biomass,Biomass & Waste - Feedstock Supply,1
+GT,Biomass,Biomass & Waste - O&M,0
+GT,Biomass,Biomass & Waste - Project Development,1
+GT,Geothermal,Geothermal - Balance of Plant,0
+GT,Geothermal,Geothermal - Engineering,0
+GT,Geothermal,Geothermal - O&M,0
+GT,Geothermal,Geothermal - Project Development,1
+GT,Geothermal,Geothermal - Resource Development,0
+GT,Geothermal,Geothermal - Turbines,0
+GT,Small Hydro,Small Hydro - Balance of Plant,0
+GT,Small Hydro,Small Hydro - Engineering ,1
+GT,Small Hydro,Small Hydro - O&M,1
+GT,Small Hydro,Small Hydro - Project Development,1
+GT,Small Hydro,Small Hydro - Turbines,0
+GT,Solar,Solar - Balance of Plan,0
+GT,Solar,Solar - Cells,0
+GT,Solar,Solar - Engineering,0
+GT,Solar,Solar - Inverters,0
+GT,Solar,Solar - Modules,0
+GT,Solar,Solar - O&M,0
+GT,Solar,Solar - Polysilicon/ingots,0
+GT,Solar,Solar - Project Development,1
+GT,Solar,Solar - Wafers,0
+GT,Wind,Wind - Project Development,1
+GT,Wind,Wind - Engineering,0
+GT,Wind,Wind - O&M ,0
+GT,Wind,Wind - Turbines,0
+GT,Wind,Wind - Blades,0
+GT,Wind,Wind - Gearboxes ,0
+GT,Wind,Wind - Towers ,0
+GT,Wind,Wind - Balance of Plant,0
+GY,Biofuels,Biofuels -Distribution and Blending ,0
+GY,Biofuels,Biofuels - Engineering (Value),0
+GY,Biofuels,Biofuels - Equipment Manufacturing,0
+GY,Biofuels,Biofuels - O&M (Value),0
+GY,Biofuels,Biofuels - Producers (Valeue),0
+GY,Biomass,Biomass & Waste - Engineering,0
+GY,Biomass,Biomass & Waste - Equipment Manufacturing,0
+GY,Biomass,Biomass & Waste - Feedstock Supply,0
+GY,Biomass,Biomass & Waste - O&M,0
+GY,Biomass,Biomass & Waste - Project Development,1
+GY,Geothermal,Geothermal - Balance of Plant,0
+GY,Geothermal,Geothermal - Engineering,0
+GY,Geothermal,Geothermal - O&M,0
+GY,Geothermal,Geothermal - Project Development,0
+GY,Geothermal,Geothermal - Resource Development,0
+GY,Geothermal,Geothermal - Turbines,0
+GY,Small Hydro,Small Hydro - Balance of Plant,0
+GY,Small Hydro,Small Hydro - Engineering ,0
+GY,Small Hydro,Small Hydro - O&M,0
+GY,Small Hydro,Small Hydro - Project Development,0
+GY,Small Hydro,Small Hydro - Turbines,0
+GY,Solar,Solar - Balance of Plan,0
+GY,Solar,Solar - Cells,0
+GY,Solar,Solar - Engineering,0
+GY,Solar,Solar - Inverters,0
+GY,Solar,Solar - Modules,0
+GY,Solar,Solar - O&M,0
+GY,Solar,Solar - Polysilicon/ingots,0
+GY,Solar,Solar - Project Development,0
+GY,Solar,Solar - Wafers,0
+GY,Wind,Wind - Project Development,0
+GY,Wind,Wind - Engineering,0
+GY,Wind,Wind - O&M ,0
+GY,Wind,Wind - Turbines,0
+GY,Wind,Wind - Blades,0
+GY,Wind,Wind - Gearboxes ,0
+GY,Wind,Wind - Towers ,0
+GY,Wind,Wind - Balance of Plant,0
+HT,Biofuels,Biofuels -Distribution and Blending ,0
+HT,Biofuels,Biofuels - Engineering (Value),0
+HT,Biofuels,Biofuels - Equipment Manufacturing,0
+HT,Biofuels,Biofuels - O&M (Value),0
+HT,Biofuels,Biofuels - Producers (Valeue),0
+HT,Biomass,Biomass & Waste - Engineering,0
+HT,Biomass,Biomass & Waste - Equipment Manufacturing,0
+HT,Biomass,Biomass & Waste - Feedstock Supply,0
+HT,Biomass,Biomass & Waste - O&M,0
+HT,Biomass,Biomass & Waste - Project Development,0
+HT,Geothermal,Geothermal - Balance of Plant,0
+HT,Geothermal,Geothermal - Engineering,0
+HT,Geothermal,Geothermal - O&M,0
+HT,Geothermal,Geothermal - Project Development,0
+HT,Geothermal,Geothermal - Resource Development,0
+HT,Geothermal,Geothermal - Turbines,0
+HT,Small Hydro,Small Hydro - Balance of Plant,0
+HT,Small Hydro,Small Hydro - Engineering ,0
+HT,Small Hydro,Small Hydro - O&M,0
+HT,Small Hydro,Small Hydro - Project Development,1
+HT,Small Hydro,Small Hydro - Turbines,0
+HT,Solar,Solar - Balance of Plan,0
+HT,Solar,Solar - Cells,0
+HT,Solar,Solar - Engineering,0
+HT,Solar,Solar - Inverters,0
+HT,Solar,Solar - Modules,0
+HT,Solar,Solar - O&M,0
+HT,Solar,Solar - Polysilicon/ingots,0
+HT,Solar,Solar - Project Development,1
+HT,Solar,Solar - Wafers,0
+HT,Wind,Wind - Project Development,0
+HT,Wind,Wind - Engineering,0
+HT,Wind,Wind - O&M ,0
+HT,Wind,Wind - Turbines,0
+HT,Wind,Wind - Blades,0
+HT,Wind,Wind - Gearboxes ,0
+HT,Wind,Wind - Towers ,0
+HT,Wind,Wind - Balance of Plant,0
+HN,Biofuels,Biofuels -Distribution and Blending ,0
+HN,Biofuels,Biofuels - Engineering (Value),0
+HN,Biofuels,Biofuels - Equipment Manufacturing,0
+HN,Biofuels,Biofuels - O&M (Value),0
+HN,Biofuels,Biofuels - Producers (Valeue),1
+HN,Biomass,Biomass & Waste - Engineering,1
+HN,Biomass,Biomass & Waste - Equipment Manufacturing,0
+HN,Biomass,Biomass & Waste - Feedstock Supply,1
+HN,Biomass,Biomass & Waste - O&M,0
+HN,Biomass,Biomass & Waste - Project Development,1
+HN,Geothermal,Geothermal - Balance of Plant,0
+HN,Geothermal,Geothermal - Engineering,1
+HN,Geothermal,Geothermal - O&M,0
+HN,Geothermal,Geothermal - Project Development,1
+HN,Geothermal,Geothermal - Resource Development,0
+HN,Geothermal,Geothermal - Turbines,0
+HN,Small Hydro,Small Hydro - Balance of Plant,0
+HN,Small Hydro,Small Hydro - Engineering ,1
+HN,Small Hydro,Small Hydro - O&M,1
+HN,Small Hydro,Small Hydro - Project Development,1
+HN,Small Hydro,Small Hydro - Turbines,0
+HN,Solar,Solar - Balance of Plan,0
+HN,Solar,Solar - Cells,0
+HN,Solar,Solar - Engineering,1
+HN,Solar,Solar - Inverters,0
+HN,Solar,Solar - Modules,0
+HN,Solar,Solar - O&M,0
+HN,Solar,Solar - Polysilicon/ingots,0
+HN,Solar,Solar - Project Development,1
+HN,Solar,Solar - Wafers,0
+HN,Wind,Wind - Project Development,1
+HN,Wind,Wind - Engineering,1
+HN,Wind,Wind - O&M ,1
+HN,Wind,Wind - Turbines,0
+HN,Wind,Wind - Blades,0
+HN,Wind,Wind - Gearboxes ,0
+HN,Wind,Wind - Towers ,0
+HN,Wind,Wind - Balance of Plant,0
+IN,Biofuels,Biofuels -Distribution and Blending ,0
+IN,Biofuels,Biofuels - Engineering (Value),1
+IN,Biofuels,Biofuels - Equipment Manufacturing,1
+IN,Biofuels,Biofuels - O&M (Value),1
+IN,Biofuels,Biofuels - Producers (Valeue),1
+IN,Biomass,Biomass & Waste - Engineering,1
+IN,Biomass,Biomass & Waste - Equipment Manufacturing,1
+IN,Biomass,Biomass & Waste - Feedstock Supply,1
+IN,Biomass,Biomass & Waste - O&M,1
+IN,Biomass,Biomass & Waste - Project Development,1
+IN,Geothermal,Geothermal - Balance of Plant,0
+IN,Geothermal,Geothermal - Engineering,0
+IN,Geothermal,Geothermal - O&M,0
+IN,Geothermal,Geothermal - Project Development,0
+IN,Geothermal,Geothermal - Resource Development,0
+IN,Geothermal,Geothermal - Turbines,0
+IN,Small Hydro,Small Hydro - Balance of Plant,1
+IN,Small Hydro,Small Hydro - Engineering ,1
+IN,Small Hydro,Small Hydro - O&M,1
+IN,Small Hydro,Small Hydro - Project Development,1
+IN,Small Hydro,Small Hydro - Turbines,1
+IN,Solar,Solar - Balance of Plan,1
+IN,Solar,Solar - Cells,1
+IN,Solar,Solar - Engineering,1
+IN,Solar,Solar - Inverters,1
+IN,Solar,Solar - Modules,1
+IN,Solar,Solar - O&M,1
+IN,Solar,Solar - Polysilicon/ingots,1
+IN,Solar,Solar - Project Development,1
+IN,Solar,Solar - Wafers,1
+IN,Wind,Wind - Project Development,1
+IN,Wind,Wind - Engineering,1
+IN,Wind,Wind - O&M ,0
+IN,Wind,Wind - Turbines,1
+IN,Wind,Wind - Blades,1
+IN,Wind,Wind - Gearboxes ,1
+IN,Wind,Wind - Towers ,1
+IN,Wind,Wind - Balance of Plant,1
+IN-AP,Biofuels,Biofuels -Distribution and Blending ,0
+IN-AP,Biofuels,Biofuels - Engineering (Value),0
+IN-AP,Biofuels,Biofuels - Equipment Manufacturing,0
+IN-AP,Biofuels,Biofuels - O&M (Value),0
+IN-AP,Biofuels,Biofuels - Producers (Valeue),1
+IN-AP,Biomass,Biomass & Waste - Engineering,1
+IN-AP,Biomass,Biomass & Waste - Equipment Manufacturing,1
+IN-AP,Biomass,Biomass & Waste - Feedstock Supply,1
+IN-AP,Biomass,Biomass & Waste - O&M,1
+IN-AP,Biomass,Biomass & Waste - Project Development,1
+IN-AP,Geothermal,Geothermal - Balance of Plant,0
+IN-AP,Geothermal,Geothermal - Engineering,0
+IN-AP,Geothermal,Geothermal - O&M,0
+IN-AP,Geothermal,Geothermal - Project Development,0
+IN-AP,Geothermal,Geothermal - Resource Development,0
+IN-AP,Geothermal,Geothermal - Turbines,0
+IN-AP,Small Hydro,Small Hydro - Balance of Plant,0
+IN-AP,Small Hydro,Small Hydro - Engineering ,1
+IN-AP,Small Hydro,Small Hydro - O&M,0
+IN-AP,Small Hydro,Small Hydro - Project Development,1
+IN-AP,Small Hydro,Small Hydro - Turbines,1
+IN-AP,Solar,Solar - Balance of Plan,0
+IN-AP,Solar,Solar - Cells,1
+IN-AP,Solar,Solar - Engineering,1
+IN-AP,Solar,Solar - Inverters,1
+IN-AP,Solar,Solar - Modules,1
+IN-AP,Solar,Solar - O&M,1
+IN-AP,Solar,Solar - Polysilicon/ingots,1
+IN-AP,Solar,Solar - Project Development,1
+IN-AP,Solar,Solar - Wafers,1
+IN-AP,Wind,Wind - Project Development,1
+IN-AP,Wind,Wind - Engineering,1
+IN-AP,Wind,Wind - O&M ,0
+IN-AP,Wind,Wind - Turbines,1
+IN-AP,Wind,Wind - Blades,0
+IN-AP,Wind,Wind - Gearboxes ,0
+IN-AP,Wind,Wind - Towers ,0
+IN-AP,Wind,Wind - Balance of Plant,0
+IN-GJ,Biofuels,Biofuels -Distribution and Blending ,0
+IN-GJ,Biofuels,Biofuels - Engineering (Value),1
+IN-GJ,Biofuels,Biofuels - Equipment Manufacturing,0
+IN-GJ,Biofuels,Biofuels - O&M (Value),0
+IN-GJ,Biofuels,Biofuels - Producers (Valeue),1
+IN-GJ,Biomass,Biomass & Waste - Engineering,0
+IN-GJ,Biomass,Biomass & Waste - Equipment Manufacturing,1
+IN-GJ,Biomass,Biomass & Waste - Feedstock Supply,1
+IN-GJ,Biomass,Biomass & Waste - O&M,1
+IN-GJ,Biomass,Biomass & Waste - Project Development,1
+IN-GJ,Geothermal,Geothermal - Balance of Plant,0
+IN-GJ,Geothermal,Geothermal - Engineering,0
+IN-GJ,Geothermal,Geothermal - O&M,0
+IN-GJ,Geothermal,Geothermal - Project Development,0
+IN-GJ,Geothermal,Geothermal - Resource Development,0
+IN-GJ,Geothermal,Geothermal - Turbines,0
+IN-GJ,Small Hydro,Small Hydro - Balance of Plant,0
+IN-GJ,Small Hydro,Small Hydro - Engineering ,1
+IN-GJ,Small Hydro,Small Hydro - O&M,1
+IN-GJ,Small Hydro,Small Hydro - Project Development,1
+IN-GJ,Small Hydro,Small Hydro - Turbines,1
+IN-GJ,Solar,Solar - Balance of Plan,0
+IN-GJ,Solar,Solar - Cells,1
+IN-GJ,Solar,Solar - Engineering,1
+IN-GJ,Solar,Solar - Inverters,1
+IN-GJ,Solar,Solar - Modules,1
+IN-GJ,Solar,Solar - O&M,1
+IN-GJ,Solar,Solar - Polysilicon/ingots,1
+IN-GJ,Solar,Solar - Project Development,1
+IN-GJ,Solar,Solar - Wafers,1
+IN-GJ,Wind,Wind - Project Development,1
+IN-GJ,Wind,Wind - Engineering,0
+IN-GJ,Wind,Wind - O&M ,0
+IN-GJ,Wind,Wind - Turbines,1
+IN-GJ,Wind,Wind - Blades,1
+IN-GJ,Wind,Wind - Gearboxes ,1
+IN-GJ,Wind,Wind - Towers ,1
+IN-GJ,Wind,Wind - Balance of Plant,1
+IN-KA,Biofuels,Biofuels -Distribution and Blending ,0
+IN-KA,Biofuels,Biofuels - Engineering (Value),0
+IN-KA,Biofuels,Biofuels - Equipment Manufacturing,0
+IN-KA,Biofuels,Biofuels - O&M (Value),0
+IN-KA,Biofuels,Biofuels - Producers (Valeue),1
+IN-KA,Biomass,Biomass & Waste - Engineering,0
+IN-KA,Biomass,Biomass & Waste - Equipment Manufacturing,0
+IN-KA,Biomass,Biomass & Waste - Feedstock Supply,1
+IN-KA,Biomass,Biomass & Waste - O&M,0
+IN-KA,Biomass,Biomass & Waste - Project Development,1
+IN-KA,Geothermal,Geothermal - Balance of Plant,0
+IN-KA,Geothermal,Geothermal - Engineering,0
+IN-KA,Geothermal,Geothermal - O&M,0
+IN-KA,Geothermal,Geothermal - Project Development,0
+IN-KA,Geothermal,Geothermal - Resource Development,0
+IN-KA,Geothermal,Geothermal - Turbines,0
+IN-KA,Small Hydro,Small Hydro - Balance of Plant,1
+IN-KA,Small Hydro,Small Hydro - Engineering ,1
+IN-KA,Small Hydro,Small Hydro - O&M,1
+IN-KA,Small Hydro,Small Hydro - Project Development,1
+IN-KA,Small Hydro,Small Hydro - Turbines,1
+IN-KA,Solar,Solar - Balance of Plan,0
+IN-KA,Solar,Solar - Cells,1
+IN-KA,Solar,Solar - Engineering,1
+IN-KA,Solar,Solar - Inverters,1
+IN-KA,Solar,Solar - Modules,1
+IN-KA,Solar,Solar - O&M,1
+IN-KA,Solar,Solar - Polysilicon/ingots,0
+IN-KA,Solar,Solar - Project Development,1
+IN-KA,Solar,Solar - Wafers,0
+IN-KA,Wind,Wind - Project Development,1
+IN-KA,Wind,Wind - Engineering,1
+IN-KA,Wind,Wind - O&M ,1
+IN-KA,Wind,Wind - Turbines,1
+IN-KA,Wind,Wind - Blades,1
+IN-KA,Wind,Wind - Gearboxes ,0
+IN-KA,Wind,Wind - Towers ,0
+IN-KA,Wind,Wind - Balance of Plant,1
+IN-MP,Biofuels,Biofuels -Distribution and Blending ,0
+IN-MP,Biofuels,Biofuels - Engineering (Value),0
+IN-MP,Biofuels,Biofuels - Equipment Manufacturing,0
+IN-MP,Biofuels,Biofuels - O&M (Value),0
+IN-MP,Biofuels,Biofuels - Producers (Valeue),0
+IN-MP,Biomass,Biomass & Waste - Engineering,0
+IN-MP,Biomass,Biomass & Waste - Equipment Manufacturing,1
+IN-MP,Biomass,Biomass & Waste - Feedstock Supply,1
+IN-MP,Biomass,Biomass & Waste - O&M,0
+IN-MP,Biomass,Biomass & Waste - Project Development,1
+IN-MP,Geothermal,Geothermal - Balance of Plant,0
+IN-MP,Geothermal,Geothermal - Engineering,0
+IN-MP,Geothermal,Geothermal - O&M,0
+IN-MP,Geothermal,Geothermal - Project Development,0
+IN-MP,Geothermal,Geothermal - Resource Development,0
+IN-MP,Geothermal,Geothermal - Turbines,0
+IN-MP,Small Hydro,Small Hydro - Balance of Plant,0
+IN-MP,Small Hydro,Small Hydro - Engineering ,0
+IN-MP,Small Hydro,Small Hydro - O&M,0
+IN-MP,Small Hydro,Small Hydro - Project Development,1
+IN-MP,Small Hydro,Small Hydro - Turbines,1
+IN-MP,Solar,Solar - Balance of Plan,0
+IN-MP,Solar,Solar - Cells,0
+IN-MP,Solar,Solar - Engineering,1
+IN-MP,Solar,Solar - Inverters,0
+IN-MP,Solar,Solar - Modules,0
+IN-MP,Solar,Solar - O&M,1
+IN-MP,Solar,Solar - Polysilicon/ingots,0
+IN-MP,Solar,Solar - Project Development,1
+IN-MP,Solar,Solar - Wafers,0
+IN-MP,Wind,Wind - Project Development,1
+IN-MP,Wind,Wind - Engineering,1
+IN-MP,Wind,Wind - O&M ,0
+IN-MP,Wind,Wind - Turbines,0
+IN-MP,Wind,Wind - Blades,0
+IN-MP,Wind,Wind - Gearboxes ,0
+IN-MP,Wind,Wind - Towers ,0
+IN-MP,Wind,Wind - Balance of Plant,0
+IN-MH,Biofuels,Biofuels -Distribution and Blending ,1
+IN-MH,Biofuels,Biofuels - Engineering (Value),1
+IN-MH,Biofuels,Biofuels - Equipment Manufacturing,0
+IN-MH,Biofuels,Biofuels - O&M (Value),0
+IN-MH,Biofuels,Biofuels - Producers (Valeue),1
+IN-MH,Biomass,Biomass & Waste - Engineering,0
+IN-MH,Biomass,Biomass & Waste - Equipment Manufacturing,1
+IN-MH,Biomass,Biomass & Waste - Feedstock Supply,1
+IN-MH,Biomass,Biomass & Waste - O&M,0
+IN-MH,Biomass,Biomass & Waste - Project Development,1
+IN-MH,Geothermal,Geothermal - Balance of Plant,0
+IN-MH,Geothermal,Geothermal - Engineering,0
+IN-MH,Geothermal,Geothermal - O&M,0
+IN-MH,Geothermal,Geothermal - Project Development,0
+IN-MH,Geothermal,Geothermal - Resource Development,0
+IN-MH,Geothermal,Geothermal - Turbines,0
+IN-MH,Small Hydro,Small Hydro - Balance of Plant,1
+IN-MH,Small Hydro,Small Hydro - Engineering ,0
+IN-MH,Small Hydro,Small Hydro - O&M,0
+IN-MH,Small Hydro,Small Hydro - Project Development,1
+IN-MH,Small Hydro,Small Hydro - Turbines,1
+IN-MH,Solar,Solar - Balance of Plan,0
+IN-MH,Solar,Solar - Cells,0
+IN-MH,Solar,Solar - Engineering,1
+IN-MH,Solar,Solar - Inverters,0
+IN-MH,Solar,Solar - Modules,1
+IN-MH,Solar,Solar - O&M,1
+IN-MH,Solar,Solar - Polysilicon/ingots,0
+IN-MH,Solar,Solar - Project Development,1
+IN-MH,Solar,Solar - Wafers,0
+IN-MH,Wind,Wind - Project Development,1
+IN-MH,Wind,Wind - Engineering,1
+IN-MH,Wind,Wind - O&M ,1
+IN-MH,Wind,Wind - Turbines,1
+IN-MH,Wind,Wind - Blades,1
+IN-MH,Wind,Wind - Gearboxes ,0
+IN-MH,Wind,Wind - Towers ,1
+IN-MH,Wind,Wind - Balance of Plant,1
+IN-PB,Biofuels,Biofuels -Distribution and Blending ,0
+IN-PB,Biofuels,Biofuels - Engineering (Value),0
+IN-PB,Biofuels,Biofuels - Equipment Manufacturing,0
+IN-PB,Biofuels,Biofuels - O&M (Value),0
+IN-PB,Biofuels,Biofuels - Producers (Valeue),0
+IN-PB,Biomass,Biomass & Waste - Engineering,0
+IN-PB,Biomass,Biomass & Waste - Equipment Manufacturing,1
+IN-PB,Biomass,Biomass & Waste - Feedstock Supply,1
+IN-PB,Biomass,Biomass & Waste - O&M,0
+IN-PB,Biomass,Biomass & Waste - Project Development,1
+IN-PB,Geothermal,Geothermal - Balance of Plant,0
+IN-PB,Geothermal,Geothermal - Engineering,0
+IN-PB,Geothermal,Geothermal - O&M,0
+IN-PB,Geothermal,Geothermal - Project Development,0
+IN-PB,Geothermal,Geothermal - Resource Development,0
+IN-PB,Geothermal,Geothermal - Turbines,0
+IN-PB,Small Hydro,Small Hydro - Balance of Plant,1
+IN-PB,Small Hydro,Small Hydro - Engineering ,1
+IN-PB,Small Hydro,Small Hydro - O&M,0
+IN-PB,Small Hydro,Small Hydro - Project Development,1
+IN-PB,Small Hydro,Small Hydro - Turbines,0
+IN-PB,Solar,Solar - Balance of Plan,0
+IN-PB,Solar,Solar - Cells,0
+IN-PB,Solar,Solar - Engineering,1
+IN-PB,Solar,Solar - Inverters,0
+IN-PB,Solar,Solar - Modules,0
+IN-PB,Solar,Solar - O&M,1
+IN-PB,Solar,Solar - Polysilicon/ingots,0
+IN-PB,Solar,Solar - Project Development,1
+IN-PB,Solar,Solar - Wafers,0
+IN-PB,Wind,Wind - Project Development,1
+IN-PB,Wind,Wind - Engineering,0
+IN-PB,Wind,Wind - O&M ,1
+IN-PB,Wind,Wind - Turbines,0
+IN-PB,Wind,Wind - Blades,0
+IN-PB,Wind,Wind - Gearboxes ,0
+IN-PB,Wind,Wind - Towers ,0
+IN-PB,Wind,Wind - Balance of Plant,0
+IN-RJ,Biofuels,Biofuels -Distribution and Blending ,0
+IN-RJ,Biofuels,Biofuels - Engineering (Value),0
+IN-RJ,Biofuels,Biofuels - Equipment Manufacturing,0
+IN-RJ,Biofuels,Biofuels - O&M (Value),0
+IN-RJ,Biofuels,Biofuels - Producers (Valeue),0
+IN-RJ,Biomass,Biomass & Waste - Engineering,0
+IN-RJ,Biomass,Biomass & Waste - Equipment Manufacturing,0
+IN-RJ,Biomass,Biomass & Waste - Feedstock Supply,1
+IN-RJ,Biomass,Biomass & Waste - O&M,0
+IN-RJ,Biomass,Biomass & Waste - Project Development,1
+IN-RJ,Geothermal,Geothermal - Balance of Plant,0
+IN-RJ,Geothermal,Geothermal - Engineering,0
+IN-RJ,Geothermal,Geothermal - O&M,0
+IN-RJ,Geothermal,Geothermal - Project Development,0
+IN-RJ,Geothermal,Geothermal - Resource Development,0
+IN-RJ,Geothermal,Geothermal - Turbines,0
+IN-RJ,Small Hydro,Small Hydro - Balance of Plant,0
+IN-RJ,Small Hydro,Small Hydro - Engineering ,0
+IN-RJ,Small Hydro,Small Hydro - O&M,0
+IN-RJ,Small Hydro,Small Hydro - Project Development,0
+IN-RJ,Small Hydro,Small Hydro - Turbines,0
+IN-RJ,Solar,Solar - Balance of Plan,1
+IN-RJ,Solar,Solar - Cells,0
+IN-RJ,Solar,Solar - Engineering,1
+IN-RJ,Solar,Solar - Inverters,1
+IN-RJ,Solar,Solar - Modules,1
+IN-RJ,Solar,Solar - O&M,1
+IN-RJ,Solar,Solar - Polysilicon/ingots,0
+IN-RJ,Solar,Solar - Project Development,1
+IN-RJ,Solar,Solar - Wafers,0
+IN-RJ,Wind,Wind - Project Development,1
+IN-RJ,Wind,Wind - Engineering,0
+IN-RJ,Wind,Wind - O&M ,0
+IN-RJ,Wind,Wind - Turbines,0
+IN-RJ,Wind,Wind - Blades,0
+IN-RJ,Wind,Wind - Gearboxes ,1
+IN-RJ,Wind,Wind - Towers ,0
+IN-RJ,Wind,Wind - Balance of Plant,0
+IN-TN,Biofuels,Biofuels -Distribution and Blending ,1
+IN-TN,Biofuels,Biofuels - Engineering (Value),1
+IN-TN,Biofuels,Biofuels - Equipment Manufacturing,0
+IN-TN,Biofuels,Biofuels - O&M (Value),0
+IN-TN,Biofuels,Biofuels - Producers (Valeue),1
+IN-TN,Biomass,Biomass & Waste - Engineering,1
+IN-TN,Biomass,Biomass & Waste - Equipment Manufacturing,1
+IN-TN,Biomass,Biomass & Waste - Feedstock Supply,1
+IN-TN,Biomass,Biomass & Waste - O&M,1
+IN-TN,Biomass,Biomass & Waste - Project Development,1
+IN-TN,Geothermal,Geothermal - Balance of Plant,0
+IN-TN,Geothermal,Geothermal - Engineering,0
+IN-TN,Geothermal,Geothermal - O&M,0
+IN-TN,Geothermal,Geothermal - Project Development,0
+IN-TN,Geothermal,Geothermal - Resource Development,0
+IN-TN,Geothermal,Geothermal - Turbines,0
+IN-TN,Small Hydro,Small Hydro - Balance of Plant,1
+IN-TN,Small Hydro,Small Hydro - Engineering ,1
+IN-TN,Small Hydro,Small Hydro - O&M,0
+IN-TN,Small Hydro,Small Hydro - Project Development,1
+IN-TN,Small Hydro,Small Hydro - Turbines,1
+IN-TN,Solar,Solar - Balance of Plan,1
+IN-TN,Solar,Solar - Cells,1
+IN-TN,Solar,Solar - Engineering,1
+IN-TN,Solar,Solar - Inverters,1
+IN-TN,Solar,Solar - Modules,1
+IN-TN,Solar,Solar - O&M,1
+IN-TN,Solar,Solar - Polysilicon/ingots,0
+IN-TN,Solar,Solar - Project Development,1
+IN-TN,Solar,Solar - Wafers,1
+IN-TN,Wind,Wind - Project Development,1
+IN-TN,Wind,Wind - Engineering,1
+IN-TN,Wind,Wind - O&M ,0
+IN-TN,Wind,Wind - Turbines,1
+IN-TN,Wind,Wind - Blades,1
+IN-TN,Wind,Wind - Gearboxes ,1
+IN-TN,Wind,Wind - Towers ,1
+IN-TN,Wind,Wind - Balance of Plant,1
+IN-UP,Biofuels,Biofuels -Distribution and Blending ,1
+IN-UP,Biofuels,Biofuels - Engineering (Value),1
+IN-UP,Biofuels,Biofuels - Equipment Manufacturing,0
+IN-UP,Biofuels,Biofuels - O&M (Value),0
+IN-UP,Biofuels,Biofuels - Producers (Valeue),1
+IN-UP,Biomass,Biomass & Waste - Engineering,1
+IN-UP,Biomass,Biomass & Waste - Equipment Manufacturing,0
+IN-UP,Biomass,Biomass & Waste - Feedstock Supply,1
+IN-UP,Biomass,Biomass & Waste - O&M,1
+IN-UP,Biomass,Biomass & Waste - Project Development,1
+IN-UP,Geothermal,Geothermal - Balance of Plant,0
+IN-UP,Geothermal,Geothermal - Engineering,0
+IN-UP,Geothermal,Geothermal - O&M,0
+IN-UP,Geothermal,Geothermal - Project Development,0
+IN-UP,Geothermal,Geothermal - Resource Development,0
+IN-UP,Geothermal,Geothermal - Turbines,0
+IN-UP,Small Hydro,Small Hydro - Balance of Plant,0
+IN-UP,Small Hydro,Small Hydro - Engineering ,1
+IN-UP,Small Hydro,Small Hydro - O&M,1
+IN-UP,Small Hydro,Small Hydro - Project Development,1
+IN-UP,Small Hydro,Small Hydro - Turbines,1
+IN-UP,Solar,Solar - Balance of Plan,0
+IN-UP,Solar,Solar - Cells,0
+IN-UP,Solar,Solar - Engineering,1
+IN-UP,Solar,Solar - Inverters,0
+IN-UP,Solar,Solar - Modules,0
+IN-UP,Solar,Solar - O&M,1
+IN-UP,Solar,Solar - Polysilicon/ingots,0
+IN-UP,Solar,Solar - Project Development,1
+IN-UP,Solar,Solar - Wafers,0
+IN-UP,Wind,Wind - Project Development,1
+IN-UP,Wind,Wind - Engineering,1
+IN-UP,Wind,Wind - O&M ,1
+IN-UP,Wind,Wind - Turbines,0
+IN-UP,Wind,Wind - Blades,0
+IN-UP,Wind,Wind - Gearboxes ,0
+IN-UP,Wind,Wind - Towers ,0
+IN-UP,Wind,Wind - Balance of Plant,0
+IN-WB,Biofuels,Biofuels -Distribution and Blending ,0
+IN-WB,Biofuels,Biofuels - Engineering (Value),1
+IN-WB,Biofuels,Biofuels - Equipment Manufacturing,0
+IN-WB,Biofuels,Biofuels - O&M (Value),0
+IN-WB,Biofuels,Biofuels - Producers (Valeue),1
+IN-WB,Biomass,Biomass & Waste - Engineering,1
+IN-WB,Biomass,Biomass & Waste - Equipment Manufacturing,0
+IN-WB,Biomass,Biomass & Waste - Feedstock Supply,1
+IN-WB,Biomass,Biomass & Waste - O&M,1
+IN-WB,Biomass,Biomass & Waste - Project Development,1
+IN-WB,Geothermal,Geothermal - Balance of Plant,0
+IN-WB,Geothermal,Geothermal - Engineering,0
+IN-WB,Geothermal,Geothermal - O&M,0
+IN-WB,Geothermal,Geothermal - Project Development,0
+IN-WB,Geothermal,Geothermal - Resource Development,0
+IN-WB,Geothermal,Geothermal - Turbines,0
+IN-WB,Small Hydro,Small Hydro - Balance of Plant,1
+IN-WB,Small Hydro,Small Hydro - Engineering ,1
+IN-WB,Small Hydro,Small Hydro - O&M,1
+IN-WB,Small Hydro,Small Hydro - Project Development,1
+IN-WB,Small Hydro,Small Hydro - Turbines,0
+IN-WB,Solar,Solar - Balance of Plan,0
+IN-WB,Solar,Solar - Cells,1
+IN-WB,Solar,Solar - Engineering,1
+IN-WB,Solar,Solar - Inverters,1
+IN-WB,Solar,Solar - Modules,1
+IN-WB,Solar,Solar - O&M,1
+IN-WB,Solar,Solar - Polysilicon/ingots,0
+IN-WB,Solar,Solar - Project Development,1
+IN-WB,Solar,Solar - Wafers,1
+IN-WB,Wind,Wind - Project Development,1
+IN-WB,Wind,Wind - Engineering,0
+IN-WB,Wind,Wind - O&M ,1
+IN-WB,Wind,Wind - Turbines,0
+IN-WB,Wind,Wind - Blades,0
+IN-WB,Wind,Wind - Gearboxes ,1
+IN-WB,Wind,Wind - Towers ,0
+IN-WB,Wind,Wind - Balance of Plant,0
+ID,Biofuels,Biofuels -Distribution and Blending ,1
+ID,Biofuels,Biofuels - Engineering (Value),1
+ID,Biofuels,Biofuels - Equipment Manufacturing,0
+ID,Biofuels,Biofuels - O&M (Value),1
+ID,Biofuels,Biofuels - Producers (Valeue),1
+ID,Biomass,Biomass & Waste - Engineering,1
+ID,Biomass,Biomass & Waste - Equipment Manufacturing,1
+ID,Biomass,Biomass & Waste - Feedstock Supply,1
+ID,Biomass,Biomass & Waste - O&M,1
+ID,Biomass,Biomass & Waste - Project Development,1
+ID,Geothermal,Geothermal - Balance of Plant,0
+ID,Geothermal,Geothermal - Engineering,1
+ID,Geothermal,Geothermal - O&M,1
+ID,Geothermal,Geothermal - Project Development,1
+ID,Geothermal,Geothermal - Resource Development,1
+ID,Geothermal,Geothermal - Turbines,0
+ID,Small Hydro,Small Hydro - Balance of Plant,0
+ID,Small Hydro,Small Hydro - Engineering ,1
+ID,Small Hydro,Small Hydro - O&M,1
+ID,Small Hydro,Small Hydro - Project Development,1
+ID,Small Hydro,Small Hydro - Turbines,1
+ID,Solar,Solar - Balance of Plan,0
+ID,Solar,Solar - Cells,1
+ID,Solar,Solar - Engineering,1
+ID,Solar,Solar - Inverters,0
+ID,Solar,Solar - Modules,1
+ID,Solar,Solar - O&M,1
+ID,Solar,Solar - Polysilicon/ingots,0
+ID,Solar,Solar - Project Development,1
+ID,Solar,Solar - Wafers,0
+ID,Wind,Wind - Project Development,1
+ID,Wind,Wind - Engineering,1
+ID,Wind,Wind - O&M ,1
+ID,Wind,Wind - Turbines,0
+ID,Wind,Wind - Blades,0
+ID,Wind,Wind - Gearboxes ,0
+ID,Wind,Wind - Towers ,0
+ID,Wind,Wind - Balance of Plant,0
+JM,Biofuels,Biofuels -Distribution and Blending ,0
+JM,Biofuels,Biofuels - Engineering (Value),0
+JM,Biofuels,Biofuels - Equipment Manufacturing,0
+JM,Biofuels,Biofuels - O&M (Value),0
+JM,Biofuels,Biofuels - Producers (Valeue),1
+JM,Biomass,Biomass & Waste - Engineering,1
+JM,Biomass,Biomass & Waste - Equipment Manufacturing,0
+JM,Biomass,Biomass & Waste - Feedstock Supply,0
+JM,Biomass,Biomass & Waste - O&M,0
+JM,Biomass,Biomass & Waste - Project Development,1
+JM,Geothermal,Geothermal - Balance of Plant,0
+JM,Geothermal,Geothermal - Engineering,0
+JM,Geothermal,Geothermal - O&M,0
+JM,Geothermal,Geothermal - Project Development,0
+JM,Geothermal,Geothermal - Resource Development,0
+JM,Geothermal,Geothermal - Turbines,0
+JM,Small Hydro,Small Hydro - Balance of Plant,0
+JM,Small Hydro,Small Hydro - Engineering ,0
+JM,Small Hydro,Small Hydro - O&M,0
+JM,Small Hydro,Small Hydro - Project Development,1
+JM,Small Hydro,Small Hydro - Turbines,0
+JM,Solar,Solar - Balance of Plan,0
+JM,Solar,Solar - Cells,0
+JM,Solar,Solar - Engineering,1
+JM,Solar,Solar - Inverters,0
+JM,Solar,Solar - Modules,0
+JM,Solar,Solar - O&M,0
+JM,Solar,Solar - Polysilicon/ingots,0
+JM,Solar,Solar - Project Development,1
+JM,Solar,Solar - Wafers,0
+JM,Wind,Wind - Project Development,1
+JM,Wind,Wind - Engineering,1
+JM,Wind,Wind - O&M ,0
+JM,Wind,Wind - Turbines,0
+JM,Wind,Wind - Blades,0
+JM,Wind,Wind - Gearboxes ,0
+JM,Wind,Wind - Towers ,0
+JM,Wind,Wind - Balance of Plant,0
+KE,Biofuels,Biofuels -Distribution and Blending ,0
+KE,Biofuels,Biofuels - Engineering (Value),0
+KE,Biofuels,Biofuels - Equipment Manufacturing,0
+KE,Biofuels,Biofuels - O&M (Value),0
+KE,Biofuels,Biofuels - Producers (Valeue),1
+KE,Biomass,Biomass & Waste - Engineering,1
+KE,Biomass,Biomass & Waste - Equipment Manufacturing,0
+KE,Biomass,Biomass & Waste - Feedstock Supply,1
+KE,Biomass,Biomass & Waste - O&M,1
+KE,Biomass,Biomass & Waste - Project Development,1
+KE,Geothermal,Geothermal - Balance of Plant,0
+KE,Geothermal,Geothermal - Engineering,1
+KE,Geothermal,Geothermal - O&M,1
+KE,Geothermal,Geothermal - Project Development,1
+KE,Geothermal,Geothermal - Resource Development,1
+KE,Geothermal,Geothermal - Turbines,0
+KE,Small Hydro,Small Hydro - Balance of Plant,0
+KE,Small Hydro,Small Hydro - Engineering ,1
+KE,Small Hydro,Small Hydro - O&M,1
+KE,Small Hydro,Small Hydro - Project Development,1
+KE,Small Hydro,Small Hydro - Turbines,0
+KE,Solar,Solar - Balance of Plan,0
+KE,Solar,Solar - Cells,0
+KE,Solar,Solar - Engineering,1
+KE,Solar,Solar - Inverters,1
+KE,Solar,Solar - Modules,0
+KE,Solar,Solar - O&M,1
+KE,Solar,Solar - Polysilicon/ingots,0
+KE,Solar,Solar - Project Development,1
+KE,Solar,Solar - Wafers,0
+KE,Wind,Wind - Project Development,1
+KE,Wind,Wind - Engineering,1
+KE,Wind,Wind - O&M ,1
+KE,Wind,Wind - Turbines,0
+KE,Wind,Wind - Blades,0
+KE,Wind,Wind - Gearboxes ,0
+KE,Wind,Wind - Towers ,0
+KE,Wind,Wind - Balance of Plant,1
+LR,Biofuels,Biofuels -Distribution and Blending ,0
+LR,Biofuels,Biofuels - Engineering (Value),0
+LR,Biofuels,Biofuels - Equipment Manufacturing,0
+LR,Biofuels,Biofuels - O&M (Value),0
+LR,Biofuels,Biofuels - Producers (Valeue),0
+LR,Biomass,Biomass & Waste - Engineering,0
+LR,Biomass,Biomass & Waste - Equipment Manufacturing,0
+LR,Biomass,Biomass & Waste - Feedstock Supply,0
+LR,Biomass,Biomass & Waste - O&M,0
+LR,Biomass,Biomass & Waste - Project Development,0
+LR,Geothermal,Geothermal - Balance of Plant,0
+LR,Geothermal,Geothermal - Engineering,0
+LR,Geothermal,Geothermal - O&M,0
+LR,Geothermal,Geothermal - Project Development,0
+LR,Geothermal,Geothermal - Resource Development,0
+LR,Geothermal,Geothermal - Turbines,0
+LR,Small Hydro,Small Hydro - Balance of Plant,0
+LR,Small Hydro,Small Hydro - Engineering ,0
+LR,Small Hydro,Small Hydro - O&M,1
+LR,Small Hydro,Small Hydro - Project Development,0
+LR,Small Hydro,Small Hydro - Turbines,0
+LR,Solar,Solar - Balance of Plan,0
+LR,Solar,Solar - Cells,0
+LR,Solar,Solar - Engineering,0
+LR,Solar,Solar - Inverters,0
+LR,Solar,Solar - Modules,0
+LR,Solar,Solar - O&M,0
+LR,Solar,Solar - Polysilicon/ingots,0
+LR,Solar,Solar - Project Development,0
+LR,Solar,Solar - Wafers,0
+LR,Wind,Wind - Project Development,0
+LR,Wind,Wind - Engineering,0
+LR,Wind,Wind - O&M ,0
+LR,Wind,Wind - Turbines,0
+LR,Wind,Wind - Blades,0
+LR,Wind,Wind - Gearboxes ,0
+LR,Wind,Wind - Towers ,0
+LR,Wind,Wind - Balance of Plant,0
+MW,Biofuels,Biofuels -Distribution and Blending ,0
+MW,Biofuels,Biofuels - Engineering (Value),0
+MW,Biofuels,Biofuels - Equipment Manufacturing,0
+MW,Biofuels,Biofuels - O&M (Value),0
+MW,Biofuels,Biofuels - Producers (Valeue),1
+MW,Biomass,Biomass & Waste - Engineering,0
+MW,Biomass,Biomass & Waste - Equipment Manufacturing,0
+MW,Biomass,Biomass & Waste - Feedstock Supply,1
+MW,Biomass,Biomass & Waste - O&M,0
+MW,Biomass,Biomass & Waste - Project Development,1
+MW,Geothermal,Geothermal - Balance of Plant,0
+MW,Geothermal,Geothermal - Engineering,0
+MW,Geothermal,Geothermal - O&M,0
+MW,Geothermal,Geothermal - Project Development,0
+MW,Geothermal,Geothermal - Resource Development,0
+MW,Geothermal,Geothermal - Turbines,0
+MW,Small Hydro,Small Hydro - Balance of Plant,0
+MW,Small Hydro,Small Hydro - Engineering ,0
+MW,Small Hydro,Small Hydro - O&M,0
+MW,Small Hydro,Small Hydro - Project Development,0
+MW,Small Hydro,Small Hydro - Turbines,0
+MW,Solar,Solar - Balance of Plan,0
+MW,Solar,Solar - Cells,0
+MW,Solar,Solar - Engineering,0
+MW,Solar,Solar - Inverters,0
+MW,Solar,Solar - Modules,0
+MW,Solar,Solar - O&M,0
+MW,Solar,Solar - Polysilicon/ingots,0
+MW,Solar,Solar - Project Development,0
+MW,Solar,Solar - Wafers,0
+MW,Wind,Wind - Project Development,0
+MW,Wind,Wind - Engineering,0
+MW,Wind,Wind - O&M ,0
+MW,Wind,Wind - Turbines,0
+MW,Wind,Wind - Blades,0
+MW,Wind,Wind - Gearboxes ,0
+MW,Wind,Wind - Towers ,0
+MW,Wind,Wind - Balance of Plant,0
+MX,Biofuels,Biofuels -Distribution and Blending ,0
+MX,Biofuels,Biofuels - Engineering (Value),0
+MX,Biofuels,Biofuels - Equipment Manufacturing,0
+MX,Biofuels,Biofuels - O&M (Value),0
+MX,Biofuels,Biofuels - Producers (Valeue),1
+MX,Biomass,Biomass & Waste - Engineering,1
+MX,Biomass,Biomass & Waste - Equipment Manufacturing,1
+MX,Biomass,Biomass & Waste - Feedstock Supply,1
+MX,Biomass,Biomass & Waste - O&M,1
+MX,Biomass,Biomass & Waste - Project Development,1
+MX,Geothermal,Geothermal - Balance of Plant,1
+MX,Geothermal,Geothermal - Engineering,1
+MX,Geothermal,Geothermal - O&M,1
+MX,Geothermal,Geothermal - Project Development,1
+MX,Geothermal,Geothermal - Resource Development,1
+MX,Geothermal,Geothermal - Turbines,1
+MX,Small Hydro,Small Hydro - Balance of Plant,1
+MX,Small Hydro,Small Hydro - Engineering ,1
+MX,Small Hydro,Small Hydro - O&M,1
+MX,Small Hydro,Small Hydro - Project Development,1
+MX,Small Hydro,Small Hydro - Turbines,1
+MX,Solar,Solar - Balance of Plan,1
+MX,Solar,Solar - Cells,0
+MX,Solar,Solar - Engineering,1
+MX,Solar,Solar - Inverters,1
+MX,Solar,Solar - Modules,1
+MX,Solar,Solar - O&M,0
+MX,Solar,Solar - Polysilicon/ingots,0
+MX,Solar,Solar - Project Development,1
+MX,Solar,Solar - Wafers,0
+MX,Wind,Wind - Project Development,1
+MX,Wind,Wind - Engineering,1
+MX,Wind,Wind - O&M ,1
+MX,Wind,Wind - Turbines,1
+MX,Wind,Wind - Blades,0
+MX,Wind,Wind - Gearboxes ,0
+MX,Wind,Wind - Towers ,1
+MX,Wind,Wind - Balance of Plant,0
+MZ,Biofuels,Biofuels -Distribution and Blending ,1
+MZ,Biofuels,Biofuels - Engineering (Value),0
+MZ,Biofuels,Biofuels - Equipment Manufacturing,0
+MZ,Biofuels,Biofuels - O&M (Value),1
+MZ,Biofuels,Biofuels - Producers (Valeue),1
+MZ,Biomass,Biomass & Waste - Engineering,0
+MZ,Biomass,Biomass & Waste - Equipment Manufacturing,0
+MZ,Biomass,Biomass & Waste - Feedstock Supply,0
+MZ,Biomass,Biomass & Waste - O&M,0
+MZ,Biomass,Biomass & Waste - Project Development,0
+MZ,Geothermal,Geothermal - Balance of Plant,0
+MZ,Geothermal,Geothermal - Engineering,0
+MZ,Geothermal,Geothermal - O&M,0
+MZ,Geothermal,Geothermal - Project Development,0
+MZ,Geothermal,Geothermal - Resource Development,0
+MZ,Geothermal,Geothermal - Turbines,0
+MZ,Small Hydro,Small Hydro - Balance of Plant,1
+MZ,Small Hydro,Small Hydro - Engineering ,0
+MZ,Small Hydro,Small Hydro - O&M,1
+MZ,Small Hydro,Small Hydro - Project Development,1
+MZ,Small Hydro,Small Hydro - Turbines,0
+MZ,Solar,Solar - Balance of Plan,0
+MZ,Solar,Solar - Cells,0
+MZ,Solar,Solar - Engineering,0
+MZ,Solar,Solar - Inverters,0
+MZ,Solar,Solar - Modules,1
+MZ,Solar,Solar - O&M,0
+MZ,Solar,Solar - Polysilicon/ingots,0
+MZ,Solar,Solar - Project Development,0
+MZ,Solar,Solar - Wafers,0
+MZ,Wind,Wind - Project Development,0
+MZ,Wind,Wind - Engineering,0
+MZ,Wind,Wind - O&M ,0
+MZ,Wind,Wind - Turbines,0
+MZ,Wind,Wind - Blades,0
+MZ,Wind,Wind - Gearboxes ,0
+MZ,Wind,Wind - Towers ,0
+MZ,Wind,Wind - Balance of Plant,0
+MM,Biofuels,Biofuels -Distribution and Blending ,0
+MM,Biofuels,Biofuels - Engineering (Value),1
+MM,Biofuels,Biofuels - Equipment Manufacturing,0
+MM,Biofuels,Biofuels - O&M (Value),0
+MM,Biofuels,Biofuels - Producers (Valeue),1
+MM,Biomass,Biomass & Waste - Engineering,0
+MM,Biomass,Biomass & Waste - Equipment Manufacturing,0
+MM,Biomass,Biomass & Waste - Feedstock Supply,0
+MM,Biomass,Biomass & Waste - O&M,0
+MM,Biomass,Biomass & Waste - Project Development,0
+MM,Geothermal,Geothermal - Balance of Plant,0
+MM,Geothermal,Geothermal - Engineering,0
+MM,Geothermal,Geothermal - O&M,0
+MM,Geothermal,Geothermal - Project Development,0
+MM,Geothermal,Geothermal - Resource Development,0
+MM,Geothermal,Geothermal - Turbines,0
+MM,Small Hydro,Small Hydro - Balance of Plant,0
+MM,Small Hydro,Small Hydro - Engineering ,1
+MM,Small Hydro,Small Hydro - O&M,1
+MM,Small Hydro,Small Hydro - Project Development,1
+MM,Small Hydro,Small Hydro - Turbines,0
+MM,Solar,Solar - Balance of Plan,0
+MM,Solar,Solar - Cells,0
+MM,Solar,Solar - Engineering,1
+MM,Solar,Solar - Inverters,1
+MM,Solar,Solar - Modules,0
+MM,Solar,Solar - O&M,1
+MM,Solar,Solar - Polysilicon/ingots,0
+MM,Solar,Solar - Project Development,0
+MM,Solar,Solar - Wafers,0
+MM,Wind,Wind - Project Development,1
+MM,Wind,Wind - Engineering,1
+MM,Wind,Wind - O&M ,1
+MM,Wind,Wind - Turbines,0
+MM,Wind,Wind - Blades,0
+MM,Wind,Wind - Gearboxes ,0
+MM,Wind,Wind - Towers ,0
+MM,Wind,Wind - Balance of Plant,0
+NP,Biofuels,Biofuels -Distribution and Blending ,0
+NP,Biofuels,Biofuels - Engineering (Value),0
+NP,Biofuels,Biofuels - Equipment Manufacturing,0
+NP,Biofuels,Biofuels - O&M (Value),0
+NP,Biofuels,Biofuels - Producers (Valeue),1
+NP,Biomass,Biomass & Waste - Engineering,0
+NP,Biomass,Biomass & Waste - Equipment Manufacturing,0
+NP,Biomass,Biomass & Waste - Feedstock Supply,0
+NP,Biomass,Biomass & Waste - O&M,0
+NP,Biomass,Biomass & Waste - Project Development,0
+NP,Geothermal,Geothermal - Balance of Plant,0
+NP,Geothermal,Geothermal - Engineering,0
+NP,Geothermal,Geothermal - O&M,0
+NP,Geothermal,Geothermal - Project Development,0
+NP,Geothermal,Geothermal - Resource Development,0
+NP,Geothermal,Geothermal - Turbines,0
+NP,Small Hydro,Small Hydro - Balance of Plant,1
+NP,Small Hydro,Small Hydro - Engineering ,1
+NP,Small Hydro,Small Hydro - O&M,1
+NP,Small Hydro,Small Hydro - Project Development,1
+NP,Small Hydro,Small Hydro - Turbines,0
+NP,Solar,Solar - Balance of Plan,0
+NP,Solar,Solar - Cells,0
+NP,Solar,Solar - Engineering,0
+NP,Solar,Solar - Inverters,0
+NP,Solar,Solar - Modules,0
+NP,Solar,Solar - O&M,0
+NP,Solar,Solar - Polysilicon/ingots,0
+NP,Solar,Solar - Project Development,0
+NP,Solar,Solar - Wafers,0
+NP,Wind,Wind - Project Development,0
+NP,Wind,Wind - Engineering,0
+NP,Wind,Wind - O&M ,0
+NP,Wind,Wind - Turbines,0
+NP,Wind,Wind - Blades,0
+NP,Wind,Wind - Gearboxes ,0
+NP,Wind,Wind - Towers ,0
+NP,Wind,Wind - Balance of Plant,0
+NI,Biofuels,Biofuels -Distribution and Blending ,0
+NI,Biofuels,Biofuels - Engineering (Value),0
+NI,Biofuels,Biofuels - Equipment Manufacturing,0
+NI,Biofuels,Biofuels - O&M (Value),0
+NI,Biofuels,Biofuels - Producers (Valeue),1
+NI,Biomass,Biomass & Waste - Engineering,0
+NI,Biomass,Biomass & Waste - Equipment Manufacturing,0
+NI,Biomass,Biomass & Waste - Feedstock Supply,0
+NI,Biomass,Biomass & Waste - O&M,0
+NI,Biomass,Biomass & Waste - Project Development,1
+NI,Geothermal,Geothermal - Balance of Plant,0
+NI,Geothermal,Geothermal - Engineering,0
+NI,Geothermal,Geothermal - O&M,0
+NI,Geothermal,Geothermal - Project Development,1
+NI,Geothermal,Geothermal - Resource Development,0
+NI,Geothermal,Geothermal - Turbines,0
+NI,Small Hydro,Small Hydro - Balance of Plant,0
+NI,Small Hydro,Small Hydro - Engineering ,1
+NI,Small Hydro,Small Hydro - O&M,1
+NI,Small Hydro,Small Hydro - Project Development,1
+NI,Small Hydro,Small Hydro - Turbines,0
+NI,Solar,Solar - Balance of Plan,0
+NI,Solar,Solar - Cells,0
+NI,Solar,Solar - Engineering,0
+NI,Solar,Solar - Inverters,0
+NI,Solar,Solar - Modules,0
+NI,Solar,Solar - O&M,1
+NI,Solar,Solar - Polysilicon/ingots,0
+NI,Solar,Solar - Project Development,1
+NI,Solar,Solar - Wafers,0
+NI,Wind,Wind - Project Development,1
+NI,Wind,Wind - Engineering,1
+NI,Wind,Wind - O&M ,1
+NI,Wind,Wind - Turbines,0
+NI,Wind,Wind - Blades,0
+NI,Wind,Wind - Gearboxes ,0
+NI,Wind,Wind - Towers ,0
+NI,Wind,Wind - Balance of Plant,0
+NG,Biofuels,Biofuels -Distribution and Blending ,1
+NG,Biofuels,Biofuels - Engineering (Value),1
+NG,Biofuels,Biofuels - Equipment Manufacturing,0
+NG,Biofuels,Biofuels - O&M (Value),0
+NG,Biofuels,Biofuels - Producers (Valeue),1
+NG,Biomass,Biomass & Waste - Engineering,0
+NG,Biomass,Biomass & Waste - Equipment Manufacturing,0
+NG,Biomass,Biomass & Waste - Feedstock Supply,1
+NG,Biomass,Biomass & Waste - O&M,0
+NG,Biomass,Biomass & Waste - Project Development,1
+NG,Geothermal,Geothermal - Balance of Plant,0
+NG,Geothermal,Geothermal - Engineering,0
+NG,Geothermal,Geothermal - O&M,0
+NG,Geothermal,Geothermal - Project Development,0
+NG,Geothermal,Geothermal - Resource Development,0
+NG,Geothermal,Geothermal - Turbines,0
+NG,Small Hydro,Small Hydro - Balance of Plant,1
+NG,Small Hydro,Small Hydro - Engineering ,1
+NG,Small Hydro,Small Hydro - O&M,1
+NG,Small Hydro,Small Hydro - Project Development,1
+NG,Small Hydro,Small Hydro - Turbines,1
+NG,Solar,Solar - Balance of Plan,1
+NG,Solar,Solar - Cells,0
+NG,Solar,Solar - Engineering,1
+NG,Solar,Solar - Inverters,1
+NG,Solar,Solar - Modules,1
+NG,Solar,Solar - O&M,1
+NG,Solar,Solar - Polysilicon/ingots,0
+NG,Solar,Solar - Project Development,1
+NG,Solar,Solar - Wafers,0
+NG,Wind,Wind - Project Development,1
+NG,Wind,Wind - Engineering,1
+NG,Wind,Wind - O&M ,0
+NG,Wind,Wind - Turbines,0
+NG,Wind,Wind - Blades,0
+NG,Wind,Wind - Gearboxes ,0
+NG,Wind,Wind - Towers ,0
+NG,Wind,Wind - Balance of Plant,0
+PK,Biofuels,Biofuels -Distribution and Blending ,1
+PK,Biofuels,Biofuels - Engineering (Value),1
+PK,Biofuels,Biofuels - Equipment Manufacturing,0
+PK,Biofuels,Biofuels - O&M (Value),1
+PK,Biofuels,Biofuels - Producers (Valeue),1
+PK,Biomass,Biomass & Waste - Engineering,1
+PK,Biomass,Biomass & Waste - Equipment Manufacturing,0
+PK,Biomass,Biomass & Waste - Feedstock Supply,1
+PK,Biomass,Biomass & Waste - O&M,1
+PK,Biomass,Biomass & Waste - Project Development,1
+PK,Geothermal,Geothermal - Balance of Plant,0
+PK,Geothermal,Geothermal - Engineering,0
+PK,Geothermal,Geothermal - O&M,0
+PK,Geothermal,Geothermal - Project Development,0
+PK,Geothermal,Geothermal - Resource Development,0
+PK,Geothermal,Geothermal - Turbines,0
+PK,Small Hydro,Small Hydro - Balance of Plant,0
+PK,Small Hydro,Small Hydro - Engineering ,1
+PK,Small Hydro,Small Hydro - O&M,1
+PK,Small Hydro,Small Hydro - Project Development,1
+PK,Small Hydro,Small Hydro - Turbines,0
+PK,Solar,Solar - Balance of Plan,0
+PK,Solar,Solar - Cells,0
+PK,Solar,Solar - Engineering,1
+PK,Solar,Solar - Inverters,0
+PK,Solar,Solar - Modules,1
+PK,Solar,Solar - O&M,1
+PK,Solar,Solar - Polysilicon/ingots,0
+PK,Solar,Solar - Project Development,1
+PK,Solar,Solar - Wafers,0
+PK,Wind,Wind - Project Development,1
+PK,Wind,Wind - Engineering,1
+PK,Wind,Wind - O&M ,1
+PK,Wind,Wind - Turbines,0
+PK,Wind,Wind - Blades,0
+PK,Wind,Wind - Gearboxes ,0
+PK,Wind,Wind - Towers ,0
+PK,Wind,Wind - Balance of Plant,0
+PA,Biofuels,Biofuels -Distribution and Blending ,0
+PA,Biofuels,Biofuels - Engineering (Value),0
+PA,Biofuels,Biofuels - Equipment Manufacturing,0
+PA,Biofuels,Biofuels - O&M (Value),0
+PA,Biofuels,Biofuels - Producers (Valeue),0
+PA,Biomass,Biomass & Waste - Engineering,0
+PA,Biomass,Biomass & Waste - Equipment Manufacturing,0
+PA,Biomass,Biomass & Waste - Feedstock Supply,0
+PA,Biomass,Biomass & Waste - O&M,0
+PA,Biomass,Biomass & Waste - Project Development,1
+PA,Geothermal,Geothermal - Balance of Plant,0
+PA,Geothermal,Geothermal - Engineering,0
+PA,Geothermal,Geothermal - O&M,0
+PA,Geothermal,Geothermal - Project Development,0
+PA,Geothermal,Geothermal - Resource Development,0
+PA,Geothermal,Geothermal - Turbines,0
+PA,Small Hydro,Small Hydro - Balance of Plant,0
+PA,Small Hydro,Small Hydro - Engineering ,1
+PA,Small Hydro,Small Hydro - O&M,0
+PA,Small Hydro,Small Hydro - Project Development,1
+PA,Small Hydro,Small Hydro - Turbines,0
+PA,Solar,Solar - Balance of Plan,0
+PA,Solar,Solar - Cells,0
+PA,Solar,Solar - Engineering,0
+PA,Solar,Solar - Inverters,0
+PA,Solar,Solar - Modules,0
+PA,Solar,Solar - O&M,0
+PA,Solar,Solar - Polysilicon/ingots,0
+PA,Solar,Solar - Project Development,1
+PA,Solar,Solar - Wafers,0
+PA,Wind,Wind - Project Development,1
+PA,Wind,Wind - Engineering,1
+PA,Wind,Wind - O&M ,0
+PA,Wind,Wind - Turbines,0
+PA,Wind,Wind - Blades,0
+PA,Wind,Wind - Gearboxes ,0
+PA,Wind,Wind - Towers ,0
+PA,Wind,Wind - Balance of Plant,0
+PY,Biofuels,Biofuels -Distribution and Blending ,0
+PY,Biofuels,Biofuels - Engineering (Value),0
+PY,Biofuels,Biofuels - Equipment Manufacturing,1
+PY,Biofuels,Biofuels - O&M (Value),0
+PY,Biofuels,Biofuels - Producers (Valeue),1
+PY,Biomass,Biomass & Waste - Engineering,0
+PY,Biomass,Biomass & Waste - Equipment Manufacturing,0
+PY,Biomass,Biomass & Waste - Feedstock Supply,0
+PY,Biomass,Biomass & Waste - O&M,0
+PY,Biomass,Biomass & Waste - Project Development,0
+PY,Geothermal,Geothermal - Balance of Plant,0
+PY,Geothermal,Geothermal - Engineering,0
+PY,Geothermal,Geothermal - O&M,0
+PY,Geothermal,Geothermal - Project Development,0
+PY,Geothermal,Geothermal - Resource Development,0
+PY,Geothermal,Geothermal - Turbines,0
+PY,Small Hydro,Small Hydro - Balance of Plant,0
+PY,Small Hydro,Small Hydro - Engineering ,0
+PY,Small Hydro,Small Hydro - O&M,0
+PY,Small Hydro,Small Hydro - Project Development,0
+PY,Small Hydro,Small Hydro - Turbines,0
+PY,Solar,Solar - Balance of Plan,0
+PY,Solar,Solar - Cells,0
+PY,Solar,Solar - Engineering,0
+PY,Solar,Solar - Inverters,0
+PY,Solar,Solar - Modules,0
+PY,Solar,Solar - O&M,0
+PY,Solar,Solar - Polysilicon/ingots,0
+PY,Solar,Solar - Project Development,1
+PY,Solar,Solar - Wafers,0
+PY,Wind,Wind - Project Development,0
+PY,Wind,Wind - Engineering,0
+PY,Wind,Wind - O&M ,0
+PY,Wind,Wind - Turbines,0
+PY,Wind,Wind - Blades,0
+PY,Wind,Wind - Gearboxes ,0
+PY,Wind,Wind - Towers ,0
+PY,Wind,Wind - Balance of Plant,0
+PE,Biofuels,Biofuels -Distribution and Blending ,0
+PE,Biofuels,Biofuels - Engineering (Value),1
+PE,Biofuels,Biofuels - Equipment Manufacturing,0
+PE,Biofuels,Biofuels - O&M (Value),0
+PE,Biofuels,Biofuels - Producers (Valeue),1
+PE,Biomass,Biomass & Waste - Engineering,1
+PE,Biomass,Biomass & Waste - Equipment Manufacturing,0
+PE,Biomass,Biomass & Waste - Feedstock Supply,1
+PE,Biomass,Biomass & Waste - O&M,0
+PE,Biomass,Biomass & Waste - Project Development,1
+PE,Geothermal,Geothermal - Balance of Plant,0
+PE,Geothermal,Geothermal - Engineering,0
+PE,Geothermal,Geothermal - O&M,0
+PE,Geothermal,Geothermal - Project Development,1
+PE,Geothermal,Geothermal - Resource Development,1
+PE,Geothermal,Geothermal - Turbines,0
+PE,Small Hydro,Small Hydro - Balance of Plant,1
+PE,Small Hydro,Small Hydro - Engineering ,1
+PE,Small Hydro,Small Hydro - O&M,1
+PE,Small Hydro,Small Hydro - Project Development,1
+PE,Small Hydro,Small Hydro - Turbines,0
+PE,Solar,Solar - Balance of Plan,0
+PE,Solar,Solar - Cells,0
+PE,Solar,Solar - Engineering,1
+PE,Solar,Solar - Inverters,0
+PE,Solar,Solar - Modules,0
+PE,Solar,Solar - O&M,0
+PE,Solar,Solar - Polysilicon/ingots,0
+PE,Solar,Solar - Project Development,1
+PE,Solar,Solar - Wafers,0
+PE,Wind,Wind - Project Development,1
+PE,Wind,Wind - Engineering,1
+PE,Wind,Wind - O&M ,0
+PE,Wind,Wind - Turbines,0
+PE,Wind,Wind - Blades,0
+PE,Wind,Wind - Gearboxes ,0
+PE,Wind,Wind - Towers ,0
+PE,Wind,Wind - Balance of Plant,0
+RW,Biofuels,Biofuels -Distribution and Blending ,1
+RW,Biofuels,Biofuels - Engineering (Value),0
+RW,Biofuels,Biofuels - Equipment Manufacturing,0
+RW,Biofuels,Biofuels - O&M (Value),0
+RW,Biofuels,Biofuels - Producers (Valeue),1
+RW,Biomass,Biomass & Waste - Engineering,1
+RW,Biomass,Biomass & Waste - Equipment Manufacturing,0
+RW,Biomass,Biomass & Waste - Feedstock Supply,1
+RW,Biomass,Biomass & Waste - O&M,0
+RW,Biomass,Biomass & Waste - Project Development,1
+RW,Geothermal,Geothermal - Balance of Plant,0
+RW,Geothermal,Geothermal - Engineering,0
+RW,Geothermal,Geothermal - O&M,0
+RW,Geothermal,Geothermal - Project Development,1
+RW,Geothermal,Geothermal - Resource Development,0
+RW,Geothermal,Geothermal - Turbines,0
+RW,Small Hydro,Small Hydro - Balance of Plant,0
+RW,Small Hydro,Small Hydro - Engineering ,1
+RW,Small Hydro,Small Hydro - O&M,0
+RW,Small Hydro,Small Hydro - Project Development,1
+RW,Small Hydro,Small Hydro - Turbines,0
+RW,Solar,Solar - Balance of Plan,1
+RW,Solar,Solar - Cells,0
+RW,Solar,Solar - Engineering,1
+RW,Solar,Solar - Inverters,0
+RW,Solar,Solar - Modules,0
+RW,Solar,Solar - O&M,1
+RW,Solar,Solar - Polysilicon/ingots,0
+RW,Solar,Solar - Project Development,1
+RW,Solar,Solar - Wafers,0
+RW,Wind,Wind - Project Development,0
+RW,Wind,Wind - Engineering,0
+RW,Wind,Wind - O&M ,0
+RW,Wind,Wind - Turbines,0
+RW,Wind,Wind - Blades,0
+RW,Wind,Wind - Gearboxes ,0
+RW,Wind,Wind - Towers ,0
+RW,Wind,Wind - Balance of Plant,0
+SN,Biofuels,Biofuels -Distribution and Blending ,1
+SN,Biofuels,Biofuels - Engineering (Value),0
+SN,Biofuels,Biofuels - Equipment Manufacturing,0
+SN,Biofuels,Biofuels - O&M (Value),0
+SN,Biofuels,Biofuels - Producers (Valeue),1
+SN,Biomass,Biomass & Waste - Engineering,1
+SN,Biomass,Biomass & Waste - Equipment Manufacturing,0
+SN,Biomass,Biomass & Waste - Feedstock Supply,1
+SN,Biomass,Biomass & Waste - O&M,1
+SN,Biomass,Biomass & Waste - Project Development,1
+SN,Geothermal,Geothermal - Balance of Plant,0
+SN,Geothermal,Geothermal - Engineering,0
+SN,Geothermal,Geothermal - O&M,0
+SN,Geothermal,Geothermal - Project Development,0
+SN,Geothermal,Geothermal - Resource Development,0
+SN,Geothermal,Geothermal - Turbines,0
+SN,Small Hydro,Small Hydro - Balance of Plant,0
+SN,Small Hydro,Small Hydro - Engineering ,0
+SN,Small Hydro,Small Hydro - O&M,0
+SN,Small Hydro,Small Hydro - Project Development,0
+SN,Small Hydro,Small Hydro - Turbines,0
+SN,Solar,Solar - Balance of Plan,0
+SN,Solar,Solar - Cells,0
+SN,Solar,Solar - Engineering,0
+SN,Solar,Solar - Inverters,0
+SN,Solar,Solar - Modules,0
+SN,Solar,Solar - O&M,1
+SN,Solar,Solar - Polysilicon/ingots,0
+SN,Solar,Solar - Project Development,1
+SN,Solar,Solar - Wafers,0
+SN,Wind,Wind - Project Development,1
+SN,Wind,Wind - Engineering,0
+SN,Wind,Wind - O&M ,0
+SN,Wind,Wind - Turbines,0
+SN,Wind,Wind - Blades,0
+SN,Wind,Wind - Gearboxes ,0
+SN,Wind,Wind - Towers ,0
+SN,Wind,Wind - Balance of Plant,0
+SL,Biofuels,Biofuels -Distribution and Blending ,1
+SL,Biofuels,Biofuels - Engineering (Value),0
+SL,Biofuels,Biofuels - Equipment Manufacturing,0
+SL,Biofuels,Biofuels - O&M (Value),0
+SL,Biofuels,Biofuels - Producers (Valeue),1
+SL,Biomass,Biomass & Waste - Engineering,1
+SL,Biomass,Biomass & Waste - Equipment Manufacturing,0
+SL,Biomass,Biomass & Waste - Feedstock Supply,1
+SL,Biomass,Biomass & Waste - O&M,0
+SL,Biomass,Biomass & Waste - Project Development,1
+SL,Geothermal,Geothermal - Balance of Plant,0
+SL,Geothermal,Geothermal - Engineering,0
+SL,Geothermal,Geothermal - O&M,0
+SL,Geothermal,Geothermal - Project Development,0
+SL,Geothermal,Geothermal - Resource Development,0
+SL,Geothermal,Geothermal - Turbines,0
+SL,Small Hydro,Small Hydro - Balance of Plant,0
+SL,Small Hydro,Small Hydro - Engineering ,0
+SL,Small Hydro,Small Hydro - O&M,1
+SL,Small Hydro,Small Hydro - Project Development,1
+SL,Small Hydro,Small Hydro - Turbines,0
+SL,Solar,Solar - Balance of Plan,0
+SL,Solar,Solar - Cells,0
+SL,Solar,Solar - Engineering,0
+SL,Solar,Solar - Inverters,0
+SL,Solar,Solar - Modules,0
+SL,Solar,Solar - O&M,0
+SL,Solar,Solar - Polysilicon/ingots,0
+SL,Solar,Solar - Project Development,0
+SL,Solar,Solar - Wafers,0
+SL,Wind,Wind - Project Development,0
+SL,Wind,Wind - Engineering,0
+SL,Wind,Wind - O&M ,0
+SL,Wind,Wind - Turbines,0
+SL,Wind,Wind - Blades,0
+SL,Wind,Wind - Gearboxes ,0
+SL,Wind,Wind - Towers ,0
+SL,Wind,Wind - Balance of Plant,0
+ZA,Biofuels,Biofuels -Distribution and Blending ,1
+ZA,Biofuels,Biofuels - Engineering (Value),1
+ZA,Biofuels,Biofuels - Equipment Manufacturing,0
+ZA,Biofuels,Biofuels - O&M (Value),1
+ZA,Biofuels,Biofuels - Producers (Valeue),1
+ZA,Biomass,Biomass & Waste - Engineering,1
+ZA,Biomass,Biomass & Waste - Equipment Manufacturing,1
+ZA,Biomass,Biomass & Waste - Feedstock Supply,1
+ZA,Biomass,Biomass & Waste - O&M,1
+ZA,Biomass,Biomass & Waste - Project Development,1
+ZA,Geothermal,Geothermal - Balance of Plant,0
+ZA,Geothermal,Geothermal - Engineering,0
+ZA,Geothermal,Geothermal - O&M,0
+ZA,Geothermal,Geothermal - Project Development,0
+ZA,Geothermal,Geothermal - Resource Development,0
+ZA,Geothermal,Geothermal - Turbines,0
+ZA,Small Hydro,Small Hydro - Balance of Plant,1
+ZA,Small Hydro,Small Hydro - Engineering ,1
+ZA,Small Hydro,Small Hydro - O&M,1
+ZA,Small Hydro,Small Hydro - Project Development,1
+ZA,Small Hydro,Small Hydro - Turbines,1
+ZA,Solar,Solar - Balance of Plan,1
+ZA,Solar,Solar - Cells,0
+ZA,Solar,Solar - Engineering,1
+ZA,Solar,Solar - Inverters,1
+ZA,Solar,Solar - Modules,1
+ZA,Solar,Solar - O&M,1
+ZA,Solar,Solar - Polysilicon/ingots,0
+ZA,Solar,Solar - Project Development,1
+ZA,Solar,Solar - Wafers,0
+ZA,Wind,Wind - Project Development,1
+ZA,Wind,Wind - Engineering,1
+ZA,Wind,Wind - O&M ,1
+ZA,Wind,Wind - Turbines,1
+ZA,Wind,Wind - Blades,1
+ZA,Wind,Wind - Gearboxes ,0
+ZA,Wind,Wind - Towers ,1
+ZA,Wind,Wind - Balance of Plant,1
+LK,Biofuels,Biofuels -Distribution and Blending ,0
+LK,Biofuels,Biofuels - Engineering (Value),0
+LK,Biofuels,Biofuels - Equipment Manufacturing,0
+LK,Biofuels,Biofuels - O&M (Value),0
+LK,Biofuels,Biofuels - Producers (Valeue),1
+LK,Biomass,Biomass & Waste - Engineering,1
+LK,Biomass,Biomass & Waste - Equipment Manufacturing,1
+LK,Biomass,Biomass & Waste - Feedstock Supply,1
+LK,Biomass,Biomass & Waste - O&M,1
+LK,Biomass,Biomass & Waste - Project Development,1
+LK,Geothermal,Geothermal - Balance of Plant,0
+LK,Geothermal,Geothermal - Engineering,0
+LK,Geothermal,Geothermal - O&M,0
+LK,Geothermal,Geothermal - Project Development,0
+LK,Geothermal,Geothermal - Resource Development,0
+LK,Geothermal,Geothermal - Turbines,0
+LK,Small Hydro,Small Hydro - Balance of Plant,1
+LK,Small Hydro,Small Hydro - Engineering ,1
+LK,Small Hydro,Small Hydro - O&M,1
+LK,Small Hydro,Small Hydro - Project Development,1
+LK,Small Hydro,Small Hydro - Turbines,1
+LK,Solar,Solar - Balance of Plan,0
+LK,Solar,Solar - Cells,0
+LK,Solar,Solar - Engineering,1
+LK,Solar,Solar - Inverters,0
+LK,Solar,Solar - Modules,0
+LK,Solar,Solar - O&M,1
+LK,Solar,Solar - Polysilicon/ingots,0
+LK,Solar,Solar - Project Development,1
+LK,Solar,Solar - Wafers,0
+LK,Wind,Wind - Project Development,1
+LK,Wind,Wind - Engineering,1
+LK,Wind,Wind - O&M ,1
+LK,Wind,Wind - Turbines,0
+LK,Wind,Wind - Blades,0
+LK,Wind,Wind - Gearboxes ,0
+LK,Wind,Wind - Towers ,0
+LK,Wind,Wind - Balance of Plant,1
+SR,Biofuels,Biofuels -Distribution and Blending ,0
+SR,Biofuels,Biofuels - Engineering (Value),0
+SR,Biofuels,Biofuels - Equipment Manufacturing,0
+SR,Biofuels,Biofuels - O&M (Value),0
+SR,Biofuels,Biofuels - Producers (Valeue),1
+SR,Biomass,Biomass & Waste - Engineering,0
+SR,Biomass,Biomass & Waste - Equipment Manufacturing,0
+SR,Biomass,Biomass & Waste - Feedstock Supply,0
+SR,Biomass,Biomass & Waste - O&M,0
+SR,Biomass,Biomass & Waste - Project Development,0
+SR,Geothermal,Geothermal - Balance of Plant,0
+SR,Geothermal,Geothermal - Engineering,0
+SR,Geothermal,Geothermal - O&M,0
+SR,Geothermal,Geothermal - Project Development,0
+SR,Geothermal,Geothermal - Resource Development,0
+SR,Geothermal,Geothermal - Turbines,0
+SR,Small Hydro,Small Hydro - Balance of Plant,0
+SR,Small Hydro,Small Hydro - Engineering ,0
+SR,Small Hydro,Small Hydro - O&M,1
+SR,Small Hydro,Small Hydro - Project Development,0
+SR,Small Hydro,Small Hydro - Turbines,0
+SR,Solar,Solar - Balance of Plan,0
+SR,Solar,Solar - Cells,0
+SR,Solar,Solar - Engineering,0
+SR,Solar,Solar - Inverters,0
+SR,Solar,Solar - Modules,0
+SR,Solar,Solar - O&M,0
+SR,Solar,Solar - Polysilicon/ingots,0
+SR,Solar,Solar - Project Development,1
+SR,Solar,Solar - Wafers,0
+SR,Wind,Wind - Project Development,0
+SR,Wind,Wind - Engineering,0
+SR,Wind,Wind - O&M ,0
+SR,Wind,Wind - Turbines,0
+SR,Wind,Wind - Blades,0
+SR,Wind,Wind - Gearboxes ,0
+SR,Wind,Wind - Towers ,0
+SR,Wind,Wind - Balance of Plant,0
+TJ,Biofuels,Biofuels -Distribution and Blending ,0
+TJ,Biofuels,Biofuels - Engineering (Value),0
+TJ,Biofuels,Biofuels - Equipment Manufacturing,0
+TJ,Biofuels,Biofuels - O&M (Value),0
+TJ,Biofuels,Biofuels - Producers (Valeue),0
+TJ,Biomass,Biomass & Waste - Engineering,0
+TJ,Biomass,Biomass & Waste - Equipment Manufacturing,0
+TJ,Biomass,Biomass & Waste - Feedstock Supply,0
+TJ,Biomass,Biomass & Waste - O&M,0
+TJ,Biomass,Biomass & Waste - Project Development,0
+TJ,Geothermal,Geothermal - Balance of Plant,0
+TJ,Geothermal,Geothermal - Engineering,0
+TJ,Geothermal,Geothermal - O&M,0
+TJ,Geothermal,Geothermal - Project Development,0
+TJ,Geothermal,Geothermal - Resource Development,0
+TJ,Geothermal,Geothermal - Turbines,0
+TJ,Small Hydro,Small Hydro - Balance of Plant,1
+TJ,Small Hydro,Small Hydro - Engineering ,1
+TJ,Small Hydro,Small Hydro - O&M,1
+TJ,Small Hydro,Small Hydro - Project Development,1
+TJ,Small Hydro,Small Hydro - Turbines,0
+TJ,Solar,Solar - Balance of Plan,0
+TJ,Solar,Solar - Cells,0
+TJ,Solar,Solar - Engineering,0
+TJ,Solar,Solar - Inverters,0
+TJ,Solar,Solar - Modules,0
+TJ,Solar,Solar - O&M,0
+TJ,Solar,Solar - Polysilicon/ingots,0
+TJ,Solar,Solar - Project Development,0
+TJ,Solar,Solar - Wafers,0
+TJ,Wind,Wind - Project Development,0
+TJ,Wind,Wind - Engineering,0
+TJ,Wind,Wind - O&M ,0
+TJ,Wind,Wind - Turbines,0
+TJ,Wind,Wind - Blades,0
+TJ,Wind,Wind - Gearboxes ,0
+TJ,Wind,Wind - Towers ,0
+TJ,Wind,Wind - Balance of Plant,0
+TZ,Biofuels,Biofuels -Distribution and Blending ,0
+TZ,Biofuels,Biofuels - Engineering (Value),0
+TZ,Biofuels,Biofuels - Equipment Manufacturing,0
+TZ,Biofuels,Biofuels - O&M (Value),0
+TZ,Biofuels,Biofuels - Producers (Valeue),0
+TZ,Biomass,Biomass & Waste - Engineering,0
+TZ,Biomass,Biomass & Waste - Equipment Manufacturing,0
+TZ,Biomass,Biomass & Waste - Feedstock Supply,1
+TZ,Biomass,Biomass & Waste - O&M,1
+TZ,Biomass,Biomass & Waste - Project Development,1
+TZ,Geothermal,Geothermal - Balance of Plant,0
+TZ,Geothermal,Geothermal - Engineering,0
+TZ,Geothermal,Geothermal - O&M,0
+TZ,Geothermal,Geothermal - Project Development,1
+TZ,Geothermal,Geothermal - Resource Development,1
+TZ,Geothermal,Geothermal - Turbines,0
+TZ,Small Hydro,Small Hydro - Balance of Plant,1
+TZ,Small Hydro,Small Hydro - Engineering ,1
+TZ,Small Hydro,Small Hydro - O&M,1
+TZ,Small Hydro,Small Hydro - Project Development,1
+TZ,Small Hydro,Small Hydro - Turbines,0
+TZ,Solar,Solar - Balance of Plan,1
+TZ,Solar,Solar - Cells,0
+TZ,Solar,Solar - Engineering,1
+TZ,Solar,Solar - Inverters,0
+TZ,Solar,Solar - Modules,0
+TZ,Solar,Solar - O&M,1
+TZ,Solar,Solar - Polysilicon/ingots,0
+TZ,Solar,Solar - Project Development,1
+TZ,Solar,Solar - Wafers,0
+TZ,Wind,Wind - Project Development,1
+TZ,Wind,Wind - Engineering,0
+TZ,Wind,Wind - O&M ,0
+TZ,Wind,Wind - Turbines,0
+TZ,Wind,Wind - Blades,0
+TZ,Wind,Wind - Gearboxes ,0
+TZ,Wind,Wind - Towers ,0
+TZ,Wind,Wind - Balance of Plant,0
+TT,Biofuels,Biofuels -Distribution and Blending ,0
+TT,Biofuels,Biofuels - Engineering (Value),1
+TT,Biofuels,Biofuels - Equipment Manufacturing,0
+TT,Biofuels,Biofuels - O&M (Value),0
+TT,Biofuels,Biofuels - Producers (Valeue),0
+TT,Biomass,Biomass & Waste - Engineering,0
+TT,Biomass,Biomass & Waste - Equipment Manufacturing,0
+TT,Biomass,Biomass & Waste - Feedstock Supply,0
+TT,Biomass,Biomass & Waste - O&M,0
+TT,Biomass,Biomass & Waste - Project Development,0
+TT,Geothermal,Geothermal - Balance of Plant,0
+TT,Geothermal,Geothermal - Engineering,0
+TT,Geothermal,Geothermal - O&M,0
+TT,Geothermal,Geothermal - Project Development,0
+TT,Geothermal,Geothermal - Resource Development,0
+TT,Geothermal,Geothermal - Turbines,0
+TT,Small Hydro,Small Hydro - Balance of Plant,0
+TT,Small Hydro,Small Hydro - Engineering ,0
+TT,Small Hydro,Small Hydro - O&M,0
+TT,Small Hydro,Small Hydro - Project Development,0
+TT,Small Hydro,Small Hydro - Turbines,0
+TT,Solar,Solar - Balance of Plan,0
+TT,Solar,Solar - Cells,0
+TT,Solar,Solar - Engineering,1
+TT,Solar,Solar - Inverters,0
+TT,Solar,Solar - Modules,0
+TT,Solar,Solar - O&M,0
+TT,Solar,Solar - Polysilicon/ingots,0
+TT,Solar,Solar - Project Development,1
+TT,Solar,Solar - Wafers,0
+TT,Wind,Wind - Project Development,0
+TT,Wind,Wind - Engineering,0
+TT,Wind,Wind - O&M ,0
+TT,Wind,Wind - Turbines,0
+TT,Wind,Wind - Blades,0
+TT,Wind,Wind - Gearboxes ,0
+TT,Wind,Wind - Towers ,0
+TT,Wind,Wind - Balance of Plant,0
+UG,Biofuels,Biofuels -Distribution and Blending ,0
+UG,Biofuels,Biofuels - Engineering (Value),0
+UG,Biofuels,Biofuels - Equipment Manufacturing,0
+UG,Biofuels,Biofuels - O&M (Value),0
+UG,Biofuels,Biofuels - Producers (Valeue),1
+UG,Biomass,Biomass & Waste - Engineering,1
+UG,Biomass,Biomass & Waste - Equipment Manufacturing,0
+UG,Biomass,Biomass & Waste - Feedstock Supply,1
+UG,Biomass,Biomass & Waste - O&M,0
+UG,Biomass,Biomass & Waste - Project Development,1
+UG,Geothermal,Geothermal - Balance of Plant,0
+UG,Geothermal,Geothermal - Engineering,1
+UG,Geothermal,Geothermal - O&M,0
+UG,Geothermal,Geothermal - Project Development,1
+UG,Geothermal,Geothermal - Resource Development,1
+UG,Geothermal,Geothermal - Turbines,0
+UG,Small Hydro,Small Hydro - Balance of Plant,0
+UG,Small Hydro,Small Hydro - Engineering ,1
+UG,Small Hydro,Small Hydro - O&M,1
+UG,Small Hydro,Small Hydro - Project Development,1
+UG,Small Hydro,Small Hydro - Turbines,0
+UG,Solar,Solar - Balance of Plan,0
+UG,Solar,Solar - Cells,0
+UG,Solar,Solar - Engineering,1
+UG,Solar,Solar - Inverters,0
+UG,Solar,Solar - Modules,0
+UG,Solar,Solar - O&M,1
+UG,Solar,Solar - Polysilicon/ingots,0
+UG,Solar,Solar - Project Development,1
+UG,Solar,Solar - Wafers,0
+UG,Wind,Wind - Project Development,0
+UG,Wind,Wind - Engineering,0
+UG,Wind,Wind - O&M ,0
+UG,Wind,Wind - Turbines,0
+UG,Wind,Wind - Blades,0
+UG,Wind,Wind - Gearboxes ,0
+UG,Wind,Wind - Towers ,0
+UG,Wind,Wind - Balance of Plant,0
+UY,Biofuels,Biofuels -Distribution and Blending ,1
+UY,Biofuels,Biofuels - Engineering (Value),0
+UY,Biofuels,Biofuels - Equipment Manufacturing,0
+UY,Biofuels,Biofuels - O&M (Value),0
+UY,Biofuels,Biofuels - Producers (Valeue),1
+UY,Biomass,Biomass & Waste - Engineering,0
+UY,Biomass,Biomass & Waste - Equipment Manufacturing,1
+UY,Biomass,Biomass & Waste - Feedstock Supply,1
+UY,Biomass,Biomass & Waste - O&M,0
+UY,Biomass,Biomass & Waste - Project Development,1
+UY,Geothermal,Geothermal - Balance of Plant,0
+UY,Geothermal,Geothermal - Engineering,0
+UY,Geothermal,Geothermal - O&M,0
+UY,Geothermal,Geothermal - Project Development,0
+UY,Geothermal,Geothermal - Resource Development,0
+UY,Geothermal,Geothermal - Turbines,0
+UY,Small Hydro,Small Hydro - Balance of Plant,0
+UY,Small Hydro,Small Hydro - Engineering ,1
+UY,Small Hydro,Small Hydro - O&M,0
+UY,Small Hydro,Small Hydro - Project Development,1
+UY,Small Hydro,Small Hydro - Turbines,0
+UY,Solar,Solar - Balance of Plan,0
+UY,Solar,Solar - Cells,0
+UY,Solar,Solar - Engineering,0
+UY,Solar,Solar - Inverters,0
+UY,Solar,Solar - Modules,0
+UY,Solar,Solar - O&M,0
+UY,Solar,Solar - Polysilicon/ingots,0
+UY,Solar,Solar - Project Development,1
+UY,Solar,Solar - Wafers,0
+UY,Wind,Wind - Project Development,1
+UY,Wind,Wind - Engineering,1
+UY,Wind,Wind - O&M ,1
+UY,Wind,Wind - Turbines,0
+UY,Wind,Wind - Blades,0
+UY,Wind,Wind - Gearboxes ,0
+UY,Wind,Wind - Towers ,0
+UY,Wind,Wind - Balance of Plant,0
+VE,Biofuels,Biofuels -Distribution and Blending ,0
+VE,Biofuels,Biofuels - Engineering (Value),0
+VE,Biofuels,Biofuels - Equipment Manufacturing,0
+VE,Biofuels,Biofuels - O&M (Value),0
+VE,Biofuels,Biofuels - Producers (Valeue),1
+VE,Biomass,Biomass & Waste - Engineering,0
+VE,Biomass,Biomass & Waste - Equipment Manufacturing,0
+VE,Biomass,Biomass & Waste - Feedstock Supply,0
+VE,Biomass,Biomass & Waste - O&M,0
+VE,Biomass,Biomass & Waste - Project Development,0
+VE,Geothermal,Geothermal - Balance of Plant,0
+VE,Geothermal,Geothermal - Engineering,0
+VE,Geothermal,Geothermal - O&M,0
+VE,Geothermal,Geothermal - Project Development,0
+VE,Geothermal,Geothermal - Resource Development,0
+VE,Geothermal,Geothermal - Turbines,0
+VE,Small Hydro,Small Hydro - Balance of Plant,0
+VE,Small Hydro,Small Hydro - Engineering ,1
+VE,Small Hydro,Small Hydro - O&M,0
+VE,Small Hydro,Small Hydro - Project Development,1
+VE,Small Hydro,Small Hydro - Turbines,0
+VE,Solar,Solar - Balance of Plan,0
+VE,Solar,Solar - Cells,0
+VE,Solar,Solar - Engineering,1
+VE,Solar,Solar - Inverters,0
+VE,Solar,Solar - Modules,0
+VE,Solar,Solar - O&M,0
+VE,Solar,Solar - Polysilicon/ingots,0
+VE,Solar,Solar - Project Development,1
+VE,Solar,Solar - Wafers,0
+VE,Wind,Wind - Project Development,1
+VE,Wind,Wind - Engineering,1
+VE,Wind,Wind - O&M ,0
+VE,Wind,Wind - Turbines,0
+VE,Wind,Wind - Blades,0
+VE,Wind,Wind - Gearboxes ,0
+VE,Wind,Wind - Towers ,0
+VE,Wind,Wind - Balance of Plant,0
+VN,Biofuels,Biofuels -Distribution and Blending ,1
+VN,Biofuels,Biofuels - Engineering (Value),1
+VN,Biofuels,Biofuels - Equipment Manufacturing,0
+VN,Biofuels,Biofuels - O&M (Value),0
+VN,Biofuels,Biofuels - Producers (Valeue),1
+VN,Biomass,Biomass & Waste - Engineering,1
+VN,Biomass,Biomass & Waste - Equipment Manufacturing,0
+VN,Biomass,Biomass & Waste - Feedstock Supply,1
+VN,Biomass,Biomass & Waste - O&M,0
+VN,Biomass,Biomass & Waste - Project Development,1
+VN,Geothermal,Geothermal - Balance of Plant,0
+VN,Geothermal,Geothermal - Engineering,0
+VN,Geothermal,Geothermal - O&M,0
+VN,Geothermal,Geothermal - Project Development,0
+VN,Geothermal,Geothermal - Resource Development,0
+VN,Geothermal,Geothermal - Turbines,0
+VN,Small Hydro,Small Hydro - Balance of Plant,0
+VN,Small Hydro,Small Hydro - Engineering ,1
+VN,Small Hydro,Small Hydro - O&M,1
+VN,Small Hydro,Small Hydro - Project Development,1
+VN,Small Hydro,Small Hydro - Turbines,1
+VN,Solar,Solar - Balance of Plan,0
+VN,Solar,Solar - Cells,0
+VN,Solar,Solar - Engineering,1
+VN,Solar,Solar - Inverters,1
+VN,Solar,Solar - Modules,1
+VN,Solar,Solar - O&M,1
+VN,Solar,Solar - Polysilicon/ingots,0
+VN,Solar,Solar - Project Development,1
+VN,Solar,Solar - Wafers,0
+VN,Wind,Wind - Project Development,1
+VN,Wind,Wind - Engineering,1
+VN,Wind,Wind - O&M ,0
+VN,Wind,Wind - Turbines,1
+VN,Wind,Wind - Blades,0
+VN,Wind,Wind - Gearboxes ,0
+VN,Wind,Wind - Towers ,1
+VN,Wind,Wind - Balance of Plant,0
+ZM,Biofuels,Biofuels -Distribution and Blending ,0
+ZM,Biofuels,Biofuels - Engineering (Value),0
+ZM,Biofuels,Biofuels - Equipment Manufacturing,0
+ZM,Biofuels,Biofuels - O&M (Value),0
+ZM,Biofuels,Biofuels - Producers (Valeue),1
+ZM,Biomass,Biomass & Waste - Engineering,0
+ZM,Biomass,Biomass & Waste - Equipment Manufacturing,0
+ZM,Biomass,Biomass & Waste - Feedstock Supply,1
+ZM,Biomass,Biomass & Waste - O&M,0
+ZM,Biomass,Biomass & Waste - Project Development,1
+ZM,Geothermal,Geothermal - Balance of Plant,0
+ZM,Geothermal,Geothermal - Engineering,1
+ZM,Geothermal,Geothermal - O&M,0
+ZM,Geothermal,Geothermal - Project Development,1
+ZM,Geothermal,Geothermal - Resource Development,0
+ZM,Geothermal,Geothermal - Turbines,0
+ZM,Small Hydro,Small Hydro - Balance of Plant,1
+ZM,Small Hydro,Small Hydro - Engineering ,1
+ZM,Small Hydro,Small Hydro - O&M,1
+ZM,Small Hydro,Small Hydro - Project Development,1
+ZM,Small Hydro,Small Hydro - Turbines,0
+ZM,Solar,Solar - Balance of Plan,0
+ZM,Solar,Solar - Cells,0
+ZM,Solar,Solar - Engineering,0
+ZM,Solar,Solar - Inverters,0
+ZM,Solar,Solar - Modules,0
+ZM,Solar,Solar - O&M,0
+ZM,Solar,Solar - Polysilicon/ingots,0
+ZM,Solar,Solar - Project Development,0
+ZM,Solar,Solar - Wafers,0
+ZM,Wind,Wind - Project Development,0
+ZM,Wind,Wind - Engineering,0
+ZM,Wind,Wind - O&M ,0
+ZM,Wind,Wind - Turbines,0
+ZM,Wind,Wind - Blades,0
+ZM,Wind,Wind - Gearboxes ,0
+ZM,Wind,Wind - Towers ,0
+ZM,Wind,Wind - Balance of Plant,0
+ZW,Biofuels,Biofuels -Distribution and Blending ,1
+ZW,Biofuels,Biofuels - Engineering (Value),0
+ZW,Biofuels,Biofuels - Equipment Manufacturing,0
+ZW,Biofuels,Biofuels - O&M (Value),0
+ZW,Biofuels,Biofuels - Producers (Valeue),1
+ZW,Biomass,Biomass & Waste - Engineering,0
+ZW,Biomass,Biomass & Waste - Equipment Manufacturing,0
+ZW,Biomass,Biomass & Waste - Feedstock Supply,1
+ZW,Biomass,Biomass & Waste - O&M,0
+ZW,Biomass,Biomass & Waste - Project Development,1
+ZW,Geothermal,Geothermal - Balance of Plant,0
+ZW,Geothermal,Geothermal - Engineering,0
+ZW,Geothermal,Geothermal - O&M,0
+ZW,Geothermal,Geothermal - Project Development,0
+ZW,Geothermal,Geothermal - Resource Development,0
+ZW,Geothermal,Geothermal - Turbines,0
+ZW,Small Hydro,Small Hydro - Balance of Plant,0
+ZW,Small Hydro,Small Hydro - Engineering ,1
+ZW,Small Hydro,Small Hydro - O&M,1
+ZW,Small Hydro,Small Hydro - Project Development,1
+ZW,Small Hydro,Small Hydro - Turbines,0
+ZW,Solar,Solar - Balance of Plan,0
+ZW,Solar,Solar - Cells,0
+ZW,Solar,Solar - Engineering,0
+ZW,Solar,Solar - Inverters,0
+ZW,Solar,Solar - Modules,0
+ZW,Solar,Solar - O&M,0
+ZW,Solar,Solar - Polysilicon/ingots,0
+ZW,Solar,Solar - Project Development,1
+ZW,Solar,Solar - Wafers,0
+ZW,Wind,Wind - Project Development,0
+ZW,Wind,Wind - Engineering,0
+ZW,Wind,Wind - O&M ,0
+ZW,Wind,Wind - Turbines,0
+ZW,Wind,Wind - Blades,0
+ZW,Wind,Wind - Gearboxes ,0
+ZW,Wind,Wind - Towers ,0
+ZW,Wind,Wind - Balance of Plant,0
