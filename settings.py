@@ -49,6 +49,194 @@ yrs = [2006,2007,2008,2009,2010,2011,2012,2013,2014]
 # The indicators for the auxiliary data
 charts = [
   {
+    "id": 102,
+    "function": cs_auxiliary.default_chart,
+    "export": 'power-sector-1',
+    "title": {
+      "en": 'Power sector structure',
+      "es": 'Estructura del sector energético'
+    },
+    "labelx": {
+      "en": ['No', 'Somewhat', 'Yes'],
+      "es": ['No', 'Algo', 'Si']
+    },
+    "labely": {
+      "en": '',
+      "es": ''
+    },
+    "series": [
+      {
+        "id": 'q1',
+        "source-id": 'q1',
+        "level": "country",
+        "name": {
+          "en": 'The power sector has been unbundled (whether privatized or not) into distinct actors for generation, transmission, distribution and retail',
+          "es": 'The power sector has been unbundled (whether privatized or not) into distinct actors for generation, transmission, distribution and retail',
+        }
+      },
+      {
+        "id": 'q2',
+        "source-id": 'q2',
+        "level": "country",
+        "name": {
+          "en": 'There are legally separate private companies at each segment of the power system pre-retail ',
+          "es": 'There are legally separate private companies at each segment of the power system pre-retail ',
+        }
+      },
+      {
+        "id": 'q3',
+        "source-id": 'q3',
+        "level": "country",
+        "name": {
+          "en": 'There is an independent transmission system that dispatches according to market dynamics and is not susceptible to state interference',
+          "es": 'There is an independent transmission system that dispatches according to market dynamics and is not susceptible to state interference',
+        }
+      },
+      {
+        "id": 'q4',
+        "source-id": 'q4',
+        "level": "country",
+        "name": {
+          "en": 'Retail electricity prices aren\'t distorted by subsidies ',
+          "es": 'Retail electricity prices aren\'t distorted by subsidies ',
+        }
+      },
+      {
+        "id": 'q5',
+        "source-id": 'q5',
+        "level": "country",
+        "name": {
+          "en": 'There aren\'t significant barriers to private sector participation in generation',
+          "es": 'There aren\'t significant barriers to private sector participation in generation',
+        }
+      },
+      {
+        "id": 'q6',
+        "source-id": 'q6',
+        "level": "country",
+        "name": {
+          "en": 'Consumers can choose retail suppliers or third-party power marketers in the retail power market',
+          "es": 'Consumers can choose retail suppliers or third-party power marketers in the retail power market',
+        }
+      },
+      {
+        "id": 'q7',
+        "source-id": 'q7',
+        "level": "country",
+        "name": {
+          "en": 'There is a functioning competitive wholesale generation market',
+          "es": 'There is a functioning competitive wholesale generation market',
+        }
+      },
+      {
+        "id": 'q8',
+        "source-id": 'q8',
+        "level": "country",
+        "name": {
+          "en": 'The generation market has many different actors and is not concentrated in the hands of a few players',
+          "es": 'The generation market has many different actors and is not concentrated in the hands of a few players',
+        }
+      },
+      {
+        "id": 'q9',
+        "source-id": 'q9',
+        "level": "country",
+        "name": {
+          "en": 'The supply market has many different actors and is not concentrated in the hands of a few players',
+          "es": 'The supply market has many different actors and is not concentrated in the hands of a few players',
+        }
+      }
+    ],
+    "years": [2014]
+  },
+  {
+    "id": 102,
+    "function": cs_auxiliary.default_chart,
+    "export": 'power-sector-2',
+    "title": {
+      "en": 'Power sector structure',
+      "es": 'Estructura del sector energético'
+    },
+    "labelx": {
+      "en": ['Low', 'Regular', 'High', 'Very high'],
+      "es": ['Low', 'Regular', 'High', 'Very high']
+    },
+    "labely": {
+      "en": '',
+      "es": ''
+    },
+    "series": [
+      {
+        "id": 'q10',
+        "source-id": 'q10',
+        "level": "country",
+        "name": {
+          "en": 'Power outages - frequency',
+          "es": 'Power outages - frequency',
+        }
+      }
+    ],
+    "years": [2014]
+  },
+  {
+    "id": 102,
+    "function": cs_auxiliary.default_chart,
+    "export": 'power-sector-3',
+    "title": {
+      "en": 'Power sector structure',
+      "es": 'Estructura del sector energético'
+    },
+    "labelx": {
+      "en": ['Short', 'Regular', 'Very regular', 'Long', 'Very long'],
+      "es": ['Short', 'Regular', 'Very regular', 'Long', 'Very long']
+    },
+    "labely": {
+      "en": '',
+      "es": ''
+    },
+    "series": [
+      {
+        "id": 'q11',
+        "source-id": 'q11',
+        "level": "country",
+        "name": {
+          "en": 'Power outages - duration',
+          "es": 'Power outages - duration',
+        }
+      }
+    ],
+    "years": [2014]
+  },
+  {
+    "id": 102,
+    "function": cs_auxiliary.default_chart,
+    "export": 'power-sector-4',
+    "title": {
+      "en": 'Power sector structure',
+      "es": 'Estructura del sector energético'
+    },
+    "labelx": {
+      "en": ['Very low risk', 'Low risk', 'Neutral', 'Risky', 'Very risky'],
+      "es": ['Very low risk', 'Low risk', 'Neutral', 'Risky', 'Very risky']
+    },
+    "labely": {
+      "en": '',
+      "es": ''
+    },
+    "series": [
+      {
+        "id": 'q12',
+        "source-id": 'q12',
+        "level": "country",
+        "name": {
+          "en": 'Power offtake risk for independent generators',
+          "es": 'Power offtake risk for independent generators',
+        }
+      }
+    ],
+    "years": [2014]
+  },
+  {
     "id": 107, # The source file contains an indication of the id
     "function": cs_auxiliary.default_chart,
     "export": 'installed-capacity', # Folder for the exported data
