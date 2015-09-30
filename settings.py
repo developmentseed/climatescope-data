@@ -89,6 +89,7 @@ charts = [
   {
     "id": 903,
     "function": cs_auxiliary.default_chart,
+    "global_average": True,
     "export": 'price-attractiveness-electricity',
     "title": {
       "en": 'Price attractiveness',
@@ -193,6 +194,7 @@ charts = [
     "id": 201,
     "function": cs_auxiliary.default_chart,
     "export": 'clean-energy-investments',
+    "global_average": True,
     "title": {
       "en": 'Clean energy investments',
       "es": 'Inversiones en energías limpias'
