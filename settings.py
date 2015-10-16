@@ -277,15 +277,7 @@ charts = [
           "en": 'Energy efficiency',
           "es": 'Eficiencia energética'
         }
-      },
-      {
-        "id": 'other',
-        "source-id": "Other",
-        "name": {
-          "en": 'Other',
-          "es": 'Otro'
-        }
-      },
+      }
     ],
     "years": [2014]
   },
