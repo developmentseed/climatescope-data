@@ -41,8 +41,6 @@ langs = ['en','es']
 # The current edition
 current_edition = 2015
 
-
-
 # Auxiliary data - Years we have want data for
 yrs = [2006,2007,2008,2009,2010,2011,2012,2013,2014]
 
@@ -57,8 +55,8 @@ charts = [
       "es": 'Estructura del sector energético'
     },
     "labelx": {
-      "en": ['No', 'Somewhat', 'Yes'],
-      "es": ['No', 'Algo', 'Si']
+      "en": ['Yes', 'Somewhat', 'No'],
+      "es": ['Si', 'Algo', 'No']
     },
     "labely": {
       "en": '',
@@ -306,7 +304,7 @@ charts = [
         "source-id": "Average retail electricity prices ($/MWh)",
         "level": "country",
         "name": {
-          "en": 'Retail',
+          "en": 'Retail Avg',
           "es": 'Al por menor'
         }
       },
