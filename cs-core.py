@@ -832,7 +832,7 @@ def main():
       country_list = []
       # Loop over the countries list for the region
       for country in c_region:
-        country_data = build_json_aa(country,df_full,lang)
+        country_data = build_json_aa(country,df_full,lang,historic=True)
         country_list.append(country_data)
 
       json_data['countries'] = country_list
