@@ -333,7 +333,10 @@ def build_json_aa(aa,df_data,lang,indicators=False,historic=False,single_p=None)
     for yr in years:
       # For each year, we're storing an object with year and the value
       yr_data = {}
-      yr_data['value'] = round(df_aa.loc[(0),(yr,'value')],5)
+      if np.isnan(df_aa.loc[(0),(yr,'value')]):
+        yr_data['value'] = None
+      else:
+        yr_data['value'] = round(df_aa.loc[(0),(yr,'value')],5)
       yr_data['year'] = int(yr)
 
       # Fetch the scores and update the yr_data dict with them
@@ -386,7 +389,10 @@ def build_json_aa(aa,df_data,lang,indicators=False,historic=False,single_p=None)
       for yr in years:
         # For each year, we're storing an object with year and the value
         yr_data = {}
-        yr_data['value'] = round(df_aa.loc[(float(param)),(yr,'value')],5)
+        if np.isnan(df_aa.loc[(float(param)),(yr,'value')]):
+          yr_data['value'] = None
+        else:
+          yr_data['value'] = round(df_aa.loc[(float(param)),(yr,'value')],5)
         yr_data['year'] = int(yr)
 
         # Fetch the rankings for the param and update the yr_dict with them
@@ -435,7 +441,10 @@ def build_json_aa(aa,df_data,lang,indicators=False,historic=False,single_p=None)
               for yr in years:
                 # For each year, we're storing an object with year and the value
                 yr_data = {}
-                yr_data['value'] = round(df_aa.ix[float(ind),(yr,'value')],5)
+                if np.isnan(df_aa.ix[float(ind),(yr,'value')]):
+                  yr_data['value'] = None
+                else:
+                  yr_data['value'] = round(df_aa.ix[float(ind),(yr,'value')],5)
                 yr_data['year'] = int(yr)
 
                 # Fetch the rankings for the indicator and update the yr_dict with them
@@ -641,7 +650,7 @@ def main():
       first_yr = False
     else:
       # Every subsequent year will have to be merged into df_full
-      df_full = pd.merge(df_full,df_yr,left_index=True,right_index=True)
+      df_full = pd.merge(df_full,df_yr,how='outer',left_index=True,right_index=True)
 
   df_full.sortlevel(axis=1,inplace=True)
 
@@ -672,7 +681,6 @@ def main():
   # Re-index the DF on iso & id  and make sure it's sorted
   df_full_csv.set_index(['iso','id'],inplace=True)
   df_full_csv.sortlevel(inplace=True)
-
 
   # 2.0 Export the full dataset to CSV
 
