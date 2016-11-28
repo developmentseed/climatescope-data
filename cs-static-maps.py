@@ -186,7 +186,7 @@ def generate_cartocss(aa_type,active,lang):
     text-fill: #333;
     text-halo-fill: #fff;
     text-halo-radius: .75;
-    text-face-name: 'Calibri Regular';
+    text-face-name: 'Ubuntu Regular';
     text-dy: -16px;
     marker-width: 12;
     marker-fill: #fff;
