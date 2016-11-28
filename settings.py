@@ -36,10 +36,10 @@ core_data_sheets = ['score', 'param', 'ind']
 core_data_cols = ['id', 'iso', 'score', 'data']
 
 # Languages
-langs = ['en','es']
+langs = ['en']
 
 # The current edition
-current_edition = 2015
+current_edition = 2016
 
 # Auxiliary data - Years we have want data for
 yrs = [2006,2007,2008,2009,2010,2011,2012,2013,2014]
