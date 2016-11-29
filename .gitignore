@@ -3,3 +3,6 @@ tilemill/cache
 .pydevproject
 .project
 *.pyc
+*.mbtiles
+*.log
+node_modules
