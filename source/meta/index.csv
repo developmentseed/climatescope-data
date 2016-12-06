@@ -66,4 +66,4 @@ id,type,name:en,name:es,description:en,description:es,unit:en,unit:es,parent,wei
 4.11,ind,Corporate emission reduction policies,Políticas de reducción de emisiones,"Companies reporting emission reduction policies captured by Bloomberg’s Environment, Social and Governance database (ESG) relative to total number of companies in the country","Empresas con políticas de reducción de emisiones (las políticas deben ser captadas por Bloomberg en su base de datos), con relación al número total de empresas en el país",,,913,,both
 4.12,ind,Capacity building – env. business training,Formación empresarial centrada en el medioambiente,Presence of at least one environmentally-focused business training program,Presencia de por lo menos un programa de formación empresarial con enfoque en el medioambiente,,,913,,both
 4.13,ind,Capacity building – think tanks,‘Think tanks’ centrado en el medioambiente,Presence of at least one environmentally-focused think tank,Presencia de por lo menos un ‘think tank’ centrado en el medioambiente,,,913,,both
-4.14,ind,Carbon tax,,,,,,912,,both
+4.14,ind,Carbon tax,,Taxation on goods and services depending on their carbon intensity,,,,912,,both
