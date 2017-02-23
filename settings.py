@@ -492,7 +492,7 @@ charts = [
           "es": 'Biocombustible'
         },
         "subchains": [
-          { "source-id": "Biofuels -Distribution and Blending ",
+          { "source-id": "Biofuels - Distribution and Blending",
             "name": {
               "en": 'Distribution and Blending',
               "es": 'Distribución y Mezcla'
@@ -627,7 +627,7 @@ charts = [
               "es": 'Balance de planta'
             }
           },
-          { "source-id": "Small Hydro - Engineering ",
+          { "source-id": "Small Hydro - Engineering",
             "name": {
               "en": 'Engineering',
               "es": 'Ingeniería'
@@ -744,13 +744,13 @@ charts = [
               "es": 'Ingeniería'
             }
           },
-          { "source-id": "Wind - Gearboxes ",
+          { "source-id": "Wind - Gearboxes",
             "name": {
               "en": 'Gearboxes',
               "es": 'Cajas de cambio'
             }
           },
-          { "source-id": "Wind - O&M ",
+          { "source-id": "Wind - O&M",
             "name": {
               "en": 'O&M',
               "es": 'O&M'
@@ -762,7 +762,7 @@ charts = [
               "es": 'Desarrollo de proyectos'
             }
           },
-          { "source-id": "Wind - Towers ",
+          { "source-id": "Wind - Towers",
             "name": {
               "en": 'Towers',
               "es": 'Torres'
