@@ -36,13 +36,13 @@ core_data_sheets = ['score', 'param', 'ind']
 core_data_cols = ['id', 'iso', 'score', 'data']
 
 # Languages
-langs = ['en','es']
+langs = ['en']
 
 # The current edition
-current_edition = 2015
+current_edition = 2016
 
 # Auxiliary data - Years we have want data for
-yrs = [2006,2007,2008,2009,2010,2011,2012,2013,2014]
+yrs = [2010,2011,2012,2013,2014,2015]
 
 # The indicators for the auxiliary data
 charts = [
@@ -145,7 +145,7 @@ charts = [
         }
       }
     ],
-    "years": [2014]
+    "years": [2015]
   },
   {
     "id": 102,
@@ -174,7 +174,7 @@ charts = [
         }
       }
     ],
-    "years": [2014]
+    "years": [2015]
   },
   {
     "id": 102,
@@ -203,7 +203,7 @@ charts = [
         }
       }
     ],
-    "years": [2014]
+    "years": [2015]
   },
   {
     "id": 102,
@@ -232,7 +232,7 @@ charts = [
         }
       }
     ],
-    "years": [2014]
+    "years": [2015]
   },
   {
     "id": 107, # The source file contains an indication of the id
@@ -336,7 +336,7 @@ charts = [
         }
       }
     ],
-    "years": [2014]
+    "years": [2015]
   },
   {
     "id": 903,
@@ -374,7 +374,7 @@ charts = [
         }
       }
     ],
-    "years": [2014]
+    "years": [2015]
   },
   {
     "id": 201,
@@ -400,7 +400,7 @@ charts = [
         "level": "country",
       }
     ],
-    "years": [2010, 2011, 2012, 2013, 2014]
+    "years": [2010, 2011, 2012, 2013, 2014, 2015]
   },
   {
     "id": 401,
@@ -437,15 +437,15 @@ charts = [
           "es": 'Metano'
         }
       },
-      {
-        "id": 'forestry',
-        "source-id": "Forestry",
-        "level": "country",
-        "name": {
-          "en": 'Forestry',
-          "es": 'Silvicultura'
-        }
-      },
+      # {
+      #   "id": 'forestry',
+      #   "source-id": "Forestry",
+      #   "level": "country",
+      #   "name": {
+      #     "en": 'Forestry',
+      #     "es": 'Silvicultura'
+      #   }
+      # },
       {
         "id": 'waste',
         "source-id": "Waste",
@@ -465,7 +465,7 @@ charts = [
         }
       }
     ],
-    "years": [2014]
+    "years": [2015]
   },
   {
     "id": 910,
@@ -498,7 +498,7 @@ charts = [
               "es": 'Distribución y Mezcla'
             }
           },
-          { "source-id": "Biofuels - Engineering (Value)",
+          { "source-id": "Biofuels - Engineering",
             "name": {
               "en": 'Engineering',
               "es": 'Ingeniería'
@@ -510,13 +510,13 @@ charts = [
               "es": 'Manufactura de equipos'
             }
           },
-          { "source-id": "Biofuels - O&M (Value)",
+          { "source-id": "Biofuels - O&M",
             "name": {
               "en": 'O&M',
               "es": 'O&M'
             }
           },
-          { "source-id": "Biofuels - Producers (Valeue)",
+          { "source-id": "Biofuels - Producers",
             "name": {
               "en": 'Producers',
               "es": 'Productores'
@@ -662,7 +662,7 @@ charts = [
           "es": 'Solar'
         },
         "subchains": [
-          { "source-id": "Solar - Balance of Plan",
+          { "source-id": "Solar - Balance of Plant",
             "name": {
               "en": 'Balance of plant',
               "es": 'Balance de planta'
@@ -726,28 +726,10 @@ charts = [
           "es": 'Eólica'
         },
         "subchains": [
-          { "source-id": "Wind - Project Development",
+          { "source-id": "Wind - Balance of Plant",
             "name": {
-              "en": 'Project development',
-              "es": 'Desarrollo de proyectos'
-            }
-          },
-          { "source-id": "Wind - Engineering",
-            "name": {
-              "en": 'Engineering',
-              "es": 'Ingeniería'
-            }
-          },
-          { "source-id": "Wind - O&M ",
-            "name": {
-              "en": 'O&M',
-              "es": 'O&M'
-            }
-          },
-          { "source-id": "Wind - Turbines",
-            "name": {
-              "en": 'Turbines',
-              "es": 'Turbinas'
+              "en": 'Balance of plant',
+              "es": 'Balance de planta'
             }
           },
           { "source-id": "Wind - Blades",
@@ -756,10 +738,28 @@ charts = [
               "es": 'Palas'
             }
           },
+          { "source-id": "Wind - Engineering",
+            "name": {
+              "en": 'Engineering',
+              "es": 'Ingeniería'
+            }
+          },
           { "source-id": "Wind - Gearboxes ",
             "name": {
               "en": 'Gearboxes',
               "es": 'Cajas de cambio'
+            }
+          },
+          { "source-id": "Wind - O&M ",
+            "name": {
+              "en": 'O&M',
+              "es": 'O&M'
+            }
+          },
+          { "source-id": "Wind - Project Development",
+            "name": {
+              "en": 'Project development',
+              "es": 'Desarrollo de proyectos'
             }
           },
           { "source-id": "Wind - Towers ",
@@ -768,15 +768,15 @@ charts = [
               "es": 'Torres'
             }
           },
-          { "source-id": "Wind - Balance of Plant",
+          { "source-id": "Wind - Turbines",
             "name": {
-              "en": 'Balance of plant',
-              "es": 'Balance de planta'
+              "en": 'Turbines',
+              "es": 'Turbinas'
             }
-          }
+          },
         ]
       },
     ],
-    "years": [2014]
+    "years": [2015]
   }
 ]

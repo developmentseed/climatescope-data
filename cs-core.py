@@ -48,7 +48,7 @@ def get_years(current=True):
               that the current year is the highest year in the range.
   """
    # Check which years are available
-  years = set()
+  years = list()
   fn_pattern = re.compile('^20[0-9]{2}$')
 
   for f in os.listdir(settings.src_core):
@@ -62,12 +62,13 @@ def get_years(current=True):
         # Check if dealing with an .xlsx
         if fn_pattern.match(fn):
           # If the file-name is a properly formatted year, add it
-          years.add(fn)
+          years.append(fn)
 
   if not current:
     current_yr = max(years)
     years.remove(current_yr)
 
+  years.sort(reverse=True)
   return years
 
 
@@ -306,7 +307,6 @@ def build_json_aa(aa,df_data,lang,indicators=False,historic=False,single_p=None)
   """
 
   aa_data = {}
-  years = get_years()
 
   # Slice the dataframe to only contain the data for the administrative area
   df_aa = df_data.loc[aa]
