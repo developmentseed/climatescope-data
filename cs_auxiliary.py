@@ -79,6 +79,18 @@ def default_chart(serie, ind_source, lang, aa, years, global_avg):
         data.append(yr_to_append)
   return data
 
+def add_note(serie, ind_source, aa):
+  """ Add a note to the serie
+  """
+  # Read in the CSV file
+  ind_data = csv.DictReader(open(ind_source))
+  data = []
+  for row in ind_data:
+    if aa == row["iso"].strip(' ') and serie["source-id"].strip() == row["sub_indicator"].strip():
+      try:
+        return row["note"]
+      except KeyError:
+        return None
 
 def value_chains(serie, ind_source, lang, aa, years, global_avg):
   """ The chart data for the value chain
@@ -131,6 +143,10 @@ def main():
 
           # Initialize the object for the serie    
           serie_to_append = {"name": serie_name, "id": serie["id"], "values": []}
+
+          # Add a note to the serie
+          if chart["note"]:
+            serie_to_append["note"] = add_note(serie, ind_source, aa)
 
           # Generate the actual data
           serie_to_append["values"] = chart['function'](serie, ind_source, lang, aa, chart["years"],global_avg)

@@ -62,6 +62,7 @@ charts = [
       "en": '',
       "es": ''
     },
+    "note": True,
     "series": [
       {
         "id": 'q1',
@@ -163,6 +164,7 @@ charts = [
       "en": '',
       "es": ''
     },
+    "note": True,
     "series": [
       {
         "id": 'q10',
@@ -192,6 +194,7 @@ charts = [
       "en": '',
       "es": ''
     },
+    "note": True,
     "series": [
       {
         "id": 'q11',
@@ -221,6 +224,7 @@ charts = [
       "en": '',
       "es": ''
     },
+    "note": True,
     "series": [
       {
         "id": 'q12',
@@ -250,6 +254,7 @@ charts = [
       "en": 'MW',
       "es": 'MW'
     },
+    "note": False,
     "series": [
       {
         "id": 'non-clean-energy', # The id used in the export
@@ -289,6 +294,7 @@ charts = [
       "en": '',
       "es": ''
     },
+    "note": False,
     "series": [
       {
         "id": 'spot_electricity',
@@ -354,6 +360,7 @@ charts = [
       "en": '',
       "es": ''
     },
+    "note": False,
     "series": [
       {
         "id": 'diesel',
@@ -393,6 +400,7 @@ charts = [
       "en": 'USDm',
       "es": 'USDm'
     },
+    "note": False,
     "series": [
       {
         "id": 'country',
@@ -418,6 +426,7 @@ charts = [
       "en": '',
       "es": ''
     },
+    "note": False,
     "series": [
       {
         "id": 'power-generation',
@@ -483,6 +492,7 @@ charts = [
       "en": '',
       "es": ''
     },
+    "note": False,
     "series": [
       {
         "id": 'biofuels',
