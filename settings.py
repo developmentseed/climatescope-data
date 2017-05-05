@@ -257,21 +257,102 @@ charts = [
     "note": False,
     "series": [
       {
-        "id": 'non-clean-energy', # The id used in the export
-        "source-id": 'Non-clean Energy', # The id in the source CSV
+        "id": 'biomass', # The id used in the export
+        "source-id": 'Biomass & Waste', # The id in the source CSV
         "level": "country", # Data on country level. When 'regional' or 'global' is used, averages are calculated
         "name": {
-          "en": 'Non-clean Energy',
-          "es": 'Energía no limpia'
+          "en": 'Biomass & Waste',
+          "es": 'Biomass & Waste'
         }
       },
       {
-        "id": 'clean-energy', # The id used in the export
-        "source-id": 'Clean Energy', # The id in the source CSV
+        "id": 'coal', # The id used in the export
+        "source-id": 'Coal', # The id in the source CSV
+        "level": "country", # Data on country level. When 'regional' or 'global' is used, averages are calculated
+        "name": {
+          "en": 'Coal',
+          "es": 'Coal'
+        }
+      },
+      {
+        "id": 'geothermal', # The id used in the export
+        "source-id": 'Geothermal', # The id in the source CSV
+        "level": "country", # Data on country level. When 'regional' or 'global' is used, averages are calculated
+        "name": {
+          "en": 'Geothermal',
+          "es": 'Geothermal'
+        }
+      },
+      {
+        "id": 'large-hydro', # The id used in the export
+        "source-id": 'Large Hydro', # The id in the source CSV
         "level": "country",
         "name": {
-          "en": 'Clean Energy',
-          "es": 'Energía limpia'
+          "en": 'Large Hydro',
+          "es": 'Large Hydro'
+        }
+      },
+      {
+        "id": 'natural-gas', # The id used in the export
+        "source-id": 'Natural Gas', # The id in the source CSV
+        "level": "country",
+        "name": {
+          "en": 'Natural Gas',
+          "es": 'Natural Gas'
+        }
+      },
+      {
+        "id": 'nuclear', # The id used in the export
+        "source-id": 'Nuclear', # The id in the source CSV
+        "level": "country",
+        "name": {
+          "en": 'Nuclear',
+          "es": 'Nuclear'
+        }
+      },
+      {
+        "id": 'oil-diesel', # The id used in the export
+        "source-id": 'Oil & Diesel', # The id in the source CSV
+        "level": "country",
+        "name": {
+          "en": 'Oil & Diesel',
+          "es": 'Oil & Diesel'
+        }
+      },
+      {
+        "id": 'other-fossil', # The id used in the export
+        "source-id": 'Other Fossil Fuels', # The id in the source CSV
+        "level": "country",
+        "name": {
+          "en": 'Other Fossil Fuels',
+          "es": 'Other Fossil Fuels'
+        }
+      },
+      {
+        "id": 'small-hydro', # The id used in the export
+        "source-id": 'Small Hydro', # The id in the source CSV
+        "level": "country",
+        "name": {
+          "en": 'Small Hydro',
+          "es": 'Small Hydro'
+        }
+      },
+      {
+        "id": 'solar', # The id used in the export
+        "source-id": 'Solar', # The id in the source CSV
+        "level": "country",
+        "name": {
+          "en": 'Solar',
+          "es": 'Solar'
+        }
+      },
+      {
+        "id": 'wind', # The id used in the export
+        "source-id": 'Wind', # The id in the source CSV
+        "level": "country",
+        "name": {
+          "en": 'Wind',
+          "es": 'Wind'
         }
       }
     ],
