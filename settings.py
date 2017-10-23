@@ -35,10 +35,10 @@ core_data_cols = ['id', 'iso', 'score', 'data']
 langs = ['en']
 
 # The current edition
-current_edition = 2016
+current_edition = 2017
 
 # Auxiliary data - Years we want data for
-yrs = [2010,2011,2012,2013,2014,2015]
+yrs = [2010,2011,2012,2013,2014,2015,2016]
 
 # The indicators for the auxiliary data
 charts = [
