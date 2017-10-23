@@ -158,7 +158,7 @@ def rank_dict(df,ind,yr):
   """
 
   # Add the rankings
-  rankings = { 'gr': 'overall_ranking', 'rr': 'regional_ranking', 'sr': 'state_ranking' }
+  rankings = { 'gr': 'overall_ranking', 'sr': 'state_ranking' }
   aa_ranks = {}
 
   # Not every type of admin area has all the rankings
@@ -277,7 +277,7 @@ def get_rank(aal,df,name):
     # The rank is stored in the empty DF to ensure no previous values get
     # overridden by NaN.
     df_rank[(year, name)] = df_yr.groupby(level=1).rank(method='min',ascending=False)
-  
+
   # Overwrite the NaN values in the original DF with values in the df_rank
   df.update(df_rank)
   
@@ -315,17 +315,6 @@ def build_json_aa(aa,df_data,lang,indicators=False,historic=False,single_p=None)
   aa_data['iso'] = aa.lower()
   aa_data['name'] = df_meta_aa.ix[aa,'name:' + lang]
   aa_data['grid'] = df_meta_aa.ix[aa,'grid']
-  
-  # Add region for the countries
-  if df_meta_aa.ix[aa,'type'] == 'country':
-    aa_region = {}
-    region = df_meta_aa.ix[aa,'region']
-    # Add the id of the region
-    aa_region['id'] = region
-    # Fetch the name of the region from the meta file
-    aa_region['name'] = df_meta_aa.ix[region,'name:' + lang]
-    aa_data['region'] = aa_region
-
 
   if historic:
     # Provide the score for all editions
@@ -567,7 +556,6 @@ def main():
   print "Loading the core and meta data..."
 
   # Build the different sets of admin areas with things we have to loop over.
-  regions = build_set('region','type','iso',settings.src_meta_aa)
   countries = build_set('country','type','iso',settings.src_meta_aa)
   states = build_set('state','type','iso',settings.src_meta_aa)
   admin_areas = countries | states
@@ -723,11 +711,11 @@ def main():
   #
   # Output: df_full
   #
-  #             2014                         2015
-  #             value   data  gr  rr  sr    value  data  gr  rr  sr
+  #             2014                    2015
+  #             value   data  gr  sr    value  data  gr  sr
   # iso   id
-  # AR    0     1.2420  NaN   13  6   NaN   1.2235 NaN   12  8   NaN
-  #       1.01  0.1802  73.1  5   3   NaN   0.1795 75.8  6   3   NaN
+  # AR    0     1.2420  NaN   13  NaN   1.2235 NaN   12  NaN
+  #       1.01  0.1802  73.1  5   NaN   0.1795 75.8  6   NaN
   # ...
 
 
@@ -736,7 +724,7 @@ def main():
   # 3.0 Prepare the structure
   # Add placeholder cols with NaN that can be updated later with df.update()
   for year in years:
-    for rank in ('gr', 'rr', 'sr'):
+    for rank in ('gr', 'sr'):
       df_full[(year,rank)] = np.nan
   # Make sure its sorted
   df_full.sortlevel(axis=1,inplace=True)
@@ -745,17 +733,6 @@ def main():
   # 3.1 Global rank
   # The global rank (gr) is a rank of all the COUNTRIES in the project
   df_full = get_rank(countries,df_full,'gr')
-
-
-  # 3.2 Regional rank
-  # The regional rank (rr) is a rank of all the COUNTRIES in a region
-  for region in regions:
-    # Build a set with the admin areas for this region
-    aa_region = build_set(region,'region','iso',settings.src_meta_aa)
-    # Filter out the states and provinces, leaving only the countries
-    cr = aa_region.difference(states)
-
-    df_full = get_rank(cr,df_full,'rr')
 
 
   # 3.3 State rank
@@ -803,46 +780,6 @@ def main():
       # Write the dict to a JSON file
       file_path = (settings.exp_aa).format(lang=lang,aa=aa.lower())
       write_json(file_path, json_data)
-
-
-  # 4.5 Generate the JSON files with derived statistics
-  for lang in settings.langs:
-
-    json_data = {}
-    
-    # Generate regional statistics
-    region_list = []
-    for region in regions:
-      # Build a set with the admin areas for this region
-      aa_region = build_set(region,'region','iso',settings.src_meta_aa)
-
-      # Remove states from this set, leaving countries
-      c_region = list(aa_region.difference(states))
-
-      # The JSON contains a dict with id, name and a countries list
-      region_data = {}
-      region_data['id'] = region
-      region_data['name'] = df_meta_aa.ix[region,'name:' + lang]
-
-      region_data['score'] = get_basic_stats(c_region,df_full,0)
-
-      param_list = []
-      for param in index_param:
-        param_data = {}
-        param_data['id'] = int(param)
-        param_data['name'] = df_meta_index.ix[param,'name:' + lang]
-        param_data['data'] = get_basic_stats(c_region,df_full,param)
-        param_list.append(param_data)
-
-      region_data['parameters'] = param_list
-
-      region_list.append(region_data)
-      
-    json_data['regions'] = region_list
-
-    # Write the list to a JSON file
-    file_path = (settings.exp_stats).format(lang=lang)
-    write_json(file_path, json_data)
 
 
   # Fully remove the temp directory
