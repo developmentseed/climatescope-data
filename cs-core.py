@@ -704,20 +704,6 @@ def main():
     pivot_df(df_main_csv,'name:' + lang + '_aa','name:' + lang + '_var',current_yr).to_csv(file_path,encoding='UTF-8')
 
 
-  # 2.2 Generate the regional CSV files
-  for region in regions:
-    # Build a set with the admin areas for this region
-    aa_region = build_set(region,'region','iso',settings.src_meta_aa)
-    aal = list(aa_region)
-    
-    # Filter the main csv on region. Used to generate CSV.
-    df_region_csv = df_main_csv.loc[aal,:]
-    for lang in settings.langs:
-      # Pivot the DF and and generate the CSV files
-      file_path = (settings.exp_region_csv).format(lang=lang, yr=current_yr, region=region)
-      pivot_df(df_region_csv,'name:' + lang + '_aa','name:' + lang + '_var',current_yr).to_csv(file_path,encoding='UTF-8')
-
-
   # 2.3 Generate the country + state CSV files
   for aa in admin_areas:
     # Select the data of this admin area
@@ -729,19 +715,6 @@ def main():
       # Select the proper columns and generate the CSV
       file_path = (settings.exp_aa_csv).format(lang = lang, aa = aa.lower())
       df_aa_csv.loc[slice(None),columns].to_csv(file_path,encoding='UTF-8',index=False)
-
-
-  # 2.4 Generate the parameter JSON files
-  for p in index_param:
-    # Select data of the parameter being dealt with
-    df_param = df_full_csv.loc[(slice(None),p),:]
-    for lang in settings.langs:
-      # Include the name of the country and the years
-      columns = ['name:' + lang + '_aa'] + list(years)
-
-      # Select the proper columns and generate the CSV
-      file_path = (settings.exp_params_csv).format(lang=lang, p=str(int(p)))
-      df_param.loc[slice(None),columns].to_csv(file_path,encoding='UTF-8',index=False)
 
 
   #############################################################################
@@ -821,35 +794,6 @@ def main():
     write_json(file_path, sorted_data)
 
 
-  # 4.2 Generate the regional JSON files
-  for region in regions:
-    # Build a set with the admin areas for this region
-    aa_region = build_set(region,'region','iso',settings.src_meta_aa)
-    aal = list(aa_region)
-
-    # Remove states from this set, leaving countries
-    c_region = aa_region.difference(states)
-
-    for lang in settings.langs:
-      # The JSON contains a dict with id, name and a countries list
-      json_data = {}
-      json_data['id'] = region
-      json_data['name'] = df_meta_aa.ix[region,'name:' + lang]
-
-      # The JSON will contain a list with dicts
-      country_list = []
-      # Loop over the countries list for the region
-      for country in c_region:
-        country_data = build_json_aa(country,df_full,lang,historic=True)
-        country_list.append(country_data)
-
-      json_data['countries'] = country_list
-  
-      # Write the list to a JSON file
-      file_path = (settings.exp_region).format(lang=lang,region=region)
-      write_json(file_path, json_data)
-
-
   # 4.3 Generate the country + state JSON files
   for aa in admin_areas:
     for lang in settings.langs:
@@ -858,29 +802,6 @@ def main():
 
       # Write the dict to a JSON file
       file_path = (settings.exp_aa).format(lang=lang,aa=aa.lower())
-      write_json(file_path, json_data)
-
-
-  # 4.4 Generate the parameter JSON files
-  for p in index_param:
-    for lang in settings.langs:
-      
-      json_data = {}
-      json_data['id'] = int(p)
-      json_data['name'] = df_meta_index.ix[p,'name:' + lang]
-      json_data['weight'] = round(df_meta_index.ix[p,'weight'],2)
-
-      # The JSON will contain a list with dicts
-      country_list = []
-      # Loop over the countries
-      for country in countries:
-        country_data = build_json_aa(country,df_full,lang,indicators=False,historic=True,single_p=p)
-        country_list.append(country_data)
-
-      json_data['countries'] = country_list
-
-      # Generate the parameter JSONs
-      file_path = (settings.exp_params).format(lang=lang,p=str(int(p)))
       write_json(file_path, json_data)
 
 
