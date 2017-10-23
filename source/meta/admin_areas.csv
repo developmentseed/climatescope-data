@@ -1,7 +1,4 @@
 iso,type,name:en,name:es,grid,region,country,capital:en,capital:es,lat,lon
-africa,region,Africa and the Middle East,África,,,,,,,
-asia,region,Asia,Asia,,,,,,,
-lac,region,Latin America and the Caribbean,América Latina y el Caribe,,,,,,,
 AR,country,Argentina,Argentina,on,lac,,Buenos Aires,Buenos Aires,-34.5833333333,-58.666667
 BB,country,Barbados,Barbados,on,lac,,Bridgetown,Bridgetown,13.1,-59.616667
 BD,country,Bangladesh,Bangladés,off,asia,,Dhaka,Daca,23.7166666667,90.4
@@ -66,3 +63,16 @@ IN-UP,state,Uttar Pradesh,Uttar Pradesh,on,asia,IN,Lucknow,Lucknow,26.847,80.947
 IN-WB,state,West Bengal,West Bengal,on,asia,IN,Kolkata,Kolkata,22.56666667,88.36666667
 IN-BR,state,Bihar,,on,asia,IN,Patna,,25.6,85.1
 IN-OR,state,Odisha,,on,asia,IN,Bhubaneswar,,20.27,85.84
+TR,country,Turkey,Turkey,on,new,Ankara,Ankara,39.933333,32.866667,
+MN,country,Mongolia,Mongolia,on,new,Ulaanbaatar,Ulaanbaatar,47.916667,106.916667,
+RU,country,Russia,Russia,on,new,Moscow,Moscow,55.75,37.616667,
+UA,country,Ukraine,Ukraine,on,new,Kiev,Kiev,50.45,30.523333,
+GE,country,Georgia,Georgia,on,new,Tblisi,Tblisi,41.716667,44.783333,
+MD,country,Moldova,Moldova,on,new,Chișinău,Chișinău,47,28.916667,
+KZ,country,Kazakhstan,Kazakhstan,on,new,Astana,Astana,51.166667,71.433333,
+AM,country,Armenia,Armenia,on,new,Yerevan,Yerevan,40.183333,44.516667,
+AZ,country,Azerbaijan,Azerbaijan,on,new,Baku,Baku,40.416667,49.833333,
+BY,country,Belarus,Belarus,on,new,Minsk,Minsk,53.916667,27.55,
+KG,country,Kyrgyzstan,Kyrgyzstan,on,new,Bishkek,Bishkek,42.866667,74.6,
+UZ,country,Uzbekistan,Uzbekistan,on,new,Tashkent,Tashkent,41.266667,69.216667,
+TM,country,Turkmenistan,Turkmenistan,on,new,Ashgabat,Ashgabat,37.933333,58.366667,
