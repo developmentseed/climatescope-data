@@ -6,3 +6,4 @@ tilemill/cache
 *.mbtiles
 *.log
 node_modules
+*.~lock*
