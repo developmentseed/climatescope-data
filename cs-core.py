@@ -204,48 +204,6 @@ def get_raw_data(df,ind,lang,yr):
   return raw_data
 
 
-def get_basic_stats(aal,df,ind):
-  """Returns a list with statistics for a list of administrative areas, for a
-  particular score/parameter/indicator. If more than one year is available, it
-  will return historic data.
-  Eg. [{ 'year': 2014, min': 0.23, 'max': 2.54, 'avg': 1.68 }]
-
-  Parameters
-  ----------
-  aal       : list
-              A list of iso codes (strings) to process
-  df        : dataframe
-              The dataframe to process, multi-indexed on 'iso' and 'id'. The
-              columns also have a hierarchy (year, 'value')
-  ind       : float
-              The score/param/indicator we're building the rank for
-  """
-
-  data = []
-
-  # Slice the full DF so it only contains data for the relevant indicator and
-  # countries.
-  df_aal = df.loc[(aal,ind),(slice(None),'value')]
-
-  for yr in years:
-    # Slice the aal DF so it only contains the year
-    df_aal_yr = df_aal.loc[slice(None),yr]
-
-    # For each year, we're storing an object with year and the value
-    yr_data = {}
-    yr_data['year'] = int(yr)
-
-    # Group the DF by the indicator, calculate the mean and store the value in
-    # the dict.
-    yr_data['mean'] = round(df_aal_yr.groupby(level=1).mean().iloc[0]['value'],5)
-    yr_data['min'] = round(df_aal_yr.groupby(level=1).min().iloc[0]['value'],5)
-    yr_data['max'] = round(df_aal_yr.groupby(level=1).max().iloc[0]['value'],5)
-
-    data.append(yr_data)
-
-  return data
-
-
 def get_rank(aal,df,name):
   """Build a dataframe that ranks a list of administrative areas on every
   variable available (score, parameter, indicator)
