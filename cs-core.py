@@ -158,7 +158,7 @@ def rank_dict(df,ind,yr):
   """
 
   # Add the rankings
-  rankings = { 'gr': 'overall_ranking', 'rr': 'regional_ranking', 'sr': 'state_ranking' }
+  rankings = { 'gr': 'overall_ranking', 'sr': 'state_ranking' }
   aa_ranks = {}
 
   # Not every type of admin area has all the rankings
@@ -204,48 +204,6 @@ def get_raw_data(df,ind,lang,yr):
   return raw_data
 
 
-def get_basic_stats(aal,df,ind):
-  """Returns a list with statistics for a list of administrative areas, for a
-  particular score/parameter/indicator. If more than one year is available, it
-  will return historic data.
-  Eg. [{ 'year': 2014, min': 0.23, 'max': 2.54, 'avg': 1.68 }]
-
-  Parameters
-  ----------
-  aal       : list
-              A list of iso codes (strings) to process
-  df        : dataframe
-              The dataframe to process, multi-indexed on 'iso' and 'id'. The
-              columns also have a hierarchy (year, 'value')
-  ind       : float
-              The score/param/indicator we're building the rank for
-  """
-
-  data = []
-
-  # Slice the full DF so it only contains data for the relevant indicator and
-  # countries.
-  df_aal = df.loc[(aal,ind),(slice(None),'value')]
-
-  for yr in years:
-    # Slice the aal DF so it only contains the year
-    df_aal_yr = df_aal.loc[slice(None),yr]
-
-    # For each year, we're storing an object with year and the value
-    yr_data = {}
-    yr_data['year'] = int(yr)
-
-    # Group the DF by the indicator, calculate the mean and store the value in
-    # the dict.
-    yr_data['mean'] = round(df_aal_yr.groupby(level=1).mean().iloc[0]['value'],5)
-    yr_data['min'] = round(df_aal_yr.groupby(level=1).min().iloc[0]['value'],5)
-    yr_data['max'] = round(df_aal_yr.groupby(level=1).max().iloc[0]['value'],5)
-
-    data.append(yr_data)
-
-  return data
-
-
 def get_rank(aal,df,name):
   """Build a dataframe that ranks a list of administrative areas on every
   variable available (score, parameter, indicator)
@@ -277,7 +235,7 @@ def get_rank(aal,df,name):
     # The rank is stored in the empty DF to ensure no previous values get
     # overridden by NaN.
     df_rank[(year, name)] = df_yr.groupby(level=1).rank(method='min',ascending=False)
-  
+
   # Overwrite the NaN values in the original DF with values in the df_rank
   df.update(df_rank)
   
@@ -315,17 +273,6 @@ def build_json_aa(aa,df_data,lang,indicators=False,historic=False,single_p=None)
   aa_data['iso'] = aa.lower()
   aa_data['name'] = df_meta_aa.ix[aa,'name:' + lang]
   aa_data['grid'] = df_meta_aa.ix[aa,'grid']
-  
-  # Add region for the countries
-  if df_meta_aa.ix[aa,'type'] == 'country':
-    aa_region = {}
-    region = df_meta_aa.ix[aa,'region']
-    # Add the id of the region
-    aa_region['id'] = region
-    # Fetch the name of the region from the meta file
-    aa_region['name'] = df_meta_aa.ix[region,'name:' + lang]
-    aa_data['region'] = aa_region
-
 
   if historic:
     # Provide the score for all editions
@@ -567,7 +514,6 @@ def main():
   print "Loading the core and meta data..."
 
   # Build the different sets of admin areas with things we have to loop over.
-  regions = build_set('region','type','iso',settings.src_meta_aa)
   countries = build_set('country','type','iso',settings.src_meta_aa)
   states = build_set('state','type','iso',settings.src_meta_aa)
   admin_areas = countries | states
@@ -704,20 +650,6 @@ def main():
     pivot_df(df_main_csv,'name:' + lang + '_aa','name:' + lang + '_var',current_yr).to_csv(file_path,encoding='UTF-8')
 
 
-  # 2.2 Generate the regional CSV files
-  for region in regions:
-    # Build a set with the admin areas for this region
-    aa_region = build_set(region,'region','iso',settings.src_meta_aa)
-    aal = list(aa_region)
-    
-    # Filter the main csv on region. Used to generate CSV.
-    df_region_csv = df_main_csv.loc[aal,:]
-    for lang in settings.langs:
-      # Pivot the DF and and generate the CSV files
-      file_path = (settings.exp_region_csv).format(lang=lang, yr=current_yr, region=region)
-      pivot_df(df_region_csv,'name:' + lang + '_aa','name:' + lang + '_var',current_yr).to_csv(file_path,encoding='UTF-8')
-
-
   # 2.3 Generate the country + state CSV files
   for aa in admin_areas:
     # Select the data of this admin area
@@ -731,30 +663,17 @@ def main():
       df_aa_csv.loc[slice(None),columns].to_csv(file_path,encoding='UTF-8',index=False)
 
 
-  # 2.4 Generate the parameter JSON files
-  for p in index_param:
-    # Select data of the parameter being dealt with
-    df_param = df_full_csv.loc[(slice(None),p),:]
-    for lang in settings.langs:
-      # Include the name of the country and the years
-      columns = ['name:' + lang + '_aa'] + list(years)
-
-      # Select the proper columns and generate the CSV
-      file_path = (settings.exp_params_csv).format(lang=lang, p=str(int(p)))
-      df_param.loc[slice(None),columns].to_csv(file_path,encoding='UTF-8',index=False)
-
-
   #############################################################################
   # 3. Calculate the rankings
   #
   #
   # Output: df_full
   #
-  #             2014                         2015
-  #             value   data  gr  rr  sr    value  data  gr  rr  sr
+  #             2014                    2015
+  #             value   data  gr  sr    value  data  gr  sr
   # iso   id
-  # AR    0     1.2420  NaN   13  6   NaN   1.2235 NaN   12  8   NaN
-  #       1.01  0.1802  73.1  5   3   NaN   0.1795 75.8  6   3   NaN
+  # AR    0     1.2420  NaN   13  NaN   1.2235 NaN   12  NaN
+  #       1.01  0.1802  73.1  5   NaN   0.1795 75.8  6   NaN
   # ...
 
 
@@ -763,7 +682,7 @@ def main():
   # 3.0 Prepare the structure
   # Add placeholder cols with NaN that can be updated later with df.update()
   for year in years:
-    for rank in ('gr', 'rr', 'sr'):
+    for rank in ('gr', 'sr'):
       df_full[(year,rank)] = np.nan
   # Make sure its sorted
   df_full.sortlevel(axis=1,inplace=True)
@@ -772,17 +691,6 @@ def main():
   # 3.1 Global rank
   # The global rank (gr) is a rank of all the COUNTRIES in the project
   df_full = get_rank(countries,df_full,'gr')
-
-
-  # 3.2 Regional rank
-  # The regional rank (rr) is a rank of all the COUNTRIES in a region
-  for region in regions:
-    # Build a set with the admin areas for this region
-    aa_region = build_set(region,'region','iso',settings.src_meta_aa)
-    # Filter out the states and provinces, leaving only the countries
-    cr = aa_region.difference(states)
-
-    df_full = get_rank(cr,df_full,'rr')
 
 
   # 3.3 State rank
@@ -821,35 +729,6 @@ def main():
     write_json(file_path, sorted_data)
 
 
-  # 4.2 Generate the regional JSON files
-  for region in regions:
-    # Build a set with the admin areas for this region
-    aa_region = build_set(region,'region','iso',settings.src_meta_aa)
-    aal = list(aa_region)
-
-    # Remove states from this set, leaving countries
-    c_region = aa_region.difference(states)
-
-    for lang in settings.langs:
-      # The JSON contains a dict with id, name and a countries list
-      json_data = {}
-      json_data['id'] = region
-      json_data['name'] = df_meta_aa.ix[region,'name:' + lang]
-
-      # The JSON will contain a list with dicts
-      country_list = []
-      # Loop over the countries list for the region
-      for country in c_region:
-        country_data = build_json_aa(country,df_full,lang,historic=True)
-        country_list.append(country_data)
-
-      json_data['countries'] = country_list
-  
-      # Write the list to a JSON file
-      file_path = (settings.exp_region).format(lang=lang,region=region)
-      write_json(file_path, json_data)
-
-
   # 4.3 Generate the country + state JSON files
   for aa in admin_areas:
     for lang in settings.langs:
@@ -859,69 +738,6 @@ def main():
       # Write the dict to a JSON file
       file_path = (settings.exp_aa).format(lang=lang,aa=aa.lower())
       write_json(file_path, json_data)
-
-
-  # 4.4 Generate the parameter JSON files
-  for p in index_param:
-    for lang in settings.langs:
-      
-      json_data = {}
-      json_data['id'] = int(p)
-      json_data['name'] = df_meta_index.ix[p,'name:' + lang]
-      json_data['weight'] = round(df_meta_index.ix[p,'weight'],2)
-
-      # The JSON will contain a list with dicts
-      country_list = []
-      # Loop over the countries
-      for country in countries:
-        country_data = build_json_aa(country,df_full,lang,indicators=False,historic=True,single_p=p)
-        country_list.append(country_data)
-
-      json_data['countries'] = country_list
-
-      # Generate the parameter JSONs
-      file_path = (settings.exp_params).format(lang=lang,p=str(int(p)))
-      write_json(file_path, json_data)
-
-
-  # 4.5 Generate the JSON files with derived statistics
-  for lang in settings.langs:
-
-    json_data = {}
-    
-    # Generate regional statistics
-    region_list = []
-    for region in regions:
-      # Build a set with the admin areas for this region
-      aa_region = build_set(region,'region','iso',settings.src_meta_aa)
-
-      # Remove states from this set, leaving countries
-      c_region = list(aa_region.difference(states))
-
-      # The JSON contains a dict with id, name and a countries list
-      region_data = {}
-      region_data['id'] = region
-      region_data['name'] = df_meta_aa.ix[region,'name:' + lang]
-
-      region_data['score'] = get_basic_stats(c_region,df_full,0)
-
-      param_list = []
-      for param in index_param:
-        param_data = {}
-        param_data['id'] = int(param)
-        param_data['name'] = df_meta_index.ix[param,'name:' + lang]
-        param_data['data'] = get_basic_stats(c_region,df_full,param)
-        param_list.append(param_data)
-
-      region_data['parameters'] = param_list
-
-      region_list.append(region_data)
-      
-    json_data['regions'] = region_list
-
-    # Write the list to a JSON file
-    file_path = (settings.exp_stats).format(lang=lang)
-    write_json(file_path, json_data)
 
 
   # Fully remove the temp directory
