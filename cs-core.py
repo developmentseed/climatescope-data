@@ -189,19 +189,13 @@ def get_raw_data(df,ind,lang,yr):
   """
 
   # Fetch the raw data that underlies the score of this indicator
-  raw_data = {}
   raw_value = df.ix[float(ind),(yr,'data')]
+  raw_unit = df_meta_index.ix[ind,'unit:' + lang]
 
-  if pd.isnull(raw_value):
-    # By default Pandas returns NaN, for the JSON this needs to be null
-    raw_data['value'] = None
-    raw_data['unit'] = None
-  else:
-    # If there is data, fetch the value and the unit in the proper language
-    raw_data['value'] = round(raw_value,5)
-    raw_data['unit'] = df_meta_index.ix[ind,'unit:' + lang]
-
-  return raw_data
+  return {
+    'value': round(raw_value,5) if not(pd.isnull(raw_value)) else None,
+    'unit': raw_unit if not (pd.isnull(raw_unit)) else None
+  }
 
 
 def get_rank(aal,df,name):
