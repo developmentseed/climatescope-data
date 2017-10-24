@@ -1,11 +1,14 @@
 iso,type,name:en,name:es,grid,country,capital:en,capital:es,lat,lon
+AM,country,Armenia,Armenia,on,,Yerevan,Yerevan,40.183333,44.516667
 AR,country,Argentina,Argentina,on,,Buenos Aires,Buenos Aires,-34.5833333333,-58.666667
+AZ,country,Azerbaijan,Azerbaijan,on,,Baku,Baku,40.416667,49.833333
 BB,country,Barbados,Barbados,on,,Bridgetown,Bridgetown,13.1,-59.616667
 BD,country,Bangladesh,Bangladés,off,,Dhaka,Daca,23.7166666667,90.4
 BO,country,Bolivia,Bolivia,on,,La Paz,La Paz,-16.5,-68.15
 BR,country,Brazil,Brasil,on,,Brasilia,Brasilia,-15.7833333333,-47.916667
 BS,country,Bahamas,Bahamas,on,,Nassau,Nasáu,25.0833333333,-77.35
 BW,country,Botswana,Botsuana,off,,Gaborone,Gaborone,-24.6333333333,25.9
+BY,country,Belarus,Belarus,on,,Minsk,Minsk,53.916667,27.55
 BZ,country,Belize,Belice,on,,Belmopan,Belmopán,17.25,-88.766667
 CD,country,DR Congo,RD Congo,off,,Kinshasa,Kinshasa,-4.3166666667,15.3
 CI,country,Côte d'Ivoire,Costa de Marfil,off,,Yamoussoukro,Yamusukro,6.8166666667,-5.266667
@@ -18,6 +21,7 @@ DO,country,Dominican Republic,República Dominicana,on,,Santo Domingo,Santo Domi
 EC,country,Ecuador,Ecuador,on,,Quito,Quito,-0.2166666667,-78.5
 EG,country,Egypt,Egypt,on,,Cairo,Cairo,30.0333,31.2167
 ET,country,Ethiopia,Etiopia,off,,Addis Ababa,Adís Abeba,9.0333333333,38.7
+GE,country,Georgia,Georgia,on,,Tblisi,Tblisi,41.716667,44.783333
 GH,country,Ghana,Ghana,off,,Accra,Accra,5.55,-0.216667
 GT,country,Guatemala,Guatemala,on,,Guatemala City,Ciudad de Guatemala,14.6166666667,-90.516667
 GY,country,Guyana,Guyana,on,,Georgetown,Georgetown,6.8,-58.15
@@ -28,10 +32,14 @@ IN,country,India,India,on,,New Delhi,Nueva Delhi,28.6,77.2
 JM,country,Jamaica,Jamaica,on,,Kingston,Kingston,18,-76.8
 JO,country,Jordan,,on,,Amman,,31.95,35.9333
 KE,country,Kenya,Kenia,off,,Nairobi,Nairobi,-1.2833333333,36.816667
+KG,country,Kyrgyzstan,Kyrgyzstan,on,,Bishkek,Bishkek,42.866667,74.6
+KZ,country,Kazakhstan,Kazakhstan,on,,Astana,Astana,51.166667,71.433333
 LB,country,Lebanon,,on,,Beirut,,33.88694,35.51306
 LK,country,Sri Lanka,Sri Lanka,on,,Colombo,Colombo,6.9166666667,79.833333
 LR,country,Liberia,Liberia,off,,Monrovia,Monrovia,6.3,-10.8
+MD,country,Moldova,Moldova,on,,Chișinău,Chișinău,47,28.916667
 MM,country,Myanmar,Birmania,off,,Naypyidaw,Naipyidó,19.75,96.1
+MN,country,Mongolia,Mongolia,on,,Ulaanbaatar,Ulaanbaatar,47.916667,106.916667
 MW,country,Malawi,Malaui,off,,Lilongwe,Lilongüe,-13.9666666667,33.783333
 MX,country,Mexico,México,on,,Mexico City,Ciudad de México,19.4333333333,-99.133333
 MZ,country,Mozambique,Mozambique,off,,Maputo,Maputo,-25.95,32.583333
@@ -42,31 +50,29 @@ PA,country,Panama,Panamá,on,,Panama City,Panamá,8.9666666667,-79.533333
 PE,country,Peru,Perú,on,,Lima,Lima,-12.05,-77.05
 PK,country,Pakistan,Pakistán,off,,Islamabad,Islamabad,33.6833333333,73.05
 PY,country,Paraguay,Paraguay,on,,Asuncion,Asunción,-25.2666666667,-57.666667
+RU,country,Russia,Russia,on,,Moscow,Moscow,55.75,37.616667
 RW,country,Rwanda,Ruanda,off,,Kigali,Kigali,-1.95,30.05
 SL,country,Sierra Leone,Sierra Leona,off,,Freetown,Freetown,8.4833333333,-13.233333
 SN,country,Senegal,Senegal,off,,Dakar,Dakar,14.7333333333,-17.633333
 SR,country,Suriname,Surinam,on,,Paramaribo,Paramaribo,5.8333333333,-55.166667
 SV,country,El Salvador,El Salvador,on,,San Salvador,San Salvador,13.7,-89.2
 TJ,country,Tajikistan,Tayikistan,on,,Dushanbe,Dusambé,38.55,68.766667
+TM,country,Turkmenistan,Turkmenistan,on,,Ashgabat,Ashgabat,37.933333,58.366667
+TR,country,Turkey,Turkey,on,,Ankara,Ankara,39.933333,32.866667
 TT,country,Trinidad and Tobago,Trinidad y Tobago,on,,Port of Spain,Puerto España,10.65,-61.516667
 TZ,country,Tanzania,Tanzania,off,,Dodoma,Dodoma,-6.1802,35.7468
+UA,country,Ukraine,Ukraine,on,,Kiev,Kiev,50.45,30.523333
 UG,country,Uganda,Uganda,off,,Kampala,Kampala,0.3166666667,32.55
 UY,country,Uruguay,Uruguay,on,,Montevideo,Montevideo,-34.85,-56.166667
+UZ,country,Uzbekistan,Uzbekistan,on,,Tashkent,Tashkent,41.266667,69.216667
 VE,country,Venezuela,Venezuela,on,,Caracas,Caracas,10.4833333333,-66.866667
 VN,country,Vietnam,Vietnam,on,,Hanoi,Hanói,21.0333333333,105.85
 ZA,country,South Africa,Sudáfrica,on,,Pretoria,Pretoria,-25.7,28.216667
 ZM,country,Zambia,Zambia,off,,Lusaka,Lusaka,-15.4166666667,28.283333
 ZW,country,Zimbabwe,Zimbabue,off,,Harare,Harare,-17.8166666667,31.033333
-TR,country,Turkey,Turkey,on,Ankara,Ankara,39.933333,32.866667,
-MN,country,Mongolia,Mongolia,on,Ulaanbaatar,Ulaanbaatar,47.916667,106.916667,
-RU,country,Russia,Russia,on,Moscow,Moscow,55.75,37.616667,
-UA,country,Ukraine,Ukraine,on,Kiev,Kiev,50.45,30.523333,
-GE,country,Georgia,Georgia,on,Tblisi,Tblisi,41.716667,44.783333,
-MD,country,Moldova,Moldova,on,Chișinău,Chișinău,47,28.916667,
-KZ,country,Kazakhstan,Kazakhstan,on,Astana,Astana,51.166667,71.433333,
-AM,country,Armenia,Armenia,on,Yerevan,Yerevan,40.183333,44.516667,
-AZ,country,Azerbaijan,Azerbaijan,on,Baku,Baku,40.416667,49.833333,
-BY,country,Belarus,Belarus,on,Minsk,Minsk,53.916667,27.55,
-KG,country,Kyrgyzstan,Kyrgyzstan,on,Bishkek,Bishkek,42.866667,74.6,
-UZ,country,Uzbekistan,Uzbekistan,on,Tashkent,Tashkent,41.266667,69.216667,
-TM,country,Turkmenistan,Turkmenistan,on,Ashgabat,Ashgabat,37.933333,58.366667,
+IN-AP,state,Andhra Pradesh,Andhra Pradesh,on,IN,Hyderabad,Hyderabad,17.366,78.476
+IN-MP,state,Madhya Pradesh,Madhya Pradesh,on,IN,Bhopal,Bhopal,23.25,77.41666667
+IN-UP,state,Uttar Pradesh,Uttar Pradesh,on,IN,Lucknow,Lucknow,26.847,80.947
+IN-WB,state,West Bengal,West Bengal,on,IN,Kolkata,Kolkata,22.56666667,88.36666667
+IN-BR,state,Bihar,,on,IN,Patna,,25.6,85.1
+IN-OR,state,Odisha,,on,IN,Bhubaneswar,,20.27,85.84
