@@ -21,9 +21,13 @@ exp_core_csv = export_dir + 'cs-core.csv'
 exp_full_csv = export_dir + '{lang}/download/data/climatescope-full.csv'
 exp_current_csv = export_dir + '{lang}/download/data/climatescope-{yr}.csv'
 exp_aa_csv = export_dir + '{lang}/download/data/countries/climatescope-{aa}.csv'
+exp_region_csv = export_dir + '{lang}/download/data/regions/climatescope-{yr}-{region}.csv'
+exp_params_csv =  export_dir + '{lang}/download/data/parameters/climatescope-{p}.csv'
 
 exp_core = export_dir + '{lang}/api/countries.json'
 exp_aa = export_dir + '{lang}/api/countries/{aa}.json'
+exp_region = export_dir + '{lang}/api/regions/{region}.json'
+exp_params = export_dir + '{lang}/api/parameters/{p}.json'
 exp_stats = export_dir + '{lang}/api/stats.json'
 exp_aux_json = export_dir + '{lang}/api/auxiliary/{indicator}/{aa}.json'
 
@@ -35,10 +39,10 @@ core_data_cols = ['id', 'iso', 'score', 'data']
 langs = ['en']
 
 # The current edition
-current_edition = 2017
+current_edition = 2016
 
-# Auxiliary data - Years we want data for
-yrs = [2010,2011,2012,2013,2014,2015,2016]
+# Auxiliary data - Years we have want data for
+yrs = [2010,2011,2012,2013,2014,2015]
 
 # The indicators for the auxiliary data
 charts = [
@@ -863,6 +867,374 @@ charts = [
           },
         ]
       },
+    ],
+    "years": [2015]
+  },  
+  {
+    "id": 103105,
+    "function": cs_auxiliary.default_chart,
+    "export": 'power-sector-offgrid-1',
+    "title": {
+      "en": 'Offgrid power sector structure'
+    },
+    "labelx": {
+      "en": ['Yes', 'Somewhat', 'No']
+    },
+    "labely": {
+      "en": ''
+    },
+    "note": True,
+    "series": [
+      {
+        "id": "q23",
+        "source-id": "q23",
+        "level": "country",
+        "name": {
+          "en": "Mini-grids: licensing"
+        }
+      },
+      {
+        "id": "q24",
+        "source-id": "q24",
+        "level": "country",
+        "name": {
+          "en": "Mini-grids: concessions"
+        }
+      },
+      {
+        "id": "q25",
+        "source-id": "q25",
+        "level": "country",
+        "name": {
+          "en": "Mini-grids: threshold"
+        }
+      },
+      {
+        "id": "q26",
+        "source-id": "q26",
+        "level": "country",
+        "name": {
+          "en": "Dedicated regulator"
+        }
+      },
+      {
+        "id": "q27",
+        "source-id": "q27",
+        "level": "country",
+        "name": {
+          "en": "Dedicated team within utility"
+        }
+      },
+      {
+        "id": "q28",
+        "source-id": "q28",
+        "level": "country",
+        "name": {
+          "en": "Light-handed regulatory framework"
+        }
+      },
+      {
+        "id": "q29",
+        "source-id": "q29",
+        "level": "country",
+        "name": {
+          "en": "Cost reflective tariffs"
+        }
+      },
+      {
+        "id": "q30",
+        "source-id": "q30",
+        "level": "country",
+        "name": {
+          "en": "Stable tariff guaranteed"
+        }
+      },
+      {
+        "id": "q31",
+        "source-id": "q31",
+        "level": "country",
+        "name": {
+          "en": "Tariff deregulation"
+        }
+      },
+      {
+        "id": "q32",
+        "source-id": "q32",
+        "level": "country",
+        "name": {
+          "en": "Standardised PPAs"
+        }
+      },
+      {
+        "id": "q33",
+        "source-id": "q33",
+        "level": "country",
+        "name": {
+          "en": "PPAs of sufficient duration"
+        }
+      },
+      {
+        "id": "q34",
+        "source-id": "q34",
+        "level": "country",
+        "name": {
+          "en": "Purchase obligation"
+        }
+      },
+      {
+        "id": "q35",
+        "source-id": "q35",
+        "level": "country",
+        "name": {
+          "en": "Clear rules on interconnection"
+        }
+      },
+      {
+        "id": "q36",
+        "source-id": "q36",
+        "level": "country",
+        "name": {
+          "en": "Clear rules on arrival of the main grid"
+        }
+      },
+      {
+        "id": "q37",
+        "source-id": "q37",
+        "level": "country",
+        "name": {
+          "en": "Transparent grid extension plan"
+        }
+      },
+      {
+        "id": "q38",
+        "source-id": "q38",
+        "level": "country",
+        "name": {
+          "en": "Quality of service standards"
+        }
+      },
+      {
+        "id": "q39",
+        "source-id": "q39",
+        "level": "country",
+        "name": {
+          "en": "SPPs can deliver financial services"
+        }
+      },
+      {
+        "id": "q41",
+        "source-id": "q41",
+        "level": "country",
+        "name": {
+          "en": "Rural electrification program"
+        }
+      },
+      {
+        "id": "q42",
+        "source-id": "q42",
+        "level": "country",
+        "name": {
+          "en": "Rural electrification agency"
+        }
+      },
+      {
+        "id": "q44",
+        "source-id": "q44",
+        "level": "country",
+        "name": {
+          "en": "Energy access targets (general)"
+        }
+      },
+      {
+        "id": "q45",
+        "source-id": "q45",
+        "level": "country",
+        "name": {
+          "en": "Offgrid energy access target"
+        }
+      },
+      {
+        "id": "q46",
+        "source-id": "q46",
+        "level": "country",
+        "name": {
+          "en": "Offgrid financing facilities"
+        }
+      },
+      {
+        "id": "q48",
+        "source-id": "q48",
+        "level": "country",
+        "name": {
+          "en": "Connection grants"
+        }
+      },
+      {
+        "id": "q49",
+        "source-id": "q49",
+        "level": "country",
+        "name": {
+          "en": "Other off-grid incentives"
+        }
+      },
+      {
+        "id": "q50",
+        "source-id": "q50",
+        "level": "country",
+        "name": {
+          "en": "Tax / duty reductions"
+        }
+      },
+      {
+        "id": "q51",
+        "source-id": "q51",
+        "level": "country",
+        "name": {
+          "en": "Off-grid market building"
+        }
+      },
+      {
+        "id": "q53",
+        "source-id": "q53",
+        "level": "country",
+        "name": {
+          "en": "PAYG availability"
+        }
+      },
+      {
+        "id": "q54",
+        "source-id": "q54",
+        "level": "country",
+        "name": {
+          "en": "Pico-solar quality standards"
+        }
+      },
+      {
+        "id": "q55",
+        "source-id": "q55",
+        "level": "country",
+        "name": {
+          "en": "Kerosene and diesel subsidies"
+        }
+      },
+      {
+        "id": "q57",
+        "source-id": "q57",
+        "level": "country",
+        "name": {
+          "en": "VAT reductions"
+        }
+      },
+      {
+        "id": "q58",
+        "source-id": "q58",
+        "level": "country",
+        "name": {
+          "en": "Import duty reductions"
+        }
+      },
+      {
+        "id": "q59",
+        "source-id": "q59",
+        "level": "country",
+        "name": {
+          "en": "Other import barriers"
+        }
+      },
+      {
+        "id": "q60",
+        "source-id": "q60",
+        "level": "country",
+        "name": {
+          "en": "Other retail barriers"
+        }
+      }
+    ],
+    "years": [2015]
+  },
+  {
+    "id": 103105,
+    "function": cs_auxiliary.default_chart,
+    "export": 'power-sector-offgrid-2',
+    "title": {
+      "en": 'Power sector structure'
+    },
+    "labelx": {
+      "en": ['High', 'Average', 'Low']
+    },
+    "labely": {
+      "en": ''
+    },
+    "note": True,
+    "series": [
+      {
+        "id": "q43",
+        "source-id": "q43",
+        "level": "country",
+        "name": {
+          "en": "Rural electrification budget"
+        }
+      },
+      {
+        "id": "q47",
+        "source-id": "q47",
+        "level": "country",
+        "name": {
+          "en": "New connection cost"
+        }
+      }
+    ],
+    "years": [2015]
+  },
+  {
+    "id": 103105,
+    "function": cs_auxiliary.default_chart,
+    "export": 'power-sector-offgrid-3',
+    "title": {
+      "en": 'Power sector structure'
+    },
+    "labelx": {
+      "en": ['High', 'Medium', 'Low']
+    },
+    "labely": {
+      "en": ''
+    },
+    "note": True,
+    "series": [
+      {
+        "id": "q56",
+        "source-id": "q56",
+        "level": "country",
+        "name": {
+          "en": "Off-grid solar VAT rate"
+        }
+      }
+    ],
+    "years": [2015]
+  },
+  {
+    "id": 103105,
+    "function": cs_auxiliary.default_chart,
+    "export": 'power-sector-offgrid-4',
+    "title": {
+      "en": 'Power sector structure'
+    },
+    "labelx": {
+      "en": ['High', 'Somewhat', 'Low']
+    },
+    "labely": {
+      "en": ''
+    },
+    "note": True,
+    "series": [
+      {
+        "id": "q61",
+        "source-id": "q61",
+        "level": "country",
+        "name": {
+          "en": "Import duties"
+        }
+      }
     ],
     "years": [2015]
   }
