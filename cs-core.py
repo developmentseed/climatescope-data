@@ -268,6 +268,16 @@ def build_json_aa(aa,df_data,lang,indicators=False,historic=False,single_p=None)
   aa_data['name'] = df_meta_aa.ix[aa,'name:' + lang]
   aa_data['grid'] = df_meta_aa.ix[aa,'grid']
 
+  # Add region for the countries
+  if df_meta_aa.ix[aa,'type'] == 'country':
+    aa_region = {}
+    region = df_meta_aa.ix[aa,'region']
+    # Add the id of the region
+    aa_region['id'] = region
+    # Fetch the name of the region from the meta file
+    aa_region['name'] = df_meta_aa.ix[region,'name:' + lang]
+    aa_data['region'] = aa_region
+
   if historic:
     # Provide the score for all editions
     sl = []
