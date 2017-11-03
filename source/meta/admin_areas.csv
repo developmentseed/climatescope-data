@@ -2,17 +2,18 @@ iso,type,name:en,grid,region,country,capital:en,lat,lon
 africa,region,Africa and the Middle East,,,,,,
 asia,region,Asia,,,,,,
 lac,region,Latin America and the Caribbean,,,,,,
-new,region,New,,,,,,
-AM,country,Armenia,on,new,,Yerevan,40.183333,44.516667
+eu,region,Europe,,,,,,
+me,region,Middle East,,,,,,
+AM,country,Armenia,on,asia,,Yerevan,40.183333,44.516667
 AR,country,Argentina,on,lac,,Buenos Aires,-34.5833333333,-58.666667
-AZ,country,Azerbaijan,on,new,,Baku,40.416667,49.833333
+AZ,country,Azerbaijan,on,asia,,Baku,40.416667,49.833333
 BB,country,Barbados,on,lac,,Bridgetown,13.1,-59.616667
 BD,country,Bangladesh,off,asia,,Dhaka,23.7166666667,90.4
 BO,country,Bolivia,on,lac,,La Paz,-16.5,-68.15
 BR,country,Brazil,on,lac,,Brasilia,-15.7833333333,-47.916667
 BS,country,Bahamas,on,lac,,Nassau,25.0833333333,-77.35
 BW,country,Botswana,off,africa,,Gaborone,-24.6333333333,25.9
-BY,country,Belarus,on,new,,Minsk,53.916667,27.55
+BY,country,Belarus,on,eu,,Minsk,53.916667,27.55
 BZ,country,Belize,on,lac,,Belmopan,17.25,-88.766667
 CD,country,DR Congo,off,africa,,Kinshasa,-4.3166666667,15.3
 CI,country,Côte d'Ivoire,off,africa,,Yamoussoukro,6.8166666667,-5.266667
@@ -23,9 +24,9 @@ CO,country,Colombia,on,lac,,Bogota,4.6,-74.083333
 CR,country,Costa Rica,on,lac,,San Jose,9.9333333333,-84.083333
 DO,country,Dominican Republic,on,lac,,Santo Domingo,18.4666666667,-69.9
 EC,country,Ecuador,on,lac,,Quito,-0.2166666667,-78.5
-EG,country,Egypt,on,new,,Cairo,30.0333,31.2167
+EG,country,Egypt,on,me,,Cairo,30.0333,31.2167
 ET,country,Ethiopia,off,africa,,Addis Ababa,9.0333333333,38.7
-GE,country,Georgia,on,new,,Tblisi,41.716667,44.783333
+GE,country,Georgia,on,eu,,Tblisi,41.716667,44.783333
 GH,country,Ghana,off,africa,,Accra,5.55,-0.216667
 GT,country,Guatemala,on,lac,,Guatemala City,14.6166666667,-90.516667
 GY,country,Guyana,on,lac,,Georgetown,6.8,-58.15
@@ -34,14 +35,14 @@ HT,country,Haiti,off,lac,,Port-au-Prince,18.5333333333,-72.333333
 ID,country,Indonesia,on,asia,,Jakarta,-6.1666666667,106.816667
 IN,country,India,on,asia,,New Delhi,28.6,77.2
 JM,country,Jamaica,on,lac,,Kingston,18,-76.8
-JO,country,Jordan,on,new,,Amman,31.95,35.9333
+JO,country,Jordan,on,me,,Amman,31.95,35.9333
 KE,country,Kenya,off,africa,,Nairobi,-1.2833333333,36.816667
-KG,country,Kyrgyzstan,on,new,,Bishkek,42.866667,74.6
-KZ,country,Kazakhstan,on,new,,Astana,51.166667,71.433333
-LB,country,Lebanon,on,new,,Beirut,33.88694,35.51306
+KG,country,Kyrgyzstan,on,asia,,Bishkek,42.866667,74.6
+KZ,country,Kazakhstan,on,asia,,Astana,51.166667,71.433333
+LB,country,Lebanon,on,me,,Beirut,33.88694,35.51306
 LK,country,Sri Lanka,on,africa,,Colombo,6.9166666667,79.833333
 LR,country,Liberia,off,africa,,Monrovia,6.3,-10.8
-MD,country,Moldova,on,new,,Chișinău,47,28.916667
+MD,country,Moldova,on,eu,,Chișinău,47,28.916667
 MM,country,Myanmar,off,asia,,Naypyidaw,19.75,96.1
 MN,country,Mongolia,on,asia,,Ulaanbaatar,47.916667,106.916667
 MW,country,Malawi,off,africa,,Lilongwe,-13.9666666667,33.783333
@@ -54,21 +55,21 @@ PA,country,Panama,on,lac,,Panama City,8.9666666667,-79.533333
 PE,country,Peru,on,lac,,Lima,-12.05,-77.05
 PK,country,Pakistan,off,asia,,Islamabad,33.6833333333,73.05
 PY,country,Paraguay,on,lac,,Asuncion,-25.2666666667,-57.666667
-RU,country,Russia,on,new,,Moscow,55.75,37.616667
+RU,country,Russia,on,eu,,Moscow,55.75,37.616667
 RW,country,Rwanda,off,africa,,Kigali,-1.95,30.05
 SL,country,Sierra Leone,off,africa,,Freetown,8.4833333333,-13.233333
 SN,country,Senegal,off,africa,,Dakar,14.7333333333,-17.633333
 SR,country,Suriname,on,lac,,Paramaribo,5.8333333333,-55.166667
 SV,country,El Salvador,on,lac,,San Salvador,13.7,-89.2
-TJ,country,Tajikistan,on,new,,Dushanbe,38.55,68.766667
-TM,country,Turkmenistan,on,new,,Ashgabat,37.933333,58.366667
-TR,country,Turkey,on,new,,Ankara,39.933333,32.866667
+TJ,country,Tajikistan,on,asia,,Dushanbe,38.55,68.766667
+TM,country,Turkmenistan,on,asia,,Ashgabat,37.933333,58.366667
+TR,country,Turkey,on,eu,,Ankara,39.933333,32.866667
 TT,country,Trinidad and Tobago,on,lac,,Port of Spain,10.65,-61.516667
 TZ,country,Tanzania,off,africa,,Dodoma,-6.1802,35.7468
-UA,country,Ukraine,on,new,,Kiev,50.45,30.523333
+UA,country,Ukraine,on,eu,,Kiev,50.45,30.523333
 UG,country,Uganda,off,africa,,Kampala,0.3166666667,32.55
 UY,country,Uruguay,on,lac,,Montevideo,-34.85,-56.166667
-UZ,country,Uzbekistan,on,new,,Tashkent,41.266667,69.216667
+UZ,country,Uzbekistan,on,asia,,Tashkent,41.266667,69.216667
 VE,country,Venezuela,on,lac,,Caracas,10.4833333333,-66.866667
 VN,country,Vietnam,on,asia,,Hanoi,21.0333333333,105.85
 ZA,country,South Africa,on,africa,,Pretoria,-25.7,28.216667
