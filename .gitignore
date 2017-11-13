@@ -7,3 +7,4 @@ tilemill/cache
 *.log
 node_modules
 *.~lock*
+basemap/climatescope-admin0*
