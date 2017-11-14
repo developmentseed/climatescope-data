@@ -146,7 +146,7 @@ charts = [
         }
       }
     ],
-    "years": [2015]
+    "years": [2016]
   },
   {
     "id": 102,
@@ -176,7 +176,7 @@ charts = [
         }
       }
     ],
-    "years": [2015]
+    "years": [2016]
   },
   {
     "id": 102,
@@ -206,7 +206,7 @@ charts = [
         }
       }
     ],
-    "years": [2015]
+    "years": [2016]
   },
   {
     "id": 102,
@@ -236,7 +236,7 @@ charts = [
         }
       }
     ],
-    "years": [2015]
+    "years": [2016]
   },
   {
     "id": 107, # The source file contains an indication of the id
