@@ -25,13 +25,12 @@
             "id": "background",
             "type": "background",
             "paint": {
-                "background-color": "#f2f2f2"
+                "background-color": "#F3F5F6"
             }
         },
         {
             "id": "climatescope-admin0-polygons-716yo8",
             "type": "fill",
-            "metadata": {},
             "source": "composite",
             "source-layer": "climatescope-admin0-polygons-716yo8",
             "filter": [
@@ -49,7 +48,6 @@
         {
             "id": "climatescope-admin0-polygons-716yo8 (1)",
             "type": "fill",
-            "metadata": {},
             "source": "composite",
             "source-layer": "climatescope-admin0-polygons-716yo8",
             "filter": [
@@ -91,7 +89,7 @@
     ],
     "created": "2017-11-09T21:35:43.905Z",
     "id": "cj9szsu6f2i752ss0aysk818a",
-    "modified": "2017-11-10T15:55:01.707Z",
+    "modified": "2017-11-14T12:50:34.767Z",
     "owner": "climatescope",
     "visibility": "private",
     "draft": false
