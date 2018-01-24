@@ -10,9 +10,10 @@ csvParse(fs.readFileSync('../source/meta/admin_areas.csv'), {columns:true}, func
     .filter(f => f.type === 'country')
     .map(f => f.iso.toLowerCase())
 
-  // Filter the capitals to those we are intersected in
+  // Filter the capitals to those we are interested in
   var finalFeatures = baseData.features
     .filter(f => csCountries.indexOf(f.properties.iso_a2.toLowerCase()) !== -1)
+    .filter(f => f.properties.featurecla === 'Admin-0 capital')
     .map(f => {
       f.properties = {
         'name': f.properties.name,

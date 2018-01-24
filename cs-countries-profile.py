@@ -71,8 +71,8 @@ indicators = [
   {
     "id": "clean_energy_investments",
     "name": {
-      "en": "Total clean energy investments, 2011-2015",
-      "es": "Total de Inversiones Acumuladas de Energía Limpia, 2011-2015"
+      "en": "Total clean energy investments, 2012-2016",
+      "es": "Total de Inversiones Acumuladas de Energía Limpia, 2012-2016"
     },
     "unit": {
       "en": "$bn",
