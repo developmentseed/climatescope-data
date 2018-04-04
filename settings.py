@@ -39,10 +39,10 @@ core_data_cols = ['id', 'iso', 'score', 'data']
 langs = ['en']
 
 # The current edition
-current_edition = 2016
+current_edition = 2017
 
 # Auxiliary data - Years we have want data for
-yrs = [2010,2011,2012,2013,2014,2015]
+yrs = [2010,2011,2012,2013,2014,2015,2016]
 
 # The indicators for the auxiliary data
 charts = [
@@ -146,7 +146,7 @@ charts = [
         }
       }
     ],
-    "years": [2015]
+    "years": [2016]
   },
   {
     "id": 102,
@@ -176,7 +176,7 @@ charts = [
         }
       }
     ],
-    "years": [2015]
+    "years": [2016]
   },
   {
     "id": 102,
@@ -206,7 +206,7 @@ charts = [
         }
       }
     ],
-    "years": [2015]
+    "years": [2016]
   },
   {
     "id": 102,
@@ -236,7 +236,7 @@ charts = [
         }
       }
     ],
-    "years": [2015]
+    "years": [2016]
   },
   {
     "id": 107, # The source file contains an indication of the id
@@ -423,7 +423,7 @@ charts = [
         }
       }
     ],
-    "years": [2015]
+    "years": [2016]
   },
   {
     "id": 903,
@@ -462,7 +462,7 @@ charts = [
         }
       }
     ],
-    "years": [2015]
+    "years": [2016]
   },
   {
     "id": 201,
@@ -489,73 +489,7 @@ charts = [
         "level": "country",
       }
     ],
-    "years": [2010, 2011, 2012, 2013, 2014, 2015]
-  },
-  {
-    "id": 401,
-    "function": cs_auxiliary.default_chart,
-    "export": 'carbon-offset-projects',
-    "title": {
-      "en": 'Carbon offset projects by sector',
-      "es": 'Compensaciones de carbono por sector'
-    },
-    "labelx": {
-      "en": 'category',
-      "es": 'categoria'
-    },
-    "labely": {
-      "en": '',
-      "es": ''
-    },
-    "note": False,
-    "series": [
-      {
-        "id": 'power-generation',
-        "source-id": "Power generation",
-        "level": "country",
-        "name": {
-          "en": 'Power generation',
-          "es": 'Generación eléctrica'
-        }
-      },
-      {
-        "id": 'methane',
-        "source-id": "Methane",
-        "level": "country",
-        "name": {
-          "en": 'Methane',
-          "es": 'Metano'
-        }
-      },
-      # {
-      #   "id": 'forestry',
-      #   "source-id": "Forestry",
-      #   "level": "country",
-      #   "name": {
-      #     "en": 'Forestry',
-      #     "es": 'Silvicultura'
-      #   }
-      # },
-      {
-        "id": 'waste',
-        "source-id": "Waste",
-        "level": "country",
-        "name": {
-          "en": 'Waste',
-          "es": 'Residuos'
-        }
-      },
-      {
-        "id": 'energy-efficiency',
-        "source-id": "Energy efficiency",
-        "level": "country",
-        "name": {
-          "en": 'Energy efficiency',
-          "es": 'Eficiencia energética'
-        }
-      }
-    ],
-    "years": [2015]
+    "years": [2010, 2011, 2012, 2013, 2014, 2015, 2016]
   },
   {
     "id": 910,
@@ -868,8 +802,8 @@ charts = [
         ]
       },
     ],
-    "years": [2015]
-  },  
+    "years": [2016]
+  },
   {
     "id": 103105,
     "function": cs_auxiliary.default_chart,
@@ -1150,7 +1084,7 @@ charts = [
         }
       }
     ],
-    "years": [2015]
+    "years": [2016]
   },
   {
     "id": 103105,
@@ -1184,7 +1118,7 @@ charts = [
         }
       }
     ],
-    "years": [2015]
+    "years": [2016]
   },
   {
     "id": 103105,
@@ -1210,7 +1144,7 @@ charts = [
         }
       }
     ],
-    "years": [2015]
+    "years": [2016]
   },
   {
     "id": 103105,
@@ -1236,6 +1170,6 @@ charts = [
         }
       }
     ],
-    "years": [2015]
+    "years": [2016]
   }
 ]

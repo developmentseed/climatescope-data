@@ -1,41 +1,55 @@
 {
     "version": 8,
-    "name": "climatescope-full",
+    "name": "climatescope-full-2017",
     "metadata": {
         "mapbox:autocomposite": true,
         "mapbox:type": "template"
     },
     "center": [
-        52.42186529991676,
-        -7.9786636538589875
+        17.58571640718037,
+        14.118503127065509
     ],
-    "zoom": 2.091129415854246,
+    "zoom": 2.243540398355349,
     "bearing": 0,
     "pitch": 0,
     "sources": {
         "composite": {
-            "url": "mapbox://climatescope.91tpxlyt",
+            "url": "mapbox://climatescope.9gtq3005,climatescope.2mzfoqfz",
             "type": "vector"
         }
     },
-    "sprite": "mapbox://sprites/climatescope/ciw2u8z4j001x2jl91e0cmk62",
+    "sprite": "mapbox://sprites/climatescope/cj9szsu6f2i752ss0aysk818a",
     "glyphs": "mapbox://fonts/climatescope/{fontstack}/{range}.pbf",
     "layers": [
         {
             "id": "background",
             "type": "background",
-            "interactive": true,
             "paint": {
-                "background-color": "#f2f2f2"
+                "background-color": "#F3F5F6"
             }
         },
         {
-            "id": "climatescope-basemap-data-ai75on",
+            "id": "climatescope-admin0-polygons-716yo8",
             "type": "fill",
             "source": "composite",
-            "source-layer": "climatescope-basemap-data-ai75on",
-            "minzoom": 2,
-            "interactive": true,
+            "source-layer": "climatescope-admin0-polygons-716yo8",
+            "filter": [
+                "==",
+                "$type",
+                "Polygon"
+            ],
+            "layout": {
+                "visibility": "visible"
+            },
+            "paint": {
+                "fill-color": "hsl(0, 0%, 100%)"
+            }
+        },
+        {
+            "id": "climatescope-admin0-polygons-716yo8 (1)",
+            "type": "fill",
+            "source": "composite",
+            "source-layer": "climatescope-admin0-polygons-716yo8",
             "filter": [
                 "all",
                 [
@@ -52,32 +66,31 @@
                 "visibility": "visible"
             },
             "paint": {
-                "fill-color": "#C3D500",
-                "fill-outline-color": "hsl(0, 0%, 100%)"
+                "fill-color": "#7BAF8B"
             }
         },
         {
-            "id": "climatescope-full",
-            "type": "fill",
+            "id": "climatescope-admin0-lines-bj8vrh",
+            "type": "line",
             "source": "composite",
-            "source-layer": "climatescope-basemap-data-ai75on",
-            "minzoom": 2,
-            "interactive": true,
+            "source-layer": "climatescope-admin0-lines-bj8vrh",
             "filter": [
-                "!has",
-                "region"
+                "==",
+                "$type",
+                "LineString"
             ],
             "layout": {
                 "visibility": "visible"
             },
             "paint": {
-                "fill-color": "hsl(0, 0%, 100%)"
+                "line-color": "hsl(0, 0%, 100%)"
             }
         }
     ],
-    "created": "2016-11-29T01:42:08.165Z",
-    "id": "ciw2u8z4j001x2jl91e0cmk62",
-    "modified": "2016-11-29T01:57:37.437Z",
+    "created": "2017-11-09T21:35:43.905Z",
+    "id": "cj9szsu6f2i752ss0aysk818a",
+    "modified": "2017-11-14T12:50:34.767Z",
     "owner": "climatescope",
+    "visibility": "private",
     "draft": false
 }

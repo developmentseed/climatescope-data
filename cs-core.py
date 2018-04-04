@@ -189,19 +189,13 @@ def get_raw_data(df,ind,lang,yr):
   """
 
   # Fetch the raw data that underlies the score of this indicator
-  raw_data = {}
   raw_value = df.ix[float(ind),(yr,'data')]
+  raw_unit = df_meta_index.ix[ind,'unit:' + lang]
 
-  if pd.isnull(raw_value):
-    # By default Pandas returns NaN, for the JSON this needs to be null
-    raw_data['value'] = None
-    raw_data['unit'] = None
-  else:
-    # If there is data, fetch the value and the unit in the proper language
-    raw_data['value'] = round(raw_value,5)
-    raw_data['unit'] = df_meta_index.ix[ind,'unit:' + lang]
-
-  return raw_data
+  return {
+    'value': round(raw_value,5) if not(pd.isnull(raw_value)) else None,
+    'unit': raw_unit if not (pd.isnull(raw_unit)) else None
+  }
 
 
 def get_rank(aal,df,name):
@@ -273,6 +267,16 @@ def build_json_aa(aa,df_data,lang,indicators=False,historic=False,single_p=None)
   aa_data['iso'] = aa.lower()
   aa_data['name'] = df_meta_aa.ix[aa,'name:' + lang]
   aa_data['grid'] = df_meta_aa.ix[aa,'grid']
+
+  # Add region for the countries
+  if df_meta_aa.ix[aa,'type'] == 'country':
+    aa_region = {}
+    region = df_meta_aa.ix[aa,'region']
+    # Add the id of the region
+    aa_region['id'] = region
+    # Fetch the name of the region from the meta file
+    aa_region['name'] = df_meta_aa.ix[region,'name:' + lang]
+    aa_data['region'] = aa_region
 
   if historic:
     # Provide the score for all editions

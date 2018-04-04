@@ -66,6 +66,7 @@ def default_chart(serie, ind_source, lang, aa, years, global_avg):
   # Read in the CSV file
   ind_data = csv.DictReader(open(ind_source))
   data = []
+
   for row in ind_data:
     if aa == row["iso"].strip(' ') and serie["source-id"].strip() == row["sub_indicator"].strip():
       for yr in years:
